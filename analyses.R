@@ -26,7 +26,8 @@ if (username == "dpedr") {
 }
 } else if (username == "marlena") {
 	wdir = "/media/storage/covidPD/"
-}
+if (username == "Marcel Printz") {
+        wdir = C:\Users\Marcel Printz\Documents\iCARE PD
 } else if (username == "marcel") {
 	wdir = "/media/storage/covidPD/"
 }
