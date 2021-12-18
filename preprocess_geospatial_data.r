@@ -7,7 +7,7 @@
 ## Specify packages of interest and load them automatically if needed
 packages = c(
 			"maptools", "dplyr", "Rcpp", "RColorBrewer", "osmar", "XML", "sf", "ggmap", "tidyverse", 
-			"viridis", "stringr", "spdep", "proj4", "choroplethr", "ggplot2", "R6", "readr", "maps",
+			"viridis", "stringr", "spdep", "proj4", "ggplot2", "R6", "readr", "maps",
 			"gpclib", "rgdal", "rgeos", "terra", "mapproj", "classInt", "ggthemes", "svDialogs") # packages which may be needed over the course
 
 ## Load or install all packages defined above
@@ -150,7 +150,6 @@ if (file.exists(file.path(wdir, "data", "demographics_per_postal_code.csv"))){
 		if (iter==length(plz_from_source)) cat("\nDone!\n")
 	}
 	close(pb)
-	# write.csv(demographics_df,file.path(wdir, "data", "demographics_per_postal_code.csv"), row.names = FALSE) # not working until fix for missing "0" is found
 }
 demographics_df <- demographics_df[!duplicated(demographics_df), ] # remove duplicates
 
@@ -201,7 +200,6 @@ ind_DUS <- which(	demographics_df$plz=="402" |
 demographics_df$physicians[ind_DUS] = df_kbv$density_physicians_total_by100K_pop[which(df_kbv$Name=="Duesseldorf, Stadt")]				
 demographics_df$neurologists[ind_DUS] = df_kbv$density_physicians_neurologist_by100K_pop[which(df_kbv$Name=="Duesseldorf, Stadt")]				
 
-
 # Hamburg
 ind_HH <- which(	demographics_df$plz=="200" | 
 					demographics_df$plz=="201" |
@@ -228,8 +226,8 @@ ind_HAN <- which(	demographics_df$plz=="301" |
 					demographics_df$plz=="306" | 
 					demographics_df$plz=="308" | 
 					demographics_df$plz=="309" )
-demographics_df$physicians[ind_HAN] = df_kbv$density_physicians_total_by100K_pop[which(df_kbv$Name=="Hannover, Stadt")]				
-demographics_df$neurologists[ind_HAN] = df_kbv$density_physicians_neurologist_by100K_pop[which(df_kbv$Name=="Hannover, Stadt")]				
+demographics_df$physicians[ind_HAN] = df_kbv$density_physicians_total_by100K_pop[which(df_kbv$Name=="Region Hannover")]				
+demographics_df$neurologists[ind_HAN] = df_kbv$density_physicians_neurologist_by100K_pop[which(df_kbv$Name=="Region Hannover")]				
 
 # Koeln
 ind_COL <- which(	demographics_df$plz=="506" | 
@@ -270,6 +268,7 @@ ind_MUN <- which(	demographics_df$plz=="803" |
 demographics_df$physicians[ind_MUN] = df_kbv$density_physicians_total_by100K_pop[which(df_kbv$Name=="Muenchen, Stadt")]				
 demographics_df$neurologists[ind_MUN] = df_kbv$density_physicians_neurologist_by100K_pop[which(df_kbv$Name=="Muenchen, Stadt")]				
 
+write.csv(demographics_df,file.path(wdir, "data", "demographics_per_postal_code.csv"), row.names = FALSE) # not working until fix for missing "0" is found
 
 
 # ==================================================================================================
