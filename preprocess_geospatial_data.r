@@ -27,7 +27,7 @@ username = Sys.info()["login"]
 if (username == "dpedr") {
 wdir = "D:/covidPD/"
 } else if (username == "david") {
-wdir = "/media/storage/skripte/covidPD/"
+wdir = "/media/storage/covidPD/"
 }
 setwd(wdir)
 
@@ -43,7 +43,7 @@ spatial_dataGER$area_sqkm <- expanse(vect(file.path(wdir, "data", "plz-3stellig.
 
 # Load KBV data ("Aerztedichte") (source: https://gesundheitsdaten.kbv.de/cms/html/16402.php)
 # csv-data from xlsx modified so that columns have meaningful names (see below) and data is without German "Umlaute"
-df_kbv <- read.csv2(file.path(wdir, "data", "aerztedichte_kbv_mod2.csv"))
+df_kbv <- read.csv2(file.path(wdir, "data", "aerztedichte_kbv_mod3.csv"))
 colnames(df_kbv)[1] = "Regionalschluessel" # no idea why this is necessary!
 cols_of_interest = c("Regionalschluessel", "PLZ", "Name", "Regionstyp", "density_physicians_total_by100K_pop", "density_physicians_neurologist_by100K_pop")
 df_kbv_all = df_kbv %>% select(cols_of_interest)
@@ -78,7 +78,7 @@ for (item in 1:length(df_plz2kreis$plz3)){ # dodgy way of entering zeros when po
 if (file.exists(file.path(wdir, "data", "demographics_per_postal_code.csv"))){
 	demographics_df <- read.csv(file.path(wdir, "data", "demographics_per_postal_code.csv"))
 } else {
-	len_dataframe <- length(unique(plz_from_source)) 
+	len_dataframe <- length(unique(spatial_dataGER$plz)) 
 	demographics_df <- data.frame( # create empty dataframe
 	plz=rep(NA,len_dataframe),#as.character(rep(NA,length(spatial_dataGER$plz)),
 	size=rep(NA,len_dataframe),#rep(NA,length(spatial_dataGER$plz)),
@@ -141,8 +141,8 @@ if (file.exists(file.path(wdir, "data", "demographics_per_postal_code.csv"))){
 			}
 
 			
-			demographics_df[iter, 5] = df_kbv$density_physicians_total_by100K_pop[which(df_kbv_reg$Name==region)] 
-			demographics_df[iter, 6] = df_kbv$density_physicians_neurologist_by100K_pop[which(df_kbv_reg$Name==region)] 
+			demographics_df[iter, 5] = df_kbv_reg$density_physicians_total_by100K_pop[which(df_kbv_reg$Name==region)] 
+			demographics_df[iter, 6] = df_kbv_reg$density_physicians_neurologist_by100K_pop[which(df_kbv_reg$Name==region)] 
 		} else {
 			demographics_df[iter, 5] = df_kbv$density_physicians_total_by100K_pop[ind_plz3]
 			demographics_df[iter, 6] = df_kbv$density_physicians_neurologist_by100K_pop[ind_plz3]
@@ -191,6 +191,16 @@ ind_DRE <- which(	demographics_df$plz=="010" |
 					demographics_df$plz=="013")
 demographics_df$physicians[ind_DRE] = df_kbv$density_physicians_total_by100K_pop[which(df_kbv$Name=="Dresden, Stadt")]				
 demographics_df$neurologists[ind_DRE] = df_kbv$density_physicians_neurologist_by100K_pop[which(df_kbv$Name=="Dresden, Stadt")]				
+
+# Duesseldorf
+ind_DUS <- which(	demographics_df$plz=="402" | 
+					demographics_df$plz=="404" |
+					demographics_df$plz=="405" | 
+					demographics_df$plz=="406" |
+					demographics_df$plz=="407")
+demographics_df$physicians[ind_DUS] = df_kbv$density_physicians_total_by100K_pop[which(df_kbv$Name=="Duesseldorf, Stadt")]				
+demographics_df$neurologists[ind_DUS] = df_kbv$density_physicians_neurologist_by100K_pop[which(df_kbv$Name=="Duesseldorf, Stadt")]				
+
 
 # Hamburg
 ind_HH <- which(	demographics_df$plz=="200" | 
