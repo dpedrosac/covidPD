@@ -99,12 +99,13 @@
 "barriers_to_care_problems_health_insurance.B9b",
 "barriers_to_care_personal_responsabilities.B9b",
 "barriers_to_care_language_issues.B9b",
+"barriers_to_care_general_health.B9b",
 "barriers_to_care_other.B9b",
 "barriers_to_care_other_text.B9b",
 "barriers_to_care_sum.B9b",
 "barriers_to_care_sum_categorized.B9b",
-"ease_pbtaining_healthcare_preCovid.B10",
-"ease_pbtaining_healthcare_preCovid_categorized.B10",
+"ease_obtaining_healthcare_preCovid.B10",
+"ease_obtaining_healthcare_preCovid_categorized.B10",
 "forgot_treatment_due_to_cost_preCovid.B11",
 "forgot_treatment_due_to_cost_preCovid_categorized.B11",
 "extended_health_insurance_due_to_PD.B12",
@@ -151,7 +152,6 @@
 "personal_accessibility_barriers_dependance.B16a",
 "personal_accessibility_barriers_OTCdrugs.B16a",
 "personal_accessibility_barriers_health_deterioration.B16a",
-"personal_accessibility_barriers_OTCdrings.B16a",
 "personal_accessibility_barriers_personal_relationships.B16a",
 "personal_accessibility_barriers_other.B16a",
 "personal_accessibility_barriers_sum.B16a",
@@ -204,7 +204,7 @@
 "educational_level.D8",
 "income.D9",
 "extent_of_financial_stability.D10"
-"extent_of_financial_stability_categprized.D10"
+"extent_of_financial_stability_categorized.D10"
 "postal_code",
 "province_of_residence_CDN.1",
 "province_of_residence_CDN.2",
