@@ -38,7 +38,6 @@
 "visit_healthcare_providers_other.B6",
 "visit_healthcare_providers_text.B6",
 "visit_healthcare_providers_sum.B6",
-"coorperation_healthcare_providers.B6a",
 "cooperation_healthcare_providers.B6a",
 "geographical_barriers_healthcare_providers.B7",
 "overcoming_barriers_telemedicine.B7a",
