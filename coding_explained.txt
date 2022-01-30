@@ -372,10 +372,10 @@
 #  | .        |                                                                           | 4 = Very Easy                                                    |
 #  | _______  |                                                                           |                                                                  |
 #  | B11      | Number of occasions Pat. canceled treatment due to cost pre COVID         | 1 = never                                                        |
-#  | .        |	                                                                          | 2 =	1                                                            |	                      
-#  | .        |                                                                           |	3 = 2-3                                                          |     
+#  | .        |	                                                                          | 2 =	1                                                            |	
+#  | .        |                                                                           | 3 = 2-3                                                          |							                             
 #  | .        |                                                                           | 4 = min. 4                                                       |
-#  | _______  |                                                                           |                                                                  |                        
+#  | _______  |                                                                           |                                                                  |                                                                      
 #  | B12      | extended healthcare insurance                                             | 1 = Yes                                                          |
 #  | .        |                                                                           | 2 = No                                                           |
 #  | .        |                                                                           | 3 = Don´t know                                                   |
@@ -433,7 +433,9 @@
 #  | .        |                                                                           | 4 = Live in a nursing home (i.e. skilled care facility)          |
 #  | .        |                                                                           | 5 = Other                                                        |
 #  | _______  |                                                                           |                                                                  |
-#  | D8       | Educational level                                                         | -> this variable has 13 categories we should summarize them      |
+#  | D8       | Educational level                                                         | 1-3 = Level 1 = without professional qualification               |
+#  | .        |                                                                           | 4-7 = Level 2 = non-academic qualification                       |
+#  | .        |                                                                           | 8-11 = Level 3 = academic degree or equivalent                   |
 #  | _______  |                                                                           |                                                                  |
 #  | D9       | yearly net. household income                                              | 1	= > 10.800 €                                                 |
 #  | .        |                                                                           | 2	= 10.800 € - 15.600 €                                        |
