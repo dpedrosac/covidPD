@@ -105,12 +105,16 @@ levels(df_total$disease_stage.A2) <- c(paste("Hoehn & Yahr", as.roman(c(1:5)))) 
 
 df_total$disease_duration.A1 <- as.factor(df_total$disease_duration.A1)
 # =====> @Marlena: there are five levels but only four categories. Please double check!
+#M: five categories is correct - the original questionnaire contained 5 categories (see table)
 
-#levels(df_total$disease_stage.A2) <- c(">2 years", "2-5 years", "5-10 years", ">10 years") # disease duration
+#levels(df_total$disease_duration.A1) <- c(">2 years", "2-5 years", "5-10 years", "10-15 years", ">15 years") # disease duration
 #  | A1       | Disease Duration                                                          | 1 = > 2yrs                                                       |
 #  | .        |                                                                           | 2 = 2-5 yrs                                                      |
 #  | .        |                                                                           | 3 = 5-10yrs                                                      |
-#  | .        |                                                                           | 4 = >10yrs 
+#  | .        |                                                                           | 4 = 10-15yrs 
+#  | .        |                                                                           | 5 = >15yrs 
+
+#M: would it make sense to build a grouping variable (A1.categorized)?
 
 df_total$overcoming_barriers_sum.B7a <- df_total$overcoming_barriers_transportz.B7a + 
 										df_total$overcoming_barriers_financialsupport.B7a + 
@@ -146,7 +150,11 @@ df_careCovid$ID 									<- as.factor(df_careCovid$ID) # ID needs to be coded as
 df_careCovid %>%
   group_by(timing) %>%
   get_summary_stats(ratings, show = c("mean", "sd", "median", "iqr"))  
-# ======> @Marlena, not quite clear to me, why lower values at post! What is the coding here? We should refactor alle uesed codes from bad to good in ascending order (see line 100)
+# ======> @Marlena, not quite clear to me, why lower values at post! What is the coding here? We should refactor alle used codes from bad to good in ascending order (see line 100)
+#M: currently 1 = very satisfied - if we´d like to change to 1 = very unsatisfied it should look like this, right?
+#df_total <- df_total %>%  mutate(satisfaction_PDcare_preCovid.B17 = fct_relevel(satisfaction_PDcare_preCovid.B17, c("4", "3", "2", "1"))
+#df_total <- df_total %>%  mutate(atisfaction_with_care_duringCovid.C6 = fct_relevel(atisfaction_with_care_duringCovid.C6, c("4", "3", "2", "1"))
+
 
 # Create a summary of available results
 summary_care 			<- df_careCovid %>% filter(timing=="pre") %>% drop_na() %>% group_by(ratings)  %>% summarize(pre=sum(ratings))
@@ -205,67 +213,70 @@ p_satisfaction_with_care
 #| Question from COVID Survey |  Representative for what barrierer   |
 #+----------------------------+--------------------------------------+
 #| 1. A2, B1                  | Autonomy                             |
-#| 2. A1, A4, vWEI        	  | Health Status                        |
-#| 4. B3, B5                  | Health Belief                        |
+#| 2. A1, A4, vWEI            | Health Status                        |
 #| 3. D8, D9                  | Health Literacy                      |
+#| 4. B3, B5                  | Health Belief                        |
 #| 5. B14a                    | Communication (personal)             |
 #| 6. PDQ-sum score           | Self-efficacy                        |
 #| 7. B7a, B9a/b              | Transportation                       |
 #| 8. B11, B12, B13, D10      | Cost of care                         |
-#| 9. NA          			  | Difficulties of Diagnosis            |
+#| 9. NA          	      | Difficulties of Diagnosis            |
 #| 10. C3, B6a, B6            | Coordination in care                 |
 #| 11. B15, B14, C2c          | Communication (system)               |
 #| 12. B16, D6, D7, B9b, B10  | Disparty in Health Services          |
 #| 13. B7, B8, B9,            | Unavailability of Specalist Services |
-#| 14. D2 				  	  | Other								 |
+#| 14. D2 	       	      | Other				     |
 #+----------------------------+--------------------------------------+
 # created with: https://ozh.github.io/ascii-tables/
 
 # ======> @Marlena, again, we need to double check the coding for all the used variables
+#M: is there a possibility to view the raw data in a table format (1 colum per variable and 1 row per participant = 1 value per box)? this would it make easier for me to check the coding
+#B1a is labled differently in the dataset than in the code - is there a reason? in the dataset: B1a_regularcaregiver_yesorno
+
 # ======> @Marlena, some variables cannot be understood such as the value of "9" in the extended_health_insurance_due_to_PD.B12
 
 dependent_variable = "needed_healthcare_but_did_not_receive_it_duringCovid.C4"
 factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/10.3233/jpd-212735
-						"disease_stage.A2", "regular_caregiver_categorial.B1a",
+						"disease_stage.A2", "regular_caregiver_categorial.B1a", #checked
 						
-						"disease_duration.A1", "vWEI", 	 
+						"disease_duration.A1", "comorbidities_categorial.A4", "vWEI", 	#checked - we could also use "comorbidities_sum.A4"
 						
-						"educational_level.D8", "income.D9",  					
+						"educational_level.D8", "income.D9",  		#checked - M: I would summarize both variables			
 						
-						"GP_expertise.B3", "neurologists_expertise.B5", 
+						"GP_expertise.B3", "neurologists_expertise.B5", #checked
 						
-						"reason_for_communication_challenges_sum_categorized.B14a",
+						"reason_for_communication_challenges_sum_categorized.B14a", #checked
 						
-						"pdq8_total.A3",
+						"pdq8_total.A3", #checked - we could also use the variable pdq8_categorial.A3 (pdq-8 score summarized in 4 categories)
 						
-						"overcoming_barriers_sum.B7a", "ability_to_access_care_priorCovid_categorized.B9a",
+						"overcoming_barriers_sum.B7a", "ability_to_access_care_priorCovid_categorized.B9a", #M: need to check B9a in the dataset again
 
-						"forgot_treatment_due_to_cost_preCovid_categorized.B11",
-						"extended_health_insurance_due_to_PD.B12", "financial_difficulties_from_treatment_costs_categorized.B13", 
-						"extent_of_financial_stability.D10",
+						"forgot_treatment_due_to_cost_preCovid_categorized.B11", #checked
+						"extended_health_insurance_due_to_PD.B12", "financial_difficulties_from_treatment_costs_categorized.B13", #checked
+						"extent_of_financial_stability.D10", #checked - we could also use extent_of_financial_stability_categorized.D10
 						
 						# 9 missing
 
-						"confidence_in_accessing_necessary_services_remotely_categorized.C3_3", "cooperation_healthcare_providers.B6a", 
-						"visit_healthcare_providers_sum.B6", 
+						"confidence_in_accessing_necessary_services_remotely_categorized.C3_3", "cooperation_healthcare_providers.B6a", #checked
+						"visit_healthcare_providers_sum.B6", #M: need to check B6 in the dataset
 						
-						"reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15", "received_remote_sessions_duringCovid.C2", 
-						"access_to_techniology_categorized.C2b2", "communication_challenges_preCovid.B14"
+						"reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15", "received_remote_sessions_duringCovid.C2", #cheched
+						"access_to_techniology_categorized.C2c2", "communication_challenges_preCovid.B14" #checked M: need to check B14 in the dataset
 						
-						"personal_accessibility_barriers_sum.B16a", 
-						"type_of_community.D6", "living_situation.D7",
-						"barriers_to_care_sum_categorized.B9b",
-						"ease_obtaining_healthcare_preCovid_categorized.B10",
+						"personal_accessibility_barriers_sum.B16a", #checked - we could also use personal_accessibility_barriers_sum_categorized.B16a
+						"type_of_community.D6", "living_situation.D7", # checked - we could also use type_of_community_categorized.D6 and living_situation_categorized.D7
+						"barriers_to_care_sum_categorized.B9b", #checked
+						"ease_obtaining_healthcare_preCovid_categorized.B10", #checked
 	
-						"geographical_barriers_healthcare_providers.B7", "populationGER",						
-						"local_availability_sum_categorized.B8", "ability_to_access_care_priorCovid.B9", "neurologistsGER",
+						"geographical_barriers_healthcare_providers.B7", "populationGER",	#checked M: need to check B7 in the dataset					
+						"local_availability_sum_categorized.B8", "ability_to_access_care_priorCovid.B9", "neurologistsGER", #checked
 	
-						"gender.D2")
+						"gender.D2") #checked
 # =====>  @both: we can add more variables without much of a fuss. Just go ahead and include variables to one category BUT add a corresponding vaue to groups below
 
 group 				<- c(	1,1, # grouping is needed for later and corresponds to factorsOR1
 							2,2, # Health status
-							3,3,
+							3,3,3
 							4,4,
 							5,
 							6,
