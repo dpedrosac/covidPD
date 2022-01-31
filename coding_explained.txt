@@ -6,7 +6,8 @@
 #  | A1       | Disease Duration                                                          | 1 = > 2yrs                                                       |
 #  | .        |                                                                           | 2 = 2-5 yrs                                                      |
 #  | .        |                                                                           | 3 = 5-10yrs                                                      |
-#  | .        |                                                                           | 4 = >10yrs                                                       |
+#  | .        |                                                                           | 4 = 10-15yrs                                                     |
+#  | .        |                                                                           | 5 = > 15yrs                                                      |
 #  | _______  |                                                                           |                                                                  |
 #  | A2       | Stage of PD (H&Y)                                                         | 1 = Stage 1                                                      |
 #  | .        |                                                                           | 2 = Stage 2                                                      |
@@ -16,7 +17,14 @@
 #  | _______  |                                                                           |                                                                  |
 #  | A3       | PDQ8-score                                                                | 0 - 100                                                          |
 #  | _______  |                                                                           |                                                                  |
-#  | B1a      | Presence of a regular caregiver                                           | 1 = yes                                                          |
+#  | A3       | PDQ8-score categorized                                                    | 1 = higher QoL (0-59)                                            |
+#  | .        |                                                                           | 2 = moderate QoL (60-79)                                         |
+#  | .        |                                                                           | 2 = lower QoL (> 80)                                             |
+#  | _______  |                                                                           |                                                                  |
+#  | A4       | Presence of co-morbidities                                                | 1 = yes                                                          |
+#  | .        |                                                                           | 2 = no                                                           |
+#  | _______  |                                                                           |                                                                  |
+#  | B1       | Presence of a regular caregiver                                           | 1 = yes                                                          |
 #  | .        |                                                                           | 2 = no                                                           |
 #  | _______  |                                                                           |                                                                  |
 #  | B3       | perceived expertise of GP                                                 | 1 = excellent                                                    |
@@ -31,6 +39,7 @@
 #  | .        |                                                                           | 3 = good                                                         |
 #  | .        |                                                                           | 4 = fair                                                         |
 #  | .        |                                                                           | 5 = poor                                                         |
+#  | .        |                                                                           | 6 = don´t know                                                   |
 #  | _______  |                                                                           |                                                                  |
 #  | B6       | Number of healthcare professionals consulted last 12 months pre COVID     | min = 1                                                          |
 #  | .        |                                                                           | max = 6                                                          |
@@ -77,9 +86,22 @@
 #  | .        |                                                                           | 3 = Somewhat easy                                                |
 #  | .        |                                                                           | 4 = Very Easy                                                    |
 #  | _______  |                                                                           |                                                                  |
+#  | B11      | shifted appointment due to costs 12 months pre COVID                      | 1 = Never                                                        |
+#  | .        |                                                                           | 2 = Once                                                         |
+#  | .        |                                                                           | 3 = 2 - 3 times                                                  |
+#  | .        |                                                                           | 4 = > 4 times                                                    |
+#  | _______  |                                                                           |                                                                  |
+#  | B11      | shifted appointment due to costs 12 months pre COVID                      | 1 = Never                                                        |
+#  | .        |                                                                           | 2 = Once                                                         |
+#  | .        |                                                                           | 3 = 2 - 3 times                                                  |
+#  | .        |                                                                           | 4 = > 4 times                                                    |
+#  | _______  |                                                                           |                                                                  |
+#  | B11      | categorized version of B11                                                | 1 = Never                                                        |
+#  | .        |                                                                           | 2 = At least once                                                |
+#  | _______  |                                                                           |                                                                  |
 #  | B12      | extended healthcare insurance                                             | 1 = Yes                                                          |
 #  | .        |                                                                           | 2 = No                                                           |
-#  | .        |                                                                           | 3 = Don´t know                                                   |
+#  | .        |                                                                           | 3 = Don´t know    #need to check the dataset if 3 or 9           |
 #  | _______  |                                                                           |                                                                  |
 #  | B13      | financial problems from treatment costs last 12 months pre COVID          | 1 = Never                                                        |
 #  | .        |                                                                           | 2 = Rarely                                                       |
@@ -87,8 +109,11 @@
 #  | .        |                                                                           | 4 = Often                                                        |
 #  | .        |                                                                           | 5 = Always                                                       |
 #  | _______  |                                                                           |                                                                  |
-#  | B14a     | sum of communication challenges pre COVID                                 | min =  0                                                         |
-#  | .        |                                                                           | max = 10                                                         |
+#  | B13      | financial problems from treatment costs last 12 months pre COVID          | 1 = less financial difficulties                                  |
+#  | .        |                                                                           | 2 = more financial difficulties                                  |
+#  | _______  |                                                                           |                                                                  |
+#  | B14a     | sum of communication challenges pre COVID                                 | 1 = no communication challenges                                  |
+#  | .        |                                                                           | 2 = one or more communication challenges                         |
 #  | .        |                                                                           | -999 = Q. was not applicable based on previous answer (B14 = 2)  |
 #  | _______  |                                                                           |                                                                  |
 #  | B15      | Number of reasons for experiencing stigmatization                         | min = 1                                                          |
@@ -98,6 +123,11 @@
 #  | B16a     | Number of neg. effects due to healthcare accesibility barriers            | min = 1                                                          |
 #  | .        |                                                                           | max = 11                                                         |
 #  | .        |                                                                           | -999 = Q. not applicable based on previous question (B16= 2(No)) |
+#  | _______  |                                                                           |                                                                  |
+#  | B17      | Satisfaction with healthcare past 12 months pre COVID                     | 1 = very satisfied                                               |
+#  | .        |                                                                           | 2 = somehow satisfied                                            |
+#  | .        |                                                                           | 3 = somehow dissatisfied                                         |
+#  | .        |                                                                           | 4 = very dissatisfied                                            |
 #  | _______  |                                                                           |                                                                  |
 #  | C2a      | Number of remote contacts w. healthcare professionals during the pandemic | 1 = 1                                                            |
 #  | .        |                                                                           | 2 = 2                                                            |
@@ -110,6 +140,11 @@
 #  | .        |                                                                           | 3 = Somewhat disagree                                            |
 #  | .        |                                                                           | 4 = Strongly disagree                                            | 
 #  | .        |                                                                           | 5 = Don’t know                                                   |
+#  | _______  |                                                                           |                                                                  |
+#  | C6       | Satisfaction with healthcare during COVID                                 | 1 = very satisfied                                               |
+#  | .        |                                                                           | 2 = somehow satisfied                                            |
+#  | .        |                                                                           | 3 = somehow dissatisfied                                         |
+#  | .        |                                                                           | 4 = very dissatisfied                                            |
 #  | _______  |                                                                           |                                                                  |
 #  | D6       | type of community                                                         | 1 = Big city (i.e. more than 300,000 people)                     |
 #  | .        |                                                                           | 2 = Suburbs of a big city                                        |
@@ -126,21 +161,25 @@
 #  | _______  |                                                                           |                                                                  |
 #  | D8       | Educational level                                                         | -> this variable has 13 categories we should summarize them      |
 #  | _______  |                                                                           |                                                                  |
-#  | D9       | yearly net. household income                                              | 1	= > 10.800 €                                                 |
-#  | .        |                                                                           | 2	= 10.800 € - 15.600 €                                        |
-#  | .        |                                                                           | 3	= 15.600 € - 18.000 €                                        |
-#  | .        |                                                                           | 4	= 18.000 € - 24.000 €                                        |
-#  | .        |                                                                           | 5	= 24.000 € - 31.200 €                                        |
-#  | .        |                                                                           | 6	= 31.200 € - 43.000 €                                        |
-#  | .        |                                                                           | 7	= 43.200 € - 60.000 €                                        |
-#  | .        |                                                                           | 8	= 60.000 € - 216.000 €                                       |
-#  | .        |                                                                           | 9	= > 216.000 €                                                |
+#  | D9       | yearly net. household income                                              | 1	= > 10.800 €                                                   |
+#  | .        |                                                                           | 2	= 10.800 € - 15.600 €                                          |
+#  | .        |                                                                           | 3	= 15.600 € - 18.000 €                                          |
+#  | .        |                                                                           | 4	= 18.000 € - 24.000 €                                          |
+#  | .        |                                                                           | 5	= 24.000 € - 31.200 €                                          |
+#  | .        |                                                                           | 6	= 31.200 € - 43.000 €                                          |
+#  | .        |                                                                           | 7	= 43.200 € - 60.000 €                                          |
+#  | .        |                                                                           | 8	= 60.000 € - 216.000 €                                         |
+#  | .        |                                                                           | 9	= > 216.000 €                                                  |
 #  | _______  |                                                                           |                                                                  |
 #  | D10      | financial stability                                                       | 1 = All of the time                                              |
 #  | .        |                                                                           | 2 = Most of the time                                             |
 #  | .        |                                                                           | 3 = Some of the time                                             |
 #  | .        |                                                                           | 4 = Rarely                                                       |
 #  | .        |                                                                           | 5 = Never                                                        |
+#  | .        |                                                                           | 6 = Don’t know                                                   |
+#  | _______  |                                                                           |                                                                  |
+#  | D10      | D10_categorized                                                           | 1 = less financial stability                                     |
+#  | .        |                                                                           | 2 = more financial stability                                     |
 #  | .        |                                                                           | 6 = Don’t know                                                   |
 #  | _______  |                                                                           |                                                                  |
 #  +----------+-----------------------------------------------------------------------------+----------------------------------------------------------------+
@@ -204,6 +243,10 @@
 #  | .        |                                                                           | max = 15                                                         |
 #  | .        |                                                                           | 16 = don´t know                                                  |
 #  | _______  |                                                                           |                                                                  |
+#  | B8       | B8_sum_categorized                                                        | 1 = less resources available                                     |
+#  | .        |                                                                           | 2 = moderate resources available                                 |                  
+#  | .        |                                                                           | 3 = more resources available                                     |
+#  | _______  |                                                                           |                                                                  |
 #  | B9       | felt that healthcare was needed but not available pre covid               | 1 = Never                                                        |
 #  | .        |                                                                           | 2 = Rarely                                                       |
 #  | .        |                                                                           | 3 = Sometimes                                                    |
@@ -219,10 +262,17 @@
 #  | .        |                                                                           | max = 18                                                         |
 #  | .        |                                                                           | -999= not applicable based on previous question (B9a= 16, B9= 1) |
 #  | _______  |                                                                           |                                                                  |
+#  | B9b      | B9b_sum_categorized                                                       | 1 = No barrieres present                                         |
+#  | .        |                                                                           | 2 = 1-2 barrieres present                                        |
+#  | .        |                                                                           | 3 = >3 barrieres present                                         |
+#  | _______  |                                                                           |                                                                  |
 #  | B10      | perceived difficulty to access healthcare pre COVID                       | 1 = Very difficult                                               |
 #  | .        |                                                                           | 2 = Somewhat difficult                                           |
 #  | .        |                                                                           | 3 = Somewhat easy                                                |
 #  | .        |                                                                           | 4 = Very Easy                                                    |
+#  | _______  |                                                                           |                                                                  |
+#  | B10      | B10_categorized                                                           | 1 = Very difficult/ difficult                                    |
+#  | .        |                                                                           | 2 = Very easy/ easy                                              |
 #  | _______  |                                                                           |                                                                  |
 #  | B12      | extended healthcare insurance                                             | 1 = Yes                                                          |
 #  | .        |                                                                           | 2 = No                                                           |
@@ -234,6 +284,10 @@
 #  | .        |                                                                           | 4 = Often                                                        |
 #  | .        |                                                                           | 5 = Always                                                       |
 #  | _______  |                                                                           |                                                                  |
+#  | B14      | experienced communication challenges with healthcare professionals pre    | 1 = yes                                                          |
+#  | .        | COVID                                                                     | 2 = no                                                           |
+#  | .        |                                                                           | 3 = don´t know                                                   |
+#  | _______  |                                                                           |                                                                  |
 #  | B14a     | sum of communication challenges pre COVID                                 | min =  0                                                         |
 #  | .        |                                                                           | max = 10                                                         |
 #  | .        |                                                                           | -999 = Q. was not applicable based on previous answer (B14 = 2)  |
@@ -242,9 +296,18 @@
 #  | .        |                                                                           | max = 14                                                         |
 #  | .        |                                                                           | 15 = no/ 0 reasons                                               |
 #  | _______  |                                                                           |                                                                  |
+#  | B15      | B15_sum_categorized                                                       | 1 = experienced stigmatization                                   |
+#  | .        |                                                                           | 2 = did not experience stigmatization                            |
+#  | _______  |                                                                           |                                                                  |
 #  | B16a     | Number of neg. effects due to healthcare accesibility barriers            | min = 1                                                          |
 #  | .        |                                                                           | max = 11                                                         |
 #  | .        |                                                                           | -999 = Q. not applicable based on previous question (B16= 2(No)) |
+#  | _______  |                                                                           |                                                                  |
+#  | B16a     | B16a_sum_categorized                                                      | 1 = no negative effects perceived                                |
+#  | .        |                                                                           | 2 = at least one negative effect perceived                       |
+#  | _______  |                                                                           |                                                                  |
+#  | C2       | contacts w. healthcare professionals during the pandemic                  | 1 = Yes                                                          |
+#  | .        |                                                                           | 2 = No                                                           |
 #  | _______  |                                                                           |                                                                  |
 #  | C2a      | Number of remote contacts w. healthcare professionals during the pandemic | 1 = 1                                                            |
 #  | .        |                                                                           | 2 = 2                                                            |
@@ -252,11 +315,28 @@
 #  | .        |                                                                           | 4 = >5                                                           |
 #  | .        |                                                                           | -999 = Not applicable based on previous question (C2 = 2(No))    |
 #  | _______  |                                                                           |                                                                  |
+#  | C2c_2    | Acess to technology for remote contacts w. healthcare professionals       | 1 = Strongly agree                                               |
+#  | .        |                                                                           | 2 = Somewhat agree                                               | 
+#  | .        |                                                                           | 3 = Somewhat disagree                                            |
+#  | .        |                                                                           | 4 = Strongly disagree                                            | 
+#  | .        |                                                                           | 5 = Don’t know                                                   |   
+#  | _______  |                                                                           |                                                                  |
+#  | C2c_2    | C2c_2 categorized                                                         | 1 = Agree                                                        |
+#  | .        |                                                                           | 2 = Disagree                                                     | 
+#  | .        |                                                                           | 5 = Don’t know                                                   | 
+#  | _______  |                                                                           |                                                                  |
 #  | C3_3     | Confidence in accessing healthcare remotely                               | 1 = Strongly agree                                               |
 #  | .        |                                                                           | 2 = Somewhat agree                                               | 
 #  | .        |                                                                           | 3 = Somewhat disagree                                            |
 #  | .        |                                                                           | 4 = Strongly disagree                                            | 
 #  | .        |                                                                           | 5 = Don’t know                                                   |
+#  | _______  |                                                                           |                                                                  |
+#  | C3_3     | C3_3 categorized                                                          | 1 = Agree                                                        |
+#  | .        |                                                                           | 2 = Disagree                                                     | 
+#  | .        |                                                                           | 5 = Don’t know                                                   |
+#  | _______  |                                                                           |                                                                  |
+#  | D2       | Gender                                                                    | 1 = Male                                                         |
+#  | .        |                                                                           | 2 = Female                                                       | 
 #  | _______  |                                                                           |                                                                  |
 #  | D6       | type of community                                                         | 1 = Big city (i.e. more than 300,000 people)                     |
 #  | .        |                                                                           | 2 = Suburbs of a big city                                        |
@@ -265,23 +345,32 @@
 #  | .        |                                                                           | 5 = Farm or countryside                                          | 
 #  | .        |                                                                           | 6 = Other                                                        |
 #  | _______  |                                                                           |                                                                  |
+#  | D6       | D6_categorized                                                            | 1 = Big city or Suburbs                                          |
+#  | .        |                                                                           | 2 = Town/ small city or village                                  |
+#  | .        |                                                                           | 3 = Farm or countryside                                          |
+#  | _______  |                                                                           |                                                                  |
 #  | D7       | living situation                                                          | 1 = Live alone                                                   |
 #  | .        |                                                                           | 2 = Live with another person (e.g. spouse, sibling, friend etc.) |  
 #  | .        |                                                                           | 3 = Live in a retirement home                                    |
 #  | .        |                                                                           | 4 = Live in a nursing home (i.e. skilled care facility)          |
 #  | .        |                                                                           | 5 = Other                                                        |
 #  | _______  |                                                                           |                                                                  |
+#  | D7       | D7_categorized                                                            | 1 = Live alone                                                   |
+#  | .        |                                                                           | 2 = Live independently with another person                       |  
+#  | .        |                                                                           | 3 = Live in a supported environment                              |
+#  | .        |                                                                           | 4 = Other                                                        |
+#  | _______  |                                                                           |                                                                  |
 #  | D8       | Educational level                                                         | -> this variable has 13 categories we should summarize them      |
 #  | _______  |                                                                           |                                                                  |
-#  | D9       | yearly net. household income                                              | 1	= > 10.800 €                                                 |
-#  | .        |                                                                           | 2	= 10.800 € - 15.600 €                                        |
-#  | .        |                                                                           | 3	= 15.600 € - 18.000 €                                        |
-#  | .        |                                                                           | 4	= 18.000 € - 24.000 €                                        |
-#  | .        |                                                                           | 5	= 24.000 € - 31.200 €                                        |
-#  | .        |                                                                           | 6	= 31.200 € - 43.000 €                                        |
-#  | .        |                                                                           | 7	= 43.200 € - 60.000 €                                        |
-#  | .        |                                                                           | 8	= 60.000 € - 216.000 €                                       |
-#  | .        |                                                                           | 9	= > 216.000 €                                                |
+#  | D9       | yearly net. household income                                              | 1	= > 10.800 €                                                   |
+#  | .        |                                                                           | 2	= 10.800 € - 15.600 €                                          |
+#  | .        |                                                                           | 3	= 15.600 € - 18.000 €                                          |
+#  | .        |                                                                           | 4	= 18.000 € - 24.000 €                                          |
+#  | .        |                                                                           | 5	= 24.000 € - 31.200 €                                          |
+#  | .        |                                                                           | 6	= 31.200 € - 43.000 €                                          |
+#  | .        |                                                                           | 7	= 43.200 € - 60.000 €                                          |
+#  | .        |                                                                           | 8	= 60.000 € - 216.000 €                                         |
+#  | .        |                                                                           | 9	= > 216.000 €                                                  |
 #  | _______  |                                                                           |                                                                  |
 #  | D10      | financial stability                                                       | 1 = All of the time                                              |
 #  | .        |                                                                           | 2 = Most of the time                                             |
