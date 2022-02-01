@@ -39,7 +39,7 @@
 "visit_healthcare_providers_text.B6",
 "visit_healthcare_providers_sum.B6",
 "cooperation_healthcare_providers_yesorno.B6a",
-"cooperation_healthcare_providers_sum.6a",
+"cooperation_healthcare_providers_sum.B6a",
 "geographical_barriers_healthcare_providers.B7",
 "overcoming_barriers_telemedicine.B7a",
 "overcoming_barriers_financialsupport.B7a",
