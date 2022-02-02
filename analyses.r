@@ -104,17 +104,9 @@ df_total$disease_stage.A2 <- as.factor(df_total$disease_stage.A2)
 levels(df_total$disease_stage.A2) <- c(paste("Hoehn & Yahr", as.roman(c(1:5)))) # disease stages
 
 df_total$disease_duration.A1 <- as.factor(df_total$disease_duration.A1)
-# =====> @Marlena: there are five levels but only four categories. Please double check!
-#M: five categories is correct - the original questionnaire contained 5 categories (see table)
+levels(df_total$disease_duration.A1) <- c(">2 years", "2-5 years", "5-10 years", "10-15 years", ">15 years") # disease duration
 
-#levels(df_total$disease_duration.A1) <- c(">2 years", "2-5 years", "5-10 years", "10-15 years", ">15 years") # disease duration
-#  | A1       | Disease Duration                                                          | 1 = > 2yrs                                                       |
-#  | .        |                                                                           | 2 = 2-5 yrs                                                      |
-#  | .        |                                                                           | 3 = 5-10yrs                                                      |
-#  | .        |                                                                           | 4 = 10-15yrs 
-#  | .        |                                                                           | 5 = >15yrs 
-
-#M: would it make sense to build a grouping variable (A1.categorized)?
+#M: would it make sense to build a grouping variable (A1.categorized)? ## => A: I think that's fine
 
 df_total$overcoming_barriers_sum.B7a <- df_total$overcoming_barriers_transportz.B7a + 
 										df_total$overcoming_barriers_financialsupport.B7a + 
@@ -152,8 +144,8 @@ df_careCovid %>%
   get_summary_stats(ratings, show = c("mean", "sd", "median", "iqr"))  
 # ======> @Marlena, not quite clear to me, why lower values at post! What is the coding here? We should refactor alle used codes from bad to good in ascending order (see line 100)
 #M: currently 1 = very satisfied - if we´d like to change to 1 = very unsatisfied it should look like this, right?
-#df_total <- df_total %>%  mutate(satisfaction_PDcare_preCovid.B17 = fct_relevel(satisfaction_PDcare_preCovid.B17, c("4", "3", "2", "1"))
-#df_total <- df_total %>%  mutate(atisfaction_with_care_duringCovid.C6 = fct_relevel(atisfaction_with_care_duringCovid.C6, c("4", "3", "2", "1"))
+df_total <- df_total %>%  mutate(satisfaction_PDcare_preCovid.B17 = fct_relevel(satisfaction_PDcare_preCovid.B17, c("4", "3", "2", "1"))
+df_total <- df_total %>%  mutate(satisfaction_with_care_duringCovid.C6 = fct_relevel(satisfaction_with_care_duringCovid.C6, c("4", "3", "2", "1"))
 
 
 # Create a summary of available results
@@ -220,12 +212,12 @@ p_satisfaction_with_care
 #| 6. PDQ-sum score           | Self-efficacy                        |
 #| 7. B7a, B9a/b              | Transportation                       |
 #| 8. B11, B12, B13, D10      | Cost of care                         |
-#| 9. NA          	      | Difficulties of Diagnosis            |
+#| 9. NA          	      	  | Difficulties of Diagnosis            |
 #| 10. C3, B6a, B6            | Coordination in care                 |
 #| 11. B15, B14, C2c          | Communication (system)               |
 #| 12. B16, D6, D7, B9b, B10  | Disparty in Health Services          |
 #| 13. B7, B8, B9,            | Unavailability of Specalist Services |
-#| 14. D2 	       	      | Other				     |
+#| 14. D2 	       	          | Other				     			 |
 #+----------------------------+--------------------------------------+
 # created with: https://ozh.github.io/ascii-tables/
 
