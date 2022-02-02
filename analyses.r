@@ -43,9 +43,9 @@ df_total[df_total<0]					<- NA 	# convert values that are not meaningful into NA
 
 # ==================================================================================================
 # Comorbidity index
-filename_comorbidities 		<- file.path(wdir, "data", "vanWalravenElixhauserIndex.csv")
-df_comorbidities 			<- read.csv2(filename_comorbidities)
-df_comorbidities 			<- data.frame(vWEI=df_comorbidities$value)
+filename_comorbidities  <- file.path(wdir, "data", "vanWalravenElixhauserIndex.csv")
+df_comorbidities 			  <- read.csv2(filename_comorbidities)
+df_comorbidities 			  <- data.frame(vWEI=df_comorbidities$value)
 
 # ==================================================================================================
 # Neurologists per 100.000 inhabitants and average population (GER) (for details cf. preprocess_geospatial_data.r)
@@ -94,19 +94,14 @@ df_total$gender.D2 			<- as.factor(df_total$gender.D2)
 levels(df_total$gender.D2) 	<- c("female", "male", "diverse") # have added third gender, as there was one person answering 3. @ Marlena is that correct?
 
 df_total$educational_level.D8 <- as.factor(df_total$educational_level.D8)
-#levels(df_total$educational_level.D8) <- c("other", "without_professional_qualification", "non_academic_qualification", "academic_degree_or_equivalent") 
-# =====> @Marcel: that must be increasing. If that is correct, we need to refactor the data as c("NA", "1", "2", "3") as in the next lines, please double check!
-
-df_total <- df_total %>%  mutate(educational_level.D8 = fct_relevel(educational_level.D8, c("4", "1", "2", "3"))) 
-levels(df_total$educational_level.D8)[levels(df_total$educational_level.D8)=='NotPerformed'] <- NA # level other was transformed to NA and is now removed 
+df_total$educational_level.D8[df_total$educational_level.D8==13] <- NA
+#df_total <- df_total %>% droplevels() %>%  mutate(educational_level.D8 = fct_relevel(educational_level.D8, c("4", "1", "2", "3")))
 
 df_total$disease_stage.A2 <- as.factor(df_total$disease_stage.A2)
 levels(df_total$disease_stage.A2) <- c(paste("Hoehn & Yahr", as.roman(c(1:5)))) # disease stages
 
 df_total$disease_duration.A1 <- as.factor(df_total$disease_duration.A1)
 levels(df_total$disease_duration.A1) <- c(">2 years", "2-5 years", "5-10 years", "10-15 years", ">15 years") # disease duration
-
-#M: would it make sense to build a grouping variable (A1.categorized)? ## => A: I think that's fine
 
 df_total$overcoming_barriers_sum.B7a <- df_total$overcoming_barriers_transportz.B7a + 
 										df_total$overcoming_barriers_financialsupport.B7a + 
@@ -255,7 +250,8 @@ factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/
 						"reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15", "received_remote_sessions_duringCovid.C2", #cheched
 						"access_to_techniology_categorized.C2c2", "communication_challenges_preCovid.B14" #checked M: need to check B14 in the dataset
 						
-						"personal_accessibility_barriers_sum.B16a", #checked - we could also use personal_accessibility_barriers_sum_categorized.B16a
+						"personal_accessibility_barriers_sum.B16a", "personal_accessibility_barriers_sum_categorized.B16a", #checked
+  
 						"type_of_community.D6", "living_situation.D7", # checked - we could also use type_of_community_categorized.D6 and living_situation_categorized.D7
 						"barriers_to_care_sum_categorized.B9b", #checked
 						"ease_obtaining_healthcare_preCovid_categorized.B10", #checked
@@ -264,7 +260,6 @@ factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/
 						"local_availability_sum_categorized.B8", "ability_to_access_care_priorCovid.B9", "neurologistsGER", #checked
 	
 						"gender.D2") #checked
-# =====>  @both: we can add more variables without much of a fuss. Just go ahead and include variables to one category BUT add a corresponding vaue to groups below
 
 group 				<- c(	1,1, # grouping is needed for later and corresponds to factorsOR1
 							2,2, # Health status
@@ -276,7 +271,7 @@ group 				<- c(	1,1, # grouping is needed for later and corresponds to factorsOR
 							8,8,8,8,
 							10, 10, 10,
 							11, 11, 11, 11
-							12,12,12,12,12,
+							12,12,12,12,12, 12,
 							13,13,13,13,13,
 							14
 						)
