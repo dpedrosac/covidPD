@@ -83,7 +83,7 @@ for (vals in plzGER) { # for loop intended to extract population, neurologists a
 } 
 
 # Concatenate data into one dataframe
-df_total 		<- cbind(df_total, population_data, df_comorbidities) # add data to data matrix to work with
+df_total 		<- data.frame(cbind(df_total, population_data, df_comorbidities)) # add data to data matrix to work with
 dfGER 			<- df_total[idx_GER,]
 
 # ==================================================================================================
@@ -95,28 +95,31 @@ levels(df_total$gender.D2) 	<- c("female", "male", "diverse") # have added third
 
 df_total$educational_level.D8 <- as.factor(df_total$educational_level.D8)
 df_total$educational_level.D8[df_total$educational_level.D8==13] <- NA
-#df_total <- df_total %>% droplevels() %>%  mutate(educational_level.D8 = fct_relevel(educational_level.D8, c("4", "1", "2", "3")))
 
-df_total$disease_stage.A2 <- as.factor(df_total$disease_stage.A2)
-levels(df_total$disease_stage.A2) <- c(paste("Hoehn & Yahr", as.roman(c(1:5)))) # disease stages
+df_total <- df_total %>% droplevels() %>%  mutate(educational_level.D8 = fct_relevel(educational_level.D8, c("4", "1", "2", "3"))) # Is that correct now or do we need to drop factor=4?!
+df_total$educational_level.D8[df_total$educational_level.D8==4] <- NA
+df_total$educational_level.D8 <- as.integer(droplevels(df_total$educational_level.D8))
 
-df_total$disease_duration.A1 <- as.factor(df_total$disease_duration.A1)
-levels(df_total$disease_duration.A1) <- c(">2 years", "2-5 years", "5-10 years", "10-15 years", ">15 years") # disease duration
+df_total$disease_stage_name <- as.factor(df_total$disease_stage.A2)
+#df_total <- df_total %>%  mutate(disease_stage_name = fct_relevel(disease_stage_name, paste("Hoehn & Yahr", as.roman(c(1:5))))) # Is that correct now or do we need to drop factor=4?!
+df_total$disease_stage.A2 <- as.integer(df_total$disease_stage.A2)
+
+df_total$disease_duration_cat <- as.factor(df_total$disease_duration.A1)
+levels(df_total$disease_duration_cat) <- c(">2 years", "2-5 years", "5-10 years", "10-15 years", ">15 years") # disease duration
 
 df_total$overcoming_barriers_sum.B7a <- df_total$overcoming_barriers_transportz.B7a + 
 										df_total$overcoming_barriers_financialsupport.B7a + 
 										df_total$overcoming_barriers_telemedicine.B7a # TODO: Apparently there has been a mistake in the way this was summed up, so repeated it manually!
 
-df_total <- df_total %>% mutate(quantile = ntile(populationGER, 4)) # converts the population data to categories according to the quantiles
-levels(as.factor(df_demographics$quantile))
+df_total <- df_total %>% mutate(quantile_population = ntile(populationGER, 5)) # converts the population data to categories according to the quantiles
 
 # ==================================================================================================
 ## Create TableOne for specific values
 
-Vars 			<- c(	"age.D1", "gender.D2", "disease_duration.A1", "disease_stage.A2", "populationGER", "neurologistsGER", 
+Vars 			<- c(	"age.D1", "gender.D2", "disease_duration_cat", "disease_stage.name", "populationGER", "neurologistsGER", 
 						"physiciansGER", "educational_level.D8", "pdq8_total.A3", "vWEI")
 #nonnormalVars 	<- c("disease_stage.A2", "disease_duration.A1") # avoids returning mean in favor of median 
-factVars 		<- c("gender.D2", "educational_level.D8", "disease_duration.A1", "disease_stage.A2") # Here only values with categorial (ordinal distribution should be added) 
+factVars 		<- c("gender.D2", "educational_level.D8", "disease_duration_cat", "disease_stage.name") # Here only values with categorial (ordinal distribution should be added) 
 tableOne 		<- CreateTableOne(vars=Vars, factorVars=factVars, data=dfGER) # @Marcel, here the vars of interest should be renamed
 print(tableOne, nonnormal=c("disease_Stage.A2"))
 
@@ -244,11 +247,11 @@ factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/
 						
 						# 9 missing
 
-						"confidence_in_accessing_necessary_services_remotely_categorized.C3_3", "cooperation_healthcare_providers.B6a", #checked
+						"confidence_in_accessing_necessary_services_remotely_categorized.C3_3", "cooperation_healthcare_providers_yesorno.B6a", #checked
 						"visit_healthcare_providers_sum.B6", #M: need to check B6 in the dataset
 						
 						"reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15", "received_remote_sessions_duringCovid.C2", #cheched
-						"access_to_techniology_categorized.C2c2", "communication_challenges_preCovid.B14" #checked M: need to check B14 in the dataset
+						"access_to_techniology_categorized.C2c2", "communication_challenges_preCovid.B14", #checked M: need to check B14 in the dataset
 						
 						"personal_accessibility_barriers_sum.B16a", "personal_accessibility_barriers_sum_categorized.B16a", #checked
   
@@ -256,21 +259,21 @@ factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/
 						"barriers_to_care_sum_categorized.B9b", #checked
 						"ease_obtaining_healthcare_preCovid_categorized.B10", #checked
 	
-						"geographical_barriers_healthcare_providers.B7", "populationGER",	#checked M: need to check B7 in the dataset					
+						"geographical_barriers_healthcare_providers.B7", "quantile_population", # "populationGER",	#checked M: need to check B7 in the dataset					
 						"local_availability_sum_categorized.B8", "ability_to_access_care_priorCovid.B9", "neurologistsGER", #checked
 	
 						"gender.D2") #checked
 
 group 				<- c(	1,1, # grouping is needed for later and corresponds to factorsOR1
 							2,2, # Health status
-							3,3,3
+							3,3,3,
 							4,4,
 							5,
 							6,
 							7,7,
 							8,8,8,8,
 							10, 10, 10,
-							11, 11, 11, 11
+							11, 11, 11, 11,
 							12,12,12,12,12, 12,
 							13,13,13,13,13,
 							14
