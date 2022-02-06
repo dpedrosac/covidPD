@@ -90,11 +90,6 @@
 #  | .        |                                                                           | 3 = 2 - 3 times                                                  |
 #  | .        |                                                                           | 4 = > 4 times                                                    |
 #  | _______  |                                                                           |                                                                  |
-#  | B11      | shifted appointment due to costs 12 months pre COVID                      | 1 = Never                                                        |
-#  | .        |                                                                           | 2 = Once                                                         |
-#  | .        |                                                                           | 3 = 2 - 3 times                                                  |
-#  | .        |                                                                           | 4 = > 4 times                                                    |
-#  | _______  |                                                                           |                                                                  |
 #  | B11      | categorized version of B11                                                | 1 = Never                                                        |
 #  | .        |                                                                           | 2 = At least once                                                |
 #  | _______  |                                                                           |                                                                  |
