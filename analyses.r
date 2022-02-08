@@ -360,7 +360,7 @@ predictors <- c(
                                            "Number of Negative Effects on Patients Personal Life due to Healthcare Accessibility Barriers", #****
 	                                   "Extent/Existance of Negative Effects on Patients Personal Life due to Healthcare Accessibility Barriers", #*
 	                                   "Level of Urbanization", #**
-	                                   "Living Situation", #**
+	                                   "Living Situation", #*
 	                                   "Number of Barriers Preventing from Receiving Needed PD-related Healthcare Ressources before the COVID-19 Pandemic", #**
                                            "Perceived Difficulty in Accessing PD-related Healthcare before the COVID-19 Pandemic", #*
 	                                   "Level of Geographical Barrier Concerning Access to Healthcare Ressources before the COVID-19 Pandemic", #**
