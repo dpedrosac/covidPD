@@ -333,8 +333,42 @@ levels(results_OR1$factors_group) <- barriers
 
 # =====> @both: we need a more precise naming of the predictors here and this list MUST be as long as results_OR1. We will use that for the next figure
 predictors <- c(
-					"Ability to access to PD-related care before COVID-19 pandemic",
-					""
+					"Disease Stage (Hoehn and Yahr)", #**
+					 "Presence of a Regular Caregiver", #*
+	                                 "Duration of Parkinson´s Disease", #**
+	                                 "Presence of Comorbidities", #*
+					 "Disease Burden (Elixhauser Comorbidity Index)", #**(*)
+                                          "Educational Level", #**
+	                                  "Annual net income", #****
+	                                  "Perceived PD-Expertise of General Practitioner", #**
+                                          "Perceived PD-Expertise of Neurologist", #**
+	                                  "Reasons for Communication Challenges before the COVID-19 Pandemic", #*
+	                                  "PD-related Quality of Life (PDQ-8)", #**(*)
+                                          "Number of Available Ressources to Overcome Geographical Barriers before the COVID-19 Pandemic", #****
+                                          "Ability to Access PD-related Care before the COVID 19 Pandemic", #*
+	                                  "(Number of) Shifted Healthcare Appointments due to Costs in the last 12 Months before the Covid-19 pandemic", #*
+	                                  "Existence of Extended Healthcare Insurance to Cover PD-associated Costs", #*
+                                          "Existence of Financial Problems due to PD-related Treatment Costs in the last 12 Months before the COVID-19 pandemic", #*
+                                           "Financial Stability", #**
+                                           "Confidence in Accessing PD-related Healthcare Remotely", #*
+	                                   "Perceived Cooperation of Healthcare Providers", #**
+                                           "Number of Healthcare Providers Consulted (in the last 12 Months before the COVID-19 Pandemic)", #****
+                                           "Experiencing Stigmatization Using Healthcare Ressources", #*
+	                                   "Received Remote Sessions with PD-related Healthcare Providers during the COVID-19 Pandemic", #*
+                                           "Existing Access to Technology for Consulting PD-related Healthcare Providers during the COVID-19 Pandemic", #*
+                                           "Presence of Communication Challenges before the COVID-19 Pandemic", #*
+                                           "Number of Negative Effects on Patients Personal Life due to Healthcare Accessibility Barriers", #****
+	                                   "Extent/Existance of Negative Effects on Patients Personal Life due to Healthcare Accessibility Barriers", #*
+	                                   "Level of Urbanization", #**
+	                                   "Living Situation", #**
+	                                   "Number of Barriers Preventing from Receiving Needed PD-related Healthcare Ressources before the COVID-19 Pandemic", #**
+                                           "Perceived Difficulty in Accessing PD-related Healthcare before the COVID-19 Pandemic", #*
+	                                   "Level of Geographical Barrier Concerning Access to Healthcare Ressources before the COVID-19 Pandemic", #**
+                                           "Quantile Population", #****
+	                                   "Number of Locally Available PD-related Healthcare Ressources", #**
+                                           "Frequency of Not Receiving Needed PD-related Healthcare before the COVID-19 Pandemic", #**
+                                            "Density of Neurological Practices and Hospital Departments (per sqm)", #****
+                                            "Gender" #*
 				)
 
 # Sort values according to groups and values of OR, irrespective of 95%CI
