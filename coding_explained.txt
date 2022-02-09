@@ -17,7 +17,7 @@
 #  | _______  |                                                                           |                                                                  |
 #  | A3       | PDQ8-score categorized                                                    | 1 = higher QoL (0-59)                                            |
 #  | .        |                                                                           | 2 = moderate QoL (60-79)                                         |
-#  | .        |                                                                           | 2 = lower QoL (> 80)                                             |
+#  | .        |                                                                           | 3 = lower QoL (> 80)                                             |
 #  | _______  |                                                                           |                                                                  |
 #  | A4       | Presence of co-morbidities                                                | 1 = yes                                                          |
 #  | .        |                                                                           | 2 = no                                                           |
