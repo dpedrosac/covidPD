@@ -126,6 +126,8 @@ df_total$cooperation_healthcare_providers_yesorno.B6a <- as.factor(df_total$coop
 df_total <- df_total %>%  mutate(cooperation_healthcare_providers_yesorno.B6a = fct_relevel(cooperation_healthcare_providers_yesorno.B6a, c("5", "4", "3", "2", "1")))
 df_total$cooperation_healthcare_providers_yesorno.B6a <- as.integer(cooperation_healthcare_providers_yesorno.B6a)
 #B10: ease_obtaining_healthcare_preCovid_categorized.B10 not adapted, because it is already categorized. @Marlena: Which values does categorym"1" and "2" include?
+#B12 (Adapting using remode() from car package)
+df_total$extended_health_insurance_due_to_PD.B12 <- recode(df_total$extended_health_insurance_due_to_PD.B12, "9=NA")
 #B17: satisfaction_PDcare_preCovid_categorized.B17 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
 #C2c2: access_to_techniology_categorized.C2c2 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
 #C3_3: confidence_in_accessing_necessary_services_remotely_categorized.C3_3 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
@@ -134,11 +136,7 @@ df_total$cooperation_healthcare_providers_yesorno.B6a <- as.integer(cooperation_
 #D10: extent_of_financial_stability.D10 not adapted, because we probably will use extent_of_financial_stability_categorized.D10, which is already categorized and contains an inverted code.
 
 # ___________________________________________________________________________________________________________________________________________________________________________________________
-# Adapting using remode() from car package could be:
-df_total$GP_expertise.B3_recode <- recode(df_total$GP_expertise.B3, "1=5; 2=4; 3=3; 4=2; 5=1")
-table(Canadian_and_German_data_16092021$B3_ratedGPexpertise)
-1   2   3   4   5  98
-9  57 126 163  42  52
+# Adapting using remode() from car package could be: df_total$GP_expertise.B3_recode <- recode(df_total$GP_expertise.B3, "1=5; 2=4; 3=3; 4=2; 5=1") 
 
 # ==================================================================================================
 ## Create TableOne for specific values
