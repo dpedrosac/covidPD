@@ -115,15 +115,15 @@ df_total <- df_total %>% mutate(quantile_population = ntile(populationGER, 5)) #
 
 # B3
 df_total$GP_expertise.B3 <- as.factor(df_total$GP_expertise.B3)
-df_total <- df_total %>%  mutate(GP_expertise.B3 = fct_relevel(GP_expertise.B3, c("5","4", "3", "2", "1","98 = NA")))
+df_total <- df_total %>%  mutate(GP_expertise.B3 = fct_relevel(GP_expertise.B3, c("5", "4", "3", "2", "1")))
 df_total$GP_expertise.B3 <- as.integer(df_total$GP_expertise.B3)
 #B5
 df_total$neurologists_expertise.B5 <- as.factor(df_total$neurologists_expertise.B5)
-df_total <- df_total %>%  mutate(neurologists_expertise.B5 = fct_relevel(neurologists_expertise.B5, c("5","4", "3", "2", "1","98 = NA", "99 = NA")))
+df_total <- df_total %>%  mutate(neurologists_expertise.B5 = fct_relevel(neurologists_expertise.B5, c("5", "4", "3", "2", "1")))
 df_total$neurologists_expertise.B5 <- as.integer(df_total$neurologists_expertise.B5)
 #B6a
 df_total$cooperation_healthcare_providers_yesorno.B6a <- as.factor(df_total$cooperation_healthcare_providers_yesorno.B6a)
-df_total <- df_total %>%  mutate(cooperation_healthcare_providers_yesorno.B6a = fct_relevel(cooperation_healthcare_providers_yesorno.B6a, c("5","4", "3", "2", "1","97 = NA", "98 = NA", "99=NA")))
+df_total <- df_total %>%  mutate(cooperation_healthcare_providers_yesorno.B6a = fct_relevel(cooperation_healthcare_providers_yesorno.B6a, c("5", "4", "3", "2", "1")))
 df_total$cooperation_healthcare_providers_yesorno.B6a <- as.integer(cooperation_healthcare_providers_yesorno.B6a)
 #B10: ease_obtaining_healthcare_preCovid_categorized.B10 not adapted, because it is already categorized. @Marlena: Which values does categorym"1" and "2" include?
 #B17: satisfaction_PDcare_preCovid_categorized.B17 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
@@ -135,7 +135,7 @@ df_total$cooperation_healthcare_providers_yesorno.B6a <- as.integer(cooperation_
 
 # ___________________________________________________________________________________________________________________________________________________________________________________________
 # Adapting using remode() from car package could be:
-df_total$GP_expertise.B3_recode <- recode(df_total$GP_expertise.B3, "1=5; 2=4; 3=3; 4=2; 5=1, 98=NA")
+df_total$GP_expertise.B3_recode <- recode(df_total$GP_expertise.B3, "1=5; 2=4; 3=3; 4=2; 5=1")
 table(Canadian_and_German_data_16092021$B3_ratedGPexpertise)
 1   2   3   4   5  98
 9  57 126 163  42  52
