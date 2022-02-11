@@ -8,7 +8,7 @@
 #  | .        |                                                                           | 5 = > 15yrs                                                      |
 #  | _______  |                                                                           |                                                                  |
 #  | A2       | Stage of PD (H&Y)                                                         | 1 = Stage 1                                                      |
-#  | .        |                                                                           | 2 = Stage 2                                                      |
+#  | .        | -> releved in code                                                        | 2 = Stage 2                                                      |
 #  | .        |                                                                           | 3 = Stage 3                                                      |
 #  | .        |                                                                           | 4 = Stage 4                                                      |
 #  | .        |                                                                           | 5 = Stage 5                                                      |
@@ -26,14 +26,14 @@
 #  | .        |                                                                           | 2 = no                                                           |
 #  | _______  |                                                                           |                                                                  |
 #  | B3       | perceived expertise of GP                                                 | 1 = excellent                                                    |
-#  | .        |                                                                           | 2 = very good                                                    |
+#  | .        | -> releved in code                                                        | 2 = very good                                                    |
 #  | .        |                                                                           | 3 = good                                                         |
 #  | .        |                                                                           | 4 = fair                                                         |
 #  | .        |                                                                           | 5 = poor                                                         |
 #  | .        |                                                                           | 6 = don´t know                                                   |
 #  | _______  |                                                                           |                                                                  |
 #  | B5       | perceived expertise of neurologist                                        | 1 = excellent                                                    |
-#  | .        |                                                                           | 2 = very good                                                    |
+#  | .        | -> releved in code                                                        | 2 = very good                                                    |
 #  | .        |                                                                           | 3 = good                                                         |
 #  | .        |                                                                           | 4 = fair                                                         |
 #  | .        |                                                                           | 5 = poor                                                         |
@@ -41,20 +41,17 @@
 #  | _______  |                                                                           |                                                                  |
 #  | B6       | Number of healthcare professionals consulted last 12 months pre COVID     | min = 1                                                          |
 #  | .        |                                                                           | max = 6                                                          |
-#  | .        |                                                                           | 7 = none                                                         |
 #  | _______  |                                                                           |                                                                  |
 #  | B6a      | Do health care professionals collaborate                                  | 1 = Yes, to a great extent                                       |
-#  | .        |                                                                           | 2 = Yes, to a moderate extent                                    |
+#  | .        | -> releved in code                                                        | 2 = Yes, to a moderate extent                                    |
 #  | .        |                                                                           | 3 = Yes, to some extent                                          |
 #  | .        |                                                                           | 4 = No, not at all                                               |
 #  | .        |                                                                           | 5 = Don’t know                                                   |
 #  | .        |                                                                           | 6 = Not applicable                                               |
 #  | .        |                                                                           | -999 = Not applicable based on previous question (B6 = 7)        |
 #  | _______  |                                                                           |                                                                  |
-#  | B7       | geographical barriers to healthcare                                       | 1 = Service only available in another city/town                  |
-#  | .        |                                                                           | 2 = Service only available in another region                     |
-#  | .        |                                                                           | 3 = Service only available in another country                    |
-#  | .        |                                                                           | 4 = None                                                         |
+#  | B7       | geographical barriers to healthcare                                       | 1 = yes (1, 2, 3)                                                |
+#  | .        |                                                                           | 2 = no  (4)                                                      |
 #  | _______  |                                                                           |                                                                  |
 #  | B7a      | available resources to overcome geographical barriers pre-COVID           | min =  0                                                         |
 #  | .        |                                                                           | max = 5                                                          |
@@ -77,12 +74,15 @@
 #  | _______  |                                                                           |                                                                  |
 #  | B9b      | Number of barriers that prevented receiving healthcare pre COVID          | min = 1                                                          |
 #  | .        |                                                                           | max = 18                                                         |
-#  | .        |                                                                           | -999= not applicable based on previous question (B9a= 16, B9= 1) |
+#  | .        |                                                                           | 97 = not applicable based on previous question (B9a= 16, B9= 1)  |
 #  | _______  |                                                                           |                                                                  |
 #  | B10      | perceived difficulty to access healthcare pre COVID                       | 1 = Very difficult                                               |
 #  | .        |                                                                           | 2 = Somewhat difficult                                           |
 #  | .        |                                                                           | 3 = Somewhat easy                                                |
 #  | .        |                                                                           | 4 = Very Easy                                                    |
+#  | _______  |                                                                           |                                                                  |
+#  | B10      | categorized B10                                                           | 1 = difficult                                                    |
+#  | .        |                                                                           | 2 = dasy                                                         |
 #  | _______  |                                                                           |                                                                  |
 #  | B11      | shifted appointment due to costs 12 months pre COVID                      | 1 = Never                                                        |
 #  | .        |                                                                           | 2 = Once                                                         |
@@ -125,6 +125,9 @@
 #  | .        |                                                                           | 3 = somehow dissatisfied                                         |
 #  | .        |                                                                           | 4 = very dissatisfied                                            |
 #  | _______  |                                                                           |                                                                  |
+#  | B17      | categorized                                                               | 1 = satisfied                                                    |
+#  | .        |                                                                           | 2 = dissatisfied                                                 |
+#  | _______  |                                                                           |                                                                  |
 #  | C2a      | Number of remote contacts w. healthcare professionals during the pandemic | 1 = 1                                                            |
 #  | .        |                                                                           | 2 = 2                                                            |
 #  | .        |                                                                           | 3 = 3                                                            |
@@ -138,16 +141,28 @@
 #  | .        |                                                                           | 5 = Don´t know                                                   |
 #  | .        |                                                                           | -999 = Not applicable based on previous question (C2 = 2(No))    |
 #  | _______  |                                                                           |                                                                  |
+#  | C2c2     | categorized                                                               | 1 = agree                                                        |
+#  | .        |                                                                           | 2 = disagree                                                     |
+#  | .        |                                                                           | 98 = Don´t know                                                  |
+#  | .        |                                                                           | -999 = Not applicable based on previous question (C2 = 2(No))    |
+#  | _______  |                                                                           |                                                                  |
 #  | C3_3     | Confidence in accessing healthcare remotely                               | 1 = Strongly agree                                               |
 #  | .        |                                                                           | 2 = Somewhat agree                                               | 
 #  | .        |                                                                           | 3 = Somewhat disagree                                            |
 #  | .        |                                                                           | 4 = Strongly disagree                                            | 
 #  | .        |                                                                           | 5 = Don’t know                                                   |
 #  | _______  |                                                                           |                                                                  |
+#  | C3_3     | categorized                                                               | 1 = agree                                                        |
+#  | .        |                                                                           | 2 = disagree                                                     | 
+#  | .        |                                                                           | 98 = Don’t know                                                  |
+#  | _______  |                                                                           |                                                                  |
 #  | C6       | Satisfaction with healthcare during COVID                                 | 1 = very satisfied                                               |
 #  | .        |                                                                           | 2 = somehow satisfied                                            |
 #  | .        |                                                                           | 3 = somehow dissatisfied                                         |
 #  | .        |                                                                           | 4 = very dissatisfied                                            |
+#  | _______  |                                                                           |                                                                  |
+#  | C6       | categorized                                                               | 1 = satisfied                                                    |
+#  | .        |                                                                           | 2 = dissatisfied                                                 |
 #  | _______  |                                                                           |                                                                  |
 #  | D2       | Gender                                                                    | 1 = female                                                       |
 #  | .        |                                                                           | 2 = male                                                         |
@@ -159,25 +174,30 @@
 #  | .        |                                                                           | 5 = Farm or countryside                                          | 
 #  | .        |                                                                           | 6 = Other                                                        |
 #  | _______  |                                                                           |                                                                  |
+#  | D6       | categorized                                                               | 1 = Big city/ Suburbs of a big city (1, 2)                       |
+#  | .        |                                                                           | 2 = Town or small city or country village (3, 4)                 |
+#  | .        |                                                                           | 3 = Farm or countryside  (5)                                     | 
+#  | _______  |                                                                           |                                                                  |
 #  | D7       | living situation                                                          | 1 = Live alone                                                   |
 #  | .        |                                                                           | 2 = Live with another person (e.g. spouse, sibling, friend etc.) |  
 #  | .        |                                                                           | 3 = Live in a retirement home                                    |
 #  | .        |                                                                           | 4 = Live in a nursing home (i.e. skilled care facility)          |
 #  | .        |                                                                           | 5 = Other                                                        |
 #  | _______  |                                                                           |                                                                  |
-#  | D8       | Educational level                                                         | 1-3 = Level 1 = without professional qualification               |
-#  | .        |                                                                           | 4-7 = Level 2 = non-academic qualification                       |
-#  | .        |                                                                           | 8-11 = Level 3 = academic degree or equivalent                   |
+#  | D7       | categorized                                                               | 1 = living alone (1)                                             |
+#  | .        |                                                                           | 2 = living independently with someone (2)                        |
+#  | .        |                                                                           | 3 = living in a supported environment  (3, 4)                    |
+#  | .        |                                                                           | 4 = Other (5)                                                        |
 #  | _______  |                                                                           |                                                                  |
-#  | D9       | yearly net. household income                                              | 1	= > 10.800 €                                                   |
-#  | .        |                                                                           | 2	= 10.800 € - 15.600 €                                          |
-#  | .        |                                                                           | 3	= 15.600 € - 18.000 €                                          |
-#  | .        |                                                                           | 4	= 18.000 € - 24.000 €                                          |
-#  | .        |                                                                           | 5	= 24.000 € - 31.200 €                                          |
-#  | .        |                                                                           | 6	= 31.200 € - 43.000 €                                          |
-#  | .        |                                                                           | 7	= 43.200 € - 60.000 €                                          |
-#  | .        |                                                                           | 8	= 60.000 € - 216.000 €                                         |
-#  | .        |                                                                           | 9	= > 216.000 €                                                  |
+#  | D8       | Educational level                                                         | 1 = 1-2 primary education  or equivalent (ISCED)                 |
+#  | .        | -> releveld in code                                                       | 2 = 3-6 secondary education or equivalent (ISCED)                |
+#  | .        |                                                                           | 3 = 7-11 post secondary education  or equivalent (ISCED)         |
+#  | .        |                                                                           | 4 = 12 highest education level possible (ISCED)                  |
+#  | .        |                                                                           | 13 = other (non-German degree)                                   |
+#  | _______  |                                                                           |                                                                  |
+#  | D9       | yearly net. household income                                              | 1	= > 10.800 € - 24.000 € (below average)                        |
+#  | .        | -> releveld in code                                                       | 2	= > 24.000 € - 60.000 € (average)                              |
+#  | .        |                                                                           | 3	= > 60.000 € - 216.000 € (above average)                       |
 #  | _______  |                                                                           |                                                                  |
 #  | D10      | financial stability                                                       | 1 = All of the time                                              |
 #  | .        |                                                                           | 2 = Most of the time                                             |
@@ -188,6 +208,6 @@
 #  | _______  |                                                                           |                                                                  |
 #  | D10      | D10_categorized                                                           | 1 = less financial stability                                     |
 #  | .        |                                                                           | 2 = more financial stability                                     |
-#  | .        |                                                                           | 6 = Don’t know                                                   |
+#  | .        |                                                                           | 98 = Don’t know                                                  |
 #  | _______  |                                                                           |                                                                  |
 #  +----------+-----------------------------------------------------------------------------+----------------------------------------------------------------+
