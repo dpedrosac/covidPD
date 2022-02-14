@@ -15,9 +15,9 @@
 #  | _______  |                                                                           |                                                                  |
 #  | A3       | PDQ8-score                                                                | 0 - 100                                                          |
 #  | _______  |                                                                           |                                                                  |
-#  | A3       | PDQ8-score categorized                                                    | 1 = higher QoL (0-59)                                            |
-#  | .        |                                                                           | 2 = moderate QoL (60-79)                                         |
-#  | .        |                                                                           | 2 = lower QoL (> 80)                                             |
+#  | A3       | PDQ8-score categorized                                                    | 1 = higher QoL (A3 = 0-59)                                       |
+#  | .        |                                                                           | 2 = moderate QoL (A3 = 60-79)                                    |
+#  | .        |                                                                           | 2 = lower QoL (A3 = > 80)                                        |
 #  | _______  |                                                                           |                                                                  |
 #  | A4       | Presence of co-morbidities                                                | 1 = yes                                                          |
 #  | .        |                                                                           | 2 = no                                                           |
@@ -89,8 +89,8 @@
 #  | .        |                                                                           | 3 = 2 - 3 times                                                  |
 #  | .        |                                                                           | 4 = > 4 times                                                    |
 #  | _______  |                                                                           |                                                                  |
-#  | B11      | categorized version of B11                                                | 1 = Never                                                        |
-#  | .        |                                                                           | 2 = At least once                                                |
+#  | B11      | categorized version of B11                                                | 1 = Never (B11 = 1)                                              |
+#  | .        |                                                                           | 2 = At least once (B11 = 2,3,4)                                  |
 #  | _______  |                                                                           |                                                                  |
 #  | B12      | extended healthcare insurance                                             | 1 = Yes                                                          |
 #  | .        |                                                                           | 2 = No                                                           |
@@ -108,8 +108,8 @@
 #  | B14      | Presence of communication challenges pre COVID                            | 0 = no                                                           |
 #  | .        |                                                                           | 1 = yes                                                          |
 #  | _______  |                                                                           |                                                                  |
-#  | B14a     | sum of communication challenges pre COVID                                 | 1 = no communication challenges                                  |
-#  | .        |                                                                           | 2 = one or more communication challenges                         |
+#  | B14a     | sum of communication challenges pre COVID                                 | 1 = no communication challenges  (B14a = 0 selections)           |
+#  | .        |                                                                           | 2 = one or more communication challenges  (B14a = >1 selections) |
 #  | .        |                                                                           | -999 = Q. was not applicable based on previous answer (B14 = 2)  |
 #  | _______  |                                                                           |                                                                  |
 #  | B15      | Number of reasons for experiencing stigmatization                         | min = 1                                                          |
@@ -206,8 +206,9 @@
 #  | .        |                                                                           | 5 = Never                                                        |
 #  | .        |                                                                           | 6 = Don’t know                                                   |
 #  | _______  |                                                                           |                                                                  |
-#  | D10      | D10_categorized                                                           | 1 = less financial stability                                     |
-#  | .        |                                                                           | 2 = more financial stability                                     |
-#  | .        |                                                                           | 98 = Don’t know                                                  |
+=======
+#  | D10      | D10_categorized                                                           | 1 = less financial stability (D10 = 3,4,5)                       |
+#  | .        |                                                                           | 2 = more financial stability  (D10 = 1,2)                        |
+#  | .        |                                                                           | 6 = Don’t know                                                   |
 #  | _______  |                                                                           |                                                                  |
 #  +----------+-----------------------------------------------------------------------------+----------------------------------------------------------------+

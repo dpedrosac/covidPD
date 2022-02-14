@@ -92,16 +92,21 @@ dfGER 			<- df_total[idx_GER,]
 # Adapt the factors of the dataframe with corresponding levels
 df_total$gender.D2 			<- as.factor(df_total$gender.D2)
 levels(df_total$gender.D2) 	<- c("female", "male", "diverse") # have added third gender, as there was one person answering 3. @ Marlena is that correct?
+								  #M: No, the raw dataset does not cotain the value 3
 
 df_total$educational_level.D8 <- as.factor(df_total$educational_level.D8)
 df_total$educational_level.D8[df_total$educational_level.D8==13] <- NA
 
-df_total <- df_total %>% droplevels() %>%  mutate(educational_level.D8 = fct_relevel(educational_level.D8, c("4", "1", "2", "3"))) # Is that correct now or do we need to drop factor=4?!
-df_total$educational_level.D8[df_total$educational_level.D8==4] <- NA
-df_total$educational_level.D8 <- as.integer(droplevels(df_total$educational_level.D8))
+df_total <- df_total %>% droplevels() %>%  mutate(educational_level.D8 = fct_relevel(educational_level.D8, c("4", "3", "2", "1"))) # Is that correct now or do we need to drop factor=4?!
+																   # if we want the lowest education to be the highest value I think we need the following order 4,3,2,1 (4 in raw data means = highest possible education)
+#df_total$educational_level.D8[df_total$educational_level.D8==4] <- NA
+#df_total$educational_level.D8 <- as.integer(droplevels(df_total$educational_level.D8))
+
+df_total$income.D9[df_total$income.D9==4] <- 3
+df_total <- df_total %>%  mutate(income.D9 = fct_relevel(income.D9, c("3", "2", "1"))) # if we want the lowest income to be the highest value I think we need the following order 3,2,1
 
 df_total$disease_stage_name <- as.factor(df_total$disease_stage.A2)
-#df_total <- df_total %>%  mutate(disease_stage_name = fct_relevel(disease_stage_name, paste("Hoehn & Yahr", as.roman(c(1:5))))) # Is that correct now or do we need to drop factor=4?!
+df_total <- df_total %>%  mutate(disease_stage_name = fct_relevel(disease_stage_name, paste("Hoehn & Yahr", as.roman(c(1:5))))) # Is that correct now or do we need to drop factor=4?! #M: if this function just reverses the order this is correct
 df_total$disease_stage.A2 <- as.integer(df_total$disease_stage.A2)
 
 df_total$disease_duration_cat <- as.factor(df_total$disease_duration.A1)
@@ -125,14 +130,28 @@ df_total$neurologists_expertise.B5 <- as.integer(df_total$neurologists_expertise
 df_total$cooperation_healthcare_providers_yesorno.B6a <- as.factor(df_total$cooperation_healthcare_providers_yesorno.B6a)
 df_total <- df_total %>%  mutate(cooperation_healthcare_providers_yesorno.B6a = fct_relevel(cooperation_healthcare_providers_yesorno.B6a, c("5", "4", "3", "2", "1")))
 df_total$cooperation_healthcare_providers_yesorno.B6a <- as.integer(cooperation_healthcare_providers_yesorno.B6a)
+
 #B10: ease_obtaining_healthcare_preCovid_categorized.B10 not adapted, because it is already categorized. @Marlena: Which values does categorym"1" and "2" include?
+#in the raw dataset there are variables B10 (contains values from 1-4) and categorized.B10 (contains values from 1-2)
+
 #B12 (Adapting using remode() from car package)
 df_total$extended_health_insurance_due_to_PD.B12 <- recode(df_total$extended_health_insurance_due_to_PD.B12, "9=NA")
+
 #B17: satisfaction_PDcare_preCovid_categorized.B17 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
+#in the raw dataset there are variables B17 (contains values from 1-4) and categorized.B17 (contains values from 1-2)
+
 #C2c2: access_to_techniology_categorized.C2c2 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
+#C2c2 not found in the raw dataset?
+
 #C3_3: confidence_in_accessing_necessary_services_remotely_categorized.C3_3 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
+#in the raw dataset there are variables C3_3 (contains values from 1-4) and categorized.C3_3 (contains values from 1-2)
+
 #C6: satisfaction_with_care_duringCovid_categorized.C6 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
+#in the raw dataset there are variables C6 (contains values from 1-4) and categorized.C6 (contains values from 1-2)
+
 #D6: type_of_community.D6 not adapted, because it is already categorized. @Marlena: Which values does category "1", "2" and "3" include?
+#in the raw dataset there are variables D6 (contains values from 1-6) and categorized.D6 (contains values from 1-3) - here we could think of merging category 3 into category 2 because there are very little people in 3
+
 #D10: extent_of_financial_stability.D10 not adapted, because we probably will use extent_of_financial_stability_categorized.D10, which is already categorized and contains an inverted code.
 
 # ___________________________________________________________________________________________________________________________________________________________________________________________
@@ -256,7 +275,7 @@ factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/
 						
 						"disease_duration.A1", "comorbidities_categorial.A4", "vWEI", 	#checked - we could also use "comorbidities_sum.A4"
 						
-						"educational_level.D8", "income.D9",  		#checked - M: I would summarize both variables			
+						"educational_level.D8", "income.D9",  		#checked			
 						
 						"GP_expertise.B3", "neurologists_expertise.B5", #checked
 						
