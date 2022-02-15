@@ -17,49 +17,56 @@
 #  | _______  |                                                                           |                                                                  |
 #  | A3       | PDQ8-score categorized                                                    | 1 = higher QoL (A3 = 0-59)                                       |
 #  | .        |                                                                           | 2 = moderate QoL (A3 = 60-79)                                    |
-#  | .        |                                                                           | 2 = lower QoL (A3 = > 80)                                        |
+#  | .        |                                                                           | 3 = lower QoL (A3 = > 80)                                        |
 #  | _______  |                                                                           |                                                                  |
 #  | A4       | Presence of co-morbidities                                                | 1 = yes                                                          |
-#  | .        |                                                                           | 2 = no                                                           |
+#  | .        |                                                                           | 0 = no                                                           |
 #  | _______  |                                                                           |                                                                  |
 #  | B1       | Presence of a regular caregiver                                           | 1 = yes                                                          |
-#  | .        |                                                                           | 2 = no                                                           |
+#  | .        |                                                                           | 0 = no                                                           |
 #  | _______  |                                                                           |                                                                  |
-#  | B3       | perceived expertise of GP                                                 | 1 = excellent                                                    |
-#  | .        | -> releved in code                                                        | 2 = very good                                                    |
+#  | B3       | perceived expertise of GP                                                 | 1 = poor                                                         |
+#  | .        | -> releved in code                                                        | 2 = fair                                                         |
 #  | .        |                                                                           | 3 = good                                                         |
-#  | .        |                                                                           | 4 = fair                                                         |
-#  | .        |                                                                           | 5 = poor                                                         |
-#  | .        |                                                                           | 6 = don´t know                                                   |
+#  | .        |                                                                           | 4 = very good                                                    |
+#  | .        |                                                                           | 5 = excellent                                                    |
+#  | .        |                                                                           | 98 = don´t know                                                  |
 #  | _______  |                                                                           |                                                                  |
-#  | B5       | perceived expertise of neurologist                                        | 1 = excellent                                                    |
-#  | .        | -> releved in code                                                        | 2 = very good                                                    |
+#  | B5       | perceived expertise of neurologist                                        | 1 = poor                                                         |
+#  | .        | -> releved in code                                                        | 2 = fair                                                         |
 #  | .        |                                                                           | 3 = good                                                         |
-#  | .        |                                                                           | 4 = fair                                                         |
-#  | .        |                                                                           | 5 = poor                                                         |
-#  | .        |                                                                           | 6 = don´t know                                                   |
+#  | .        |                                                                           | 4 = very good                                                    |
+#  | .        |                                                                           | 5 = excellent                                                    |
+#  | .        |                                                                           | 98 = don´t know                                                  |
 #  | _______  |                                                                           |                                                                  |
 #  | B6       | Number of healthcare professionals consulted last 12 months pre COVID     | min = 1                                                          |
 #  | .        |                                                                           | max = 6                                                          |
 #  | _______  |                                                                           |                                                                  |
-#  | B6a      | Do health care professionals collaborate                                  | 1 = Yes, to a great extent                                       |
-#  | .        | -> releved in code                                                        | 2 = Yes, to a moderate extent                                    |
-#  | .        |                                                                           | 3 = Yes, to some extent                                          |
-#  | .        |                                                                           | 4 = No, not at all                                               |
-#  | .        |                                                                           | 5 = Don’t know                                                   |
-#  | .        |                                                                           | 6 = Not applicable                                               |
-#  | .        |                                                                           | -999 = Not applicable based on previous question (B6 = 7)        |
+#  | B6a      | Do health care professionals collaborate                                  | 1 = No, not at all                                               |
+#  | .        | -> releved in code                                                        | 2 = Yes, to some extent                                          |
+#  | .        |                                                                           | 3 = Yes, to a moderate extent                                    |
+#  | .        |                                                                           | 4 = Yes, to a great extent                                       |
+#  | .        |                                                                           | 98 = Don’t know                                                  |
+#  | .        |                                                                           | 97 = Not applicable based on previous question (B6 = no/ 0)      |
 #  | _______  |                                                                           |                                                                  |
-#  | B7       | geographical barriers to healthcare                                       | 1 = yes (1, 2, 3)                                                |
-#  | .        |                                                                           | 2 = no  (4)                                                      |
+#  | B7       | geographical barriers to healthcare                                       | 2 = yes (1, 2, 3)                                                |
+#  | .        |                                                                           | 1 = no  (4)                                                      |
 #  | _______  |                                                                           |                                                                  |
 #  | B7a      | available resources to overcome geographical barriers pre-COVID           | min =  0                                                         |
-#  | .        |                                                                           | max = 5                                                          |
+#  | .        |                                                                           | max = 4                                                          |
 #  | .        |                                                                           | -999 = Q. was not applicable based on previous answer (B7 = 4)   |
+#  | _______  |                                                                           |                                                                  |
+#  | B7a      | overcoming_barriers_sum.B7a                                               | 0 = Not able to access support (B7a = no selection)              |
+#  | .        |                                                                           | 1 = Able to access support (B7a = at least one selection)        |
+#  | .        |                                                                           | 97 = Q. was not applicable based on previous answer (B7 = 1/ no) |
 #  | _______  |                                                                           |                                                                  |
 #  | B8       | sum of locally available healthcare resources                             | min = 1                                                          |
 #  | .        |                                                                           | max = 15                                                         |
-#  | .        |                                                                           | 16 = don´t know                                                  |
+#  | _______  |                                                                           |                                                                  |
+#  | B8       | local_availability_sum_categorized.B8                                     | 0 = no services available (B8 = 0 selections)                    |
+#  | .        |                                                                           | 1 = less services available (B8 = 1-4 selections)                |
+#  | .        |                                                                           | 2 = moderate services available (B8 = 5-9 selections)            |
+#  | .        |                                                                           | 3 = more services available (B8 = 10-15 selections)              |
 #  | _______  |                                                                           |                                                                  |
 #  | B9       | felt that healthcare was needed but not available pre covid               | 1 = Never                                                        |
 #  | .        |                                                                           | 2 = Rarely                                                       |
@@ -72,17 +79,25 @@
 #  | .        |                                                                           | 16 = everything available                                        |
 #  | .        |                                                                           | -999 = Q. was not applicable based on previous answer (B9= 1)    |
 #  | _______  |                                                                           |                                                                  |
+#  | B9a      | inability_to_access_care_sum_categorized_priorCovid.B9a                   | 1 = 0 services unavailable (B9a_16 = selected)                   |
+#  | .        |                                                                           | 2 = 1 service unavailable (B9a_1 to _15 = 1 selected)            |
+#  | .        |                                                                           | 3 = >2 services unavailable (B9a_1 to _15 = 2 or more selected)  |
+#  | _______  |                                                                           |                                                                  |
 #  | B9b      | Number of barriers that prevented receiving healthcare pre COVID          | min = 1                                                          |
 #  | .        |                                                                           | max = 18                                                         |
 #  | .        |                                                                           | 97 = not applicable based on previous question (B9a= 16, B9= 1)  |
+#  | _______  |                                                                           |                                                                  |
+#  | B9b      | barriers_to_care_sum_categorized.B9b                                      | 1 = 0 barrieres experienced (B9b_1 to _19 = not selected)        |
+#  | .        |                                                                           | 2 = 1-2 barrieres experienced (B9b_1 to _19 = 1-2 selections)    |
+#  | .        |                                                                           | 3 = >3 barrieres experienced (B9b_1 to _19 >3 selections)        |
 #  | _______  |                                                                           |                                                                  |
 #  | B10      | perceived difficulty to access healthcare pre COVID                       | 1 = Very difficult                                               |
 #  | .        |                                                                           | 2 = Somewhat difficult                                           |
 #  | .        |                                                                           | 3 = Somewhat easy                                                |
 #  | .        |                                                                           | 4 = Very Easy                                                    |
 #  | _______  |                                                                           |                                                                  |
-#  | B10      | categorized B10                                                           | 1 = difficult                                                    |
-#  | .        |                                                                           | 2 = dasy                                                         |
+#  | B10      | categorized B10                                                           | 1 = difficult (B10 = 1, 2)                                       |
+#  | .        |                                                                           | 2 = easy (B10 = 3, 4)                                            |
 #  | _______  |                                                                           |                                                                  |
 #  | B11      | shifted appointment due to costs 12 months pre COVID                      | 1 = Never                                                        |
 #  | .        |                                                                           | 2 = Once                                                         |
@@ -94,7 +109,7 @@
 #  | _______  |                                                                           |                                                                  |
 #  | B12      | extended healthcare insurance                                             | 1 = Yes                                                          |
 #  | .        |                                                                           | 2 = No                                                           |
-#  | .        |                                                                           | 3 = Don´t know    #need to check the dataset if 3 or 9           |
+#  | .        |                                                                           | 9 = Don´t know                                                   |
 #  | _______  |                                                                           |                                                                  |
 #  | B13      | financial problems from treatment costs last 12 months pre COVID          | 1 = Never                                                        |
 #  | .        |                                                                           | 2 = Rarely                                                       |
@@ -102,13 +117,13 @@
 #  | .        |                                                                           | 4 = Often                                                        |
 #  | .        |                                                                           | 5 = Always                                                       |
 #  | _______  |                                                                           |                                                                  |
-#  | B13      | financial problems from treatment costs last 12 months pre COVID          | 1 = less financial difficulties                                  |
-#  | .        |                                                                           | 2 = more financial difficulties                                  |
+#  | B13      | B13 categorized                                                           | 1 = less financial difficulties (B13 = 1, 2)                     |
+#  | .        |                                                                           | 2 = more financial difficulties (B13 = 3, 4 or 5)                |
 #  | _______  |                                                                           |                                                                  |
 #  | B14      | Presence of communication challenges pre COVID                            | 0 = no                                                           |
 #  | .        |                                                                           | 1 = yes                                                          |
 #  | _______  |                                                                           |                                                                  |
-#  | B14a     | sum of communication challenges pre COVID                                 | 1 = no communication challenges  (B14a = 0 selections)           |
+#  | B14a     | sum of communication challenges pre COVID - categorised                   | 1 = no communication challenges  (B14a = 0 selections)           |
 #  | .        |                                                                           | 2 = one or more communication challenges  (B14a = >1 selections) |
 #  | .        |                                                                           | -999 = Q. was not applicable based on previous answer (B14 = 2)  |
 #  | _______  |                                                                           |                                                                  |
@@ -116,56 +131,63 @@
 #  | .        |                                                                           | max = 14                                                         |
 #  | .        |                                                                           | 15 = no/ 0 reasons                                               |
 #  | _______  |                                                                           |                                                                  |
+#  | 15       | B15 categorised                                                           | 0 = no stigmatization experienced (B15_15 = selected)            |
+#  | .        |                                                                           | 1 = stigmatization experienced (B15_1 to _14 = >1 selected)      |
+#  | _______  |                                                                           |                                                                  |
 #  | B16a     | Number of neg. effects due to healthcare accesibility barriers            | min = 1                                                          |
 #  | .        |                                                                           | max = 11                                                         |
 #  | .        |                                                                           | -999 = Q. not applicable based on previous question (B16= 2(No)) |
 #  | _______  |                                                                           |                                                                  |
-#  | B17      | Satisfaction with healthcare past 12 months pre COVID                     | 1 = very satisfied                                               |
-#  | .        |                                                                           | 2 = somehow satisfied                                            |
-#  | .        |                                                                           | 3 = somehow dissatisfied                                         |
-#  | .        |                                                                           | 4 = very dissatisfied                                            |
+#  | B16a     | B16a categorised                                                          | 1 = no effect on health (B16a_1 to _11 = not selected)           |
+#  | .        |                                                                           | 2 = negative effect on health (B16a_1 to _11 = >1 seletced)      |
 #  | _______  |                                                                           |                                                                  |
-#  | B17      | categorized                                                               | 1 = satisfied                                                    |
-#  | .        |                                                                           | 2 = dissatisfied                                                 |
+#  | B17      | Satisfaction with healthcare past 12 months pre COVID                     | 4 = very satisfied                                               |
+#  | .        |                                                                           | 3 = somehow satisfied                                            |
+#  | .        |                                                                           | 2 = somehow dissatisfied                                         |
+#  | .        |                                                                           | 1 = very dissatisfied                                            |
+#  | _______  |                                                                           |                                                                  |
+#  | B17      | categorized                                                               | 1 = satisfied (B17 = 4, 3)                                       |
+#  | .        |                                                                           | 2 = dissatisfied (B17 = 1, 2)                                    |
 #  | _______  |                                                                           |                                                                  |
 #  | C2a      | Number of remote contacts w. healthcare professionals during the pandemic | 1 = 1                                                            |
 #  | .        |                                                                           | 2 = 2                                                            |
 #  | .        |                                                                           | 3 = 3                                                            |
 #  | .        |                                                                           | 4 = >5                                                           |
-#  | .        |                                                                           | -999 = Not applicable based on previous question (C2 = 2(No))    |
+#  | .        |                                                                           | 97 = Not applicable based on previous question (C2 = 2(No))      |
 #  | ________ |                                                                           |                                                                  |
 #  | C2c2     | Access to technology                                                      | 1 = Strongly agree                                               |
 #  | .        |                                                                           | 2 = Somewhat agree                                               |
 #  | .        |                                                                           | 3 = Somewhat disagree                                            |
 #  | .        |                                                                           | 4 = Strongly disagree                                            |
 #  | .        |                                                                           | 5 = Don´t know                                                   |
-#  | .        |                                                                           | -999 = Not applicable based on previous question (C2 = 2(No))    |
+#  | .        |                                                                           | 97= Not applicable based on previous question (C2 = 2(No))       |
 #  | _______  |                                                                           |                                                                  |
-#  | C2c2     | categorized                                                               | 1 = agree                                                        |
-#  | .        |                                                                           | 2 = disagree                                                     |
+#  | C2c2     | categorized                                                               | 1 = agree  (C2c2 = 3, 4)                                         |
+#  | .        |                                                                           | 2 = disagree (C2c2 = 1, 2)                                       | 
 #  | .        |                                                                           | 98 = Don´t know                                                  |
-#  | .        |                                                                           | -999 = Not applicable based on previous question (C2 = 2(No))    |
+#  | .        |                                                                           | 97= Not applicable based on previous question (C2 = 2(No))       |
 #  | _______  |                                                                           |                                                                  |
-#  | C3_3     | Confidence in accessing healthcare remotely                               | 1 = Strongly agree                                               |
-#  | .        |                                                                           | 2 = Somewhat agree                                               | 
-#  | .        |                                                                           | 3 = Somewhat disagree                                            |
-#  | .        |                                                                           | 4 = Strongly disagree                                            | 
-#  | .        |                                                                           | 5 = Don’t know                                                   |
+#  | C3_3     | Confidence in accessing healthcare remotely                               | 4 = Strongly agree                                               |
+#  | .        |                                                                           | 3 = Somewhat agree                                               | 
+#  | .        |                                                                           | 2 = Somewhat disagree                                            |
+#  | .        |                                                                           | 1 = Strongly disagree                                            | 
+#  | .        |                                                                           | 98= Don’t know                                                   |
 #  | _______  |                                                                           |                                                                  |
-#  | C3_3     | categorized                                                               | 1 = agree                                                        |
-#  | .        |                                                                           | 2 = disagree                                                     | 
+#  | C3_3     | categorized                                                               | 1 = agree (C3_3  = 3, 2)                                         |
+#  | .        |                                                                           | 2 = disagree (C3_3  = 1, 2)                                      | 
 #  | .        |                                                                           | 98 = Don’t know                                                  |
 #  | _______  |                                                                           |                                                                  |
-#  | C6       | Satisfaction with healthcare during COVID                                 | 1 = very satisfied                                               |
-#  | .        |                                                                           | 2 = somehow satisfied                                            |
-#  | .        |                                                                           | 3 = somehow dissatisfied                                         |
-#  | .        |                                                                           | 4 = very dissatisfied                                            |
+#  | C6       | Satisfaction with healthcare during COVID                                 | 1 = very dissatisfied                                            |
+#  | .        |                                                                           | 2 = somehow dissatisfied                                         |
+#  | .        |                                                                           | 3 = somehow satisfied                                            |
+#  | .        |                                                                           | 4 = very satisfied                                               |
 #  | _______  |                                                                           |                                                                  |
-#  | C6       | categorized                                                               | 1 = satisfied                                                    |
-#  | .        |                                                                           | 2 = dissatisfied                                                 |
+#  | C6       | categorized                                                               | 1 = dissatisfied (C6 = 1, 2)                                     |
+#  | .        |                                                                           | 2 = satisfied  (C6 = 3, 4)                                       |
 #  | _______  |                                                                           |                                                                  |
 #  | D2       | Gender                                                                    | 1 = female                                                       |
 #  | .        |                                                                           | 2 = male                                                         |
+#  | .        |                                                                           | 3 = other                                                        |
 #  | _______  |                                                                           |                                                                  |
 #  | D6       | type of community                                                         | 1 = Big city (i.e. more than 300,000 people)                     |
 #  | .        |                                                                           | 2 = Suburbs of a big city                                        |
@@ -187,7 +209,7 @@
 #  | D7       | categorized                                                               | 1 = living alone (1)                                             |
 #  | .        |                                                                           | 2 = living independently with someone (2)                        |
 #  | .        |                                                                           | 3 = living in a supported environment  (3, 4)                    |
-#  | .        |                                                                           | 4 = Other (5)                                                        |
+#  | .        |                                                                           | 4 = Other (5)                                                    |
 #  | _______  |                                                                           |                                                                  |
 #  | D8       | Educational level                                                         | 1 = 1-2 primary education  or equivalent (ISCED)                 |
 #  | .        | -> releveld in code                                                       | 2 = 3-6 secondary education or equivalent (ISCED)                |
@@ -204,11 +226,10 @@
 #  | .        |                                                                           | 3 = Some of the time                                             |
 #  | .        |                                                                           | 4 = Rarely                                                       |
 #  | .        |                                                                           | 5 = Never                                                        |
-#  | .        |                                                                           | 6 = Don’t know                                                   |
+#  | .        |                                                                           | 98= Don’t know                                                   |
 #  | _______  |                                                                           |                                                                  |
-=======
 #  | D10      | D10_categorized                                                           | 1 = less financial stability (D10 = 3,4,5)                       |
 #  | .        |                                                                           | 2 = more financial stability  (D10 = 1,2)                        |
-#  | .        |                                                                           | 6 = Don’t know                                                   |
+#  | .        |                                                                           | 98= Don’t know                                                   |
 #  | _______  |                                                                           |                                                                  |
 #  +----------+-----------------------------------------------------------------------------+----------------------------------------------------------------+
