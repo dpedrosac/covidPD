@@ -4,7 +4,7 @@
 # Version 1.6 # 2022-02-19, recoded all values, refined analyses
 
 ## First specify the packages of interest
-packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", 
+packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", "lemon", 
 				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel" )
 
 # ==================================================================================================
@@ -238,6 +238,10 @@ df_lines 	<- data.frame(y_start=y_start, y_end=y_end, x_start=rep(1+bar_width/1.
 summary_care$timing <- as.factor(summary_care$timing)
 levels(summary_care$timing) <- c("before", "during") # explicit definition of order necessary as otherwise data is sorted alphabetically (cf. https://stackoverflow.com/questions/5208679/order-bars-in-ggplot2-bar-graph)
 
+# ==================================================================================================
+# Figure 1: Satisfaction with PD-care before and  during COVID-19 pandemic
+# items: a. satisfaction_PDcare_priorCovid.B17 vs. b. satisfaction_with_care_duringCovid.C6
+
 p_satisfaction_with_care <- ggplot(summary_care, aes(x = timing, y = percentage)) +
 	geom_col(data = summary_care,
            aes(x = timing, y = percentage, fill = factor(ratings)), 
@@ -248,11 +252,17 @@ p_satisfaction_with_care <- ggplot(summary_care, aes(x = timing, y = percentage)
 	scale_x_discrete(labels= c('Before \nCOVID-19 pandemic', 'During \nCOVID-19 pandemic')) +
 	scale_fill_brewer(palette = 1, name="Satisfaction\nwith PD-related care",
 					  labels=c("very satisfied", "rather satisfied","rather unsatisfied","very unsatisfied")) + 
-	labs(x="",y="Percentage of questionnaires") + 
+	labs(x = "",y = "Percentage of questionnaires", caption=sprintf("Data from n = %s participants", 399)) + 
 	geom_segment(data = df_lines, colour="black", size=.25,
 			aes(x = x_start, xend = x_end, y = y_start, yend = y_end)) + 
-	theme_minimal()
+	theme_minimal() +
+	theme(text = element_text(size = 12),
+		  plot.caption = element_text(hjust = 0, face="italic"), 
+		  legend.title = element_text(hjust = .5, color = "black", size = 12, face = "bold"),
+		  axis.text = element_text(size = 12))
 p_satisfaction_with_care
+# ==================================================================================================
+
 
 # ==================================================================================================
 # Start with Odds rations 
@@ -347,10 +357,13 @@ df_OR1_complete <- df_OR1_complete %>%
 	  filter(!is.na(dv))
 
 # ==================================================================================================
-# Get Odds rations for every factor if interest	  
+# Get Odds ratios for every factor of interest	  
+df_OR1_complete$educational_level.D8 <- as.integer(df_OR1_complete$educational_level.D8)
+df_OR1_complete$income.D9 <- as.integer(df_OR1_complete$income.D9)
+
 results1 = c()
 for (fac in factorsOR1) { # for loop over factors of interest
-  mod <- as.formula(sprintf("I(dv=='yes') ~ %s", as.integer(fac))) # formula for (unadjusted) GLM
+  mod <- as.formula(sprintf("I(dv=='yes') ~ %s", fac)) # formula for (unadjusted) GLM
   fit_temp = glm(mod, data=df_OR1_complete, family="binomial") # estimate model
   results1 = rbind(	results1, c(exp(coef(fit_temp)[2]), 	# OR
 					exp(confint.default(fit_temp)[2]),  	# lower CI
@@ -385,46 +398,50 @@ dot_color 		<- results_OR1$dot_color
 results_OR1$factors_group <- as.factor(results_OR1$factors_group) # convert groups to factors 
 levels(results_OR1$factors_group) <- barriers
 
-predictors <- c(
+predictors <- c( # TODO: We must try to keep the description as short as possible; I would propose to have the questions of the questionnare as text file appended
 					"Disease Stage (Hoehn and Yahr)", #**
 					"Presence of Regular Caregiver", #*
 	                "Disease duration [in years]", #**
 					"Sum of Comorbidities", #*
-					"Elixhauser Comorbidity Index", #**(*)
+					"Elixhauser Comorbidity Index", #**(*) # TODO seems to be named difefrently throughout the script, please double check
 					"Educational Level (according to ISCED)", #**
-					"Annual income", #****
-					"Perceived PD-Expertise General Practitioner", #**
-					"Perceived PD-Expertise Neurologist", #**
+					"Annual income [in €]", #****
+					"Perceived PD-Expertise of General Practitioner", #**
+					"Perceived PD-Expertise of Neurologist", #**
 						"Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate?
 	                "PDQ-8 score", #**(*)
-					"Available Ressources to Overcome Geographical Barriers before Pandemic", #****
+					"Available Ressources to Overcome Geographical Barriers before Pandemic", #**** # TODO: sum?
 					"Ability to Access PD-related Care before Pandemic", #*
 					"Shifted Healthcare Appointments due to financial resaons 12 Months before pandemic", #* 
 	                "Extended Healthcare Insurance covering PD-related expenses", #*
 					"Financial Problems due to PD-related Expenses 12 Months before pandemic", #*
                     "Financial Stability", #**
-                    "Confidence Accessing PD-related Healthcare Remotely", #*
+                    "Confidence Accessing PD-related Healthcare Remotely", #* TODO: What does this mean?!
 					"Perceived Cooperation between Healthcare Providers", #**
 					"Healthcare Providers Consulted 12 Months before pandemic", #****
                     "Experienced Stigmatization Using Healthcare Ressources", #*
 						"Possibility of Remote Sessions with PD-related Healthcare Providers during pandemic", #* #TODO: What is the difference to next line?!
-					"Access to Technology for Consulting PD-related Healthcare Providers during pandemic", #*
+					"Access to Technology for Consulting Healthcare Providers during pandemic", #*
 					"Communication Challenges before pandemic", #*
                     "Negative Effects on Patients due to Healthcare Accessibility Barriers", #****
-					"Existance of Negative Effects on Patients due to Healthcare Accessibility Barriers", #*
-	                "Level of Urbanization", #**
+					"Existence of Negative Effects on Patients due to Healthcare Accessibility Barriers", #* # TODO: What is this?
+	                "Level of Urbanization", #** #TODO: is this a number?
 						"Living Situation", #* #TODO: Not very precise. Situation about what?
-	                "Number of Barriers Preventing from Receiving Needed PD-related Healthcare Ressources before the COVID-19 Pandemic", #**
-					"Perceived Difficulty Accessing PD-related Healthcare before pandemic", #*	
+	                "Sum of Barriers Preventing Healthcare Access before pandemic", #**
+					"Difficulty Accessing PD-related Healthcare Services before pandemic", #*	
 					"Geographical Barriers Concerning Access to Healthcare Ressources before pandemic", #**
 					"Population according to quantiles of German population [in sqkm]", #****
 	                "Locally Available PD-related Healthcare Ressources", #**
 						"Frequency of Not Receiving Needed PD-related Healthcare before the COVID-19 Pandemic", #** #TODO: not quite clear to me what this means
                     "Neurologists nearby (per sqkm)", #****
-                    "Male Gender" #*
+                    "Gender *" #*
 				)
 
-results_OR1$factors <- predictors
+# ==================================================================================================
+# Figure 2: Odds rations for the question of unmet PD-related needs during pandemic
+# item: needed_healthcare_but_did_not_receive_it_duringCovid.C4
+results_OR1$factors <- predictors # change names of predictors according to list above
+results_OR1$significance <- factor(results_OR1$significance, levels = c('ns', 'p < .05', 'p < .001')) # necessary to make legend look properly
 
 # Sort values according to groups and values of OR, irrespective of 95%CI
 results_OR1 %>%
@@ -436,7 +453,7 @@ results_OR1 %>%
   geom_point(aes(x = boxOdds, y = factors, color = factors_group), size = 1.5, show.legend=TRUE) +
   guides(colour = guide_legend(reverse=T)) +
   scale_colour_manual(values=my_blue2) +
-  theme_bw() +
+  theme_blank() +
   theme(panel.grid.minor = element_blank(), legend.position = c(0.9, 0.2), 
 		legend.title=element_blank()) +
   scale_x_log10(breaks = c(0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10, 20, 40), limits=c(.08, 40)) + 
@@ -451,21 +468,43 @@ results_OR1 %>%
   ggplot(aes(x = boxOdds, y = factors)) +
   geom_vline(aes(xintercept = 1), size = .75, linetype = "dashed", color="grey") +
   geom_errorbarh(aes(xmax = boxCIHigh, xmin = boxCILow), size = .5, height = .2, color = "gray50") +
-  geom_point(aes(x = boxOdds, y = factors, color = significance), size = 1.5, show.legend=TRUE) +
+  geom_point(aes(x = boxOdds, y = factors, color = significance), size = 2, show.legend=TRUE) +
   guides(colour = guide_legend(reverse=TRUE)) +
-  scale_colour_manual(values=c("#C6DBEF", "#08306B", "#4292C6")) +
-  theme_bw() +
-  theme(panel.grid.minor = element_blank(), legend.position = c(0.9, 0.2), 
-		legend.title=element_blank()) +
-  scale_x_log10(breaks = c(0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10, 20, 40), limits=c(.08, 40)) + 
+  scale_colour_manual(values=c("#C6DBEF", "#4292C6", "#08306B")) +
+  theme_minimal() +
+  theme(text = element_text(size = 12),
+		panel.grid.minor = element_blank(), 
+		legend.position = c(0.95, 0.1), legend.title=element_blank(), legend.box.background = element_rect(colour = "black"),
+		legend.background = element_rect(colour = "black", fill="white"),
+		plot.title = element_text(vjust = 4, hjust = .5, color = "black", size = 12, face = "bold"),
+		axis.line.x = element_line(size = .25, colour = "black"), 
+		axis.ticks.x = element_line(size = .25, colour = "black"), 
+		axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+		axis.text = element_text(size = 12),
+		plot.caption = element_text(hjust = 0, face="italic")) +
+  coord_capped_cart(bottom='right') +
+  scale_x_log10(breaks = c(0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10, 20, 40), limits=c(.1, 40), expand=c(0.2, 0)) + 
   geom_hline(yintercept=hlines[1:length(hlines)-1], linetype="dotted", size = .01) +
   ylab("") +
-  xlab("Odds ratio (log scale)")
+  xlab("Odds ratio (log scale)") + 
+  # ggtitle("iPS-patients' odds of unmet need for healthcare services during COVID-19 pandemic") + 
+  labs(title = "iPS-patients' odds of unmet need for healthcare services during COVID-19 pandemic",
+  caption = "*Gender was coded so that negative odds means that being female indicates a higher risk of unmet needs")
+#TODO: Please double check the results, as most of them look plausible while at least one is not quite clear: Confidence Accessing PD-related Healthcare Remotely increase significantly the Odds?!?
 
+# ==================================================================================================
+# Supplementary table 1: odds and Confidence intervals
+suppl_table1 			<- results_OR1 %>% select(., -any_of(c("yAxis", "significance", "dot_color", "pvalue"))) %>% dplyr::mutate_if(is.numeric, round, 2)
+pvalues 				<- results_OR1 %>% select("pvalue") %>% round(3)
+pvalues[pvalues<.001] 	<- 'p < .001'
+suppl_table1 			<- cbind(suppl_table1, pvalues)
+colnames(suppl_table1) 	<- c("Factors", "Domain", "Odds Ratio", "CI.05", "CI.95", "p-value") 
+write.csv(suppl_table1, file.path(wdir, "results", "supplementary_table1.csv"), row.names = F) # csv-file may be easily imported into text processing software
 
 #display Odds ratio table
 results_OR1
-
+# ==================================================================================================
+# ==================================================================================================
 ## DEPRECATED VERSIONS OF VISUALISATION
 # Display results from OR estimation
 # a) Sort values according to OR, irrespective of 95%CI
@@ -493,20 +532,14 @@ results_OR1
 #  coord_trans(x = "log10") +
 #  ylab("") +
 #  xlab("Odds ratio (log scale)") #+
+# ==================================================================================================
+# ==================================================================================================
 
 
 # ==================================================================================================
-## UNFINISHED ATTEMPT TO REDUCE DATA DIMENSIONALITY!
-# ==================================================================================================
-# Attempt to create an entire glm with all predictors 
-# use again needed_healthcare_but_did_not_receive_it_duringCovid.C4, which ranges from 1 to 5 (and NA) as dv
-
-# Try again with http://rstudio-pubs-static.s3.amazonaws.com/448536_221fe7b85ca1471d8f4a53c05fcbe95b.html
-
-
-
-# ==================================================================================================
-# The first step is data imputation using multivariate routines (MICE package)
+# Variable factor selection using GLM with the dependent variable being:
+# needed_healthcare_but_did_not_receive_it_duringCovid.C4, which ranges from 1 to 5 (and NA)
+# Method inspired from http://rstudio-pubs-static.s3.amazonaws.com/448536_221fe7b85ca1471d8f4a53c05fcbe95b.html among other sources
 
 # General functions
 pMiss <- function(x){sum(is.na(x))/length(x)*100} # function to find missing (NA) values
@@ -521,6 +554,8 @@ apply(data_full_glm,1,pMiss) # percentage of missing values per row
 
 aggr_plot 			<- aggr(data_full_glm[-1], col=c('navyblue','red'), numbers=TRUE, sortVars=TRUE, labels=names(data), cex.axis=.7, gap=3, ylab=c("Histogram of missing data","Pattern"))
 inlist 				<- c("disease_stage.A2", "gender.D2", "vWEI", "dv") # names of the variables that should be included as covariates in every imputation model
+
+# 1. Data imputation using multivariate routines (MICE package)
 pred 				<- quickpred(data_full_glm, minpuc = 0.5, include = inlist, mincor=.1) # predictor matrix
 generate_imputation <- mice(data=data_full_glm,
 							 predictorMatrix = pred, #predictormatrix,
@@ -528,12 +563,12 @@ generate_imputation <- mice(data=data_full_glm,
 							 maxit=5,            
 							 diagnostics=TRUE)
 							 #MaxNWts=3000)				 
-# imp_data_full_glm <- data.frame(complete(imp_gen)) #not really needed
-imputed_data_full = data.frame(complete(generate_imputation)) %>% drop_na()
 
+imputed_data_full = data.frame(complete(generate_imputation)) %>% drop_na()
+imputed_data_full$visit_healthcare_providers_sum.B6[table(imputed_data_full$visit_healthcare_providers_sum.B6==5] <-4
+#imputed_data_full <- imputed_data_full %>% mutate_if(is.factor, as.integer) # converts factors into integers
 # ==================================================================================================
 # Regression models w/ stepwise reduction using glmStepAIC {caret package}-algorithm with CV
-
 # Separate data into train and test dataset
 index 		<- createDataPartition(imputed_data_full$dv, p = 0.8, list = FALSE) # split data with balanced values for dv
 train_data 	<- imputed_data_full[index,]
@@ -545,7 +580,6 @@ objControl <- trainControl(method = "cv", number = 10, #returnResamp = 'final',
                            summaryFunction = twoClassSummary,
                            classProbs = TRUE,
                            repeats = 5)
-#objControl <- trainControl(method = "cv", number = 3, classProbs = TRUE,)
 
 train_control <- trainControl(
   method = "cv", number = 10,
