@@ -142,7 +142,7 @@
 #  | .        |                                                                           | 2 = negative effect on health (B16a_1 to _11 = >1 seletced)      |
 #  | _______  |                                                                           |                                                                  |
 #  | B17      | Satisfaction with healthcare past 12 months pre COVID                     | 4 = very satisfied                                               |
-#  | .        |                                                                           | 3 = somehow satisfied                                            |
+#  | .        | -> releved in code  									| 3 = somehow satisfied                                            |
 #  | .        |                                                                           | 2 = somehow dissatisfied                                         |
 #  | .        |                                                                           | 1 = very dissatisfied                                            |
 #  | _______  |                                                                           |                                                                  |
@@ -178,7 +178,7 @@
 #  | .        |                                                                           | 98 = Don’t know                                                  |
 #  | _______  |                                                                           |                                                                  |
 #  | C6       | Satisfaction with healthcare during COVID                                 | 1 = very dissatisfied                                            |
-#  | .        |                                                                           | 2 = somehow dissatisfied                                         |
+#  | .        | -> releved in code  									| 2 = somehow dissatisfied                                         |
 #  | .        |                                                                           | 3 = somehow satisfied                                            |
 #  | .        |                                                                           | 4 = very satisfied                                               |
 #  | _______  |                                                                           |                                                                  |

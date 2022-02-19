@@ -1,7 +1,7 @@
 ﻿# This is code to run analyses for the covidPD project;
 # Code developed by Marlena van Munster, Marcel Printz and David Pedrosa
 
-# Version 1.5 # 2022-01-29, recoded values and updated code
+# Version 1.6 # 2022-02-19, recoded all values, refined analyses
 
 ## First specify the packages of interest
 packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", 
@@ -43,9 +43,9 @@ df_total[df_total<0]					<- NA 	# convert values that are not meaningful into NA
 
 # ==================================================================================================
 # Comorbidity index
-filename_comorbidities  <- file.path(wdir, "data", "vanWalravenElixhauserIndex.csv")
-df_comorbidities 			  <- read.csv2(filename_comorbidities)
-df_comorbidities 			  <- data.frame(vWEI=df_comorbidities$value)
+filename_comorbidities  		<- file.path(wdir, "data", "vanWalravenElixhauserIndex.csv")
+df_comorbidities 			  	<- read.csv2(filename_comorbidities)
+df_comorbidities 			  	<- data.frame(vWEI=df_comorbidities$value)
 
 # ==================================================================================================
 # Neurologists per 100.000 inhabitants and average population (GER) (for details cf. preprocess_geospatial_data.r)
@@ -87,167 +87,137 @@ df_total 		<- data.frame(cbind(df_total, population_data, df_comorbidities)) # a
 dfGER 			<- df_total[idx_GER,]
 
 # ==================================================================================================
-## Tidy up factors before analyses
-
-# Adapt the factors of the dataframe with corresponding levels
-
-#PART A
-
+## Tidy up factors before analyses (adapt corresponding levels)
+# PART ...A
 df_total$disease_duration_cat <- as.factor(df_total$disease_duration.A1)
 levels(df_total$disease_duration_cat) <- c(">2 years", "2-5 years", "5-10 years", "10-15 years", ">15 years") 
 
-df_total$disease_stage_name <- as.factor(df_total$disease_stage.A2)
-df_total <- df_total %>%  mutate(disease_stage_name = fct_relevel(paste("Hoehn & Yahr", as.roman(c(1:5))))) # M: Is that correct?
+#df_total$disease_stage_name <- as.factor(df_total$disease_stage.A2)
+df_total <- df_total %>% mutate(disease_stage_name = factor(disease_stage.A2, labels = paste("Hoehn & Yahr", as.roman(c(1:5)))))
 df_total$disease_stage.A2 <- as.integer(df_total$disease_stage.A2)
 
-#PART B
-
-df_total$regular_caregiver_categorial.B1a <- as.factor(df_total$regular_caregiver_categorial.B1a)
-df_total <- df_total %>%  mutate(regular_caregiver_categorial.B1a = fct_relevel(regular_caregiver_categorial.B1a, c("1", "2")))
+# PART ...B
+df_total <- df_total %>% mutate(regular_caregiver_categorial.B1a = factor(regular_caregiver_categorial.B1a, labels = c("1", "2")))
 df_total$regular_caregiver_categorial.B1a <- as.integer(df_total$regular_caregiver_categorial.B1a)
 
-df_total$GP_expertise.B3 <- as.factor(df_total$GP_expertise.B3)
-df_total <- df_total %>%  mutate(GP_expertise.B3 = fct_relevel(GP_expertise.B3, c("5", "4", "3", "2", "1")))
+df_total <- df_total %>% mutate(GP_expertise.B3 = fct_relevel(factor(GP_expertise.B3), c("5", "4", "3", "2", "1")))
 df_total$GP_expertise.B3 <- as.integer(df_total$GP_expertise.B3)
 
-df_total$neurologists_expertise.B5 <- as.factor(df_total$neurologists_expertise.B5)
-df_total <- df_total %>%  mutate(neurologists_expertise.B5 = fct_relevel(neurologists_expertise.B5, c("5", "4", "3", "2", "1")))
+df_total <- df_total %>% mutate(neurologists_expertise.B5 = fct_relevel(factor(neurologists_expertise.B5), c("5", "4", "3", "2", "1")))
 df_total$neurologists_expertise.B5 <- as.integer(df_total$neurologists_expertise.B5)
 
-df_total$cooperation_healthcare_providers_yesorno.B6a <- as.factor(df_total$cooperation_healthcare_providers_yesorno.B6a)
-df_total <- df_total %>%  mutate(cooperation_healthcare_providers_yesorno.B6a = fct_relevel(cooperation_healthcare_providers_yesorno.B6a, c("4", "3", "2", "1")))
-df_total$cooperation_healthcare_providers_yesorno.B6a <- as.integer(cooperation_healthcare_providers_yesorno.B6a)
+df_total <- df_total %>% mutate(cooperation_healthcare_providers_yesorno.B6a = fct_relevel(factor(cooperation_healthcare_providers_yesorno.B6a), c("4", "3", "2", "1")))
+df_total$cooperation_healthcare_providers_yesorno.B6a <- as.integer(df_total$cooperation_healthcare_providers_yesorno.B6a)
 
-#df_total$overcoming_barriers_sum.B7a <- df_total$overcoming_barriers_transportz.B7a + 
-										#df_total$overcoming_barriers_financialsupport.B7a + 
-										#df_total$overcoming_barriers_telemedicine.B7a # TODO: Apparently there has been a mistake in the way this was summed up, so repeated it manually!
+df_total <- df_total %>% mutate(overcoming_barriers_sum.B7a = factor(overcoming_barriers_sum.B7a, labels = c("2", "1")))
+df_total$overcoming_barriers_sum.B7a <- as.integer(df_total$overcoming_barriers_sum.B7a)
 
-df_total$overcoming_barriers_sum.B7a <- as.factor(df_total$overcoming_barriers_sum.B7a)
-df_total <- df_total %>%  mutate(overcoming_barriers_sum.B7a = fct_relevel(overcoming_barriers_sum.B7a, c("2", "1")))
-df_total$overcoming_barriers_sum.B7a <- as.integer(overcoming_barriers_sum.B7a)
+df_total <- df_total %>%  mutate(local_availability_sum_categorized.B8 = fct_relevel(factor(local_availability_sum_categorized.B8), c("4", "3", "2", "1")))
+df_total$local_availability_sum_categorized.B8 <- as.integer(df_total$local_availability_sum_categorized.B8)
 
-df_total$local_availability_sum_categorized.B8 <- as.factor(df_total$local_availability_sum_categorized.B8)
-df_total <- df_total %>%  mutate(local_availability_sum_categorized.B8 = fct_relevel(local_availability_sum_categorized.B8, c("4", "3", "2", "1")))
-df_total$local_availability_sum_categorized.B8 <- as.integer(local_availability_sum_categorized.B8)
+df_total <- df_total %>%  mutate(ease_obtaining_healthcare_priorCovid.B10 = fct_relevel(factor(ease_obtaining_healthcare_priorCovid.B10), c("4", "3", "2", "1")))
+df_total$ease_obtaining_healthcare_priorCovid.B10 <- as.integer(df_total$ease_obtaining_healthcare_priorCovid.B10)
 
-df_total$ease_obtaining_healthcare_preCovid.B10 <- as.factor(df_total$ease_obtaining_healthcare_preCovid.B10)
-df_total <- df_total %>%  mutate(ease_obtaining_healthcare_preCovid.B10 = fct_relevel(ease_obtaining_healthcare_preCovid.B10, c("4", "3", "2", "1")))
-df_total$ease_obtaining_healthcare_preCovid.B10 <- as.integer(ease_obtaining_healthcare_preCovid.B10)
+df_total <- df_total %>%  mutate(ease_obtaining_healthcare_priorCovid_categorized.B10 = fct_relevel(factor(ease_obtaining_healthcare_priorCovid_categorized.B10), c("2", "1")))
+df_total$ease_obtaining_healthcare_priorCovid_categorized.B10 <- as.integer(df_total$ease_obtaining_healthcare_priorCovid_categorized.B10)
 
-df_total$ease_obtaining_healthcare_preCovid_categorized.B10 <- as.factor(df_total$ease_obtaining_healthcare_preCovid_categorized.B10)
-df_total <- df_total %>%  mutate(ease_obtaining_healthcare_preCovid_categorized.B10 = fct_relevel(ease_obtaining_healthcare_preCovid_categorized.B10, c("2", "1")))
-df_total$ease_obtaining_healthcare_preCovid_categorized.B10 <- as.integer(ease_obtaining_healthcare_preCovid_categorized.B10)
+df_total$extended_health_insurance_due_to_PD.B12[df_total$extended_health_insurance_due_to_PD.B12==9] <- NA
 
-#B12 (Adapting using remode() from car package)
-df_total$extended_health_insurance_due_to_PD.B12 <- recode(df_total$extended_health_insurance_due_to_PD.B12, "9=NA")
+df_total <- df_total %>%  mutate(satisfaction_PDcare_priorCovid.B17 = fct_relevel(factor(satisfaction_PDcare_priorCovid.B17), c("4", "3", "2", "1")))
+df_total$satisfaction_PDcare_priorCovid.B17 <- as.integer(df_total$satisfaction_PDcare_priorCovid.B17)
 
-df_total$satisfaction_PDcare_preCovid.B17 <- as.factor(df_total$satisfaction_PDcare_preCovid.B17)
-df_total <- df_total %>%  mutate(satisfaction_PDcare_preCovid.B17 = fct_relevel(satisfaction_PDcare_preCovid.B17, c("4", "3", "2", "1")))
-df_total$satisfaction_PDcare_preCovid.B17 <- as.integer(satisfaction_PDcare_preCovid.B17)
+# PART ...C
+df_total <- df_total %>%  mutate(access_to_technology.C2c2 = fct_relevel(factor(access_to_technology.C2c2), c("4", "3", "2", "1")))
+df_total$access_to_technology.C2c2 <- as.integer(df_total$access_to_technology.C2c2)
 
-#PART C
+df_total <- df_total %>%  mutate(access_to_technology_categorized.C2c2 = fct_relevel(factor(access_to_technology_categorized.C2c2), c("2", "1")))
+df_total$access_to_technology_categorized.C2c2 <- as.integer(df_total$access_to_technology_categorized.C2c2)
 
-df_total$access_to_techniology.C2c2 <- as.factor(df_total$access_to_techniology.C2c2)
-df_total <- df_total %>%  mutate(access_to_techniology.C2c2 = fct_relevel(access_to_techniology.C2c2, c("4", "3", "2", "1")))
-df_total$access_to_techniology.C2c2 <- as.integer(access_to_techniology.C2c2)
+df_total <- df_total %>%  mutate(confidence_in_accessing_necessary_services_remotely.C3_3 = fct_relevel(factor(confidence_in_accessing_necessary_services_remotely.C3_3), c("4", "3", "2", "1")))
+df_total$confidence_in_accessing_necessary_services_remotely.C3_3 <- as.integer(df_total$confidence_in_accessing_necessary_services_remotely.C3_3)
 
-df_total$access_to_techniology_categorized.C2c2 <- as.factor(df_total$access_to_techniology_categorized.C2c2)
-df_total <- df_total %>%  mutate(access_to_techniology_categorized.C2c2 = fct_relevel(access_to_techniology_categorized.C2c2, c("2", "1")))
-df_total$access_to_techniology_categorized.C2c2 <- as.integer(access_to_techniology_categorized.C2c2)
+df_total <- df_total %>%  mutate(satisfaction_with_care_duringCovid.C6 = fct_relevel(factor(satisfaction_with_care_duringCovid.C6), c("4", "3", "2", "1")))
+df_total$satisfaction_with_care_duringCovid.C6 <- as.integer(df_total$satisfaction_with_care_duringCovid.C6)
 
-df_total$confidence_in_accessing_necessary_services_remotely.C3_3 <- as.factor(df_total$confidence_in_accessing_necessary_services_remotely.C3_3)
-df_total <- df_total %>%  mutate(confidence_in_accessing_necessary_services_remotely.C3_3 = fct_relevel(confidence_in_accessing_necessary_services_remotely.C3_3, c("4", "3", "2", "1")))
-df_total$confidence_in_accessing_necessary_services_remotely.C3_3 <- as.integer(confidence_in_accessing_necessary_services_remotely.C3_3)
+df_total <- df_total %>%  mutate(satisfaction_with_care_duringCovid_categorized.C6 = fct_relevel(factor(satisfaction_with_care_duringCovid_categorized.C6), c("2", "1")))
+df_total$satisfaction_with_care_duringCovid_categorized.C6 <- as.integer(df_total$satisfaction_with_care_duringCovid_categorized.C6)
+
+#PART ...D
+df_total$gender.D2 			<- as.factor(df_total$gender.D2)
+levels(df_total$gender.D2) 	<- c("female", "male")
+
+df_total <- df_total %>%  mutate(extent_of_financial_stability.D10 = fct_relevel(factor(extent_of_financial_stability.D10), c("5", "4", "3", "2", "1")))
+df_total$extent_of_financial_stability.D10 <- as.integer(df_total$extent_of_financial_stability.D10)
+
+df_total <- df_total %>%  mutate(extent_of_financial_stability_categorized.D10 = fct_relevel(factor(extent_of_financial_stability_categorized.D10), c("2", "1")))
+df_total$extent_of_financial_stability_categorized.D10 <- as.integer(df_total$extent_of_financial_stability_categorized.D10)
+
+df_total$educational_level.D8 <- as.factor(df_total$educational_level.D8)
+df_total$educational_level.D8[df_total$educational_level.D8==13] <- NA
+
+df_total <- df_total %>% droplevels() %>%  mutate(educational_level.D8 = fct_relevel(factor(educational_level.D8), c("4", "3", "2", "1"))) 
+df_total <- df_total %>%  mutate(income.D9 = fct_relevel(factor(income.D9), c("3", "2", "1")))
+
+df_total$education_cat <- df_total$educational_level.D8
+levels(df_total$education_cat) <- c("primary education", "secondary education", "post secondary education", "highest education level possible")
+
+# ...OTHER
+df_total <- df_total %>% mutate(quantile_population = ntile(populationGER, 5)) # converts German population data to categories according to quantiles
+
+# TODO: What do the following lines mean?
+# ___________________________________________________________________________________________________________________________________________________________________________________________
+# Adapting using remode() from car package could be: df_total$GP_expertise.B3_recode <- recode(df_total$GP_expertise.B3, "1=5; 2=4; 3=3; 4=2; 5=1") 
 
 #C6: satisfaction_with_care_duringCovid_categorized.C6 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
 #in the raw dataset there are variables C6 (contains values from 1-4) and categorized.C6 (contains values from 1-2)
-df_total$satisfaction_with_care_duringCovid.C6 <- as.factor(df_total$satisfaction_with_care_duringCovid.C6)
-df_total <- df_total %>%  mutate(satisfaction_with_care_duringCovid.C6 = fct_relevel(satisfaction_with_care_duringCovid.C6, c("4", "3", "2", "1")))
-df_total$satisfaction_with_care_duringCovid.C6 <- as.integer(satisfaction_with_care_duringCovid.C6)
-
-df_total$satisfaction_with_care_duringCovid_categorized.C6 <- as.factor(df_total$satisfaction_with_care_duringCovid_categorized.C6)
-df_total <- df_total %>%  mutate(satisfaction_with_care_duringCovid_categorized.C6 = fct_relevel(satisfaction_with_care_duringCovid_categorized.C6, c("2", "1")))
-df_total$satisfaction_with_care_duringCovid_categorized.C6 <- as.integer(satisfaction_with_care_duringCovid_categorized.C6)
-
-
-#PART D
-df_total$gender.D2 			<- as.factor(df_total$gender.D2)
-levels(df_total$gender.D2) 	<- c("female", "male", "diverse") # have added third gender, as there was one person answering 3. @ Marlena is that correct?
-								  #M: Yes 3 means "other", but I did not find 3 the raw dataset
 
 #D6: type_of_community.D6 not adapted, because it is already categorized. @Marlena: Which values does category "1", "2" and "3" include?
 #in the raw dataset there are variables D6 (contains values from 1-6) and categorized.D6 (contains values from 1-3) - here we could think of merging category 3 into category 2 because there are very little people in 3
 
-df_total$extent_of_financial_stability.D10 <- as.factor(df_total$extent_of_financial_stability.D10)
-df_total <- df_total %>%  mutate(extent_of_financial_stability.D10 = fct_relevel(extent_of_financial_stability.D10, c("5", "4", "3", "2", "1")))
-df_total$extent_of_financial_stability.D10 <- as.integer(extent_of_financial_stability.D10)
-
-df_total$extent_of_financial_stability_categorized.D10 <- as.factor(df_total$extent_of_financial_stability_categorized.D10)
-df_total <- df_total %>%  mutate(extent_of_financial_stability_categorized.D10 = fct_relevel(extent_of_financial_stability_categorized.D10, c("2", "1")))
-df_total$extent_of_financial_stability_categorized.D10 <- as.integer(extent_of_financial_stability_categorized.D10)
-
-
-df_total$educational_level.D8 <- as.factor(df_total$educational_level.D8)
-df_total$educational_level.D8[df_total$educational_level.D8==13] <- NA #M: correct
-
-df_total <- df_total %>% droplevels() %>%  mutate(educational_level.D8 = fct_relevel(educational_level.D8, c("4", "3", "2", "1"))) # Is that correct now or do we need to drop factor=4?!
-																   # M: correct
-#df_total$income.D9[df_total$income.D9==4] <- 3 #M: I did not find 4 in the dataset
-df_total <- df_total %>%  mutate(income.D9 = fct_relevel(income.D9, c("3", "2", "1"))) # M: correct
-
-#OTHER
-
-df_total <- df_total %>% mutate(quantile_population = ntile(populationGER, 5)) # converts the population data to categories according to the quantiles
-
-
-# ___________________________________________________________________________________________________________________________________________________________________________________________
-# Adapting using remode() from car package could be: df_total$GP_expertise.B3_recode <- recode(df_total$GP_expertise.B3, "1=5; 2=4; 3=3; 4=2; 5=1") 
-
 # ==================================================================================================
 ## Create TableOne for specific values
 
-Vars 			<- c(	"age.D1", "gender.D2", "disease_duration_cat", "disease_stage.name", "populationGER", "neurologistsGER", 
-						"physiciansGER", "educational_level.D8", "pdq8_total.A3", "vWEI")
-#nonnormalVars 	<- c("disease_stage.A2", "disease_duration.A1") # avoids returning mean in favor of median 
-factVars 		<- c("gender.D2", "educational_level.D8", "disease_duration_cat", "disease_stage.name") # Here only values with categorial (ordinal distribution should be added) 
-tableOne 		<- CreateTableOne(vars=Vars, factorVars=factVars, data=dfGER) # @Marcel, here the vars of interest should be renamed
-print(tableOne, nonnormal=c("disease_Stage.A2"))
+Vars 					<- c(	"age.D1", "gender.D2", "disease_duration_cat", "disease_stage_name", "populationGER", "neurologistsGER", 
+						"physiciansGER", "education_cat", "pdq8_total.A3", "vWEI")
+df_tableOne 			<- df_total %>% select(all_of(Vars))
+
+colnames_Vars			<- c("Age", "Gender", "Disease duration", "Disease stage", "Inhabiltants per sqkm", "Neurologists per sqkm", 
+								"General practitioners per sqkm", "Education level according to ISCED", "PDQ-8 scores [in %]", "Van-Walraven-Elixhauser comorbidity index")
+colnames(df_tableOne) 	<- colnames_Vars
+factVars 				<- c("Gender", "Education level according to ISCED", "Disease duration", "Disease stage") # Here only values with categorial (ordinal distribution should be added) 
+tableOne 				<- CreateTableOne(vars=colnames_Vars, factorVars=factVars, data=df_tableOne) # @Marcel, here the vars of interest should be renamed
+print(tableOne, nonnormal=c("Disease stage", "Education level according to ISCED"))
 
 # ==================================================================================================
 # Start analysing major questions 
-# Extract values of interest pre and post (cf. ...B17 vs. ...C6) 
-df_careCovid 			<- df_total %>% select(satisfaction_PDcare_preCovid_categorized.B17, satisfaction_with_care_duringCovid_categorized.C6) %>% drop_na()
-colnames(df_careCovid) 	<- c("pre", "post") # change colnames in meaningful way 
+# Extract values of interest pre and during (cf. ...B17 vs. ...C6) 
+df_careCovid 			<- df_total %>% select(satisfaction_PDcare_priorCovid.B17, satisfaction_with_care_duringCovid.C6) %>% drop_na()
+colnames(df_careCovid) 	<- c("before", "during") # change colnames in meaningful way 
 df_careCovid 			<- dplyr::mutate(df_careCovid, ID = row_number()) %>% 
 							pivot_longer(
-											cols = c("pre", "post"), 
+											cols = c("before", "during"), 
 											names_to = "timing", 
 											values_to = "ratings")
 
-df_careCovid$ratings[df_careCovid$ratings==-999] 	<- NA # -999 means "not answered because question not applicable based on a previous answer", a bit redundant after lines 41f.
+df_careCovid$ratings[(df_careCovid$ratings==-999 | df_careCovid$ratings ==5)] 	<- NA # -999 means "not answered because question not applicable based on a previous answer", a bit redundant after lines 41f.
 df_careCovid$ID 									<- as.factor(df_careCovid$ID) # ID needs to be coded as factor
 
 df_careCovid %>%
   group_by(timing) %>%
   get_summary_stats(ratings, show = c("mean", "sd", "median", "iqr"))  
-# ======> @Marlena, not quite clear to me, why lower values at post! What is the coding here? We should refactor alle used codes from bad to good in ascending order (see line 100)
-#@David: releveling done above
-#df_total <- df_total %>%  mutate(satisfaction_PDcare_preCovid.B17 = fct_relevel(satisfaction_PDcare_preCovid.B17, c("4", "3", "2", "1"))
-#df_total <- df_total %>%  mutate(satisfaction_with_care_duringCovid.C6 = fct_relevel(satisfaction_with_care_duringCovid.C6, c("4", "3", "2", "1"))
-
 
 # Create a summary of available results
-summary_care 			<- df_careCovid %>% filter(timing=="pre") %>% drop_na() %>% group_by(ratings)  %>% summarize(pre=sum(ratings))
-temp_data 				<- df_careCovid %>% filter(timing=="post") %>% drop_na()%>% group_by(ratings)  %>% summarize(post=sum(ratings))
+summary_care 			<- df_careCovid %>% filter(timing=="before") %>% drop_na() %>% group_by(ratings)  %>% summarize(before=sum(ratings))
+temp_data 				<- df_careCovid %>% filter(timing=="during") %>% drop_na()%>% group_by(ratings)  %>% summarize(during=sum(ratings))
 summary_care 			<- merge(summary_care, temp_data, by="ratings", all = T)
 summary_care[is.na(summary_care)]=0.001
 
-colnames(summary_care) 	<- c("ratings", "pre", "post")
-summary_care$pre 		<- summary_care$pre/sum(summary_care$pre)
-summary_care$post 		<- summary_care$post/sum(summary_care$post)
+colnames(summary_care) 	<- c("ratings", "before", "during")
+summary_care$before 	<- summary_care$before/sum(summary_care$before)
+summary_care$during 	<- summary_care$during/sum(summary_care$during)
 summary_care 			<- dplyr::mutate(summary_care, ID = row_number()) %>% 
 								pivot_longer(
-											cols = c("pre", "post"), 
+											cols = c("before", "during"), 
 											names_to = "timing", 
 											values_to = "percentage")
 
@@ -261,12 +231,12 @@ stat.test
 
 # Start plotting results for changes in perceived care during pandemic
 bar_width 	<- .7 
-y_start 	<- summary_care %>% filter(timing=="pre") %>% summarize(y_start=cumsum(percentage))
-y_end 		<- summary_care %>% filter(timing=="post") %>% summarize(y_end=cumsum(percentage))
+y_start 	<- summary_care %>% filter(timing=="before") %>% summarize(y_start=cumsum(percentage))
+y_end 		<- summary_care %>% filter(timing=="during") %>% summarize(y_end=cumsum(percentage))
 df_lines 	<- data.frame(y_start=y_start, y_end=y_end, x_start=rep(1+bar_width/1.99,4), x_end=rep(2-bar_width/1.99,4))
 
 summary_care$timing <- as.factor(summary_care$timing)
-levels(summary_care$timing) <- c("pre", "post") # explicit definition of order necessary as otherwise data is sorted alphabetically (cf. https://stackoverflow.com/questions/5208679/order-bars-in-ggplot2-bar-graph)
+levels(summary_care$timing) <- c("before", "during") # explicit definition of order necessary as otherwise data is sorted alphabetically (cf. https://stackoverflow.com/questions/5208679/order-bars-in-ggplot2-bar-graph)
 
 p_satisfaction_with_care <- ggplot(summary_care, aes(x = timing, y = percentage)) +
 	geom_col(data = summary_care,
@@ -309,55 +279,48 @@ p_satisfaction_with_care
 #+----------------------------+--------------------------------------+
 # created with: https://ozh.github.io/ascii-tables/
 
-# ======> @Marlena, again, we need to double check the coding for all the used variables
-# ======> @David: should be solved
-
-# ======> @Marlena, some variables cannot be understood such as the value of "9" in the extended_health_insurance_due_to_PD.B12
-# ======> @David: should be solved
-
 dependent_variable = "needed_healthcare_but_did_not_receive_it_duringCovid.C4"
 factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/10.3233/jpd-212735
 						"disease_stage.A2", "regular_caregiver_categorial.B1a", #checked
-						
+						# ============================================================== 2->#
 						"disease_duration.A1", "comorbidities_sum.A4", "vWEI", 	#checked
-						
+						# ============================================================== 3->#						
 						"educational_level.D8", "income.D9",  		#checked			
-						
+						# ============================================================== 4->#						
 						"GP_expertise.B3", "neurologists_expertise.B5", #checked
-						
+						# ============================================================== 5->#												
 						"reason_for_communication_challenges_sum_categorized.B14a", #checked
-						
+						# ============================================================== 6->#						
 						"pdq8_categorial.A3", #checked
-						
+						# ============================================================== 7->#												
 						"overcoming_barriers_sum.B7a", "inability_to_access_care_sum_categorized_priorCovid.B9a", #checked
-
-						"forgot_treatment_due_to_cost_preCovid_categorized.B11", #checked
+						# ============================================================== 8->#						
+						"forgot_treatment_due_to_cost_priorCovid_categorized.B11", #checked
 						"extended_health_insurance_due_to_PD.B12", "financial_difficulties_from_treatment_costs_categorized.B13", #migth need to relevel B12
 						"extent_of_financial_stability_categorized.D10", #checked 
-						
+						# ============================================================== 9->#						
 						# 9 not applicable to our dataset
-
+						# ============================================================== 10->#						
 						"confidence_in_accessing_necessary_services_remotely_categorized.C3_3", "cooperation_healthcare_providers_yesorno.B6a", #checked
 						"visit_healthcare_providers_sum.B6", #checked
-						
+						# ============================================================== 11->#												
 						"reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15", "received_remote_sessions_duringCovid.C2", #might need to relevel C2
-						"access_to_techniology_categorized.C2c2", "communication_challenges_preCovid.B14", #checked
-						
+						"access_to_technology_categorized.C2c2", "communication_challenges_priorCovid.B14", #checked
+						# ============================================================== 12->#												
 						"personal_accessibility_barriers_sum.B16a", "personal_accessibility_barriers_sum_categorized.B16a", #checked
-  
 						"type_of_community_categorized.D6", "living_situation_categorized.D7",
 						"barriers_to_care_sum_categorized.B9b", #checked
-						"ease_obtaining_healthcare_preCovid_categorized.B10", #checked
-	
-						"geographical_barriers_healthcare_providers.B7", "quantile_population", # "populationGER",	#checked					
+						"ease_obtaining_healthcare_priorCovid_categorized.B10", #checked
+						# ============================================================== 13->#						
+						"geographical_barriers_healthcare_providers.B7", "quantile_population", #checked					
 						"local_availability_sum_categorized.B8", "ability_to_access_care_priorCovid.B9", "neurologistsGER", #checked
-	
+						# ============================================================== 14->#							
 						"gender.D2") #checked
 
 group 				<- c(	1,1, # grouping is needed for later and corresponds to factorsOR1
 							2,2, # Health status
-							3,3,3,
-							4,4,
+							3,3,3, # Health Literacy
+							4,4, # ... see below for further categories ...
 							5,
 							6,
 							7,7,
@@ -382,10 +345,12 @@ df_OR1_complete <- df_OR1_complete %>%
       "no" = c("1", "2"),
       "yes" = c("3", "4", "5"))) %>%
 	  filter(!is.na(dv))
-	  
+
+# ==================================================================================================
+# Get Odds rations for every factor if interest	  
 results1 = c()
-for (fac in factorsOR1) { # for loop to get results from all factors of interest
-  mod <- as.formula(sprintf("I(dv=='yes') ~ %s", fac)) # formula for (unadjusted) GLM
+for (fac in factorsOR1) { # for loop over factors of interest
+  mod <- as.formula(sprintf("I(dv=='yes') ~ %s", as.integer(fac))) # formula for (unadjusted) GLM
   fit_temp = glm(mod, data=df_OR1_complete, family="binomial") # estimate model
   results1 = rbind(	results1, c(exp(coef(fit_temp)[2]), 	# OR
 					exp(confint.default(fit_temp)[2]),  	# lower CI
@@ -407,7 +372,6 @@ results_OR1 <- results_OR1 %>% mutate(significance = case_when(pvalue <= .001 ~ 
                                 (pvalue < .05 & pvalue >.001) ~ "#B8A31F",
 								pvalue > .05 ~ "#08306B"))
 							
-								
 # ==================================================================================================
 # Visualisation of (unadjusted) OR results:
 # General commands
@@ -421,49 +385,50 @@ dot_color 		<- results_OR1$dot_color
 results_OR1$factors_group <- as.factor(results_OR1$factors_group) # convert groups to factors 
 levels(results_OR1$factors_group) <- barriers
 
-# =====> @both: we need a more precise naming of the predictors here and this list MUST be as long as results_OR1. We will use that for the next figure
 predictors <- c(
 					"Disease Stage (Hoehn and Yahr)", #**
-					 "Presence of a Regular Caregiver", #*
-	                                 "Duration of Parkinson´s Disease", #**
-	                                 "Presence of Comorbidities", #*
-					 "Disease Burden (Elixhauser Comorbidity Index)", #**(*)
-                                          "Educational Level", #**
-	                                  "Annual net income", #****
-	                                  "Perceived PD-Expertise of General Practitioner", #**
-                                          "Perceived PD-Expertise of Neurologist", #**
-	                                  "Reasons for Communication Challenges before the COVID-19 Pandemic", #*
-	                                  "PD-related Quality of Life (PDQ-8)", #**(*)
-                                          "Number of Available Ressources to Overcome Geographical Barriers before the COVID-19 Pandemic", #****
-                                          "Ability to Access PD-related Care before the COVID 19 Pandemic", #*
-	                                  "(Number of) Shifted Healthcare Appointments due to Costs in the last 12 Months before the Covid-19 pandemic", #*
-	                                  "Existence of Extended Healthcare Insurance to Cover PD-associated Costs", #*
-                                          "Existence of Financial Problems due to PD-related Treatment Costs in the last 12 Months before the COVID-19 pandemic", #*
-                                           "Financial Stability", #**
-                                           "Confidence in Accessing PD-related Healthcare Remotely", #*
-	                                   "Perceived Cooperation of Healthcare Providers", #**
-                                           "Number of Healthcare Providers Consulted (in the last 12 Months before the COVID-19 Pandemic)", #****
-                                           "Experiencing Stigmatization Using Healthcare Ressources", #*
-	                                   "Received Remote Sessions with PD-related Healthcare Providers during the COVID-19 Pandemic", #*
-                                           "Existing Access to Technology for Consulting PD-related Healthcare Providers during the COVID-19 Pandemic", #*
-                                           "Presence of Communication Challenges before the COVID-19 Pandemic", #*
-                                           "Number of Negative Effects on Patients Personal Life due to Healthcare Accessibility Barriers", #****
-	                                   "Extent/Existance of Negative Effects on Patients Personal Life due to Healthcare Accessibility Barriers", #*
-	                                   "Level of Urbanization", #**
-	                                   "Living Situation", #*
-	                                   "Number of Barriers Preventing from Receiving Needed PD-related Healthcare Ressources before the COVID-19 Pandemic", #**
-                                           "Perceived Difficulty in Accessing PD-related Healthcare before the COVID-19 Pandemic", #*
-	                                   "Level of Geographical Barrier Concerning Access to Healthcare Ressources before the COVID-19 Pandemic", #**
-                                           "Quantile Population", #****
-	                                   "Number of Locally Available PD-related Healthcare Ressources", #**
-                                           "Frequency of Not Receiving Needed PD-related Healthcare before the COVID-19 Pandemic", #**
-                                            "Density of Neurological Practices and Hospital Departments (per sqm)", #****
-                                            "Gender" #*
+					"Presence of Regular Caregiver", #*
+	                "Disease duration [in years]", #**
+					"Sum of Comorbidities", #*
+					"Elixhauser Comorbidity Index", #**(*)
+					"Educational Level (according to ISCED)", #**
+					"Annual income", #****
+					"Perceived PD-Expertise General Practitioner", #**
+					"Perceived PD-Expertise Neurologist", #**
+						"Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate?
+	                "PDQ-8 score", #**(*)
+					"Available Ressources to Overcome Geographical Barriers before Pandemic", #****
+					"Ability to Access PD-related Care before Pandemic", #*
+					"Shifted Healthcare Appointments due to financial resaons 12 Months before pandemic", #* 
+	                "Extended Healthcare Insurance covering PD-related expenses", #*
+					"Financial Problems due to PD-related Expenses 12 Months before pandemic", #*
+                    "Financial Stability", #**
+                    "Confidence Accessing PD-related Healthcare Remotely", #*
+					"Perceived Cooperation between Healthcare Providers", #**
+					"Healthcare Providers Consulted 12 Months before pandemic", #****
+                    "Experienced Stigmatization Using Healthcare Ressources", #*
+						"Possibility of Remote Sessions with PD-related Healthcare Providers during pandemic", #* #TODO: What is the difference to next line?!
+					"Access to Technology for Consulting PD-related Healthcare Providers during pandemic", #*
+					"Communication Challenges before pandemic", #*
+                    "Negative Effects on Patients due to Healthcare Accessibility Barriers", #****
+					"Existance of Negative Effects on Patients due to Healthcare Accessibility Barriers", #*
+	                "Level of Urbanization", #**
+						"Living Situation", #* #TODO: Not very precise. Situation about what?
+	                "Number of Barriers Preventing from Receiving Needed PD-related Healthcare Ressources before the COVID-19 Pandemic", #**
+					"Perceived Difficulty Accessing PD-related Healthcare before pandemic", #*	
+					"Geographical Barriers Concerning Access to Healthcare Ressources before pandemic", #**
+					"Population according to quantiles of German population [in sqkm]", #****
+	                "Locally Available PD-related Healthcare Ressources", #**
+						"Frequency of Not Receiving Needed PD-related Healthcare before the COVID-19 Pandemic", #** #TODO: not quite clear to me what this means
+                    "Neurologists nearby (per sqkm)", #****
+                    "Male Gender" #*
 				)
+
+results_OR1$factors <- predictors
 
 # Sort values according to groups and values of OR, irrespective of 95%CI
 results_OR1 %>%
-  dplyr::arrange(group, boxOdds) %>%
+  dplyr::arrange(boxOdds) %>%
   mutate(factors=factor(factors, levels=factors)) %>%  # This trick update the factor levels
   ggplot(aes(x = boxOdds, y = factors)) +
   geom_vline(aes(xintercept = 1), size = .75, linetype = "dashed", color="grey") +
@@ -488,7 +453,7 @@ results_OR1 %>%
   geom_errorbarh(aes(xmax = boxCIHigh, xmin = boxCILow), size = .5, height = .2, color = "gray50") +
   geom_point(aes(x = boxOdds, y = factors, color = significance), size = 1.5, show.legend=TRUE) +
   guides(colour = guide_legend(reverse=TRUE)) +
-  scale_colour_manual(values=c("#08306B", "#B8A31F", "#6B340D")) +
+  scale_colour_manual(values=c("#C6DBEF", "#08306B", "#4292C6")) +
   theme_bw() +
   theme(panel.grid.minor = element_blank(), legend.position = c(0.9, 0.2), 
 		legend.title=element_blank()) +
@@ -496,6 +461,7 @@ results_OR1 %>%
   geom_hline(yintercept=hlines[1:length(hlines)-1], linetype="dotted", size = .01) +
   ylab("") +
   xlab("Odds ratio (log scale)")
+
 
 #display Odds ratio table
 results_OR1
