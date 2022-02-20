@@ -4,8 +4,8 @@
 # Version 1.6 # 2022-02-19, recoded all values, refined analyses
 
 ## First specify the packages of interest
-packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", "lemon", 
-				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel" )
+packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", "lemon", "precrec", "mctest",
+				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel", "fastDummies" )
 
 # ==================================================================================================
 ## Now load or install&load all
@@ -408,12 +408,12 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
 					"Annual income [in €]", #****
 					"Perceived PD-Expertise of General Practitioner", #**
 					"Perceived PD-Expertise of Neurologist", #**
-						"Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate?
-	                "PDQ-8 score", #**(*)
+						"Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? Besides problem with multicollinearity (see below "Communication challanges ...")
+	                "PDQ-8 score", #**(*) # TODO: I think it makes sense to stick to the raw values (pdq8_total.A3), as otherwise almost all participants were scoring 1 (cf. "table(df_OR1_complete$pdq8_categorial.A3)" -> 1 = 320)
 					"Available Ressources to Overcome Geographical Barriers before Pandemic", #**** # TODO: sum?
 					"Ability to Access PD-related Care before Pandemic", #*
 					"Shifted Healthcare Appointments due to financial resaons 12 Months before pandemic", #* 
-	                "Extended Healthcare Insurance covering PD-related expenses", #*
+	                "Extended Healthcare Insurance covering PD-related expenses", #* #TODO: That is not quite clear to me, since in Germany health insurance is "mandatory"/fixed in terms of costs?
 					"Financial Problems due to PD-related Expenses 12 Months before pandemic", #*
                     "Financial Stability", #**
                     "Confidence Accessing PD-related Healthcare Remotely", #* TODO: What does this mean?!
@@ -422,10 +422,10 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
                     "Experienced Stigmatization Using Healthcare Ressources", #*
 						"Possibility of Remote Sessions with PD-related Healthcare Providers during pandemic", #* #TODO: What is the difference to next line?!
 					"Access to Technology for Consulting Healthcare Providers during pandemic", #*
-					"Communication Challenges before pandemic", #*
+					"Communication Challenges before pandemic", #* # TODO: produces isues with collinearity in the dataset together with "Reasons for Communication Challenges..."
                     "Negative Effects on Patients due to Healthcare Accessibility Barriers", #****
 					"Existence of Negative Effects on Patients due to Healthcare Accessibility Barriers", #* # TODO: What is this?
-	                "Level of Urbanization", #** #TODO: is this a number?
+	                "Level of Urbanization", #** #TODO: This is very similar to "Population according to ..." below. I would prefer the other one as it is more reliable and we only have 3/6 levels available here; besides resuöts are almost identical
 						"Living Situation", #* #TODO: Not very precise. Situation about what?
 	                "Sum of Barriers Preventing Healthcare Access before pandemic", #**
 					"Difficulty Accessing PD-related Healthcare Services before pandemic", #*	
@@ -490,7 +490,27 @@ results_OR1 %>%
   # ggtitle("iPS-patients' odds of unmet need for healthcare services during COVID-19 pandemic") + 
   labs(title = "iPS-patients' odds of unmet need for healthcare services during COVID-19 pandemic",
   caption = "*Gender was coded so that negative odds means that being female indicates a higher risk of unmet needs")
-#TODO: Please double check the results, as most of them look plausible while at least one is not quite clear: Confidence Accessing PD-related Healthcare Remotely increase significantly the Odds?!?
+
+#TODO 1: Please double check the results, as most of them look plausible while at least one is not quite clear: Confidence Accessing PD-related Healthcare Remotely increase significantly the Odds?!?
+pMiss <- function(x){sum(is.na(x))/length(x)*100} # function to find missing (NA) values
+sort(apply(df_OR1_complete,2,pMiss), decreasing=TRUE)[1:5]
+
+# TODO 2: Run the last two lines. There are some predictors with lots of missing entries which is problematic for regression later. Besides, there is some redundancy among some of them:
+#  personal_accessibility_barriers_sum.B16a vs.  personal_accessibility_barriers_sum_categorized.B16a
+# Please double-check if there are some of the five that we can replace and if so try to change the code. The lines to change if you remove (or add) something are;
+# line 293f, line 330f, line401f.
+
+# TODO 3: We have problems with multicollinearity in the data. The problem is an innate condition for GLM, which means  a little oversimplified that values that are perfectly correlated with each other
+# make the estimation of residuals complicated so that the model becomes bad. The problem arises with:
+
+if (flag_check){ # need to run the part with the stepwise regression first to make this work ...
+full_model_test = glm(I(dv=='yes') ~ ., data = train_data)
+mctest::imcdiag(full_model_test)
+XX <- data_full_glm %>% select(c("local_availability_sum_categorized.B8", "ability_to_access_care_priorCovid.B9"), contains("communication_challenges")) %>% ggpairs(upper = list(continuous = wrap("cor", method = "spearman")))
+XX
+}
+
+# TODO 4: What is ""ability_to_access_care_priorCovid.B9", that does appear somehow and looks a bit odd. It's very related to "local_availability_sum_categorized.B8". We should decide for one (if first actually exists).
 
 # ==================================================================================================
 # Supplementary table 1: odds and Confidence intervals
@@ -548,15 +568,20 @@ data_full_glm <- df_OR1_complete %>% dplyr::select(factorsOR1, dv) %>% mutate(ac
 data_full_glm$pdq8_total.A3 <- as.numeric(data_full_glm$pdq8_total.A3)
 data_full_glm$educational_level.D8[data_full_glm$educational_level.D8==13] <- NA
 
-# Sanity checks
-apply(data_full_glm,2,pMiss) # percentage of missing values per column
-apply(data_full_glm,1,pMiss) # percentage of missing values per row
+flag_check = TRUE
+if (flag_check) { # Sanity checks if flag_check set
+	apply(data_full_glm,2,pMiss) # percentage of missing values per column
+	apply(data_full_glm,1,pMiss) # percentage of missing values per row
+	aggr_plot1 			<- aggr(data_full_glm[1:19], col = c('navyblue','red'), numbers = TRUE, sortVars = TRUE, 
+													labels = names(data), cex.axis = .7, gap = 3, ylab = c("Histogram of missing data","Pattern")) # Display missing values graphically
+	aggr_plot2 			<- aggr(data_full_glm[20:37], col = c('navyblue','red'), numbers = TRUE, sortVars = TRUE, 
+												labels = names(data), cex.axis = .7, gap = 3, ylab = c("Histogram of missing data","Pattern")) # Display missing values graphically
+}
 
-aggr_plot 			<- aggr(data_full_glm[-1], col=c('navyblue','red'), numbers=TRUE, sortVars=TRUE, labels=names(data), cex.axis=.7, gap=3, ylab=c("Histogram of missing data","Pattern"))
 inlist 				<- c("disease_stage.A2", "gender.D2", "vWEI", "dv") # names of the variables that should be included as covariates in every imputation model
 
 # 1. Data imputation using multivariate routines (MICE package)
-pred 				<- quickpred(data_full_glm, minpuc = 0.5, include = inlist, mincor=.1) # predictor matrix
+pred 				<- quickpred(data_full_glm, minpuc = 0.5, include = inlist) # predictor matrix
 generate_imputation <- mice(data=data_full_glm,
 							 predictorMatrix = pred, #predictormatrix,
 							 m=10,
@@ -564,71 +589,105 @@ generate_imputation <- mice(data=data_full_glm,
 							 diagnostics=TRUE)
 							 #MaxNWts=3000)				 
 
+if (flag_check){
+	densityplot(generate_imputation, xlim = c(0, 5), ylim = c(0, 0.4))
+}
+
+# 2. Prepare "imputed" data for regression by creating dummy variables and converting rest to integers:
+imputed_data_full$visit_healthcare_providers_sum.B6[imputed_data_full$visit_healthcare_providers_sum.B6==5] <-4
 imputed_data_full = data.frame(complete(generate_imputation)) %>% drop_na()
-imputed_data_full$visit_healthcare_providers_sum.B6[table(imputed_data_full$visit_healthcare_providers_sum.B6==5] <-4
-#imputed_data_full <- imputed_data_full %>% mutate_if(is.factor, as.integer) # converts factors into integers
+imputed_data_full$neurologists_expertise.B5 <- as.integer(imputed_data_full$neurologists_expertise.B5)
+imputed_data_full$visit_healthcare_providers_sum.B6 <- as.integer(imputed_data_full$visit_healthcare_providers_sum.B6)  
+
+imputed_data_full <- dummy_cols(imputed_data_full, select_columns = c(	'gender.D2', 'received_remote_sessions_duringCovid.C2', 
+															'regular_caregiver_categorial.B1a', 'type_of_community_categorized.D6',
+															'overcoming_barriers_sum.B7a', 'personal_accessibility_barriers_sum_categorized.B16a', 
+															'reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15', 'extended_health_insurance_due_to_PD.B12',
+															'inability_to_access_care_sum_categorized_priorCovid.B9a'), #TODO: if something is changed before, this must be adapted, as well
+					remove_selected_columns = TRUE)
+str(imputed_data_full)
+
 # ==================================================================================================
-# Regression models w/ stepwise reduction using glmStepAIC {caret package}-algorithm with CV
+## Start with regression models, that is full model vs. model w/ stepwise reduction using glmStepAIC {caret package}
+# analyses adapted from: https://rpubs.com/mpfoley73/625323
+
 # Separate data into train and test dataset
 index 		<- createDataPartition(imputed_data_full$dv, p = 0.8, list = FALSE) # split data with balanced values for dv
 train_data 	<- imputed_data_full[index,]
 test_data 	<- imputed_data_full[-index,]
 
-# Define model
+# Define a) FULL GLM and save results to workspace {mdl_full}
 train_data <- model.frame(dv ~ ., data = train_data, drop.unused.levels = TRUE) # drop unused factors
-objControl <- trainControl(method = "cv", number = 10, #returnResamp = 'final',
-                           summaryFunction = twoClassSummary,
-                           classProbs = TRUE,
-                           repeats = 5)
-
-train_control <- trainControl(
-  method = "cv", number = 10,
-  savePredictions = "final",
-  classProbs = TRUE)
-
+train_control <- trainControl(method = "cv", number = 10, savePredictions = "final", classProbs = TRUE)
 mdl_full <- train(train_data %>% select(-dv),
 					train_data$dv,
 					method = "glm",
+					preProcess = c("center", "scale", "pca"),
 					family = "binomial",
 					trControl = train_control,
 					metric = "Accuracy")
- 
-predicted_classes <- predict(mdl_full, newdata = train_data) 
-predicted_probs <- predict(mdl_full, newdata = train_data, type = "prob")
-confusionMatrix(predicted_classes, train_data$dv, positive = "yes") 
- 
-mdl_full_preds <- predict(mdl_full, newdata = train_data, type = "prob")
+
+# Interpreting results of FULL GLM:
+mdl_full # Accuracy of full model results in ~84.1%
+varImp(mdl_full) # Factors most contributing to data are listed here  
+predicted_classes <- predict(mdl_full, newdata = test_data) 
+predicted_probs <- predict(mdl_full, newdata = test_data, type = "prob")
+confusionMatrix(predicted_classes, test_data$dv, positive = "yes") # predictions on (independent) test data
+  
+mdl_full_preds <- predict(mdl_full, newdata = test_data, type = "prob")
 (mdl_full_eval <- evalmod(
   scores = mdl_full_preds$yes,
-  labels = train_data$dv
+  labels = test_data$dv
 ))
 
+# Print AUC
 options(yardstick.event_first = FALSE)  # set the second level as success
 data.frame(
   pred = mdl_full_preds$yes, 
-  obs = train_data$dv
+  obs = test_data$dv
 ) %>%
   yardstick::roc_curve(obs, pred) %>%
   autoplot() +
   labs(
-    title = "Full Model ROC Curve, Test Data",
-    subtitle = "AUC = ??"
+    title = "Full Model ROC Curve, Test-dataset",
+    subtitle = "AUC = 85.91"
 )
 
-reg_caret_model <- train(train_data %>% select(-dv),
+# Print Gain curve
+data.frame(
+  pred = mdl_full_preds$yes, 
+  obs = test_data$dv
+) %>%
+  yardstick::gain_curve(obs, pred) %>%
+  autoplot() +
+  labs(
+    title = "Full Model Gain Curve on Test dataset"
+  )
+  
+
+# Run b) stepwise regression using {caret}-package
+mdl_step 	<- train(train_data %>% select(-dv), # reg_caret_model
                       train_data$dv, #train_data[,dim(train_data)[2]],
                       method = 'glmStepAIC', #lmStepAIC, BstLm, 
-                      trControl = objControl,
+                      trControl = train_control,
 					  #metric = "Accuracy",
-					  preProcess = c("center", "scale"),
-					  tuneLength = 5, metric = "Accuracy", #"ROC",
+					  preProcess = c("center", "scale", "pca"),
+					  tuneLength = 10, metric = "Accuracy", #"ROC",
                       family = binomial, 
 					  link="logit")
+summary(mdl_step)
+varImp(mdl_step) # Factors most contributing to data are listed here  
 
-predicted_classes <- predict(reg_caret_model, newdata = train_data) 
-predicted_probs <- predict(reg_caret_model, newdata = train_data, type = "prob")
-confusionMatrix(predicted_classes, train_data$dv, positive = "yes")
+# Interpreting results of stepwise reduced GLM:
+predicted_classes <- predict(mdl_step, newdata = test_data) 
+predicted_probs <- predict(mdl_step, newdata = test_data, type = "prob")
+confusionMatrix(predicted_classes, test_data$dv, positive = "yes") # predictions on (independent) test data
 
+mdl_step_preds <- predict(mdl_step, newdata = test_data, type = "prob")
+(mdl_step_eval <- evalmod(
+  scores = mdl_step_preds$yes,
+  labels = test_data$dv
+))
 
 scores_list <- join_scores(
   predict(mdl_full, newdata = train_data, type = "prob")$yes,
