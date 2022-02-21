@@ -2,7 +2,7 @@
 > predictive factors of worse access to healthcare services during the COVID-19 pandemic  
 
 ## Table of Contents
-* [General Info](#general-information)
+* [About this Project](#about-this-project)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
@@ -15,7 +15,7 @@
 <!-- * [License](#license) -->
 
 
-## General Information
+## About this Project
 - In this project we consider the effects of the Covid-19 pandemic on the healthcare of Parkinson's patients in Germany.
 - The underlying data was collected using a questionnaire designed in the international Parkinson network and also issued in partner countries.
 - We ask which predictors can be found to identify patients who are most likely to be affected by the COVID- 19 pandemic in a negative way.
