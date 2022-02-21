@@ -1,4 +1,7 @@
 # iCARE PD
+![iCARE PD Logo](https://user-images.githubusercontent.com/91500622/155007341-a96f29a6-8004-44c4-bda1-3594af961af0.jpg)
+![Uni Marburg](https://user-images.githubusercontent.com/91500622/155007352-b279c722-379c-400c-8bed-b2de77c61520.png)
+
 > A project using R to identify predictive factors of worse access to healthcare services during the COVID-19 pandemic.
 
 ## Table of Contents
