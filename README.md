@@ -20,13 +20,11 @@
 - The underlying data was collected using a questionnaire designed in the international Parkinson network and also issued in partner countries.
 - We ask which predictors can be found to identify patients who are most likely to be affected by the COVID- 19 pandemic in a negative way.
 - This knowledge can help to prevent worsening of healthcare access of those vulnarable groups in similar settings and in general.
+- Therefore we developed a code to help us analyze the data.
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
-
+- R version 4.1.1 
 
 ## Features
 List the ready features here:
