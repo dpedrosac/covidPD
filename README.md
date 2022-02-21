@@ -54,8 +54,7 @@ Provide various use cases and code examples here.
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
-
+Project is: _in progress_ 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
@@ -70,14 +69,24 @@ To do:
 
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- The database of this project was collected by an questionnaire designed by Eric Crighton, PhD (Professor, Department of Geography, Environment and Geomatics, University of Ottawa and Tiago Mestre MD, MSc (Associate Professor, Department of Medicine, Division of Neurology, University of Ottawa)
+- The questionnaire was available from 11/24/2020 - 01/03/2021 via SoSci Survey
+- The questionnaire was shared via the e-mail distribution list of the German Parkinson Society (https://www.parkinson-vereinigung.de/wir-ueber-uns.html), later the questionnaire was also sent to smaller regional groups who asked for it.
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Dr. David Pedrosa MD, PhD
+Senior physician at the Department of Neurology,
+Head of the Movement Disorders Section, University Hospital Giessen and Marburg 
+
+Marlena van Munster M.Sc. Public Health
+Research assistant at the Department of Neurology, 
+WG Movement Disorders and Neuromodulation, University Hospital Giessen and Marburg
+
+Marcel Printz, MD 
+Resident at the Department of Neurology, 
+WG Movement Disorders and Neuromodulation, University Hospital Giessen and Marburg
+marcelralf.printz@uk-gm.de
 
 
 <!-- Optional -->
