@@ -29,7 +29,8 @@ if (username == "dpedr") {
 	wdir = "/media/storage/covidPD/"
 } else if (username == "root") {
 	wdir = "/Users/marlenavm/Desktop/COVID-PD"
-}
+} else if (username == "Marcel Printz") {
+	wdir = "C:/Users/Marcel Printz/Documents/iCARE PD/R"
 setwd(wdir)
 
 # ==================================================================================================
