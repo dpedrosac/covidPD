@@ -1,7 +1,4 @@
 # iCARE PD
-
-img src="https://user-images.githubusercontent.com/91500622/155007341-a96f29a6-8004-44c4-bda1-3594af961af0.jpg" width=100 heigth=100
-
 > A project using R to identify predictive factors of worse access to healthcare services during the COVID-19 pandemic.
 
 ## Table of Contents
