@@ -30,7 +30,7 @@ if (username == "dpedr") {
 } else if (username == "root") {
 	wdir = "/Users/marlenavm/Desktop/COVID-PD"
 } else if (username == "Marcel Printz") {
-	wdir = "C:\Users\Marcel Printz\Desktop\covidPD"
+	wdir = "C:/Users/Marcel Printz/Desktop/covidPD"
 	}
 setwd(wdir)
 
