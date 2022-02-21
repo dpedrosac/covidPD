@@ -16,7 +16,7 @@
 - Therefore we developed a code to help us analyze the data.
 
 ## Technologies Used
-> R version 4.1.1 
+R version 4.1.1 
 
 ## Project Status
 Project is: _in progress_ 
