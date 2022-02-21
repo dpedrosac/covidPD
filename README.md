@@ -1,5 +1,5 @@
 # CovidPD
-> predictive factors of worse access to healthcare services during the COVID-19 pandemic  
+> A project to identify predictive factors of worse access to healthcare services during the COVID-19 pandemic  
 
 ## Table of Contents
 * [About this Project](#about-this-project)
