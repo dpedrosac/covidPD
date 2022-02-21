@@ -76,17 +76,14 @@ To do:
 
 ## Contact
 Dr. David Pedrosa MD, PhD
-
 Senior physician at the Department of Neurology,
 Head of the Movement Disorders Section, University Hospital Giessen and Marburg 
 
 Marlena van Munster M.Sc. Public Health
-
 Research assistant at the Department of Neurology, 
 WG Movement Disorders and Neuromodulation, University Hospital Giessen and Marburg
 
 Marcel Printz, MD 
-
 Resident at the Department of Neurology, 
 WG Movement Disorders and Neuromodulation, University Hospital Giessen and Marburg
 marcelralf.printz@uk-gm.de
