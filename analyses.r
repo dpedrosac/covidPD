@@ -5,7 +5,7 @@
 
 ## First specify the packages of interest
 packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", "lemon", "precrec", "mctest",
-				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel", "fastDummies" )
+				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel", "fastDummies", "car")
 
 # ==================================================================================================
 ## Now load or install&load all
