@@ -88,7 +88,7 @@ marcelralf.printz@uk-gm.de
 
 
 <!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
+## License
+This project is licensed under the terms of the MIT license.
 
 <!-- You don't have to include all sections - just the one's relevant to your project -->
