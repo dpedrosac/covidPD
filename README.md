@@ -1,6 +1,5 @@
 # CovidPD
 > predictive factors of worse access to healthcare services during the COVID-19 pandemic  
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -17,11 +16,10 @@
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+- In this project we consider the effects of the Covid-19 pandemic on the healthcare of Parkinson's patients in Germany.
+- The underlying data was collected using a questionnaire designed in the international Parkinson network and also issued in partner countries.
+- We ask which predictors can be found to identify patients who are most likely to be affected by the COVID- 19 pandemic in a negative way.
+- This knowledge can help to prevent worsening of healthcare access of those vulnarable groups in similar settings and in general.
 
 
 ## Technologies Used
