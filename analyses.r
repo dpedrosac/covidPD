@@ -410,16 +410,16 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
 					"Annual income [in €]", #****
 					"Perceived PD-Expertise of General Practitioner", #**
 					"Perceived PD-Expertise of Neurologist", #**
-						"Sum of Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? -> A sum Besides problem with multicollinearity (see below "Communication challanges ...")
+						"Sum of Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? -> Answer: a sum // Besides problem with multicollinearity (see below "Communication challanges ...")
 	                "PDQ-8 Score", #**(*) 
-					"Available Ressources to Overcome Geographical Barriers before Pandemic", #**** # TODO: sum?
+					"Number of Available Ressources to Overcome Geographical Barriers before Pandemic", #**** 
 					"Ability to Access PD-related Care before Pandemic", #*
 					"Shifted Healthcare Appointments due to financial resaons 12 Months before pandemic", #* 
-	                "Extended Healthcare Insurance covering PD-related expenses", #* #TODO: That is not quite clear to me, since in Germany health insurance is "mandatory"/fixed in terms of costs?
+	                "Extended Healthcare Insurance covering PD-related expenses", #* #TODO: That is not quite clear to me, since in Germany health insurance is "mandatory"/fixed in terms of costs? -> for me neither, should we remove it?
 					"Financial Problems due to PD-related Expenses 12 Months before pandemic", #*
                     "Financial Stability", #**
                     "Confidence Accessing PD-related Healthcare Remotely", #* TODO: What does this mean?!
-					"Perceived Cooperation between Healthcare Providers", #**
+					"Perceived Extend of Cooperation between Healthcare Providers", #**
 					"Healthcare Providers Consulted 12 Months before pandemic", #****
                     "Experienced Stigmatization Using Healthcare Ressources", #*
 						"Possibility of Remote Sessions with PD-related Healthcare Providers during pandemic", #* #TODO: What is the difference to next line?!
@@ -430,11 +430,11 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
 	                "Level of Urbanization", #** #TODO: This is very similar to "Population according to ..." below. I would prefer the other one as it is more reliable and we only have 3/6 levels available here; besides resuöts are almost identical
 						"Living Situation", #* #TODO: Not very precise. Situation about what?
 	                "Sum of Barriers Preventing Healthcare Access before pandemic", #**
-					"Difficulty Accessing PD-related Healthcare Services before pandemic", #*	
+					"Extent of Perceived Difficulty Accessing PD-related Healthcare Services before pandemic", #*	
 					"Geographical Barriers Concerning Access to Healthcare Ressources before pandemic", #**
 					"Population according to quantiles of German population [in sqkm]", #****
 	                "Locally Available PD-related Healthcare Ressources", #**
-						"Frequency of Not Receiving Needed PD-related Healthcare before the COVID-19 Pandemic", #** #TODO: not quite clear to me what this means
+						"Frequency of the Impression that Needed PD-related Healthcare was not Received before the COVID-19 Pandemic", #** #TODO: not quite clear to me what this means -> changed description to make it clearer
                     "Neurologists nearby (per sqkm)", #****
                     "Gender *" #*
 				)
@@ -508,11 +508,15 @@ sort(apply(df_OR1_complete,2,pMiss), decreasing=TRUE)[1:5]
 if (flag_check){ # need to run the part with the stepwise regression first to make this work ...
 full_model_test = glm(I(dv=='yes') ~ ., data = train_data)
 mctest::imcdiag(full_model_test)
-XX <- data_full_glm %>% select(c("local_availability_sum_categorized.B8", "ability_to_access_care_priorCovid.B9"), contains("communication_challenges")) %>% ggpairs(upper = list(continuous = wrap("cor", method = "spearman")))
+XX <- data_full_glm %>% select(c("local_avail
+_sum_categorized.B8", "ability_to_access_care_priorCovid.B9"), contains("communication_challenges")) %>% ggpairs(upper = list(continuous = wrap("cor", method = "spearman")))
 XX
 }
 
-# TODO 4: What is ""ability_to_access_care_priorCovid.B9", that does appear somehow and looks a bit odd. It's very related to "local_availability_sum_categorized.B8". We should decide for one (if first actually exists).
+# TODO 4: What is ""ability_to_access_care_priorCovid.B9", that does appear somehow and looks a bit odd. It's very related to "local_availability_sum_categorized.B8". We should decide for one (if first actually exists). 
+# -> B9: "felt that healthcare was needed but not available pre covid (never/rarely/sometimes/often/always) and is now named "Frequency of the Impression that Needed PD-related Healthcare was not Received before the COVID-19 Pandemic" for plotting
+# --> the strong relation between B8 and B9 seems logical because if there isn´t a healthcare ressource locally available (B8) it´s more likely that people there more often perceive a lack of healthcare (B9)
+
 
 # ==================================================================================================
 # Supplementary table 1: odds and Confidence intervals
