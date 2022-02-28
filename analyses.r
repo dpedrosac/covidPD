@@ -303,7 +303,7 @@ factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/
 						# ============================================================== 5->#												
 						"reason_for_communication_challenges_sum_categorized.B14a", #checked
 						# ============================================================== 6->#						
-						"pdq8_categorial.A3", #checked
+						"pdq8_total.A3", #checked
 						# ============================================================== 7->#												
 						"overcoming_barriers_sum.B7a", "inability_to_access_care_sum_categorized_priorCovid.B9a", #checked
 						# ============================================================== 8->#						
@@ -410,8 +410,8 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
 					"Annual income [in €]", #****
 					"Perceived PD-Expertise of General Practitioner", #**
 					"Perceived PD-Expertise of Neurologist", #**
-						"Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? Besides problem with multicollinearity (see below "Communication challanges ...")
-	                "PDQ-8 score", #**(*) # TODO: I think it makes sense to stick to the raw values (pdq8_total.A3), as otherwise almost all participants were scoring 1 (cf. "table(df_OR1_complete$pdq8_categorial.A3)" -> 1 = 320)
+						"Sum of Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? -> A sum Besides problem with multicollinearity (see below "Communication challanges ...")
+	                "PDQ-8 Score", #**(*) 
 					"Available Ressources to Overcome Geographical Barriers before Pandemic", #**** # TODO: sum?
 					"Ability to Access PD-related Care before Pandemic", #*
 					"Shifted Healthcare Appointments due to financial resaons 12 Months before pandemic", #* 
