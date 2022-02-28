@@ -184,7 +184,7 @@ Vars 					<- c(	"age.D1", "gender.D2", "disease_duration_cat", "disease_stage_na
 df_tableOne 			<- df_total %>% select(all_of(Vars))
 
 colnames_Vars			<- c("Age", "Gender", "Disease duration", "Disease stage", "Inhabiltants per sqkm", "Neurologists per sqkm", 
-								"General practitioners per sqkm", "Education level according to ISCED", "PDQ-8 scores [in %]", "Van-Walraven-Elixhauser comorbidity index")
+								"General practitioners per sqkm", "Education level according to ISCED", "PDQ-8 scores [in %]", "Van-Walraven-Elixhauser Comorbidity Index")
 colnames(df_tableOne) 	<- colnames_Vars
 factVars 				<- c("Gender", "Education level according to ISCED", "Disease duration", "Disease stage") # Here only values with categorial (ordinal distribution should be added) 
 tableOne 				<- CreateTableOne(vars=colnames_Vars, factorVars=factVars, data=df_tableOne) # @Marcel, here the vars of interest should be renamed
@@ -405,7 +405,7 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
 					"Presence of Regular Caregiver", #*
 	                "Disease duration [in years]", #**
 					"Sum of Comorbidities", #*
-					"Elixhauser Comorbidity Index", #**(*) # TODO seems to be named difefrently throughout the script, please double check
+					"Van-Walraven-Elixhauser Comorbidity Index", #**(*) 
 					"Educational Level (according to ISCED)", #**
 					"Annual income [in €]", #****
 					"Perceived PD-Expertise of General Practitioner", #**
