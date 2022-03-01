@@ -293,41 +293,58 @@ p_satisfaction_with_care
 
 dependent_variable = "needed_healthcare_but_did_not_receive_it_duringCovid.C4"
 factorsOR1 <- c( # sorted according to the barriers proposed in https://doi.org/10.3233/jpd-212735
-						"disease_stage.A2", "regular_caregiver_categorial.B1a", #checked
+						# ============================================================== 1->#
+						"disease_stage.A2", 
+						"regular_caregiver_categorial.B1a", 
 						# ============================================================== 2->#
-						"disease_duration.A1", "comorbidities_sum.A4", "vWEI", 	#checked
+						"disease_duration.A1", 
+						"comorbidities_sum.A4", 
+						"vWEI", 	
 						# ============================================================== 3->#						
-						"educational_level.D8", "income.D9",  		#checked			
+						"educational_level.D8", 
+						"income.D9",  					
 						# ============================================================== 4->#						
-						"GP_expertise.B3", "neurologists_expertise.B5", #checked
+						"GP_expertise.B3", 	
+						"neurologists_expertise.B5", 
 						# ============================================================== 5->#												
-						"reason_for_communication_challenges_sum_categorized.B14a", #checked
+						#"reason_for_communication_challenges_sum_categorized.B14a",
+						"communication_challenges_priorCovid.B14",
 						# ============================================================== 6->#						
-						"pdq8_total.A3", #checked
+						"pdq8_total.A3", 
 						# ============================================================== 7->#												
-						"overcoming_barriers_sum.B7a", "inability_to_access_care_sum_categorized_priorCovid.B9a", #checked
+						"overcoming_barriers_sum.B7a", 
+						"inability_to_access_care_sum_categorized_priorCovid.B9a", 
 						# ============================================================== 8->#						
-						"forgot_treatment_due_to_cost_priorCovid_categorized.B11", #checked
-						"extended_health_insurance_due_to_PD.B12", "financial_difficulties_from_treatment_costs_categorized.B13", #migth need to relevel B12
-						"extent_of_financial_stability_categorized.D10", #checked 
+						"forgot_treatment_due_to_cost_priorCovid_categorized.B11", 
+						"extended_health_insurance_due_to_PD.B12", 	
+						"financial_difficulties_from_treatment_costs_categorized.B13", 
+						"extent_of_financial_stability_categorized.D10", 
 						# ============================================================== 9->#						
 						# 9 not applicable to our dataset
 						# ============================================================== 10->#						
-						"confidence_in_accessing_necessary_services_remotely_categorized.C3_3", "cooperation_healthcare_providers_yesorno.B6a", #checked
-						"visit_healthcare_providers_sum.B6", #checked
+						"confidence_in_accessing_necessary_services_remotely_categorized.C3_3", 
+						"cooperation_healthcare_providers_yesorno.B6a", 
+						"visit_healthcare_providers_sum.B6", 
 						# ============================================================== 11->#												
-						"reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15", "received_remote_sessions_duringCovid.C2", #might need to relevel C2
-						"access_to_technology_categorized.C2c2", "communication_challenges_priorCovid.B14", #checked
+						"reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15", 
+						"received_remote_sessions_duringCovid.C2", 
+						"access_to_technology_categorized.C2c2", 
+						#"communication_challenges_priorCovid.B14", 
 						# ============================================================== 12->#												
-						"personal_accessibility_barriers_sum.B16a", "personal_accessibility_barriers_sum_categorized.B16a", #checked
-						"type_of_community_categorized.D6", "living_situation_categorized.D7",
-						"barriers_to_care_sum_categorized.B9b", #checked
-						"ease_obtaining_healthcare_priorCovid_categorized.B10", #checked
+						"personal_accessibility_barriers_sum.B16a", 
+						#"personal_accessibility_barriers_sum_categorized.B16a", 
+						#"type_of_community_categorized.D6", 
+						"living_situation_categorized.D7",
+						"barriers_to_care_sum_categorized.B9b", 
+						"ease_obtaining_healthcare_priorCovid_categorized.B10",
 						# ============================================================== 13->#						
-						"geographical_barriers_healthcare_providers.B7", "quantile_population", #checked					
-						"local_availability_sum_categorized.B8", "ability_to_access_care_priorCovid.B9", "neurologistsGER", #checked
+						"geographical_barriers_healthcare_providers.B7", 
+						"quantile_population", 				
+						#"local_availability_sum_categorized.B8", 
+						"ability_to_access_care_priorCovid.B9", 
+						"neurologistsGER", 
 						# ============================================================== 14->#							
-						"gender.D2") #checked
+						"gender.D2") 
 
 group 				<- c(	1,1, # grouping is needed for later and corresponds to factorsOR1
 							2,2, # Health status
@@ -337,10 +354,10 @@ group 				<- c(	1,1, # grouping is needed for later and corresponds to factorsOR
 							6,
 							7,7,
 							8,8,8,8,
-							10, 10, 10,
-							11, 11, 11, 11,
-							12,12,12,12,12, 12,
-							13,13,13,13,13,
+							10,10,10,
+							11,11,11, 
+							12,12,12,12,
+							13,13,13,13,
 							14
 						)
 
@@ -401,42 +418,56 @@ results_OR1$factors_group <- as.factor(results_OR1$factors_group) # convert grou
 levels(results_OR1$factors_group) <- barriers
 
 predictors <- c( # TODO: We must try to keep the description as short as possible; I would propose to have the questions of the questionnare as text file appended
-					"Disease Stage (Hoehn and Yahr)", #**
-					"Presence of Regular Caregiver", #*
-	                "Disease duration [in years]", #**
-					"Sum of Comorbidities", #*
-					"Van-Walraven-Elixhauser Comorbidity Index", #**(*) 
-					"Educational Level (according to ISCED)", #**
-					"Annual income [in €]", #****
-					"Perceived PD-Expertise of General Practitioner", #**
-					"Perceived PD-Expertise of Neurologist", #**
-						"Sum of Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? -> Answer: a sum // Besides problem with multicollinearity (see below "Communication challanges ...")
-	                "PDQ-8 Score", #**(*) 
-					"Number of Available Ressources to Overcome Geographical Barriers before Pandemic", #**** 
-					"Ability to Access PD-related Care before Pandemic", #*
-					"Shifted Healthcare Appointments due to financial resaons 12 Months before pandemic", #* 
-	                "Extended Healthcare Insurance covering PD-related expenses", #* #TODO: That is not quite clear to me, since in Germany health insurance is "mandatory"/fixed in terms of costs? -> for me neither, should we remove it?
-					"Financial Problems due to PD-related Expenses 12 Months before pandemic", #*
-                    "Financial Stability", #**
-                    "Confidence Accessing PD-related Healthcare Remotely", #* TODO: What does this mean?!
-					"Perceived Extend of Cooperation between Healthcare Providers", #**
-					"Healthcare Providers Consulted 12 Months before pandemic", #****
-                    "Experienced Stigmatization Using Healthcare Ressources", #*
-						"Possibility of Remote Sessions with PD-related Healthcare Providers during pandemic", #* #TODO: What is the difference to next line?!
-					"Access to Technology for Consulting Healthcare Providers during pandemic", #*
-					"Communication Challenges before pandemic", #* # TODO: produces isues with collinearity in the dataset together with "Reasons for Communication Challenges..."
-                    "Negative Effects on Patients due to Healthcare Accessibility Barriers", #****
-					"Existence of Negative Effects on Patients due to Healthcare Accessibility Barriers", #* # TODO: What is this?
-	                "Level of Urbanization", #** #TODO: This is very similar to "Population according to ..." below. I would prefer the other one as it is more reliable and we only have 3/6 levels available here; besides resuöts are almost identical
-						"Living Situation", #* #TODO: Not very precise. Situation about what?
-	                "Sum of Barriers Preventing Healthcare Access before pandemic", #**
-					"Extent of Perceived Difficulty Accessing PD-related Healthcare Services before pandemic", #*	
-					"Geographical Barriers Concerning Access to Healthcare Ressources before pandemic", #**
-					"Population according to quantiles of German population [in sqkm]", #****
-	                "Locally Available PD-related Healthcare Ressources", #**
-						"Frequency of the Impression that Needed PD-related Healthcare was not Received before the COVID-19 Pandemic", #** #TODO: not quite clear to me what this means -> changed description to make it clearer
-                    "Neurologists nearby (per sqkm)", #****
-                    "Gender *" #*
+					"A2 - Disease Stage [H&Y]", #**
+ 					"B1a - Regular caregiver present", #*
+	                		
+					"A1 - Disease duration [Years]", #**
+  					"A4 - No. of comorbidities", #*
+ 					"vWEI - Comorbidity Index [vWEI]", #**(*)
+					
+					"D8 - Education [ISCED]", #**
+  					"D9 - Net Householdincome [€/year]", #****
+					
+					"B3 - Perceived GP expertise", #**
+  					"B5 - Perceived Neurologist expertise", #**
+					
+					#"B14a - Sum of Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? -> Answer: a sum // Besides problem with multicollinearity (see below "Communication challanges ...")
+	                		"B14 - Communication challenges pre COVID"
+	
+					"A3 - PDQ-8 score", #**(*)
+					
+					"B7a - No. of ressources against geographical barriers pre COVID", #**** 
+  					"B9a - Ability to access PD-care pre COVID", #*
+					
+					"B11 - Rescheduled healthcare due to financial burden pre COVID", #* 
+  					"B12 - Extended healthcare insurance", #* 
+  					"B13 - Financial burden related to PD pre COVID", #*
+ 				 	"D10 - Financial stability", #**
+                   			
+	
+					"C3_3 - Confidence accessing healthcare remotely", #* 
+  					"B6a - Perceived cooperation between healthcare providers", #**
+  					"B6 - No. of healthcare providers consulted pre COVID", #****
+                   			
+					"B15 - Experienced stigmatization in healthcare", #*
+  					"C2 - Availability of remote healthcare during COVID", #* #TODO: What is the difference to next line?!
+  					"C2c2 - Access to telehealth technologies during COVID", #*
+  					#B14 - "Communication Challenges before pandemic", #* # TODO: produces isues with collinearity in the dataset together with "Reasons for Communication Challenges..."
+                   			
+					"B16a - No. of negative consequences from barriers to healthcare", #****
+  					#B16a.c - Existence of Negative Effects on Patients due to Healthcare Accessibility Barriers", #* 
+					#D6 - Level of Urbanization", #** #TODO: This is very similar to "Population according to ..." below. I would prefer the other one as it is more reliable and we only have 3/6 levels available here; besides resuöts are almost identical
+  					"D7 - Living independently", #* 
+  					"B9b - No. of barriers in acces to healthcare pre COVID", #**
+  					"B10 - Perceived difficulty of accessing healthcare pre COVID", #*	
+					
+					"B7 - No. of geographical barriers in access to healthcare pre COVID", #**
+  					"qp - Population according to quantiles of German population [in sqkm]", #****
+	                		#"B8 - Locally Available PD-related Healthcare Ressources", #**
+					"B9 - Not received needed healthcare pre COVID", #** 
+  					"nGER - Neurologists nearby (per sqkm)", #****
+                    
+					"D2 - Gender *" #*
 				)
 
 # ==================================================================================================
