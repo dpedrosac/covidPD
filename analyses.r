@@ -523,6 +523,7 @@ sort(apply(df_OR1_complete,2,pMiss), decreasing=TRUE)[1:5]
 # TODO 3: We have problems with multicollinearity in the data. The problem is an innate condition for GLM, which means  a little oversimplified that values that are perfectly correlated with each other
 # make the estimation of residuals complicated so that the model becomes bad. The problem arises with:
 
+flag_check = TRUE
 if (flag_check){ # need to run the part with the stepwise regression first to make this work ...
 full_model_test = glm(I(dv=='yes') ~ ., data = train_data)
 mctest::imcdiag(full_model_test)
