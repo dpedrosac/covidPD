@@ -39,22 +39,22 @@ setwd(wdir)
 # ==================================================================================================
 # Load and tidy up raw data with the majority of columns of interest (further data to be added below)
 
-df_total 								<- read.csv(file.path(wdir, "data", "raw_data.csv")) # read data frama from raw (csv/xlsx-file)
-cols			    					<- read.csv(file.path(wdir, "colnames.txt"), header=FALSE, stringsAsFactors=FALSE)$V1 # read column names to frename in next line
-colnames(df_total) 						<- cols[1:length(colnames(df_total))]	# replace column names with cleaned version in 'colnames.txt'
+df_total 		<- read.csv(file.path(wdir, "data", "raw_data.csv")) # read data frama from raw (csv/xlsx-file)
+cols			<- read.csv(file.path(wdir, "colnames.txt"), header=FALSE, stringsAsFactors=FALSE)$V1 # read column names to frename in next line
+colnames(df_total) 	<- cols[1:length(colnames(df_total))]	# replace column names with cleaned version in 'colnames.txt'
 df_total[(df_total>=93 & df_total<=99)] <- NA 	# convert values that are not meaningful into NAs
-df_total[df_total<0]					<- NA 	# convert values that are not meaningful into NAs
+df_total[df_total<0]	<- NA 	# convert values that are not meaningful into NAs
 
 # ==================================================================================================
 # Comorbidity index
-filename_comorbidities  		<- file.path(wdir, "data", "vanWalravenElixhauserIndex.csv")
-df_comorbidities 			  	<- read.csv2(filename_comorbidities)
-df_comorbidities 			  	<- data.frame(vWEI=df_comorbidities$value)
+filename_comorbidities  <- file.path(wdir, "data", "vanWalravenElixhauserIndex.csv")
+df_comorbidities 	<- read.csv2(filename_comorbidities)
+df_comorbidities 	<- data.frame(vWEI=df_comorbidities$value)
 
 # ==================================================================================================
-# Neurologists per 100.000 inhabitants and average population (GER) (for details cf. preprocess_geospatial_data.r)
+# Neurologists per 100.000 inh. & average population (GER) (cf. preprocess_geospatial_data.r)
 df_demographics <-read.csv(file.path(wdir, "data", "demographics_per_postal_code.csv"))
-for (item in 1:length(df_demographics$plz)){ # dodgy way of entering zeros when postal codes have less than 5 digits
+for (item in 1:length(df_demographics$plz)){ # dodgy way to enter 0's when postal codes < 5 digits
 	if (!is.na(df_demographics$plz[item]) & nchar(df_demographics$plz[item]) < 3){
 		df_demographics$plz[item] <- paste0("0", df_demographics$plz[item])
 	} else {
@@ -62,19 +62,19 @@ for (item in 1:length(df_demographics$plz)){ # dodgy way of entering zeros when 
 	}
 }	
 
-population_data 	<- data.frame( # create empty dataframe of the size of data_raw
-  populationGER=rep(NA, dim(df_total)[1]), 
-  neurologistsGER=rep(NA, dim(df_total)[1]),
-  physiciansGER=rep(NA, dim(df_total)[1]))
+population_data <- data.frame( # create empty dataframe of the size of data_raw
+				  populationGER=rep(NA, dim(df_total)[1]), 
+				  neurologistsGER=rep(NA, dim(df_total)[1]),
+				  physiciansGER=rep(NA, dim(df_total)[1]))
 
 # ==================================================================================================
 # only use regional data of interest, that is German data
 idx_GER 		<- which(df_total$country=="GE") # index of German data
-plzGER 			<- unique(df_total$postal_code[idx_GER]) # all postal codes available in the plzGER data
+plzGER 			<- unique(df_total$postal_code[idx_GER]) # postal codes available in {plzGER}
 
-for (vals in plzGER) { # for loop intended to extract population, neurologists and total physician density to matrix
-  idx_demographics = which(df_demographics$plz==vals)
-  idx_df = which(df_total$postal_code==vals)
+for ( {in plzGER) { # for loop to extract population, neurologists and total physician density
+  idx_demographics 	<- which(df_demographics$plz==vals)
+  idx_df 		<- which(df_total$postal_code==vals)
   if (identical(idx_demographics, integer(0))){
     population_data$populationGER[idx_df] = NA
     population_data$neurologistsGER[idx_df] = NA
@@ -87,8 +87,8 @@ for (vals in plzGER) { # for loop intended to extract population, neurologists a
 } 
 
 # Concatenate data into one dataframe
-df_total 		<- data.frame(cbind(df_total, population_data, df_comorbidities)) # add data to data matrix to work with
-dfGER 			<- df_total[idx_GER,]
+df_total 	<- data.frame(cbind(df_total, population_data, df_comorbidities)) # add data to working data matrix
+dfGER 		<- df_total[idx_GER,]
 
 # ==================================================================================================
 ## Tidy up factors before analyses (adapt corresponding levels)
@@ -168,40 +168,29 @@ levels(df_total$education_cat) <- c("primary education", "secondary education", 
 # ...OTHER
 df_total <- df_total %>% mutate(quantile_population = ntile(populationGER, 5)) # converts German population data to categories according to quantiles
 
-# TODO: What do the following lines mean?
-# ___________________________________________________________________________________________________________________________________________________________________________________________
-# Adapting using remode() from car package could be: df_total$GP_expertise.B3_recode <- recode(df_total$GP_expertise.B3, "1=5; 2=4; 3=3; 4=2; 5=1") 
-
-#C6: satisfaction_with_care_duringCovid_categorized.C6 not adapted, because it is already categorized. @Marlena: Which values does category "1" and "2" include?
-#in the raw dataset there are variables C6 (contains values from 1-4) and categorized.C6 (contains values from 1-2)
-
-#D6: type_of_community.D6 not adapted, because it is already categorized. @Marlena: Which values does category "1", "2" and "3" include?
-#in the raw dataset there are variables D6 (contains values from 1-6) and categorized.D6 (contains values from 1-3) - here we could think of merging category 3 into category 2 because there are very little people in 3
-
 # ==================================================================================================
 ## Create TableOne for specific values
 
-Vars 					<- c(	"age.D1", "gender.D2", "disease_duration_cat", "disease_stage_name", "populationGER", "neurologistsGER", 
-						"physiciansGER", "education_cat", "pdq8_total.A3", "vWEI")
-df_tableOne 			<- df_total %>% select(all_of(Vars))
-
-colnames_Vars			<- c("Age", "Gender", "Disease duration", "Disease stage", "Inhabiltants per sqkm", "Neurologists per sqkm", 
-								"General practitioners per sqkm", "Education level according to ISCED", "PDQ-8 scores [in %]", "Van-Walraven-Elixhauser Comorbidity Index")
+Vars 			<- c(	"age.D1", "gender.D2", "disease_duration_cat", "disease_stage_name", "populationGER", "neurologistsGER", 
+				"physiciansGER", "education_cat", "pdq8_total.A3", "vWEI")
+df_tableOne 		<- df_total %>% select(all_of(Vars))
+colnames_Vars		<- c("Age", "Gender", "Disease duration", "Disease stage", "Inhabiltants per sqkm", "Neurologists per sqkm", 
+				"General practitioners per sqkm", "Education level according to ISCED", "PDQ-8 scores [in %]", 
+			     	"Van-Walraven-Elixhauser Comorbidity Index")
 colnames(df_tableOne) 	<- colnames_Vars
-factVars 				<- c("Gender", "Education level according to ISCED", "Disease duration", "Disease stage") # Here only values with categorial (ordinal distribution should be added) 
-tableOne 				<- CreateTableOne(vars=colnames_Vars, factorVars=factVars, data=df_tableOne) # @Marcel, here the vars of interest should be renamed
+factVars 		<- c("Gender", "Education level according to ISCED", "Disease duration", "Disease stage") # Here only values with categorial (ordinal distribution should be added) 
+tableOne 		<- CreateTableOne(vars=colnames_Vars, factorVars=factVars, data=df_tableOne) # @Marcel, here the vars of interest should be renamed
 print(tableOne, nonnormal=c("Disease stage", "Education level according to ISCED"))
 
 # ==================================================================================================
 # Start analysing major questions 
 # Extract values of interest pre and during (cf. ...B17 vs. ...C6) 
-df_careCovid 			<- df_total %>% select(satisfaction_PDcare_priorCovid.B17, satisfaction_with_care_duringCovid.C6) %>% drop_na()
+df_careCovid 		<- df_total %>% select(satisfaction_PDcare_priorCovid.B17, satisfaction_with_care_duringCovid.C6) %>% drop_na()
 colnames(df_careCovid) 	<- c("before", "during") # change colnames in meaningful way 
-df_careCovid 			<- dplyr::mutate(df_careCovid, ID = row_number()) %>% 
-							pivot_longer(
-											cols = c("before", "during"), 
-											names_to = "timing", 
-											values_to = "ratings")
+df_careCovid 		<- dplyr::mutate(df_careCovid, ID = row_number()) %>% 
+							pivot_longer(cols = c("before", "during"), 
+									names_to = "timing", 
+									values_to = "ratings")
 
 df_careCovid$ratings[(df_careCovid$ratings==-999 | df_careCovid$ratings ==5)] 	<- NA # -999 means "not answered because question not applicable based on a previous answer", a bit redundant after lines 41f.
 df_careCovid$ID 									<- as.factor(df_careCovid$ID) # ID needs to be coded as factor
@@ -211,23 +200,22 @@ df_careCovid %>%
   get_summary_stats(ratings, show = c("mean", "sd", "median", "iqr"))  
 
 # Create a summary of available results
-summary_care 			<- df_careCovid %>% filter(timing=="before") %>% drop_na() %>% group_by(ratings)  %>% summarize(before=sum(ratings))
-temp_data 				<- df_careCovid %>% filter(timing=="during") %>% drop_na()%>% group_by(ratings)  %>% summarize(during=sum(ratings))
-summary_care 			<- merge(summary_care, temp_data, by="ratings", all = T)
+summary_care 		<- df_careCovid %>% filter(timing=="before") %>% drop_na() %>% group_by(ratings)  %>% summarize(before=sum(ratings))
+temp_data 		<- df_careCovid %>% filter(timing=="during") %>% drop_na()%>% group_by(ratings)  %>% summarize(during=sum(ratings))
+summary_care 		<- merge(summary_care, temp_data, by="ratings", all = T)
 summary_care[is.na(summary_care)]=0.001
 
 colnames(summary_care) 	<- c("ratings", "before", "during")
 summary_care$before 	<- summary_care$before/sum(summary_care$before)
 summary_care$during 	<- summary_care$during/sum(summary_care$during)
 summary_care 			<- dplyr::mutate(summary_care, ID = row_number()) %>% 
-								pivot_longer(
-											cols = c("before", "during"), 
-											names_to = "timing", 
-											values_to = "percentage")
+								pivot_longer(cols = c("before", "during"), 
+										names_to = "timing", 
+										values_to = "percentage")
 
-summary_care <- summary_care %>% filter(ratings>0)
+summary_care		<- summary_care %>% filter(ratings>0)
 symmetry_test(ratings~as.factor(timing) | ID, data=df_careCovid, distribution="exact")
-stat.test <- df_careCovid  %>%
+stat.test 		<- df_careCovid  %>%
   sign_test(ratings ~ timing) %>%
   add_significance() %>%
   add_xy_position(x = "ratings", dodge = 0.8)
@@ -266,7 +254,6 @@ p_satisfaction_with_care <- ggplot(summary_care, aes(x = timing, y = percentage)
 		  axis.text = element_text(size = 12))
 p_satisfaction_with_care
 # ==================================================================================================
-
 
 # ==================================================================================================
 # Start with Odds rations 
@@ -538,6 +525,7 @@ sort(apply(df_OR1_complete,2,pMiss), decreasing=TRUE)[1:5]
 # TODO 3: We have problems with multicollinearity in the data. The problem is an innate condition for GLM, which means  a little oversimplified that values that are perfectly correlated with each other
 # make the estimation of residuals complicated so that the model becomes bad. The problem arises with:
 
+flag_check = TRUE
 if (flag_check){ # need to run the part with the stepwise regression first to make this work ...
 full_model_test = glm(I(dv=='yes') ~ ., data = train_data)
 mctest::imcdiag(full_model_test)
