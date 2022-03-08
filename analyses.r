@@ -3,9 +3,11 @@
 
 # Version 1.6 # 2022-02-19, recoded all values, refined analyses
 
+flag_check=FALSE
 ## First specify the packages of interest
 packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", "lemon", "precrec", "mctest",
-				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel", "fastDummies", "car")
+				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel", "fastDummies", "car",
+				"MLmetrics", "gtsummary", "xfun")
 
 # ==================================================================================================
 ## Now load or install&load all
@@ -432,7 +434,7 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
   					"B5 - Perceived Neurologist expertise", #**
 					
 					#"B14a - Sum of Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? -> Answer: a sum // Besides problem with multicollinearity (see below "Communication challanges ...")
-	                		"B14 - Communication challenges pre COVID"
+	                		"B14 - Communication challenges pre COVID",
 	
 					"A3 - PDQ-8 score", #**(*)
 					
@@ -592,9 +594,9 @@ results_OR1
 # ==================================================================================================
 # ==================================================================================================
 
-
 # ==================================================================================================
-# Variable factor selection using GLM with the dependent variable being:
+# ==================================================================================================
+# Stepwise linear regression in order to reduce dimensionality/extract the most meaningful predictors
 # needed_healthcare_but_did_not_receive_it_duringCovid.C4, which ranges from 1 to 5 (and NA)
 # Method inspired from http://rstudio-pubs-static.s3.amazonaws.com/448536_221fe7b85ca1471d8f4a53c05fcbe95b.html among other sources
 
@@ -603,73 +605,76 @@ pMiss <- function(x){sum(is.na(x))/length(x)*100} # function to find missing (NA
 
 data_full_glm <- df_OR1_complete %>% dplyr::select(factorsOR1, dv) %>% mutate(across(c(2,9,12,13, 15, 20, 21, 22, 26, 27), as.factor)) # getting data for the full-GLM
 data_full_glm$pdq8_total.A3 <- as.numeric(data_full_glm$pdq8_total.A3)
-data_full_glm$educational_level.D8[data_full_glm$educational_level.D8==13] <- NA
 
 flag_check = TRUE
-if (flag_check) { # Sanity checks if flag_check set
+if (flag_check) { # Sanity checks; looks for incomplete columns within the entire dataset
 	apply(data_full_glm,2,pMiss) # percentage of missing values per column
 	apply(data_full_glm,1,pMiss) # percentage of missing values per row
-	aggr_plot1 			<- aggr(data_full_glm[1:19], col = c('navyblue','red'), numbers = TRUE, sortVars = TRUE, 
-													labels = names(data), cex.axis = .7, gap = 3, ylab = c("Histogram of missing data","Pattern")) # Display missing values graphically
-	aggr_plot2 			<- aggr(data_full_glm[20:37], col = c('navyblue','red'), numbers = TRUE, sortVars = TRUE, 
-												labels = names(data), cex.axis = .7, gap = 3, ylab = c("Histogram of missing data","Pattern")) # Display missing values graphically
+	aggr_plot1 			<- aggr(data_full_glm[1:16], col = c('navyblue','red'), numbers = TRUE, sortVars = TRUE, 
+													labels = names(data), cex.axis = .7, gap = 3, 
+													ylab = c("Histogram of missing data","Pattern")) # Display missing values graphically
+	aggr_plot2 			<- aggr(data_full_glm[17:33], col = c('navyblue','red'), numbers = TRUE, sortVars = TRUE, 
+												labels = names(data), cex.axis = .7, gap = 3, 
+												ylab = c("Histogram of missing data","Pattern")) # Display missing values graphically
 }
 
+# ==================================================================================================
+# Data imputation using the MICE package with a multivariate approach
 inlist 				<- c("disease_stage.A2", "gender.D2", "vWEI", "dv") # names of the variables that should be included as covariates in every imputation model
-
-# 1. Data imputation using multivariate routines (MICE package)
 pred 				<- quickpred(data_full_glm, minpuc = 0.5, include = inlist) # predictor matrix
 generate_imputation <- mice(data=data_full_glm,
 							 predictorMatrix = pred, #predictormatrix,
 							 m=10,
 							 maxit=5,            
-							 diagnostics=TRUE)
-							 #MaxNWts=3000)				 
+							 diagnostics=TRUE)		 
 
-if (flag_check){
+# Sanity checks
+if (flag_check){ # Generates a density plot with the observed vs. the imputed variables
 	densityplot(generate_imputation, xlim = c(0, 5), ylim = c(0, 0.4))
 }
 
-# 2. Prepare "imputed" data for regression by creating dummy variables and converting rest to integers:
+# Prepare "imputed" data for GLM with dummy variables and by converting columns integers where appropiate:
+imputed_data_full 									<- generate_imputation
 imputed_data_full$visit_healthcare_providers_sum.B6[imputed_data_full$visit_healthcare_providers_sum.B6==5] <-4
-imputed_data_full = data.frame(complete(generate_imputation)) %>% drop_na()
-imputed_data_full$neurologists_expertise.B5 <- as.integer(imputed_data_full$neurologists_expertise.B5)
+imputed_data_full 									<- data.frame(complete(generate_imputation)) %>% drop_na()
+imputed_data_full$neurologists_expertise.B5 		<- as.integer(imputed_data_full$neurologists_expertise.B5)
 imputed_data_full$visit_healthcare_providers_sum.B6 <- as.integer(imputed_data_full$visit_healthcare_providers_sum.B6)  
 
 imputed_data_full <- dummy_cols(imputed_data_full, select_columns = c(	'gender.D2', 'received_remote_sessions_duringCovid.C2', 
-															'regular_caregiver_categorial.B1a', 'type_of_community_categorized.D6',
+															'regular_caregiver_categorial.B1a',# 'type_of_community_categorized.D6',
 															'overcoming_barriers_sum.B7a', 'personal_accessibility_barriers_sum_categorized.B16a', 
 															'reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15', 'extended_health_insurance_due_to_PD.B12',
-															'inability_to_access_care_sum_categorized_priorCovid.B9a'), #TODO: if something is changed before, this must be adapted, as well
-					remove_selected_columns = TRUE)
+															'inability_to_access_care_sum_categorized_priorCovid.B9a'), remove_selected_columns = TRUE)
 str(imputed_data_full)
 
 # ==================================================================================================
-## Start with regression models, that is full model vs. model w/ stepwise reduction using glmStepAIC {caret package}
-# analyses adapted from: https://rpubs.com/mpfoley73/625323
+## GLM analyses, that is full model vs. model w/ stepwise reduction w/ glmStepAIC from {caret} package
+# Analyses adapted from: https://rpubs.com/mpfoley73/625323
 
 # Separate data into train and test dataset
 index 		<- createDataPartition(imputed_data_full$dv, p = 0.8, list = FALSE) # split data with balanced values for dv
 train_data 	<- imputed_data_full[index,]
 test_data 	<- imputed_data_full[-index,]
-
-# Define a) FULL GLM and save results to workspace {mdl_full}
+model_est 	<- data.frame(model_name=c("Full GLM", "Stepwise reduced GLM"), AUC=c(NA,NA), LogLoss=c(NA, NA), Accuracy=c(NA,NA))
+# ==================================================================================================
+# a) FULL GLM and save results to workspace {mdl_full}
 train_data <- model.frame(dv ~ ., data = train_data, drop.unused.levels = TRUE) # drop unused factors
 train_control <- trainControl(method = "cv", number = 10, savePredictions = "final", classProbs = TRUE)
 mdl_full <- train(train_data %>% select(-dv),
 					train_data$dv,
 					method = "glm",
-					preProcess = c("center", "scale", "pca"),
+					preProcess = c("center", "scale"),
 					family = "binomial",
 					trControl = train_control,
 					metric = "Accuracy")
 
-# Interpreting results of FULL GLM:
+# Interpreting results {mdl_full}:
 mdl_full # Accuracy of full model results in ~84.1%
 varImp(mdl_full) # Factors most contributing to data are listed here  
-predicted_classes <- predict(mdl_full, newdata = test_data) 
-predicted_probs <- predict(mdl_full, newdata = test_data, type = "prob")
-confusionMatrix(predicted_classes, test_data$dv, positive = "yes") # predictions on (independent) test data
+
+predicted_classes 	<- predict(mdl_full, newdata = test_data) 
+predicted_probs 	<- predict(mdl_full, newdata = test_data, type = "prob")
+mdl_full_matrix 	<- confusionMatrix(predicted_classes, test_data$dv, positive = "yes") # predictions on (independent) test data
   
 mdl_full_preds <- predict(mdl_full, newdata = test_data, type = "prob")
 (mdl_full_eval <- evalmod(
@@ -677,48 +682,47 @@ mdl_full_preds <- predict(mdl_full, newdata = test_data, type = "prob")
   labels = test_data$dv
 ))
 
-# Print AUC
+mdl_full_prob <- predict(mdl_full, newdata = test_data, type = "prob") %>%
+        bind_cols(predict(mdl_full, test_data)) %>%
+        bind_cols(select(test_data, dv))
+
+trueLabelsBinary <- ifelse(mdl_full_prob$dv=="yes", 1, 0)
+predictedLabelsBinary <- ifelse(mdl_full_prob$`...3`=="yes", 1, 0)
+model_est$LogLoss[1] = LogLoss(mdl_full_prob$yes, trueLabelsBinary)
+model_est$AUC[1] = AUC(mdl_full_prob$yes, trueLabelsBinary)
+model_est$Accuracy[1] = mdl_full$results[[2]]
+
+annotation <- data.frame(x=.8, y=.6, label=sprintf("AUC = %.2f [%.2f; %.2f]", mdl_full_matrix$overall[[1]],  mdl_full_matrix$overall[[3]], mdl_full_matrix$overall[[4]]))
+
+# Print AUC for the FULL model
 options(yardstick.event_first = FALSE)  # set the second level as success
-data.frame(
-  pred = mdl_full_preds$yes, 
-  obs = test_data$dv
-) %>%
-  yardstick::roc_curve(obs, pred) %>%
-  autoplot() +
-  labs(
-    title = "Full Model ROC Curve, Test-dataset",
-    subtitle = "AUC = 85.91"
-)
+fig3a <- data.frame(pred = mdl_full_preds$yes, obs = test_data$dv) %>%
+	yardstick::roc_curve(obs, pred) %>%
+	autoplot() +
+	theme_bw() +
+	labs(title = "Prediction zthat healthcare was needed but wasn't received", 
+		subtitle = "Full model GLM including all predictors") + 
+	geom_text(data=annotation, aes(x=x, y=y, label=label), color="black", fontface="bold") + 
+	coord_equal() +
+	xlab("1 - specificity") + ylab("sensitivity")
 
-# Print Gain curve
-data.frame(
-  pred = mdl_full_preds$yes, 
-  obs = test_data$dv
-) %>%
-  yardstick::gain_curve(obs, pred) %>%
-  autoplot() +
-  labs(
-    title = "Full Model Gain Curve on Test dataset"
-  )
-  
-
-# Run b) stepwise regression using {caret}-package
-mdl_step 	<- train(train_data %>% select(-dv), # reg_caret_model
-                      train_data$dv, #train_data[,dim(train_data)[2]],
-                      method = 'glmStepAIC', #lmStepAIC, BstLm, 
+# ==================================================================================================
+# b) stepwise regression using {caret}-package
+mdl_step 	<- train(train_data %>% select(-dv),
+                      train_data$dv,
+                      method = 'glmStepAIC', 
+					  preProcess = c("center", "scale"),
+					  tuneLength = 10, #"ROC",
+                      family = binomial,
                       trControl = train_control,
-					  #metric = "Accuracy",
-					  preProcess = c("center", "scale", "pca"),
-					  tuneLength = 10, metric = "Accuracy", #"ROC",
-                      family = binomial, 
-					  link="logit")
-summary(mdl_step)
-varImp(mdl_step) # Factors most contributing to data are listed here  
+					  metric = "Accuracy")
+mdl_step
+varImp(mdl_step$finalModel) # Factors most contributing to data are listed here  
 
 # Interpreting results of stepwise reduced GLM:
-predicted_classes <- predict(mdl_step, newdata = test_data) 
-predicted_probs <- predict(mdl_step, newdata = test_data, type = "prob")
-confusionMatrix(predicted_classes, test_data$dv, positive = "yes") # predictions on (independent) test data
+predicted_classes 	<- predict(mdl_step, newdata = test_data) 
+predicted_probs	 	<- predict(mdl_step, newdata = test_data, type = "prob")
+mdl_step_matrix 	<- confusionMatrix(predicted_classes, test_data$dv, positive = "yes") # predictions on (independent) test data
 
 mdl_step_preds <- predict(mdl_step, newdata = test_data, type = "prob")
 (mdl_step_eval <- evalmod(
@@ -726,50 +730,61 @@ mdl_step_preds <- predict(mdl_step, newdata = test_data, type = "prob")
   labels = test_data$dv
 ))
 
-scores_list <- join_scores(
-  predict(mdl_full, newdata = train_data, type = "prob")$yes,
-  predict(reg_caret_model, newdata = train_data, type = "prob")$yes)
+mdl_step_prob <- predict(mdl_step, newdata = test_data, type = "prob") %>%
+        bind_cols(predict(mdl_step, test_data)) %>%
+        bind_cols(select(test_data, dv))
 
-labels_list <- join_labels(
-  train_data$dv,
-  train_data$dv)
+trueLabelsBinary <- ifelse(mdl_step_prob$dv=="yes", 1, 0)
+predictedLabelsBinary <- ifelse(mdl_step_prob$`...3`=="yes", 1, 0)
+model_est$LogLoss[2] = LogLoss(mdl_step_prob$yes, trueLabelsBinary)
+model_est$AUC[2] = AUC(mdl_step_prob$yes, trueLabelsBinary)
+model_est$Accuracy[2] = mdl_step$results[[2]]
 
-pe <- evalmod(
-  scores = scores_list, 
-  labels = labels_list,
-  modnames = c("Full", "glmStepAIC"), #, "Final (Training)"),
-  posclass = "yes")
-
-autoplot(pe, "ROC")
-
-resamps <- resamples(list('Full' = mdl_full, 
-                          'glmStepAIC' = reg_caret_model))#,
-                          #'Final' = mdl_final_train))
-summary(resamps)
-bwplot(resamps, layout = c(2, 1))
-
-
-predictTest = predict(reg_caret_model, newdata = test_data, type = "raw")
-head(predict(reg_caret_model, newdata = test_data))
+# Print AUC for the FULL model
+annotation <- data.frame(x=.8, y=.6, label=sprintf("AUC = %.2f [%.2f; %.2f]", mdl_step_matrix$overall[[1]],  mdl_step_matrix$overall[[3]], mdl_step_matrix$overall[[4]]))
+options(yardstick.event_first = FALSE)  # set the second level as success
+fig3b <- data.frame(pred = mdl_step_preds$yes, obs = test_data$dv) %>%
+	yardstick::roc_curve(obs, pred) %>%
+	autoplot() +
+	theme_bw() +
+	labs(title = "Prediction zthat healthcare was needed but wasn't received", 
+		subtitle = "GLM model after AIC-based stepwise reduction ") + 
+	geom_text(data=annotation, aes(x=x, y=y, label=label), color="black", fontface="bold") + 
+	coord_equal() +
+	xlab("1 - specificity") + ylab("sensitivity")
 
 
-calc_acc = function(actual, predicted) {
-  mean(actual == predicted)
-}
+# Compare models
+p_comparison_models <- model_est %>% pivot_longer(!model_name, names_to="metric") %>%
+  ggplot(aes(fill = model_name, y = value, x = metric)) + 
+  geom_bar(position = "dodge", stat = "identity") +
+  #scale_fill_manual(values = c("#7A8B99", "#A9DDD6")) +
+	theme_minimal() +
+	theme(text = element_text(size = 12),
+		  plot.caption = element_text(hjust = .7, face="italic"), 
+		  legend.title = element_text(hjust = .5, color = "black", size = 12, face = "bold"),
+		  axis.text = element_text(size = 12), 
+		  legend.position = c(0.86, 0.9), 
+		  plot.margin = margin(t = 10, unit = "pt")) +
+	ylim(0,1) +
+	scale_fill_brewer(palette = 1) + 
+	labs(
+		y = "Value",
+		x = "",
+		fill = NULL,
+		title = "Comparing the full model with the reduced model using distinct metrics",
+		caption = "Higher values indicate better performance: Accuracy and AUC\nLower values indicate better performance: Log Loss") + 
+  geom_text(aes(label = round(value, 3)), vjust = -0.5, size = 3, position = position_dodge(width= 0.9)) #+
+  #coord_capped_cart()
+p_comparison_models
 
-calc_acc(actual = test_data[,34],
-         predicted = predict(reg_caret_model, newdata = test_data))
+# ==================================================================================================
+# Summary of all results from the stepwise reduced regression and plots to show the results for the 
+# identified predictors
+summary(mdl_step) # No function was traceable to get that into a table, so it has to be done manually!
 
-# Stepwise regression
-fit_temp_complete <- glm("I(dv=='yes') ~ .", data=td, family=binomial)
-step.model <- stepAIC(fit_temp_complete, direction = "both", 
-                      trace = TRUE)
-summary(step.model)
-
-
-
-step(fit_temp_complete, direction="backward")
-summary(fit_temp_complete)
+#TODO: Supplementary data which displeays the levels of the answers on the x-Axis and the means for 'yes' and 'no' on the y axis for the
+# supplementary data. For that we need a list of factors (-> just copy the entore list and remove what is not needed) and the ggplot routines in a loop ; ) 
 
 
 
