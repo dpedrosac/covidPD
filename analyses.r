@@ -20,6 +20,7 @@ package.check <- lapply(
     }
   }
 )
+#ERROR: object x not found
 
 ## In case of multiple people working on one project, this helps to create an automatic script
 username = Sys.info()["login"]
@@ -73,6 +74,8 @@ idx_GER 		<- which(df_total$country=="GE") # index of German data
 plzGER 			<- unique(df_total$postal_code[idx_GER]) # postal codes available in {plzGER}
 
 for ( {in plzGER) { # for loop to extract population, neurologists and total physician density
+#ERROR: Loop is not running 
+  
   idx_demographics 	<- which(df_demographics$plz==vals)
   idx_df 		<- which(df_total$postal_code==vals)
   if (identical(idx_demographics, integer(0))){
@@ -178,8 +181,8 @@ colnames_Vars		<- c("Age", "Gender", "Disease duration", "Disease stage", "Inhab
 				"General practitioners per sqkm", "Education level according to ISCED", "PDQ-8 scores [in %]", 
 			     	"Van-Walraven-Elixhauser Comorbidity Index")
 colnames(df_tableOne) 	<- colnames_Vars
-factVars 		<- c("Gender", "Education level according to ISCED", "Disease duration", "Disease stage") # Here only values with categorial (ordinal distribution should be added) 
-tableOne 		<- CreateTableOne(vars=colnames_Vars, factorVars=factVars, data=df_tableOne) # @Marcel, here the vars of interest should be renamed
+factVars 		<- c("Gender", "Education level according to ISCED", "Disease duration", "Disease stage")  
+tableOne 		<- CreateTableOne(vars=colnames_Vars, factorVars=factVars, data=df_tableOne) 
 print(tableOne, nonnormal=c("Disease stage", "Education level according to ISCED"))
 
 # ==================================================================================================
@@ -515,7 +518,8 @@ results_OR1 %>%
   caption = "*Gender was coded so that negative odds means that being female indicates a higher risk of unmet needs")
 
 #TODO 1: Please double check the results, as most of them look plausible while at least one is not quite clear: Confidence Accessing PD-related Healthcare Remotely increase significantly the Odds?!?
-#M: to me this makese sense as higher values in C3_3 mean less confidence 
+#Marlena#s answer: to me this makese sense as higher values in C3_3 mean less confidence (we used the categorized variable)
+       
 pMiss <- function(x){sum(is.na(x))/length(x)*100} # function to find missing (NA) values
 sort(apply(df_OR1_complete,2,pMiss), decreasing=TRUE)[1:5]
 
@@ -524,11 +528,12 @@ sort(apply(df_OR1_complete,2,pMiss), decreasing=TRUE)[1:5]
        
 # Please double-check if there are some of the five that we can replace and if so try to change the code. The lines to change if you remove (or add) something are;
 # line 293f, line 330f, line401f.
-#M: personal_accessibility_barriers_sum_categorized.B16a has been removed - also I removed D6,  and B8
+#Marlena´s answer: personal_accessibility_barriers_sum_categorized.B16a has been removed - also I removed D6, B14a, and B8
       
 
 # TODO 3: We have problems with multicollinearity in the data. The problem is an innate condition for GLM, which means  a little oversimplified that values that are perfectly correlated with each other
 # make the estimation of residuals complicated so that the model becomes bad. The problem arises with:
+#Marlena: see my answer above
 
 flag_check = TRUE
 if (flag_check){ # need to run the part with the stepwise regression first to make this work ...
@@ -540,7 +545,7 @@ XX
 }
 
 # TODO 4: What is ""ability_to_access_care_priorCovid.B9", that does appear somehow and looks a bit odd. It's very related to "local_availability_sum_categorized.B8". We should decide for one (if first actually exists). 
-#M: removed B8      
+#Marlena's answer: removed B8      
 # -> B9: "felt that healthcare was needed but not available pre covid (never/rarely/sometimes/often/always) and is now named "Frequency of the Impression that Needed PD-related Healthcare was not Received before the COVID-19 Pandemic" for plotting
 # --> the strong relation between B8 and B9 seems logical because if there isn´t a healthcare ressource locally available (B8) it´s more likely that people there more often perceive a lack of healthcare (B9)
 
@@ -694,7 +699,7 @@ fig3a <- data.frame(pred = mdl_full_preds$yes, obs = test_data$dv) %>%
 	yardstick::roc_curve(obs, pred) %>%
 	autoplot() +
 	theme_bw() +
-	labs(title = "Prediction zthat healthcare was needed but wasn't received", 
+	labs(title = "Prediction that healthcare was needed but wasn't received", 
 		subtitle = "Full model GLM including all predictors") + 
 	geom_text(data=annotation, aes(x=x, y=y, label=label), color="black", fontface="bold") + 
 	coord_equal() +
@@ -741,7 +746,7 @@ fig3b <- data.frame(pred = mdl_step_preds$yes, obs = test_data$dv) %>%
 	yardstick::roc_curve(obs, pred) %>%
 	autoplot() +
 	theme_bw() +
-	labs(title = "Prediction zthat healthcare was needed but wasn't received", 
+	labs(title = "Prediction that healthcare was needed but wasn't received", 
 		subtitle = "GLM model after AIC-based stepwise reduction ") + 
 	geom_text(data=annotation, aes(x=x, y=y, label=label), color="black", fontface="bold") + 
 	coord_equal() +
@@ -785,7 +790,7 @@ summary(mdl_step) # No function was traceable to get that into a table, so it ha
 #results: @Marlena, this has changed as some more categories are included now!
 # =====> @David: I will update this table as after the analysis
 #+----------------+----------------------------------------------------------------------+------------+---------------------+
-#  | Factor Group |                               Variable                               |  box_odds  |         CI          |
+#| Factor Group   |                               Variable                               |  box_odds  |         CI          |
 # +---------------+----------------------------------------------------------------------+------------+---------------------+
 
 
@@ -797,5 +802,5 @@ dfGER_plot <- dfGER
 dfGER_plot[dfGER_plot<0] <- NA
 #pdq8_total
 #dfGER_plot$pdq8_total.A3[dfGER_plot$pdq8_total.A3<0] = NA
-#p_test <- ggplot(aes(x=pdq8_total.A3, y=satisfaction_with_care_duringCovid.C6), data=dfGER_plot) + geom_jitter()
+#p_test <- ggplot(aes(x=pdq8_total.A3, y=satisfaction_with_care_duringCovid.C6), data=dfGER_plot) + geom_jitter() #Note: this has to be C4 instead of C6
 #p_test
