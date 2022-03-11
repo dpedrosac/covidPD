@@ -20,7 +20,6 @@ package.check <- lapply(
     }
   }
 )
-#ERROR: object x not found
 
 ## In case of multiple people working on one project, this helps to create an automatic script
 username = Sys.info()["login"]
@@ -74,7 +73,6 @@ idx_GER 		<- which(df_total$country=="GE") # index of German data
 plzGER 			<- unique(df_total$postal_code[idx_GER]) # postal codes available in {plzGER}
 
 for ( {in plzGER) { # for loop to extract population, neurologists and total physician density
-#ERROR: Loop is not running 
   
   idx_demographics 	<- which(df_demographics$plz==vals)
   idx_df 		<- which(df_total$postal_code==vals)
