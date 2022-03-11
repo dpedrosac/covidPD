@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  9 MAR 2022 23:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  11 MAR 2022 18:34
 entering extended mode
 **./document_MvM_07032022.tex
 (document_MvM_07032022.tex
@@ -336,16 +336,17 @@ LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
 [1{C:/Users/dpedr/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 ] [2]
-<available.questionnaires.jpeg, id=18, 674.52pt x 674.52pt>
-File: available.questionnaires.jpeg Graphic file (type jpg)
-<use available.questionnaires.jpeg>
-Package pdftex.def Info: available.questionnaires.jpeg  used on input line 276.
-
+<media//available.questionnaires.jpeg, id=18, 674.52pt x 674.52pt>
+File: media//available.questionnaires.jpeg Graphic file (type jpg)
+<use media//available.questionnaires.jpeg>
+Package pdftex.def Info: media//available.questionnaires.jpeg  used on input li
+ne 276.
 (pdftex.def)             Requested size: 113.7162pt x 113.70969pt.
-<population.perskmGER.jpeg, id=19, 674.52pt x 674.52pt>
-File: population.perskmGER.jpeg Graphic file (type jpg)
-<use population.perskmGER.jpeg>
-Package pdftex.def Info: population.perskmGER.jpeg  used on input line 281.
+<media//population.perskmGER.jpeg, id=19, 674.52pt x 674.52pt>
+File: media//population.perskmGER.jpeg Graphic file (type jpg)
+<use media//population.perskmGER.jpeg>
+Package pdftex.def Info: media//population.perskmGER.jpeg  used on input line 2
+81.
 (pdftex.def)             Requested size: 113.7162pt x 113.70969pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 282--282
@@ -357,10 +358,11 @@ Underfull \hbox (badness 8056) in paragraph at lines 282--282
 \OT1/cmr/m/n/9 square kilo-me-ter, source:
  []
 
-<neurologists.10122021.jpeg, id=20, 766.865pt x 870.25125pt>
-File: neurologists.10122021.jpeg Graphic file (type jpg)
-<use neurologists.10122021.jpeg>
-Package pdftex.def Info: neurologists.10122021.jpeg  used on input line 286.
+<media//neurologists.10122021.jpeg, id=20, 766.865pt x 870.25125pt>
+File: media//neurologists.10122021.jpeg Graphic file (type jpg)
+<use media//neurologists.10122021.jpeg>
+Package pdftex.def Info: media//neurologists.10122021.jpeg  used on input line 
+286.
 (pdftex.def)             Requested size: 113.7162pt x 129.04482pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 287--287
@@ -383,29 +385,37 @@ File: media//fig2.satisfaction.care.v1.0.jpeg Graphic file (type jpg)
 Package pdftex.def Info: media//fig2.satisfaction.care.v1.0.jpeg  used on input
  line 297.
 (pdftex.def)             Requested size: 324.8978pt x 324.89807pt.
-[3 <./available.questionnaires.jpeg> <./population.perskmGER.jpeg> <./neurologi
-sts.10122021.jpeg>] [4 <./media//fig2.satisfaction.care.v1.0.jpeg>]
+[3 <./media//available.questionnaires.jpeg> <./media//population.perskmGER.jpeg
+> <./media//neurologists.10122021.jpeg>] [4 <./media//fig2.satisfaction.care.v1
+.0.jpeg>]
+<media//fig3.oddsratios.v1.0.jpeg, id=31, 1054.94125pt x 936.49875pt>
+File: media//fig3.oddsratios.v1.0.jpeg Graphic file (type jpg)
+<use media//fig3.oddsratios.v1.0.jpeg>
+Package pdftex.def Info: media//fig3.oddsratios.v1.0.jpeg  used on input line 3
+06.
+(pdftex.def)             Requested size: 324.8978pt x 288.41107pt.
+ [5 <./media//fig3.oddsratios.v1.0.jpeg>]
 
-LaTeX Warning: Citation `koon' on page 5 undefined on input line 340.
-
-
-LaTeX Warning: Citation `xjon' on page 5 undefined on input line 340.
-
-
-LaTeX Warning: Citation `marg' on page 5 undefined on input line 340.
-
-
-LaTeX Warning: Citation `schn' on page 5 undefined on input line 340.
-
-
-LaTeX Warning: Citation `koha' on page 5 undefined on input line 340.
+LaTeX Warning: Citation `koon' on page 6 undefined on input line 350.
 
 
-LaTeX Warning: Citation `issnic' on page 5 undefined on input line 340.
+LaTeX Warning: Citation `xjon' on page 6 undefined on input line 350.
 
-[5] (document_MvM_07032022.bbl) 
+
+LaTeX Warning: Citation `marg' on page 6 undefined on input line 350.
+
+
+LaTeX Warning: Citation `schn' on page 6 undefined on input line 350.
+
+
+LaTeX Warning: Citation `koha' on page 6 undefined on input line 350.
+
+
+LaTeX Warning: Citation `issnic' on page 6 undefined on input line 350.
+
+(document_MvM_07032022.bbl [6]) 
 AED: lastpage setting LastPage
-[6] (document_MvM_07032022.aux)
+[7] (document_MvM_07032022.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -415,33 +425,34 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5027 strings out of 478927
- 77119 string characters out of 2862391
- 396578 words of memory out of 3000000
- 22848 multiletter control sequences out of 15000+600000
- 413039 words of font info for 60 fonts, out of 8000000 for 9000
+ 5039 strings out of 478927
+ 77578 string characters out of 2862391
+ 397578 words of memory out of 3000000
+ 22858 multiletter control sequences out of 15000+600000
+ 413340 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,14n,66p,1194b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\dpedr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss
 0500.pk> <C:\Users\dpedr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcss0800.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssb
-x10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/font
-s/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on document_MvM_07032022.pdf (6 pages, 962428 bytes).
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmss17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+s8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb>
+Output written on document_MvM_07032022.pdf (7 pages, 1495755 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 131 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
