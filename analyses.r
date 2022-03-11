@@ -5,7 +5,7 @@
 
 flag_check=FALSE
 ## First specify the packages of interest
-packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", "lemon", "precrec", "mctest",
+packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", "lemon", "precrec", "mctest", "magrittr",
 				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel", "fastDummies", "car",
 				"MLmetrics", "gtsummary", "xfun")
 
