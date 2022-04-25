@@ -71,8 +71,10 @@ population_data <- data.frame( # create empty dataframe of the size of data_raw
 # only use regional data of interest, that is German data
 idx_GER 		<- which(df_total$country=="GE") # index of German data
 plzGER 			<- unique(df_total$postal_code[idx_GER]) # postal codes available in {plzGER}
+sprintf("There were a total of: %s postal codes available", length(plzGER))
 
-for ( {in plzGER) { # for loop to extract population, neurologists and total physician density
+
+for (vals in plzGER) { # for loop to extract population, neurologists and total physician density
   
   idx_demographics 	<- which(df_demographics$plz==vals)
   idx_df 		<- which(df_total$postal_code==vals)
@@ -395,6 +397,8 @@ results_OR1 <- results_OR1 %>% mutate(significance = case_when(pvalue <= .001 ~ 
                                 (pvalue < .05 & pvalue >.001) ~ "#B8A31F",
 								pvalue > .05 ~ "#08306B"))
 							
+							
+							
 # ==================================================================================================
 # Visualisation of (unadjusted) OR results:
 # General commands
@@ -498,7 +502,7 @@ results_OR1 %>%
   theme_minimal() +
   theme(text = element_text(size = 12),
 		panel.grid.minor = element_blank(), 
-		legend.position = c(0.95, 0.1), legend.title=element_blank(), legend.box.background = element_rect(colour = "black"),
+		legend.position = c(0.9, 0.1), legend.title=element_blank(), legend.box.background = element_rect(colour = "black"),
 		legend.background = element_rect(colour = "black", fill="white"),
 		plot.title = element_text(vjust = 4, hjust = .5, color = "black", size = 12, face = "bold"),
 		axis.line.x = element_line(size = .25, colour = "black"), 
