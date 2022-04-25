@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  11 MAR 2022 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.14)  25 APR 2022 16:20
 entering extended mode
 **./document_MvM_07032022.tex
 (document_MvM_07032022.tex
@@ -326,96 +326,98 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 \address@aff1=\toks37
 \address@aff2=\toks38
-
-
-LaTeX Warning: Citation `(' on page 1 undefined on input line 218.
-
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 221.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 219.
 
-[1{C:/Users/dpedr/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+ [1{C:/Users/dpedr/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
-] [2]
-<media//available.questionnaires.jpeg, id=18, 674.52pt x 674.52pt>
+]
+
+LaTeX Warning: Citation `fabbri2020moving' on page 2 undefined on input line 22
+5.
+
+
+LaTeX Warning: Citation `(' on page 2 undefined on input line 227.
+
+[2]
+
+LaTeX Warning: Citation `van2009modification' on page 3 undefined on input line
+ 259.
+
+
+Overfull \hbox (554.58539pt too wide) in paragraph at lines 258--260
+\OT1/cmr/m/n/10 data with pub-licly avail-able pop-u-la-tion den-si-ties (https
+://www.bbsr.bund.de/BBSR/DE/forschung/raumbeobachtung/Raumabgrenzungen/deutschl
+and/regionen/Raumordnungsregionen/raumordnungsregionen-
+ []
+
+
+Overfull \hbox (14.64532pt too wide) in paragraph at lines 258--260
+\OT1/cmr/m/n/10 (cf. https://github.com/dpedrosac/covidPD/blob/main/preprocess[
+]geospatial[]data.r).
+ []
+
+[3]
+<media//available.questionnaires.jpeg, id=21, 731.73375pt x 1074.0125pt>
 File: media//available.questionnaires.jpeg Graphic file (type jpg)
 <use media//available.questionnaires.jpeg>
 Package pdftex.def Info: media//available.questionnaires.jpeg  used on input li
-ne 276.
-(pdftex.def)             Requested size: 113.7162pt x 113.70969pt.
-<media//population.perskmGER.jpeg, id=19, 674.52pt x 674.52pt>
+ne 305.
+(pdftex.def)             Requested size: 113.7162pt x 166.8963pt.
+<media//population.perskmGER.jpeg, id=22, 731.73375pt x 1074.0125pt>
 File: media//population.perskmGER.jpeg Graphic file (type jpg)
 <use media//population.perskmGER.jpeg>
-Package pdftex.def Info: media//population.perskmGER.jpeg  used on input line 2
-81.
-(pdftex.def)             Requested size: 113.7162pt x 113.70969pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
-[]\OT1/cmr/m/n/9 (b) |In-hab-i-tants per
- []
-
-
-Underfull \hbox (badness 8056) in paragraph at lines 282--282
-\OT1/cmr/m/n/9 square kilo-me-ter, source:
- []
-
-<media//neurologists.10122021.jpeg, id=20, 766.865pt x 870.25125pt>
+Package pdftex.def Info: media//population.perskmGER.jpeg  used on input line 3
+09.
+(pdftex.def)             Requested size: 113.7162pt x 166.8963pt.
+<media//neurologists.10122021.jpeg, id=23, 731.73375pt x 1074.0125pt>
 File: media//neurologists.10122021.jpeg Graphic file (type jpg)
 <use media//neurologists.10122021.jpeg>
 Package pdftex.def Info: media//neurologists.10122021.jpeg  used on input line 
-286.
-(pdftex.def)             Requested size: 113.7162pt x 129.04482pt.
+313.
+(pdftex.def)             Requested size: 113.7162pt x 166.8963pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
-[]\OT1/cmr/m/n/9 (c) |Den-sity of neu-rol-o-
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 287--287
-\OT1/cmr/m/n/9 gists in Ger-many (source:
- []
-
-
-Overfull \hbox (18.05661pt too wide) in paragraph at lines 275--290
+Overfull \hbox (18.05661pt too wide) in paragraph at lines 304--316
  [][][][] 
  []
 
-<media//fig2.satisfaction.care.v1.0.jpeg, id=21, 674.52pt x 674.52pt>
+[4]
+<media//fig2.satisfaction.care.v1.0.jpeg, id=30, 674.52pt x 674.52pt>
 File: media//fig2.satisfaction.care.v1.0.jpeg Graphic file (type jpg)
 <use media//fig2.satisfaction.care.v1.0.jpeg>
 Package pdftex.def Info: media//fig2.satisfaction.care.v1.0.jpeg  used on input
- line 297.
+ line 326.
 (pdftex.def)             Requested size: 324.8978pt x 324.89807pt.
-[3 <./media//available.questionnaires.jpeg> <./media//population.perskmGER.jpeg
-> <./media//neurologists.10122021.jpeg>] [4 <./media//fig2.satisfaction.care.v1
-.0.jpeg>]
 <media//fig3.oddsratios.v1.0.jpeg, id=31, 1054.94125pt x 936.49875pt>
 File: media//fig3.oddsratios.v1.0.jpeg Graphic file (type jpg)
 <use media//fig3.oddsratios.v1.0.jpeg>
 Package pdftex.def Info: media//fig3.oddsratios.v1.0.jpeg  used on input line 3
-06.
+33.
 (pdftex.def)             Requested size: 324.8978pt x 288.41107pt.
- [5 <./media//fig3.oddsratios.v1.0.jpeg>]
+ [5 <./media//available.questionnaires.jpeg> <./media//population.perskmGER.jpe
+g> <./media//neurologists.10122021.jpeg>] [6 <./media//fig2.satisfaction.care.v
+1.0.jpeg>] [7 <./media//fig3.oddsratios.v1.0.jpeg>]
 
-LaTeX Warning: Citation `koon' on page 6 undefined on input line 350.
-
-
-LaTeX Warning: Citation `xjon' on page 6 undefined on input line 350.
-
-
-LaTeX Warning: Citation `marg' on page 6 undefined on input line 350.
+LaTeX Warning: Citation `koon' on page 8 undefined on input line 381.
 
 
-LaTeX Warning: Citation `schn' on page 6 undefined on input line 350.
+LaTeX Warning: Citation `xjon' on page 8 undefined on input line 381.
 
 
-LaTeX Warning: Citation `koha' on page 6 undefined on input line 350.
+LaTeX Warning: Citation `marg' on page 8 undefined on input line 381.
 
 
-LaTeX Warning: Citation `issnic' on page 6 undefined on input line 350.
+LaTeX Warning: Citation `schn' on page 8 undefined on input line 381.
 
-(document_MvM_07032022.bbl [6]) 
+
+LaTeX Warning: Citation `koha' on page 8 undefined on input line 381.
+
+
+LaTeX Warning: Citation `issnic' on page 8 undefined on input line 381.
+
+[8] (document_MvM_07032022.bbl) 
 AED: lastpage setting LastPage
-[7] (document_MvM_07032022.aux)
+[9] (document_MvM_07032022.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -423,15 +425,18 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 5039 strings out of 478927
- 77578 string characters out of 2862391
- 397578 words of memory out of 3000000
- 22858 multiletter control sequences out of 15000+600000
- 413340 words of font info for 61 fonts, out of 8000000 for 9000
+ 5037 strings out of 478927
+ 77545 string characters out of 2862391
+ 398578 words of memory out of 3000000
+ 22857 multiletter control sequences out of 15000+600000
+ 413041 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,14n,66p,1194b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,14n,66p,1684b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\dpedr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss
 0500.pk> <C:\Users\dpedr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcss0800.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pf
@@ -442,17 +447,16 @@ pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Pro
 gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmss17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cms
-s8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Fil
-es/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb>
-Output written on document_MvM_07032022.pdf (7 pages, 1495755 bytes).
+TeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+ssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><
+C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on document_MvM_07032022.pdf (9 pages, 1761388 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
