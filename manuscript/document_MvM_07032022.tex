@@ -81,8 +81,8 @@
 			\author[
 			addressref={aff1},
 			noteref={n1},
-			email={email@marcel.de}
-			]{\inits{M.P.} \fnm{Marcel} \snm{Prinz}}
+			email={marcel.printz@uni-marburg.de}
+			]{\inits{M.P.} \fnm{Marcel} \snm{Printz}}
 			\author[
 			addressref={aff1, aff2},
 			corref={aff1},                       % id of corresponding address, if any
@@ -225,10 +225,25 @@ People with Parkinson's disease (PwP) suffer from a progressive condition showin
 	There are several conceptualizations and definitions of what SDH are but in a broadest sense, they compromise contextual, structural and individual factors \cite{world2010conceptual}. The word \textit{contextual} is of utmost importance here: what may be considered as relevant SDH is not universal. For the context of Parkinson's disease, Zaman  et al. proposed a model which summarizes structural and individual factors that may influence PwPs access to healthcare \cite{zaman2021barriers}. 
 	Structural SDH in this model may be reflected by barrieres, that PwPs meet on a system-level when trying to access healthcare, such as a lack of care coordination, limited communication between healthcare providers, disparities in health services or the unavailability of specialit services \cite{zaman2021barriers}. Individual SDH may be reflected by personal barriers in this model, which influence the PwPs ability to seek help, engage with care providers, reach important care services or pay for them \cite{zaman2021barriers}. 
 	
-	To the best of our knowledge, it has not been investigated how SDH may explain the impact of the COVID-19 pandemic on PwPs access to healthcare. Therefore, we here explicitly examine the impact of relevant SDH on PwPs access to healthcare during the COVID-19 pandemic in Germany. The basis of our analysis is the German dataset of an anonymous survey that was carried out as part of the icare-PD project.   
+	To the best of our knowledge, it has not been investigated how SDH may explain the impact of the COVID-19 pandemic on PwPs access to healthcare. Therefore, we here explicitly examine the impact of relevant SDH on PwPs access to healthcare during the COVID-19 pandemic in Germany. The basis of our analysis is the German dataset of an anonymous survey that was carried out as part of the iCARE-PD project. In the iCARE-PD project, international collaborators are seeking ways to improve health care for PwP by establishing integrated care models. These models are characterized by a patient-centered approach with coordination of local healthcare providers and application of technology-based solutions \cite{fabbri2020moving}.  
 	
 \section*{Methods}
-The study was approved by the local Ethics committee and carried out in accordance with the Declaration of Helsinki. All patients gave informed written consent prior to participating.
+The survey developed in the iCARE-PD project was designed to characterize the access of PwP to health services and to identify barriers in order to develop solutions to overcome them in the future.  In addition, the impact of the Covid-19 pandemic on the care situation of Parkinson's patients was to be investigated.
+The questionnaire consists of four parts. Part A was used to describe the patients' health status (in terms of their Parkinson's disease and concomitant diseases), and Part D was used to determine their demographic background. Part B contained questions about health care experiences in the last 12 months before the Covid-19 pandemic (for example, concerning existing personal resources, local availability of health care providers, barriers to accessing services, and satisfaction with care).  Part C addressed questions about experiences with health care during the Covid-19 pandemic and the use of telemedicine services.
+The questionnaire included 49 questions. Some of them were to be answered only depending on previous answers. Single or multiple-choice questions and open-ended questions were used.
+The questionnaire was originally developed in English and translated into German for use in Germany. %who did it with which program, if any?%.
+The invitation to participate in the survey was sent via the e-mail distribution list of the German Parkinson Association (Deutsche Gesellschaft für Parkinson und Bewegungsstörungen, DPG) and was addressed to all patients with a doctor's diagnosis of Parkinson's disease. The questionnaire was available for anonymous and voluntary participation via the online platform SoSci Survey from November 2020 to January 2021. Participation was possible via a computer as well as by cell phone.
+The study was approved by the local Ethics committee and carried out in accordance with the Declaration of Helsinki. The study is registered under the study ID DRKS00025764 in the German Clinical Trial Register. All patients gave informed written consent prior to participating. %In what way was the latter done in our online survey?%.
+In addition to Germany, the questionnaire was also distributed in Canada, Spain, Portugal and the Czech Republic. In our evaluation, we limit ourselves to the data collected with the survey in Germany.
+We received 551 answered questionnaires, of which 388 (70.4%) were completely filled out.
+%What does complete mean and how were the data checked and transferred to the Excel spreadsheet?%.
+In our analysis, in addition to the data from the survey, we also included information on the density of neurologists, general practitioners, and population according to zip code, which was available via %source of information%.
+For the available data on comorbidities, we applied the Elixhäuser Comorbitiy Score modified by van Walraven \cite {van2009modification}.
+%the following part is still under construction and please be checked%
+We used R (version 4.1.1) to perform statistical analyses.
+To test for significance of differences in the median of ordinal scaled variables (B17/C6), we used a sign test.
+To examine the direction and strength of the influence of selected predictors on the manifestation of C4, we performed multiple and stepwise logistic regression with determination of odds ratios.
+We made the selection of predictors to be examined based on previously characterized barriers to accessing health services regarding PwP\cite {zaman2021barriers}.
 
 \subsection*{Participants}
 
