@@ -27,7 +27,7 @@
 "B9b - No. of barriers in acces to healthcare pre COVID","Communication (system)",1.98,1.01,3.89,"0.048"
 "B10 - Perceived difficulty of accessing healthcare pre COVID","Communication (system)",5.37,2.84,10.17,"p < .001"
 "B7 - No. of geographical barriers in access to healthcare pre COVID","Disparty in Health Services",1.9,1.08,3.33,"0.026"
-"qp - Population according to quantiles of German population [in sqkm]","Disparty in Health Services",0.96,0.77,1.19,"0.714"
+"  Population according to quantiles of German population [in sqkm]","Disparty in Health Services",0.96,0.77,1.19,"0.714"
 "B9 - Not received needed healthcare pre COVID","Disparty in Health Services",2.5,1.88,3.32,"p < .001"
 "nGER - Neurologists nearby (per sqkm)","Disparty in Health Services",0.97,0.87,1.07,"0.527"
 "D2 - Gender *","Unavailability of Specalist Services",0.55,0.31,0.98,"0.044"

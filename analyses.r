@@ -243,7 +243,7 @@ p_satisfaction_with_care <- ggplot(summary_care, aes(x = timing, y = percentage)
 		   position_fill(reverse = TRUE),  width = bar_width) + 
 	# stat_pvalue_manual(stat.test, label = "p", y.position = 1.4, step.increase = 0.2) +
 	scale_y_continuous(labels = scales::percent) +
-	geom_text(data=summary_care, aes(label = sprintf("%0.2f", round(100*percentage, digits = 2))), colour="black", size = 3, position = position_stack(vjust = 0.5)) +
+	geom_text(data=summary_care, aes(label = sprintf("%0.1f%%", round(100*percentage, digits = 2))), colour="black", size = 5, position = position_stack(vjust = 0.5)) +
 	scale_x_discrete(labels= c('Before \nCOVID-19 pandemic', 'During \nCOVID-19 pandemic')) +
 	scale_fill_brewer(palette = 1, name="Satisfaction\nwith PD-related care",
 					  labels=c("very satisfied", "rather satisfied","rather unsatisfied","very unsatisfied")) + 
@@ -251,11 +251,13 @@ p_satisfaction_with_care <- ggplot(summary_care, aes(x = timing, y = percentage)
 	geom_segment(data = df_lines, colour="black", size=.25,
 			aes(x = x_start, xend = x_end, y = y_start, yend = y_end)) + 
 	theme_minimal() +
-	theme(text = element_text(size = 12),
-		  plot.caption = element_text(hjust = 0, face="italic"), 
-		  legend.title = element_text(hjust = .5, color = "black", size = 12, face = "bold"),
-		  axis.text = element_text(size = 12))
+	theme(text = element_text(size = 20),
+		  plot.caption = element_text(hjust = 0, face="italic", size = 14), 
+		  legend.title = element_text(hjust = .5, color = "black", size = 20, face = "bold"),
+		  axis.text = element_text(size = 20), 
+      axis.title.y = element_text(size = 20))
 p_satisfaction_with_care
+
 # ==================================================================================================
 
 # ==================================================================================================
@@ -427,7 +429,7 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
   					"B5 - Perceived Neurologist expertise", #**
 					
 					#"B14a - Sum of Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? -> Answer: a sum // Besides problem with multicollinearity (see below "Communication challanges ...")
-	                		"B14 - Communication challenges pre COVID",
+	                "B14 - Communication challenges pre COVID",
 	
 					"A3 - PDQ-8 score", #**(*)
 					
@@ -457,7 +459,7 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
   					"B10 - Perceived difficulty of accessing healthcare pre COVID", #*	
 					
 					"B7 - No. of geographical barriers in access to healthcare pre COVID", #**
-  					"qp - Population according to quantiles of German population [in sqkm]", #****
+  					"	  Population according to quantiles of German population [in sqkm]", #****
 	                		#"B8 - Locally Available PD-related Healthcare Ressources", #**
 					"B9 - Not received needed healthcare pre COVID", #** 
   					"nGER - Neurologists nearby (per sqkm)", #****
@@ -481,7 +483,7 @@ results_OR1 %>%
   geom_point(aes(x = boxOdds, y = factors, color = factors_group), size = 1.5, show.legend=TRUE) +
   guides(colour = guide_legend(reverse=T)) +
   scale_colour_manual(values=my_blue2) +
-  theme_blank() +
+  #theme_blank() +
   theme(panel.grid.minor = element_blank(), legend.position = c(0.9, 0.2), 
 		legend.title=element_blank()) +
   scale_x_log10(breaks = c(0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10, 20, 40), limits=c(.08, 40)) + 
@@ -490,7 +492,8 @@ results_OR1 %>%
   xlab("Odds ratio (log scale)")
 
 # Change the way significance is coded
-results_OR1 %>%
+fontsize = 15
+t <- results_OR1 %>%
   dplyr::arrange(group, boxOdds) %>%
   mutate(factors=factor(factors, levels=factors)) %>%  # This trick update the factor levels
   ggplot(aes(x = boxOdds, y = factors)) +
@@ -504,12 +507,14 @@ results_OR1 %>%
 		panel.grid.minor = element_blank(), 
 		legend.position = c(0.9, 0.1), legend.title=element_blank(), legend.box.background = element_rect(colour = "black"),
 		legend.background = element_rect(colour = "black", fill="white"),
-		plot.title = element_text(vjust = 4, hjust = .5, color = "black", size = 12, face = "bold"),
+		legend.text = element_text(size = fontsize),
+		plot.title = element_text(vjust = 4, hjust = .5, color = "black", size = fontsize, face = "bold"),
 		axis.line.x = element_line(size = .25, colour = "black"), 
 		axis.ticks.x = element_line(size = .25, colour = "black"), 
 		axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
-		axis.text = element_text(size = 12),
-		plot.caption = element_text(hjust = 0, face="italic")) +
+		axis.text = element_text(size = fontsize),
+		plot.caption = element_text(hjust = 0, face="italic"), 
+		plot.margin = margin(t = 20, r = 0, b = 0, l = 0, unit = "pt")) +
   coord_capped_cart(bottom='right') +
   scale_x_log10(breaks = c(0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10, 20, 40), limits=c(.1, 40), expand=c(0.2, 0)) + 
   geom_hline(yintercept=hlines[1:length(hlines)-1], linetype="dotted", size = .01) +
@@ -518,38 +523,18 @@ results_OR1 %>%
   # ggtitle("iPS-patients' odds of unmet need for healthcare services during COVID-19 pandemic") + 
   labs(title = "iPS-patients' odds of unmet need for healthcare services during COVID-19 pandemic",
   caption = "*Gender was coded so that negative odds means that being female indicates a higher risk of unmet needs")
-
-#TODO 1: Please double check the results, as most of them look plausible while at least one is not quite clear: Confidence Accessing PD-related Healthcare Remotely increase significantly the Odds?!?
-#Marlena#s answer: to me this makese sense as higher values in C3_3 mean less confidence (we used the categorized variable)
        
 pMiss <- function(x){sum(is.na(x))/length(x)*100} # function to find missing (NA) values
 sort(apply(df_OR1_complete,2,pMiss), decreasing=TRUE)[1:5]
-
-# TODO 2: Run the last two lines. There are some predictors with lots of missing entries which is problematic for regression later. Besides, there is some redundancy among some of them:
-# personal_accessibility_barriers_sum.B16a vs.  personal_accessibility_barriers_sum_categorized.B16a
        
-# Please double-check if there are some of the five that we can replace and if so try to change the code. The lines to change if you remove (or add) something are;
-# line 293f, line 330f, line401f.
-#Marlena´s answer: personal_accessibility_barriers_sum_categorized.B16a has been removed - also I removed D6, B14a, and B8
-      
-
-# TODO 3: We have problems with multicollinearity in the data. The problem is an innate condition for GLM, which means  a little oversimplified that values that are perfectly correlated with each other
-# make the estimation of residuals complicated so that the model becomes bad. The problem arises with:
-#Marlena: see my answer above
-
 flag_check = TRUE
 if (flag_check){ # need to run the part with the stepwise regression first to make this work ...
-full_model_test = glm(I(dv=='yes') ~ ., data = train_data)
-mctest::imcdiag(full_model_test)
-XX <- data_full_glm %>% select(c("local_avail
-_sum_categorized.B8", "ability_to_access_care_priorCovid.B9"), contains("communication_challenges")) %>% ggpairs(upper = list(continuous = wrap("cor", method = "spearman")))
-XX
+	full_model_test = glm(I(dv=='yes') ~ ., data = train_data)
+	mctest::imcdiag(full_model_test)
+	XX <- data_full_glm %>% select(c("local_avail
+	_sum_categorized.B8", "ability_to_access_care_priorCovid.B9"), contains("communication_challenges")) %>% ggpairs(upper = list(continuous = wrap("cor", method = "spearman")))
+	XX
 }
-
-# TODO 4: What is ""ability_to_access_care_priorCovid.B9", that does appear somehow and looks a bit odd. It's very related to "local_availability_sum_categorized.B8". We should decide for one (if first actually exists). 
-#Marlena's answer: removed B8      
-# -> B9: "felt that healthcare was needed but not available pre covid (never/rarely/sometimes/often/always) and is now named "Frequency of the Impression that Needed PD-related Healthcare was not Received before the COVID-19 Pandemic" for plotting
-# --> the strong relation between B8 and B9 seems logical because if there isn´t a healthcare ressource locally available (B8) it´s more likely that people there more often perceive a lack of healthcare (B9)
 
 
 # ==================================================================================================
@@ -563,37 +548,7 @@ write.csv(suppl_table1, file.path(wdir, "results", "supplementary_table1.csv"), 
 
 #display Odds ratio table
 results_OR1
-# ==================================================================================================
-# ==================================================================================================
-## DEPRECATED VERSIONS OF VISUALISATION
-# Display results from OR estimation
-# a) Sort values according to OR, irrespective of 95%CI
-#results_OR1 %>%
-#  dplyr::arrange(boxOdds) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
-#  mutate(factors=factor(factors, levels=factors)) %>%  # This trick update the factor levels
-#  ggplot(aes(x = boxOdds, y = factors)) +
-#  geom_vline(aes(xintercept = 1), size = .75, linetype = "dashed", color="grey") +
-#  geom_errorbarh(aes(xmax = boxCIHigh, xmin = boxCILow), size = .5, height = .2, color = "gray50") +
-#  geom_point(size = 1.5, color = "brown") +
-#  theme_bw() +
-#  theme(panel.grid.minor = element_blank()) +
-# scale_x_continuous(breaks = seq(-5,5,1) ) +
-#  coord_trans(x = "log10") +
-#  ylab("") +
-#  xlab("Odds ratio (log scale)")
 
-# b) volcano plot; THIS IS EXPERIMENTAL AND LOOKS BAD!
-#results_OR1 %>%
-#  mutate(factors=factor(factors, levels=factors)) %>%  # This trick update the factor levels
-#  ggplot(aes(x = boxOdds, y = -log10(pvalue))) +
-#  geom_point(size = 1.5, color = group) +
-#  theme_bw() +
-#  theme(panel.grid.minor = element_blank()) +
-#  coord_trans(x = "log10") +
-#  ylab("") +
-#  xlab("Odds ratio (log scale)") #+
-# ==================================================================================================
-# ==================================================================================================
 
 # ==================================================================================================
 # ==================================================================================================
@@ -646,6 +601,7 @@ imputed_data_full <- dummy_cols(imputed_data_full, select_columns = c(	'gender.D
 															'overcoming_barriers_sum.B7a', 'personal_accessibility_barriers_sum_categorized.B16a', 
 															'reason_for_experiencing_stigmatisation_sum_categorized_RC1.B15', 'extended_health_insurance_due_to_PD.B12',
 															'inability_to_access_care_sum_categorized_priorCovid.B9a'), remove_selected_columns = TRUE)
+imputed_data_full$barriers_to_care_sum_categorized.B9b <- as.integer(imputed_data_full$barriers_to_care_sum_categorized.B9b )
 str(imputed_data_full)
 
 # ==================================================================================================
@@ -754,7 +710,6 @@ fig3b <- data.frame(pred = mdl_step_preds$yes, obs = test_data$dv) %>%
 	coord_equal() +
 	xlab("1 - specificity") + ylab("sensitivity")
 
-
 # Compare models
 p_comparison_models <- model_est %>% pivot_longer(!model_name, names_to="metric") %>%
   ggplot(aes(fill = model_name, y = value, x = metric)) + 
@@ -799,10 +754,3 @@ summary(mdl_step) # No function was traceable to get that into a table, so it ha
 
 #create g-plots for factors w. CI>1 from previous step (variables marked with "x")
 # =====> @David: I will update this table as after the analysis
-
-dfGER_plot <- dfGER
-dfGER_plot[dfGER_plot<0] <- NA
-#pdq8_total
-#dfGER_plot$pdq8_total.A3[dfGER_plot$pdq8_total.A3<0] = NA
-#p_test <- ggplot(aes(x=pdq8_total.A3, y=satisfaction_with_care_duringCovid.C6), data=dfGER_plot) + geom_jitter() #Note: this has to be C4 instead of C6
-#p_test
