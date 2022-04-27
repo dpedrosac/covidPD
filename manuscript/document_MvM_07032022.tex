@@ -40,6 +40,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{graphicx}
+\usepackage{svg}
 %\def\includegraphic{}
 %\def\includegraphics{}
 \graphicspath{ {media/} }
@@ -420,9 +421,21 @@ All analyses are available on \url{https://github.com/dpedrosac/covidPD}
 \end{figure}
 		
 \begin{figure}[h!]
+\includesvg{fig2.satisfaction.care.v1.1.svg}
 \caption{Distribution of responses on the Satisfaction with PD-related care before and during the \textsc{Covid}-19 pandemic.}
 \end{figure}
 		
+\begin{figure}[h!]
+\includesvg{fig3.oddsratios.v1.1.svg}
+\caption{Logistic regression for distinct predictors. A \ac{GLM} with a binomial logit function was used to estimate the odds for different questions and data from the questionnaires for affirding that ??. All odds are displayed on alogarithmic scale and significance level is color coded. For additional information cf. supplementary material.}
+\end{figure}
+
+\begin{figure}[h!]
+\includesvg{fig4.model_comparison.v1.0.svg}
+\caption{Comparison of the models. The full model including all predictors was compatred in terms of accuracy to the reduced model resulting from the stepwise \ac{GLM}regression. Values between both models are comparable although only ?? predictors remained in the model compared to the full model with ?? predictors. For further details of the multilevel regression cf. Table ??}
+\end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                               %%
 %% Tables                        %%
@@ -464,7 +477,21 @@ Van-Walraven-Elixhauser \newline \hspace{3mm} Comorbidity Index (mean (SD)) 	& 	
 \end{tabular}
 \end{table}
 
-		
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+        Predictor & Estimate & Std.Error & zvalue & \textit{p} \\ \hline
+        educational\_level.D8 &  -2.65  & 0.29 & -9.24 & <.0001 \\ \hline
+        GP\_expertise.B3" & "-0.73" & "0.24" & "-3.01" & 0.003 \\ \hline
+        confidence\_in\_accessing\_necessary\_services\_remotely\_categorized.C3\_3" & "0.34" & "0.17" & "2.07" & "0.038" \\ \hline
+        ease\_obtaining\_healthcare\_priorCovid\_categorized.B10" & "0.64" & "0.22" & "2.90" & "0.004" \\ \hline
+        ability\_to\_access\_care\_priorCovid.B9" & "-0.47" & "0.22" & "-2.15" & "0.031" \\ \hline
+        neurologistsGER" & "0.41" & "0.20" & "2.07" & "0.038" \\ \hline
+        overcoming\_barriers\_sum.B7a\_1 & 0.47 & 0.21 & 2.22 & 0.027 \\ \hline
+        NA & -0.51 & 0.22 & -2.38 & 0.017 \\ \hline
+    \end{tabular}
+\end{table}	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                               %%

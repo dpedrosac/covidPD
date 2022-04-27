@@ -7,7 +7,7 @@ flag_check=FALSE
 ## First specify the packages of interest
 packages = c(	"readxl", "tableone", "dplyr", "tidyverse", "coin", "lemon", "precrec", "mctest", "magrittr",
 				"rstatix", "RColorBrewer", "mice", "caret", "VIM", "doParallel", "fastDummies", "car",
-				"MLmetrics", "gtsummary", "xfun")
+				"MLmetrics", "gtsummary", "xfun", "ggpval", "kableExtra")
 
 # ==================================================================================================
 ## Now load or install&load all
@@ -716,23 +716,34 @@ p_comparison_models <- model_est %>% pivot_longer(!model_name, names_to="metric"
   geom_bar(position = "dodge", stat = "identity") +
   #scale_fill_manual(values = c("#7A8B99", "#A9DDD6")) +
 	theme_minimal() +
-	theme(text = element_text(size = 12),
+	theme(text = element_text(size = 20),
 		  plot.caption = element_text(hjust = .7, face="italic"), 
-		  legend.title = element_text(hjust = .5, color = "black", size = 12, face = "bold"),
-		  axis.text = element_text(size = 12), 
+		  legend.title = element_text(hjust = .5, color = "black", size = 20, face = "bold"),
+		  axis.text = element_text(size = 20), 
 		  legend.position = c(0.86, 0.9), 
 		  plot.margin = margin(t = 10, unit = "pt")) +
 	ylim(0,1) +
 	scale_fill_brewer(palette = 1) + 
 	labs(
-		y = "Value",
+		y = "",
 		x = "",
 		fill = NULL,
-		title = "Comparing the full model with the reduced model using distinct metrics",
+		title = "Comparing full model with  reduced model using distinct metrics",
 		caption = "Higher values indicate better performance: Accuracy and AUC\nLower values indicate better performance: Log Loss") + 
-  geom_text(aes(label = round(value, 3)), vjust = -0.5, size = 3, position = position_dodge(width= 0.9)) #+
+  geom_text(aes(label = round(value, 3)), vjust = -0.5, size = 5, position = position_dodge(width= 0.9)) #+
   #coord_capped_cart()
 p_comparison_models
+
+# ==================================================================================================
+# Create table for stepwise reduced model
+summary_mdl_step <- data.frame(	Terms=attr(summary(mdl_step)$terms , "term.labels")[summary(mdl_step)$coef[,4] <= .05],
+								Estimate=sprintf(summary(mdl_step)$coef[summary(mdl_step)$coef[,4] <= .05, 1], fmt="%#.2f"),
+								Std.Error=sprintf(summary(mdl_step)$coef[summary(mdl_step)$coef[,4] <= .05, 2], fmt="%#.2f"),
+								zvalue=sprintf(summary(mdl_step)$coef[summary(mdl_step)$coef[,4] <= .05, 3], fmt="%#.2f"),
+								p=sprintf(summary(mdl_step)$coef[summary(mdl_step)$coef[,4] <= .05, 4], fmt="%#.3f")
+								)
+write.csv(summary_mdl_step, file.path(wdir, "results", "table_stepwise_model.csv"), row.names = F) # csv-file may be easily imported into text processing software
+# TODO: Some manual refinement of the table necessary (include "(Intercept", tidy up the predictors, etc.)
 
 # ==================================================================================================
 # Summary of all results from the stepwise reduced regression and plots to show the results for the 
@@ -742,6 +753,20 @@ summary(mdl_step) # No function was traceable to get that into a table, so it ha
 #TODO: Supplementary data which displeays the levels of the answers on the x-Axis and the means for 'yes' and 'no' on the y axis for the
 # supplementary data. For that we need a list of factors (-> just copy the entore list and remove what is not needed) and the ggplot routines in a loop ; ) 
 
+
+scores_list <- join_scores(
+  predict(mdl_full, newdata = train_data, type = "prob")$yes,
+  predict(mdl_step, newdata = train_data, type = "prob")$yes)
+
+labels_list <- join_labels(
+  train_data$dv,
+  train_data$dv)
+
+pe <- evalmod(
+  scores = scores_list, 
+  labels = labels_list,
+  modnames = c("Full", "glmStepAIC"),
+  posclass = "yes")
 
 
 #results: @Marlena, this has changed as some more categories are included now!
