@@ -1,0 +1,107 @@
+%% Creator: Inkscape 1.1.1 (3bf5ae0d25, 2021-09-20), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'fig3.oddsratios.v1.1_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1097.25bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.73752563)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{fig3.oddsratios.v1.1_svg-tex.pdf}}%
+    \put(0.42437912,0.05672362){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B1a - Regular caregiver present\end{tabular}}}}%
+    \put(0.42437911,0.07698334){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}A2 - Disease Stage [H\&Y]\end{tabular}}}}%
+    \put(0.42437911,0.097234){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}A1 - Disease duration [Years]\end{tabular}}}}%
+    \put(0.42437912,0.11749372){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}A4 - No. of comorbidities\end{tabular}}}}%
+    \put(0.42437912,0.13774437){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}D8 - Education [ISCED]\end{tabular}}}}%
+    \put(0.42437912,0.1580041){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}D9 - Net Householdincome [€/year]\end{tabular}}}}%
+    \put(0.42437911,0.17826382){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}vWEI - Comorbidity Index [vWEI]\end{tabular}}}}%
+    \put(0.42437912,0.19851447){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B5 - Perceived Neurologist expertise\end{tabular}}}}%
+    \put(0.42437912,0.2187742){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B3 - Perceived GP expertise\end{tabular}}}}%
+    \put(0.42437912,0.23902485){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B14 - Communication challenges pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.25928458){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}A3 - PDQ-8 score\end{tabular}}}}%
+    \put(0.42437912,0.2795352){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B7a - No. of ressources against geographical barriers pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.29979495){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B9a - Ability to access PD-care pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.32005468){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B12 - Extended healthcare insurance\end{tabular}}}}%
+    \put(0.42437912,0.3403053){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B11 - Rescheduled healthcare due to financial burden pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.36056505){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}D10 - Financial stability\end{tabular}}}}%
+    \put(0.42437912,0.38081568){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B13 - Financial burden related to PD pre COVID\end{tabular}}}}%
+    \put(0.4243791,0.4010754){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B6a - Perceived cooperation between healthcare providers\end{tabular}}}}%
+    \put(0.42437912,0.42132603){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B6 - No. of healthcare providers consulted pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.44158578){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}C3_3 - Confidence accessing healthcare remotely\end{tabular}}}}%
+    \put(0.42437912,0.46183641){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}C2c2 - Access to telehealth technologies during COVID\end{tabular}}}}%
+    \put(0.42437912,0.48209616){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}C2 - Availability of remote healthcare during COVID\end{tabular}}}}%
+    \put(0.42437912,0.50235588){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B15 - Experienced stigmatization in healthcare\end{tabular}}}}%
+    \put(0.42437912,0.52260651){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}D7 - Living independently\end{tabular}}}}%
+    \put(0.42437912,0.54286626){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B16a - No. of negative consequences from barriers to healthcare\end{tabular}}}}%
+    \put(0.42437912,0.56311689){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B9b - No. of barriers in acces to healthcare pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.58337662){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B10 - Perceived difficulty of accessing healthcare pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.60362725){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}Population according to quantiles of German population [in sqkm]\end{tabular}}}}%
+    \put(0.42437912,0.62388699){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}nGER - Neurologists nearby (per sqkm)\end{tabular}}}}%
+    \put(0.42437912,0.64413762){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B7 - No. of geographical barriers in access to healthcare pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.66439736){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}B9 - Not received needed healthcare pre COVID\end{tabular}}}}%
+    \put(0.42437912,0.6846571){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}D2 - Gender *\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{fig3.oddsratios.v1.1_svg-tex.pdf}}%
+    \put(0.51045794,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.1\end{tabular}}}}%
+    \put(0.55765779,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.2\end{tabular}}}}%
+    \put(0.6200501,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.5\end{tabular}}}}%
+    \put(0.66724083,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1.0\end{tabular}}}}%
+    \put(0.71444063,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}2.0\end{tabular}}}}%
+    \put(0.77682387,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}5.0\end{tabular}}}}%
+    \put(0.82402367,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}10.0\end{tabular}}}}%
+    \put(0.8712144,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}20.0\end{tabular}}}}%
+    \put(0.9184142,0.03517883){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}40.0\end{tabular}}}}%
+    \put(0.71444063,0.01538392){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Odds ratio (log scale)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{fig3.oddsratios.v1.1_svg-tex.pdf}}%
+    \put(0.9286033,0.12281614){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}p < .001\end{tabular}}}}%
+    \put(0.9286033,0.10706765){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}p < .05\end{tabular}}}}%
+    \put(0.9286033,0.09131922){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ns\end{tabular}}}}%
+    \put(0.71444063,0.71821372){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{iPS-patients' odds of unmet need for healthcare services during COVID-19 pandemic}\end{tabular}}}}%
+    \put(0.42887217,0.00184098){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textit{*Gender was coded so that negative odds means that being female indicates a higher risk of unmet needs}\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,85 @@
+%% Creator: Inkscape 1.1.1 (3bf5ae0d25, 2021-09-20), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'fig2.satisfaction.care.v1.1_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{805.89001465bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.69399052)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{fig2.satisfaction.care.v1.1_svg-tex.pdf}}%
+    \put(0.26497411,0.22967157){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}37.2\%\end{tabular}}}}%
+    \put(0.52240379,0.13540312){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}1.2\%\end{tabular}}}}%
+    \put(0.26497411,0.44215715){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}44.1\%\end{tabular}}}}%
+    \put(0.52240379,0.1533212){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}5.7\%\end{tabular}}}}%
+    \put(0.26497411,0.59576371){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}14.7\%\end{tabular}}}}%
+    \put(0.52240379,0.2624428){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}36.1\%\end{tabular}}}}%
+    \put(0.26497412,0.64440559){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}3.9\%\end{tabular}}}}%
+    \put(0.52240379,0.50566457){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}57.0\%\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{fig2.satisfaction.care.v1.1_svg-tex.pdf}}%
+    \put(0.10440631,0.12976959){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0\%\end{tabular}}}}%
+    \put(0.10440631,0.26033331){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}25\%\end{tabular}}}}%
+    \put(0.10440631,0.39089706){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}50\%\end{tabular}}}}%
+    \put(0.10440631,0.52147318){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}75\%\end{tabular}}}}%
+    \put(0.10440631,0.6520369){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}100\%\end{tabular}}}}%
+    \put(0.26497411,0.08849848){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Before\end{tabular}}}}%
+    \put(0.26497411,0.0616958){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}COVID-19 pandemic\end{tabular}}}}%
+    \put(0.52240379,0.08849848){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}During\end{tabular}}}}%
+    \put(0.52240379,0.0616958){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}COVID-19 pandemic\end{tabular}}}}%
+    \put(0.02489173,0.39994295){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Percentage of questionnaires\end{tabular}}}}}%
+    \put(0.84182701,0.45337455){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Satisfaction}\end{tabular}}}}%
+    \put(0.84182701,0.4265719){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{with PD-related care}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{fig2.satisfaction.care.v1.1_svg-tex.pdf}}%
+    \put(0.73106747,0.39366418){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}very satisfied\end{tabular}}}}%
+    \put(0.73106747,0.37222205){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}rather satisfied\end{tabular}}}}%
+    \put(0.73106747,0.35077992){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}rather unsatisfied\end{tabular}}}}%
+    \put(0.73106747,0.32933779){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}very unsatisfied\end{tabular}}}}%
+    \put(0.11052377,0.01041087){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textit{Data from n = 399 participants}\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

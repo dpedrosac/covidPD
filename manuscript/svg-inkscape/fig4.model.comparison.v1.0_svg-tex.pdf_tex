@@ -1,0 +1,78 @@
+%% Creator: Inkscape 1.1.1 (3bf5ae0d25, 2021-09-20), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'fig4.model.comparison.v1.0_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{831bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.96570397)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{fig4.model.comparison.v1.0_svg-tex.pdf}}%
+    \put(0.4743923,0.687858){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.73\end{tabular}}}}%
+    \put(0.76239469,0.46614921){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.433\end{tabular}}}}%
+    \put(0.18637786,0.76624549){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.835\end{tabular}}}}%
+    \put(0.6039952,0.73543922){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.794\end{tabular}}}}%
+    \put(0.89199759,0.41383874){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.363\end{tabular}}}}%
+    \put(0.31598073,0.77273165){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.844\end{tabular}}}}%
+    \put(0.07244285,0.12777376){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.00\end{tabular}}}}%
+    \put(0.07244285,0.31444042){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.25\end{tabular}}}}%
+    \put(0.07244285,0.50109507){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.50\end{tabular}}}}%
+    \put(0.07244285,0.68776173){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0.75\end{tabular}}}}%
+    \put(0.07244285,0.87441637){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1.00\end{tabular}}}}%
+    \put(0.2511793,0.07589652){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Accuracy\end{tabular}}}}%
+    \put(0.53919375,0.07589652){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AUC\end{tabular}}}}%
+    \put(0.82719618,0.07589652){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}LogLoss\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{fig4.model.comparison.v1.0_svg-tex.pdf}}%
+    \put(0.78730445,0.83575211){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Full GLM\end{tabular}}}}%
+    \put(0.78730445,0.81495789){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Stepwise reduced GLM\end{tabular}}}}%
+    \put(0.07837545,0.93304453){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Comparing full model with reduced model using distinct metrics\end{tabular}}}}%
+    \put(0.61764141,0.02484961){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{Higher values indicate better performance: Accuracy and AUC}\end{tabular}}}}%
+    \put(0.63511436,0.00405535){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textit{Lower values indicate better performance: Log Loss}\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
