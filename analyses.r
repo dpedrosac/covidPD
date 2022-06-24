@@ -416,33 +416,33 @@ levels(results_OR1$factors_group) <- barriers
 
 predictors <- c( # TODO: We must try to keep the description as short as possible; I would propose to have the questions of the questionnare as text file appended
 					"A2 - Disease Stage [H&Y]", #**
- 					"B1a - Regular caregiver present", #*
+ 					"B1a - Presence of regular caregiver", #*
 	                		
 					"A1 - Disease duration [Years]", #**
-  					"A4 - No. of comorbidities", #*
+  					"A4 - Comorbidities present", #*
  					"vWEI - Comorbidity Index [vWEI]", #**(*)
 					
 					"D8 - Education [ISCED]", #**
-  					"D9 - Net Householdincome [€/year]", #****
+  					"D9 - Net household income [€/year]", #****
 					
-					"B3 - Perceived GP expertise", #**
-  					"B5 - Perceived Neurologist expertise", #**
+					"B3 - Expertise of General Practitioner", #**
+  					"B5 - Expertise of Neurologist", #**
 					
 					#"B14a - Sum of Reasons for Communication Challenges before the COVID-19 Pandemic", #* # TODO: Not quite clear. Is it a number? A sum? A rate? -> Answer: a sum // Besides problem with multicollinearity (see below "Communication challanges ...")
-	                "B14 - Communication challenges pre COVID",
+	                		"B14 - Communication problems with care providers pre COVID",
 	
 					"A3 - PDQ-8 score", #**(*)
 					
-					"B7a - No. of ressources against geographical barriers pre COVID", #**** 
+					"B7a - No. of ressources to overcome geogr. barriers pre COVID", #**** 
   					"B9a - Ability to access PD-care pre COVID", #*
 					
-					"B11 - Rescheduled healthcare due to financial burden pre COVID", #* 
-  					"B12 - Extended healthcare insurance", #* 
-  					"B13 - Financial burden related to PD pre COVID", #*
- 				 	"D10 - Financial stability", #**
+					"B11 - Canceled healthcare appointment due to fin. difficulties pre COVID", #* 
+  					"B12 - Presence of extended healthcare insurance", #* 
+  					"B13 - Financial burden due to PD treatment pre COVID", #*
+ 				 	"D10 - Perceived financial stability", #**
                    			
 	
-					"C3_3 - Confidence accessing healthcare remotely", #* 
+					"C3_3 - Confidence in access to remote healthcare", #* 
   					"B6a - Perceived cooperation between healthcare providers", #**
   					"B6 - No. of healthcare providers consulted pre COVID", #****
                    			
@@ -451,17 +451,17 @@ predictors <- c( # TODO: We must try to keep the description as short as possibl
   					"C2c2 - Access to telehealth technologies during COVID", #*
   					#B14 - "Communication Challenges before pandemic", #* # TODO: produces isues with collinearity in the dataset together with "Reasons for Communication Challenges..."
                    			
-					"B16a - No. of negative consequences from barriers to healthcare", #****
+					"B16a - Health restrictions from barriers to healthcare", #****
   					#B16a.c - Existence of Negative Effects on Patients due to Healthcare Accessibility Barriers", #* 
 					#D6 - Level of Urbanization", #** #TODO: This is very similar to "Population according to ..." below. I would prefer the other one as it is more reliable and we only have 3/6 levels available here; besides resuöts are almost identical
-  					"D7 - Living independently", #* 
-  					"B9b - No. of barriers in acces to healthcare pre COVID", #**
-  					"B10 - Perceived difficulty of accessing healthcare pre COVID", #*	
+  					"D7 - Living situation", #* 
+  					"B9b - No. of barriers in access to healthcare pre COVID", #**
+  					"B10 - Perceived difficulty of access to healthcare pre COVID", #*	
 					
-					"B7 - No. of geographical barriers in access to healthcare pre COVID", #**
-  					"	  Population according to quantiles of German population [in sqkm]", #****
+					"B7 - No. of geogr. barriers in access to healthcare pre COVID", #**
+  					"Population according to quantiles of German population [in sqkm]", #****
 	                		#"B8 - Locally Available PD-related Healthcare Ressources", #**
-					"B9 - Not received needed healthcare pre COVID", #** 
+					"B9 - Feeling of not receiving needed healthcare pre COVID", #** 
   					"nGER - Neurologists nearby (per sqkm)", #****
                     
 					"D2 - Gender *" #*
