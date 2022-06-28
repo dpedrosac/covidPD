@@ -1,7 +1,7 @@
 # This is code to display the available data at the distinct German postal codes;
 # Code developed by David Pedrosa
 
-# Version 1.2 # 2021-12-10, adding data from the "Kassenaerztliche Bundesvereinigung"
+# Version 1.3 # 2022-06-28, minor changes if the way regional data is plotted due to error
 
 # ==================================================================================================
 ## Specify packages of interest and load them automatically if needed
@@ -270,6 +270,14 @@ demographics_df$neurologists[ind_MUN] = df_kbv$density_physicians_neurologist_by
 
 write.csv(demographics_df,file.path(wdir, "data", "demographics_per_postal_code.csv"), row.names = FALSE) # not working until fix for missing "0" is found
 
+for (item in 1:length(demographics_df$plz)){ # dodgy way of entering zeros when postal codes have less than 5 digits
+	if (!is.na(demographics_df$plz[item]) & nchar(demographics_df$plz[item]) < 3){
+		demographics_df$plz[item] <- paste0("0", demographics_df$plz[item])
+	} else {
+	demographics_df$plz[item] <- demographics_df$plz[item]
+	}
+}	
+
 
 # ==================================================================================================
 ## Prepare data for plotting population per skm
@@ -315,9 +323,9 @@ fig <- ggplot(data=merge.shp, aes(x = long,
       legend.position = c(0.5, 0.03),
       legend.text.align = 0,
       legend.background = element_rect(fill = alpha('white', 0.0)),
-      legend.text = element_text(size = 7, hjust = 0, color = "#4e4d47"),
-      plot.title = element_text(hjust = 0.5, color = "#4e4d47"),
-      plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47", 
+      legend.text = element_text(hjust = 0, color = "#4e4d47", size= 18),
+      plot.title = element_text(hjust = 0.5, color = "#4e4d47", size =24),
+      plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47", size=18,
                                    margin = margin(b = -0.1, 
                                                    t = -0.1, 
                                                    l = 2, 
@@ -338,13 +346,15 @@ fig <- ggplot(data=merge.shp, aes(x = long,
 	labs(x = NULL, 
          y = NULL, 
          title = "Germany's regional demographics", 
-         subtitle = "Average population per square kilometer in German municipalities, 2019", 
-         caption = "Map CC-BY-SA; Author: AG Bewegungsstoerungen und Neuromodulation, UKGM; Geometries: plz-suche.org, 2021; Data: Zensus, 2011") +
+         subtitle = "Average population per square kilometer, 2019", 
+         caption = "Map CC-BY-SA; Author: AG Bewegungsstoerungen und Neuromodulation, UKGM; \nGeometries: plz-suche.org, 2021; \nData: Zensus, 2011", 
+		 size = 18) +
 	scale_fill_manual(
           values = rev(brewer.pal(7, "Blues")),
           breaks = rev(brks_scale),
           name = "Population [inhabitants per km^2]",
-          drop = FALSE,
+          size = 18,
+		  drop = FALSE,
           labels = labels_scale,
           guide = guide_legend(
             direction = "horizontal",
@@ -414,9 +424,9 @@ fig2 <- ggplot(data=merge.shp, aes(x = long,
       legend.position = c(0.5, 0.03),
       legend.text.align = 0,
       legend.background = element_rect(fill = alpha('white', 0.0)),
-      legend.text = element_text(size = 7, hjust = 0, color = "#4e4d47"),
-      plot.title = element_text(hjust = 0.5, color = "#4e4d47"),
-      plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47", 
+      legend.text = element_text(hjust = 0, color = "#4e4d47", size=18),
+      plot.title = element_text(hjust = 0.5, color = "#4e4d47", size=24),
+      plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47", size=18, 
                                    margin = margin(b = -0.1, 
                                                    t = -0.1, 
                                                    l = 2, 
@@ -504,9 +514,9 @@ fig3 <- ggplot(data=merge.shp, aes(x = long,
       legend.position = c(0.5, 0.03),
       legend.text.align = 0,
       legend.background = element_rect(fill = alpha('white', 0.0)),
-      legend.text = element_text(size = 7, hjust = 0, color = "#4e4d47"),
-      plot.title = element_text(hjust = 0.5, color = "#4e4d47"),
-      plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47", 
+      legend.text = element_text(hjust = 0, color = "#4e4d47", size=18),
+      plot.title = element_text(hjust = 0.5, color = "#4e4d47", size=24),
+      plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47", size=18, 
                                    margin = margin(b = -0.1, 
                                                    t = -0.1, 
                                                    l = 2, 

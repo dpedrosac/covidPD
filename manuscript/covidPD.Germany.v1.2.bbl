@@ -65,6 +65,12 @@ Zaman MS, Ghahari S, McColl MA.
   Parkinsonâ€™s Disease: A Scoping Review.
 \newblock Journal of Parkinson's Disease. 2021;(Preprint):1--17.
 
+\bibitem{van2009modification}
+van Walraven C, Austin PC, Jennings A, Quan H, Forster AJ.
+\newblock A modification of the Elixhauser comorbidity measures into a point
+  system for hospital death using administrative data.
+\newblock Medical care. 2009;p. 626--633.
+
 \bibitem{rcore}
 {R Core Team}. R: A Language and Environment for Statistical Computing.
 \newblock Vienna, Austria; 2021.
@@ -81,12 +87,6 @@ Kuhn M.
 \newblock Journal of Statistical Software, Articles. 2008;28(5):1--26.
 \newblock Available from: \url{https://www.jstatsoft.org/v028/i05}.
 
-\bibitem{van2009modification}
-van Walraven C, Austin PC, Jennings A, Quan H, Forster AJ.
-\newblock A modification of the Elixhauser comorbidity measures into a point
-  system for hospital death using administrative data.
-\newblock Medical care. 2009;p. 626--633.
-
 \bibitem{10665-341674}
 on~Health~Systems EO, Policies, M B, A S, K A, A M, et~al.
 \newblock Germany: health system review.
@@ -100,12 +100,6 @@ Richter D, Bartig D, Muhlack S, Hartelt E, Scherbaum R, Katsanos AH, et~al.
   formation of regional centers.
 \newblock Cells. 2019;8(2):151.
 
-\bibitem{prell2020specialized}
-Prell T, Siebecker F, Lorrain M, T{\"o}nges L, Warnecke T, Klucken J, et~al.
-\newblock Specialized staff for the care of people with Parkinson’s disease
-  in Germany: an overview.
-\newblock Journal of Clinical Medicine. 2020;9(8):2581.
-
 \bibitem{van2020building}
 van Munster M, T{\"o}nges L, Loewenbr{\"u}ck KF, Warnecke T, Eggers C.
 \newblock Building a Parkinson-Network--Experiences from Germany.
@@ -116,5 +110,11 @@ Radder DL, Nonnekes J, Van~Nimwegen M, Eggers C, Abbruzzese G, Alves G, et~al.
 \newblock Recommendations for the organization of multidisciplinary clinical
   care teams in Parkinson’s disease.
 \newblock Journal of Parkinson's disease. 2020;10(3):1087--1098.
+
+\bibitem{prell2020specialized}
+Prell T, Siebecker F, Lorrain M, T{\"o}nges L, Warnecke T, Klucken J, et~al.
+\newblock Specialized staff for the care of people with Parkinson’s disease
+  in Germany: an overview.
+\newblock Journal of Clinical Medicine. 2020;9(8):2581.
 
 \end{thebibliography}
