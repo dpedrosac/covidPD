@@ -1,0 +1,279 @@
+\begin{thebibliography}{10}
+
+\bibitem{nunez2021access}
+N{\'u}{\~n}ez A, Sreeganga S, Ramaprasad A.
+\newblock Access to Healthcare during COVID-19.
+\newblock International journal of environmental research and public health.
+  2021;18(6):2980.
+
+\bibitem{moynihan2021impact}
+Moynihan R, Sanders S, Michaleff ZA, Scott AM, Clark J, To EJ, et~al.
+\newblock Impact of COVID-19 pandemic on utilisation of healthcare services: a
+  systematic review.
+\newblock BMJ open. 2021;11(3):e045343.
+
+\bibitem{world2020impact}
+Organization WH, et~al.
+\newblock The impact of the COVID-19 pandemic on noncommunicable disease
+  resources and services: results of a rapid assessment. 2020;.
+
+\bibitem{sepulveda2020impact}
+Sep{\'u}lveda-Loyola W, Rodr{\'\i}guez-S{\'a}nchez I, P{\'e}rez-Rodr{\'\i}guez
+  P, Ganz F, Torralba R, Oliveira D, et~al.
+\newblock Impact of social isolation due to COVID-19 on health in older people:
+  mental and physical effects and recommendations.
+\newblock The journal of nutrition, health \& aging. 2020;24(9):938--947.
+
+\bibitem{kasar2021life}
+Kasar KS, Karaman E.
+\newblock Life in lockdown: Social isolation, loneliness and quality of life in
+  the elderly during the COV{\.I}D-19 pandemic: A scoping review.
+\newblock Geriatric Nursing. 2021;42(5):1222--1229.
+
+\bibitem{yogev2021covid}
+Yogev-Seligmann G, Kafri M.
+\newblock COVID-19 social distancing: negative effects on people with Parkinson
+  disease and their associations with confidence for self-management.
+\newblock BMC neurology. 2021;21(1):1--8.
+
+\bibitem{scheidt2021care}
+Scheidt-Nave C, Barnes B, Beyer AK, Busch MA, Hapke U, Heidemann C, et~al.
+\newblock Care for the chronically ill in Germany--The challenges during the
+  COVID-19 pandemic.
+\newblock Journal of Health Monitoring. 2021;5(Suppl 10):2.
+
+\bibitem{feral2020collateral}
+Feral-Pierssens AL, Claret PG, Chouihed T.
+\newblock Collateral damage of the COVID-19 outbreak: expression of concern.
+\newblock European Journal of Emergency Medicine. 2020;.
+
+\bibitem{demirtepe2022psychosocial}
+Demirtepe-Saygili D.
+\newblock Psychosocial Effects of the COVID-19 Pandemic on Adults With Chronic
+  Illnesses.
+\newblock In: The Impact of the COVID-19 Pandemic on Child, Adolescent, and
+  Adult Development. IGI Global; 2022. p. 1--20.
+
+\bibitem{zipprich2020knowledge}
+Zipprich HM, Teschner U, Witte OW, Sch{\"o}nenberg A, Prell T.
+\newblock Knowledge, attitudes, practices, and burden during the COVID-19
+  pandemic in people with Parkinsonâ€™s disease in Germany.
+\newblock Journal of clinical medicine. 2020;9(6):1643.
+
+\bibitem{frundt2022impact}
+Fr{\"u}ndt O, Hanff AM, Mai T, Kirchner C, Bouzanne~des Mazery E, Amouzandeh A,
+  et~al.
+\newblock Impact of COVID-19 Pandemic on (Health) Care Situation of People with
+  Parkinsonâ€™s Disease in Germany (Care4PD).
+\newblock Brain sciences. 2022;12(1):62.
+
+\bibitem{richter2021analysis}
+Richter D, Scherbaum R, Bartig D, Gold R, Krogias C, T{\"o}nges L.
+\newblock Analysis of nationwide multimodal complex treatment and drug pump
+  therapy in Parkinson's disease in times of COVID-19 pandemic in Germany.
+\newblock Parkinsonism \& related disorders. 2021;85:109--113.
+
+\bibitem{brooks2021social}
+Brooks SK, Weston D, Greenberg N.
+\newblock Social and psychological impact of the COVID-19 pandemic on people
+  with Parkinson's disease: a scoping review.
+\newblock Public Health. 2021;199:77--86.
+
+\bibitem{huijts2017prevalence}
+Huijts T, Stornes P, Eikemo TA, Bambra C, Consortium H.
+\newblock Prevalence of physical and mental non-communicable diseases in
+  Europe: findings from the European Social Survey (2014) special module on the
+  social determinants of health.
+\newblock The European Journal of Public Health. 2017;27(suppl\_1):8--13.
+
+\bibitem{lowcock2012social}
+Lowcock EC, Rosella LC, Foisy J, McGeer A, Crowcroft N.
+\newblock The social determinants of health and pandemic H1N1 2009 influenza
+  severity.
+\newblock American journal of public health. 2012;102(8):e51--e58.
+
+\bibitem{whocovidbrief}
+Organization WH.
+\newblock COVID-19 and the social determinants of health and health equity:
+  evidence brief.
+\newblock World Health Organization; 2021.
+
+\bibitem{brown2020effect}
+Brown EG, Chahine LM, Goldman SM, Korell M, Mann E, Kinel DR, et~al.
+\newblock The effect of the COVID-19 pandemic on people with Parkinson’s
+  disease.
+\newblock Journal of Parkinson's disease. 2020;10(4):1365--1377.
+
+\bibitem{world2010conceptual}
+Organization WH, et~al.
+\newblock A conceptual framework for action on the social determinants of
+  health. 2010;.
+
+\bibitem{zaman2021barriers}
+Zaman MS, Ghahari S, McColl MA.
+\newblock Barriers to Accessing Healthcare Services for People with
+  Parkinsonâ€™s Disease: A Scoping Review.
+\newblock Journal of Parkinson's Disease. 2021;(Preprint):1--17.
+
+\bibitem{leiner2019sosci}
+Leiner DJ. SoSci survey (version 3.1. 06)[computer software]; 2019.
+
+\bibitem{van2009modification}
+van Walraven C, Austin PC, Jennings A, Quan H, Forster AJ.
+\newblock A modification of the Elixhauser comorbidity measures into a point
+  system for hospital death using administrative data.
+\newblock Medical care. 2009;p. 626--633.
+
+\bibitem{rcore}
+{R Core Team}. R: A Language and Environment for Statistical Computing.
+\newblock Vienna, Austria; 2021.
+\newblock Available from: \url{https://www.R-project.org/}.
+
+\bibitem{vanbuuren2011}
+{van Buuren} S, Groothuis-Oudshoorn K.
+\newblock {mice}: Multivariate Imputation by Chained Equations in R.
+\newblock Journal of Statistical Software. 2011;45(3):1--67.
+
+\bibitem{kuhn2008}
+Kuhn M.
+\newblock Building Predictive Models in R Using the caret Package.
+\newblock Journal of Statistical Software, Articles. 2008;28(5):1--26.
+\newblock Available from: \url{https://www.jstatsoft.org/v028/i05}.
+
+\bibitem{10665-341674}
+on~Health~Systems EO, Policies, M B, A S, K A, A M, et~al.
+\newblock Germany: health system review.
+\newblock Health Systems in Transition; Vol. 22 (6). World Health Organization.
+  Regional Office for Europe; 2020.
+
+\bibitem{richter2019dynamics}
+Richter D, Bartig D, Muhlack S, Hartelt E, Scherbaum R, Katsanos AH, et~al.
+\newblock Dynamics of Parkinson’s disease multimodal complex treatment in
+  Germany from 2010--2016: Patient characteristics, access to treatment, and
+  formation of regional centers.
+\newblock Cells. 2019;8(2):151.
+
+\bibitem{van2020building}
+van Munster M, T{\"o}nges L, Loewenbr{\"u}ck KF, Warnecke T, Eggers C.
+\newblock Building a Parkinson-Network--Experiences from Germany.
+\newblock Journal of clinical medicine. 2020;9(9):2743.
+
+\bibitem{prell2020specialized}
+Prell T, Siebecker F, Lorrain M, T{\"o}nges L, Warnecke T, Klucken J, et~al.
+\newblock Specialized staff for the care of people with Parkinson’s disease
+  in Germany: an overview.
+\newblock Journal of Clinical Medicine. 2020;9(8):2581.
+
+\bibitem{deuschl2016s3}
+Deuschl G, Oertel W, Reichmann H.
+\newblock S3-Leitlinie Idiopathisches Parkinson-Syndrom.
+\newblock Leitlinie der Deutschen Gesellschaft f{\"u}r Neurologie (DGN)
+  AWMF-Register-Nummer. 2016;p. 030--010.
+
+\bibitem{radder2020recommendations}
+Radder DL, Nonnekes J, Van~Nimwegen M, Eggers C, Abbruzzese G, Alves G, et~al.
+\newblock Recommendations for the organization of multidisciplinary clinical
+  care teams in Parkinson’s disease.
+\newblock Journal of Parkinson's disease. 2020;10(3):1087--1098.
+
+\bibitem{tickle2011culture}
+Tickle-Degnen L, Zebrowitz LA, Ma Hi.
+\newblock Culture, gender and health care stigma: Practitioners’ response to
+  facial masking experienced by people with Parkinson’s disease.
+\newblock Social Science \& Medicine. 2011;73(1):95--102.
+
+\bibitem{hermanns2013invisible}
+Hermanns M.
+\newblock The invisible and visible stigmatization of Parkinson's disease.
+\newblock Journal of the American Association of Nurse Practitioners.
+  2013;25(10):563--566.
+
+\bibitem{davis2003variability}
+Davis JT, Ehrhart A, Trzcinski BH, Kille S, Mount J.
+\newblock Variability of experiences for individuals living with Parkinson
+  disease.
+\newblock Journal of Neurologic Physical Therapy. 2003;27(2):38--45.
+
+\bibitem{hurt2019barriers}
+Hurt CS, Rixon L, Chaudhuri KR, Moss-Morris R, Samuel M, Brown RG.
+\newblock Barriers to reporting non-motor symptoms to health-care providers in
+  people with Parkinson's.
+\newblock Parkinsonism \& Related Disorders. 2019;64:220--225.
+
+\bibitem{fleisher2016associations}
+Fleisher JE, Shah K, Fitts W, Dahodwala NA.
+\newblock Associations and implications of low health literacy in Parkinson's
+  Disease.
+\newblock Movement disorders clinical practice. 2016;3(3):250--256.
+
+\bibitem{lim2020factors}
+Lim KE, Kim SR, Sung YH, Oh SY, Kim MS, Chung SJ.
+\newblock Factors influencing self-management in Parkinson's disease: a
+  cross-sectional study.
+\newblock Geriatric Nursing. 2020;41(3):254--260.
+
+\bibitem{rostagni2022gratitude}
+Rostagni OM, Stutts LA.
+\newblock Gratitude, self-efficacy, and health-related quality of life in
+  individuals with Parkinson’s Disease.
+\newblock Psychology, Health \& Medicine. 2022;p. 1--7.
+
+\bibitem{bainbridge2009challenges}
+Bainbridge JL, Ruscin JM.
+\newblock Challenges of treatment adherence in older patients with
+  Parkinson’s disease.
+\newblock Drugs \& aging. 2009;26(2):145--155.
+
+\bibitem{shin2016initiation}
+Shin JY, Habermann B.
+\newblock Initiation of medications for Parkinson's disease: a qualitative
+  description.
+\newblock Journal of Clinical Nursing. 2016;25(1-2):127--133.
+
+\bibitem{spottke2005cost}
+Spottke AE, Reuter M, Machat O, Bornschein B, von Campenhausen S, Berger K,
+  et~al.
+\newblock Cost of illness and its predictors for Parkinson’s disease in
+  Germany.
+\newblock Pharmacoeconomics. 2005;23(8):817--836.
+
+\bibitem{dahodwala2018sex}
+Dahodwala N, Shah K, He Y, Wu SS, Schmidt P, Cubillos F, et~al.
+\newblock Sex disparities in access to caregiving in Parkinson disease.
+\newblock Neurology. 2018;90(1):e48--e54.
+
+\bibitem{achey2014past}
+Achey M, Aldred JL, Aljehani N, Bloem BR, Biglan KM, Chan P, et~al.
+\newblock The past, present, and future of telemedicine for Parkinson's
+  disease.
+\newblock Movement disorders. 2014;29(7):871--883.
+
+\bibitem{eggers2020care}
+Eggers C, Wellach I, Groppa S, Strothjohann M, Klucken J.
+\newblock Care of patients with Parkinson's disease in Germany: status quo and
+  perspectives as reflected in the digital transition.
+\newblock Der Nervenarzt. 2020;.
+
+\bibitem{samuels2021digital}
+Samuels-Kalow M, Jaffe T, Zachrison K. Digital disparities: designing
+  telemedicine systems with a health equity aim.
+\newblock BMJ Publishing Group Ltd and the British Association for
+  Accident~…; 2021.
+
+\bibitem{taylor2016leveraging}
+Taylor LA, Tan AX, Coyle CE, Ndumele C, Rogan E, Canavan M, et~al.
+\newblock Leveraging the social determinants of health: what works?
+\newblock PloS one. 2016;11(8):e0160217.
+
+\bibitem{gottlieb2019social}
+Gottlieb L, Fichtenberg C, Alderwick H, Adler N.
+\newblock Social determinants of health: what’sa healthcare system to do?
+\newblock Journal of Healthcare Management. 2019;64(4):243--257.
+
+\bibitem{friedman2018toward}
+Friedman NL, Banegas MP.
+\newblock Toward addressing social determinants of health: a health care system
+  strategy.
+\newblock The Permanente Journal. 2018;22.
+
+\end{thebibliography}

@@ -1,0 +1,574 @@
+%% BioMed_Central_Tex_Template_v1.06
+%%                                      %
+%  bmc_article.tex            ver: 1.06 %
+%                                       %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                     											      %%
+%%  LaTeX template for BioMed Central 						 	      %%
+%%     journal article submissions    								      %%
+%%                                     											      %%
+%%          <8 June 2012>              %%
+%%                                     %%
+%%                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% additional documentclass options:
+%  [doublespacing]
+%  [linenumbers]   - put the line numbers on margins
+
+%%% loading packages, author definitions
+
+%\documentclass[twocolumn]{bmcart}% uncomment this for twocolumn layout and comment line below
+\documentclass{bmcart}
+
+%%% Load packages
+\usepackage{amsthm,amsmath}
+\usepackage[nohyperlinks, printonlyused, withpage, smaller]{acronym}
+\usepackage{subcaption}
+\captionsetup[subfigure]{width=0.9\textwidth}
+\usepackage[hyphens]{url}
+\urlstyle{same}
+\usepackage{booktabs}
+\usepackage{float}
+
+%\usepackage{hyperref}
+%\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  If you wish to display your graphics for   %%
+%%  your own use using includegraphic or       %%
+%%  includegraphics, then comment out the      %%
+%%  following two lines of code.               %%
+%%  NB: These line *must* be included when     %%
+%%  submitting to BMC.                         %%
+%%  All figure files must be submitted as      %%
+%%  separate graphics through the BMC          %%
+%%  submission process, not included in the    %%
+%%  submitted article.                         %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\includegraphic{}
+%\def\includegraphics{}
+\usepackage{graphicx}
+\graphicspath{ {media/} }
+
+\usepackage{pdflscape}
+\usepackage{svg}
+\svgpath{ {media/} }
+
+%%% Put your definitions there:
+\startlocaldefs
+\endlocaldefs
+
+%%% Begin ...
+\begin{document}
+
+%%% Start of article front matter
+\begin{frontmatter}
+
+\begin{fmbox}
+\dochead{Research}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Enter the title of your article here     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Impact of COVID-19 Pandemic on Perceived Access and Quality of Care in German People with Parkinson's Disease}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Enter the authors here                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author[
+addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
+email={marlena.vanmunster@uni-marburg.de}   % email address
+]{\inits{M.v.M.} \fnm{Marlena} \snm{van Munster}}
+\author[
+addressref={aff1},
+email={marcel.printz@uni-marburg.de}
+]{\inits{M.P.} \fnm{Marcel} \snm{Printz}}
+\author[
+addressref={aff1,aff2},
+corref={aff1},                       % id of corresponding address, if any
+email={david.pedrosa@staff.uni-marburg.de}
+]{\inits{D.J.P} \fnm{David J.} \snm{Pedrosa}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Enter the authors' addresses here        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\address[id=aff1]{%                          % unique id
+\orgdiv{Department of Neurology},             % department, if any
+\orgname{Philipps University},          % university, etc
+\city{Marburg},                              % city
+\cny{Germany}                                    % country
+}
+
+\address[id=aff2]{%                          % unique id
+\orgdiv{Centre of Mind, Brain and Behaviour},             % department, if any
+\orgname{Philipps University},          % university, etc
+\city{Marburg},                              % city
+\cny{Germany}                                    % country
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter short notes here                   %%
+%%                                          %%
+%% Short notes will be after addresses      %%
+%% on first page.                           %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{fmbox}% comment this for two column layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                           %%
+%% The Abstract begins here                  %%
+%%                                           %%
+%% Please refer to the Instructions for      %%
+%% authors on https://www.biomedcentral.com/ %%
+%% and include the section headings          %%
+%% accordingly for your article type.        %%
+%%                                           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstractbox}
+
+\begin{abstract} % abstract
+\parttitle{Background} %if any
+Due to a very heterogeneous clinical presentation, \ac{pd}-patients may develop different needs during their illness. Exceptional situations, such as the \textsc{Covid}-19 pandemic, have added to the scarcity of health resources, revealing some affected individuals receiving inadequate care. Meanwhile, research on the social determinants of health suggests an uneven burden during the pandemic. Therefore, this study examines the influence of individual and structural determinants on the perceived health care situation during the pandemic in Germany.
+
+\parttitle{Methods} %if any
+The analyses are based on an anonymous online survey that used a 49-item questionnaire. The aim of this survey was to describe access to health services by \ac{pd}patients before and during the pandemic. To this end, a \ac{glm} was used to derive significant predictors, whereas a stepwise regression aimed to summarize the main factors contributing to inadequate care. 
+
+\parttitle{Results}
+All over Germany, 552 questionnaires were filled out. Satisfaction for \ac{pd}-related care significantly decreased during the pandemic generally (\textit{p} $<$ .001). Yet, factors such as educational level, perceived expertise of healthcare providers, confidence in remote care, perceived ease of obtaining healthcare and the ability to access care prior to the pandemic, the density of neurologists within the area of living and the ability to overcome barriers were indicative of higher odds to perceive unmet needs during the pandemic (\textit{p} $<$ .05).
+
+\parttitle{Discussion}
+Our results unveil both structural and individual obstacles contributing to people's reduced access to healthcare. Furthermore, we could show and that people with poorer \ac{sdh} experience a greater feeling of not having received needed health services during the \textsc{Covid}-19 pandemic.
+
+\parttitle{Conclusion}
+This survey identifies common barriers that drove perceptions of limited health care during a very unique time. At the same time, some of our findings may be generalizable to all patients, so they can guide which societal and individual factors can be improved in the future to not only identify \ac{pd}-patients at risk of inadequate support, but also to provide more resources to mitigate these issues in the future.
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The keywords begin here                  									      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{keyword}%three to ten keywords
+\kwd{Parkinson's disease}
+\kwd{\textsc{Covid}-19 pandemic}
+\kwd{health care}
+\kwd{impact}
+\kwd{influence}
+\kwd{Germany}
+\kwd{iCARE-PD}
+\end{keyword}
+
+\end{abstractbox}
+%\end{fmbox}% uncomment this for two column layout
+
+\end{frontmatter}
+
+%%%%%%%%%%%%%%%%
+%% Background 		      %%
+%%%%%%%%%%%%%%%%
+
+\section*{Background}
+The \textsc{Covid}-19 pandemic presented modern societies with unprecedented challenges. The uncontrolled spread of a virus causing potentially fatal side effects despite intensive care and the resulting necessity to reduce everyday life afflicted societies economically and culturally. However, the impact on healthcare systems was particularly drastic. With rising incidences, public life around the world came to a standstill and access to public services, including health care, was disrupted \cite{nunez2021access, moynihan2021impact, world2020impact}. This disruption affected individuals in societies to varying degrees. The group of particularly affected subjects included those with chronic diseases \cite{sepulveda2020impact, kasar2021life, yogev2021covid, scheidt2021care}. This is not overly surprising in that people with chronic illnesses often belong to the high-risk group for a severe course of \textsc{Covid}-19, causing reluctance to attend medical facilities \cite{feral2020collateral}. Also, chronic conditions negatively affect individual psychosocial functioning \cite{demirtepe2022psychosocial}, often leaving affected persons in need of social, financial or physical support. People suffering from chronic diseases often necessitate continuous medical services outside of emergency departments and therefore appeared at high risk of undersupply during the pandemic \cite{scheidt2021care, nunez2021access, world2020impact}. 
+
+The group of chronically-ill also includes people with \acl{pd} (\acs{pd}). \ac{pd}-patients show a progressive condition characterized by motor but also non-motor symptoms. A plethora of different clinical signs may emerge during the disease's course, requiring continuous therapy adjustments and need assessments by healthcare professionals. Recent studies have unveiled the impact of the \textsc{Covid}-19 pandemic on people suffering from \ac{pd} \cite{yogev2021covid, zipprich2020knowledge, frundt2022impact, richter2021analysis, brooks2021social}. However, it can hardly be assumed that all \ac{pd}-patients were equally affected by the \textsc{Covid}-19 restrictions as other areas of public health research also indicate that health crises have very individual effects on health care access for vulnerable groups \cite{huijts2017prevalence, lowcock2012social, whocovidbrief}. 
+
+In addition to individual health care needs, other determinants may be inferred that influence how severely care is restricted. In recent years, the concept of so-called \acl{sdh} (\acs{sdh}) has emerged \cite{brown2020effect, world2010conceptual} which may pose an interesting concept to answer the question of what is relevant to maintain a high level of support and well-being individually but also on a societal level.
+
+% The association between \ac{sdh} and patients' access to health was evident not least during this pandemic, such that some individuals experienced greater impacts than others based on their \ac{sdh} . Particularly people with \ac{pd} often hinge on a good support network, which in turn can be influenced by \ac{sdh} \cite{zaman2021barriers}. This raises the question of which factors determined how severely affected patients were in their access to healthcare during the \textsc{Covid}-19 pandemic.
+
+What may be considered relevant \ac{sdh} is by no means universal. Rather, a context-specific consideration is required \cite{world2010conceptual}. For \ac{pd}, Zaman et al. proposed a model summarising structural and individual factors potentially influencing patients' access to healthcare \cite{zaman2021barriers}. Structural \ac{sdh} may on the one hand encompass barriers, that \ac{pd}-patients meet on a system-level when accessing healthcare, such as a lack of care coordination, limited communication between healthcare providers, disparities in health services or the unavailability of specialised services \cite{zaman2021barriers}, etc. Otherwise, individual barriers influencing \ac{pd}-patients' abilities to seek help or to engage with care providers, to reach important care services or to pay for them \cite{zaman2021barriers} may likewise be of great importance. Particularly people with \ac{pd} often hinge on a good support network. 
+
+To our knowledge, it has not yet been investigated how \ac{sdh} may relate to the \textsc{Covid}-19 pandemic on access to healthcare in people with \ac{pd}. Therefore, we examined the impact of a multitude of factors on this population with special emphasis on their access to healthcare during the pandemic in Germany. 
+
+\newpage
+%%%%%%%%%%%%%%%%
+%% Methods %%
+%%%%%%%%%%%%%%%%
+
+\section*{Methods}
+\subsection*{Questionnaire}
+Analyses relied on an anonymous survey carried out as part of the \ac{icarepd}-project (\url{https://icare-pd.ca/}). Within the scope of this project, a 49-items questionnaire was developed which aimed at characterising the access of \ac{pd}-patients to healthcare services before and during the pandemic. The initial questions in English were translated to German and were structured in four sections: A) questions describing patients' health status in terms of \ac{pd} but also of concomitant diseases, B) questions regarding experiences with healthcare services within twelve months before the pandemic, C) questions addressing experiences with healthcare services during the \textsc{Covid}-19 pandemic with special emphasis on telemedicine services, and, D) questions devoted to ascertaining demographic backgrounds of participants. There were single, multiple-choice questions or open-ended questions, some of which depended upon the specific answers to previous ones. A full version of the questionnaire is included in the supplementary data. 
+
+The questionnaire was distributed nationwide using the members’ e-mail newsletter of the German Parkinson Association (\acl{dpv}, \acs{dpv}) between November 2020 to January 2021. The e-mail included a short invitation as well as a link to an online survey, which patients could access using a personal computer, a tablet or a smartphone. In Germany, SoSci Survey \cite{leiner2019sosci} served as a database for hosting the survey. Throughout the data input, the database was supervised and manually checked for plausibility. In addition to Germany, the \ac{icarepd} questionnaire was also shared with patient associations in Canada, Spain, Portugal and the Czech Republic with the respective translations. In this study, we limit ourselves to data collected from German patients. 
+
+\subsection*{Additional data}
+Within the last section of the survey, participants were asked to disclose the first three of five numbers of their German postal code, which allowed for regional data containment. We concatenated resulting data with publicly available population densities\footnote{\url{https://www.bbsr.bund.de/BBSR/DE/forschung/raumbeobachtung/Raumabgrenzungen/deutschland/regionen/Raumordnungsregionen/raumordnungsregionen-2017.xlsx?\_\_blob=publicationFile\&v=3}} and those for family doctors and neurologists\footnote{\url{https://gesundheitsdaten.kbv.de/cms/html/16402.php}}. Merging the available data with the maps for postal codes\footnote{\url{https://www.suche-postleitzahl.org/downloads}} resulted in regional distributions  (cf. Figure \ref{fig1:total}). Population densities and those for neurologists were stratified into five equal quantiles for further analyses. Moreover, the provided information of concomitant diseases (besides \ac{pd}) was collated to a score -- the Elixhäuser Comorbitiy Score with its modification introduced by van Walraven et al. \cite{van2009modification} with higher values indicating more severe disease burden. Finally, all questions were assigned to barriers to accessing health services regarding \ac{pd} as described by \cite{zaman2021barriers} (cf. Table \ref{tab3:matchingzaman} in the supplementary data).
+
+\subsection*{Statistical analyses}
+All analyses were conducted in R\cite{rcore}. After estimation of descriptive statistics, satisfaction with overall \ac{pd}-related care was compared before and during the pandemic using a non-parametric \textit{sign-test} (rstatix package, \url{https://github.com/kassambara/rstatix/}). The two questions that were used were: 
+\begin{itemize}
+\item ``In the 12 months prior to the  \textsc{Covid}-19 pandemic, overall, how satisfied were you with the way healthcare services related to \acl{pd} were provided?'' (B17) vs.
+\item ``Since the beginning of the \textsc{Covid}-19 pandemic, overall, how satisfied are you with the way healthcare services related to \acl{pd} are provided?'' (C6).
+\end{itemize}
+
+Furthermore, using a \ac{glm} we estimated the odds for worse satisfaction with \ac{pd}-related care. After establishing the full model with a total of 32 predictors, we conducted a stepwise logistic regression in order to reduce the complexity leaving the most meaningful predictors for the question: ``Since the beginning of the \textsc{Covid}-19 pandemic, how often did you feel you needed healthcare for Parkinson’s disease but did not receive it?'' (C4). For that purpose, first missing data were imputed by taking advantage of a multivariate imputation scheme using the \textsc{Mice}-package \cite{vanbuuren2011}. We thereby assumed data missing at random and used the \ac{pmm}. After missing data imputation, stepwise reduction using a \ac{glm} with Stepwise Feature Selection (\textit{glmStepAIC}) in both directions from the \textit{caret}-package \cite{kuhn2008} aimed at minimising the \ac{aic}. For that, we first split all data into 80\% of training and 20\% of test data and performed the stepwise regression after centering and rescaling values and applying 10-fold cross-validation. The predictions of the two models were compared with the test data using Accuracy, \ac{auc} and LogLoss as metrics. All data for the analyses and all analyses can be followed under \url{https://github.com/dpedrosac/covidPD/}
+
+\newpage
+%%%%%%%%%%%%%%%%
+%% Results %%
+%%%%%%%%%%%%%%%%
+
+\section*{Results}
+%MvM: es sind 551 VP´s
+In total, 552 questionnaires were filled out with 252 different postal codes from all 16 German regions (Bundesländer, cf. Figure~\ref{fig1:total}A). Of all participants, 388 (70.4$\%$) returned a complete questionnaire (for demographics from parts A and D, cf. Table~\ref{tab1:demographics}). 
+
+Satisfaction for PD-related care significantly decreased during the pandemic. Hence, the \textit{sign-test} for the question: ```Overall, how satisfied are you with the way healthcare services related to \acl{pd} are provided?'' indicated lower values during the pandemic (Mdn = 1) compared to before (Mdn = 3, \textit{p} = 10\textsuperscript{-73}). More than 90\% of all participants stating to be rather unsatisfied or very unsatisfied with their \ac{pd}-related care during the pandemic (cf. Figure \ref{fig2:satisfaction}). 
+
+To ascertain underlying reasons for dramatic declines in satisfaction, logistic regressions on question C4 (``Since the beginning of the \textsc{Covid}-19 pandemic, how often did you feel you needed healthcare for \acl{pd} but did not receive it?'') was performed, unveiling different factors which contributed to this perception of unmet needs during the pandemic (see Figure \ref{fig3:resultsOR1}). Thus, odds to affirm this question were highly significant (\textit{p} $<$ .001) for those patients inferring lower levels of competence for their neurologist, with a lower ability to access \ac{pd}-care before the pandemic, for patients with higher degrees of stigmatisation in healthcare and for those who did not receive healthcare services before the pandemic. A significant contribution -- albeit lower with significance values \textit{p} $<$ .05 --  was encountered for \ac{pd}-patients with increasing levels of comorbidity, with perceived lower expertise of the \ac{gp}, with higher quality of life scores retrospectively, for people with higher financial burden due to \ac{pd} or who rescheduled healthcare due to financial burden before the pandemic. Finally, the lack of availability of remote healthcare during the pandemic and geographical or in general more numerous barriers in access to healthcare before the start of the pandemic were also indicative of higher odds to perceive unmet needs. For an illustration of significant predictors see Figure \ref{fig3:resultsOR1} and for the entire list of results cf. Table \ref{tab4:resultsall} in the supplementary material. 
+
+Starting with the entirety of 32 questions that might be predictors of affirming question ``C4'' (see above), using a two-way stepwise regression model these could be reduced to seven (cf. Table \ref{tab2:reduced_model}), namely: 
+\begin{itemize}
+	\item[--] educational level
+	\item[--] perceived expertise of the general practitioner
+	\item[--] confidence in the ability to access required health care services remotely
+	\item[--] perceived ease of obtaining healthcare before the pandemic
+	\item[--] perceived availability of specialist care before the pandemic
+	\item[--] density of neurologists within the area of living
+	\item[--] availability of structural support to overcome geographical barriers
+\end{itemize}
+Markers for model comparison were indicative of similar performances in the ```full model'' with 32 predictors compared to the reduced one (cf. Figure \ref{fig4:comparison_models})
+
+\newpage
+%%%%%%%%%%%%%%%%
+%% Discussion %%
+%%%%%%%%%%%%%%%%
+
+\section*{Discussion}
+%MvM: eine Sache die ich noch abgeändert habe: patients zu persons umbenannt - hatte das jetzt schon 2x als Kritik von einem Reviewer 
+
+In this study, we sought to investigate factors contributing to insecurity and the feeling of not having received health services during the \textsc{Covid}-19 pandemic among German person's with \ac{pd}. To the best of our knowledge, this is the first time that \ac{sdh} were related to German \ac{pd}-patients' perceived access to healthcare during this extraordinary crisis. With our study, we demonstrate that not all individuals were affected equally but that structural as well as individual determinants massively infer perceived access to healthcare. Viewing the pandemic through the focal lens of an ongoing demographic change in Western societies, our findings may render a deeper insight into how future care of people with \ac{pd} may be improved. 
+
+It remains undisputed that the \textsc{Covid}-19 pandemic has been a defining event in recent years. At a relatively early stage and before the availability of vaccination provided some relief, our data reflect people's unbiased and acute concerns regarding their own healthcare. Interestingly, a good overall performance has been attested to the German healthcare system during the pandemic \cite{10665-341674}, which is transferable to person's with \ac{pd} \cite{frundt2022impact}. However, a good testimony for a healthcare system should not be equated with an adequate range of services, especially when it comes to very specific needs of \ac{pd}-patients. In the recent literature, care deficits on a structural level have been reported insinuating a rather partial insufficiency \cite{richter2019dynamics,van2020building, prell2020specialized, deuschl2016s3} of this heterogeneous population.
+
+One of the major challenges physicians face in \ac{pd} is its diverse manifestation. Multimodal therapeutic approaches could be a potential remedy \cite{richter2019dynamics}, yet limited availability of such services cause long journeys from people from some regions of Germany \cite{richter2019dynamics} as Regionally coordinated care approaches for people with \ac{pd} remain rare \cite{van2020building}. Furthermore, staff providing specialised, structured and cooperative care services are lacking especially in outpatient care and in nursing homes \cite{prell2020specialized}, despite being advisable \cite{radder2020recommendations, deuschl2016s3}. Our results substantiate that structural challenges for individuals with \ac{pd} reinforce perceived insecurity and a feeling of not obtaining the needed health care. The majority of predictors from the reduced model and eight predictors from the full model may be projected to system-level barriers as per Zaman et al.  
+
+%\begin{itemize} 
+%	\item the unavailability of specialist services and or transportation 
+%		\begin{itemize}
+%		\item predictors
+%			\begin{itemize}
+%			\item ability to access PD-care before the pandemic
+%			\item abvailability of remote health care during the pandemic
+%			\item feeling that needed healthcare was not received before the pandemic
+%			\item presence of geographical barrieres in access to healthcare before the pandemic
+%			\item presence of of structural ressources to overcome geographical barriers in access to healthcare before the pandemic
+%			\end{itemize}
+%		\end{itemize}
+%\end{itemize}
+%
+%\begin{itemize}
+%	\item presence of health disparities
+%	\begin{itemize}
+%		\item predictors
+%			\begin{itemize}
+%			\item confidence in accessing all required healthcare services remotely
+%			\item perceived difficulty of accessing needed healthcare before the pandemic	
+%			\item number of structural barrieres in access to healthcare before the pandemic
+%			\item density of Neurologists nearby
+%			\end{itemize}
+%	\end{itemize}
+%\end{itemize}
+
+%% TODO: Ist der nächste Absatz wirklich system-level bzw. structural? Ehrlich gesagt würde ich ihn weglassen.
+
+%Another system-level barrier that siginificantly predicted people´s perception of access to healthcare was the experience of stigmatization in health care before the pandemic. Stigmatization by healthcare providers based on certain symptoms such as facial masking may expose person´s with \ac{pd} to unpleasant experiences and prevent them from seeking further help \cite{tickle2011culture, hermanns2013invisible}. Such experiences may negatively impact the perception of access to healthcare.
+
+On the level of individual \ac{sdh}, our data may also have some implications. We identified low educational attainment as a predictor for the perception of inadequate health care, which according to Zaman \cite{zaman2021barriers} relates to two dimensions: health literacy and self-efficacy. The former thereby inversely correlates with the ability to express healthcare needs \cite{davis2003variability, hurt2019barriers} -- another significant predictor in our data -- and with lower educational levels of \ac{pd}-patients \cite{fleisher2016associations}. This is in good accordance with higher rates of hospitalisations and a higher caregiver burden \cite{fleisher2016associations} as well as higher disease severity \cite{fleisher2016associations} in \ac{pd}-patients with lower health literacy. With regards to higher self-efficacy, this correlates the level of education\cite{lim2020factors} and, at the same time, with quality of life \cite{rostagni2022gratitude, lim2020factors}. Hence, our model suggests that people with \ac{pd} who have received more education and who present with higher quality of life scores show the greatest probability to absorb healthcare disruptions in healthcare. Our data advocates for greater attention to individuals with lower levels of education, but particularly those with a diminished quality of life from professionals involved in \ac{pd}-patient care.
+
+Unsurprisingly, \ac{pd}-patients deemed the expertise of physicians, that is neurologists and \ac{gp} alike, important on the perception in adequate care. It is well-known that patients' trust in care professionals may foster healthcare utilization \cite{bainbridge2009challenges, shin2016initiation}. This warrants special emphasis since training appears at first glance accessible. The extent to which a trained Parkinson nurse could facilitate special services and therefore complement medical expertise remains a question to be answered (van Munster 2022). Yet, one might infer that they could catalyst tailored offerings such as legal or economic counselling. Hence, economic problems were highlighted in our results and are consistently cited as a reason for not seeking care services \cite{zaman2021barriers}, although being often neglected by physicians. Barring direct costs, e.g. those services spared from health insurance, many patients also claim indirect expenses like those resulting from the inability to work \cite{spottke2005cost}. This may gain importance with increases in the employment of women nowadays.  In general, however, a rather surprising result is that women are at higher risk of perceived undersupply. The reasons are unclear, but abundant literature indicates that women have fewer caregivers compared with their spouses \cite{dahodwala2018sex} especially, as they are less likely to receive care from their male partners \cite{zaman2021barriers}. A higher vulnerability to disruptions of healthcare because of the pandemic is therefore feasible and awaits future confirmation. In general, one might posit that to strengthen the resilience of \ac{pd} health care, strategies are needed that recognize and address both structural and individual barriers in access to healthcare.
+
+In addition to investments, reorganization and policy reforms on the structural level \cite{taylor2016leveraging, gottlieb2019social}, suitable assessments are also required to make the individual requirements of patients tangible for the treatment team \cite{friedman2018toward, gottlieb2019social}. One possible solution for subjects lacking access to healthcare services or who may not be able to ask for assistance due insufficient health literacy could be telehealth services. Telehealth services are effective means to facilitate access to care for person's with \ac{pd} \cite{achey2014past, van2021state}. In this questionnaire, we could corroborate these results as patients with access to these services before the pandemic reported a reduced likelyhood of unmet care needs. Nevertheless, some caution is advised when interpretinf these findings as this cohort must be deemed rather technology-savy according to the nature of the questionnaire. Therefore, this process may not generalisable for all German patients \cite{eggers2020care}. Further investigations are warranted, e.g., on how to increase the confidence in telemedicine or how to overcome technological limitations such as high-speed internet availability. Another possible caveat to consider are putative unintended negative effects on health equity, so that \ac{pd}-patients with low incomes or with other barriers to accessing technology could be left behind and thus underserved \cite{samuels2021digital}. 
+
+\section*{General Limitations:}
+Despite revealing problems patients encountered during the \textsc{Covid}-19 pandemic, the interpretation of our results requires some caution. Hence, it was an anonymous online survey, so that the representativeness for the German \ac{pd} population is not warranted. As abovementioned, not only patients filling out the questionnaire may be highly selected from a major support group in Germany but especially the online tool also suggests that it is more likely to be filled out by tech-savvy patients. In this context, the mean age of almost 67 years was surprising, so that young-onset \ac{pd}-patients cannot be inferred from this. Finally, a limitation is also the fact that there was no way to ascertain misdiagnosis or the correctness of data, so that these results await confirmation in observational studies with controlled demographics.
+
+\section*{Conclusion}
+In order to learn from the pandemic in the long term, difficulties in access to healthcare must be uncovered and addressed. The results of this analysis showed that the \textsc{Covid}-19 pandemic did not affect all \ac{pd}-patients equally, but that people who experienced individual and structural barriers to accessing healthcare before the pandemic were more affected. Therefore, it is important to examine these determinants more closely and to address them in future-oriented, resilient healthcare models. Further investigations into the effect of individual and structural influences as by as Zaman et al. defined on measures of healthcare experiences should be object of further scrutiny.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Backmatter begins here                   %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{backmatter}
+
+\section*{Acknowledgements}
+At this point we would like to thank Dr. Mehrhoff, who provided us with the resources of the \ac{dpv} and the entire consortium of \ac{icarepd}.
+
+\section*{Funding}%% if any
+This research was funded as part of the research project ``\ac{icarepd}'' (reference number: HESOCARE-329-073). This is an EU Joint Programme - Neurodegenerative Disease Research (JPND) project. The project is supported through the following funding organisations under the aegis of JPND - www.jpnd.eu (Canada - Canadian Institutes of Health Research; Czech Republik - Ministry of Education, Youth and Sport of the Czech Republic; France - Agence National de la Recherche; Germany - Bundesministerium für Bildung und Forschung; Spain - National Institute of Health Carlos III; United Kingdom - Medical Research Council). \newline
+
+M.vM. is mentioned under the aforementioned project. \newline
+
+D. P. received a grant from the German Research Foundation (PE 2291-1). D.P. received payments as a consultant for Boston Scientific and as a speaker at symposia sponsored by Boston Scientific and AbbVie. D.P.'s institution, not D.P. personally, received funding from the German Federal Joint Committee (G-BA), the German Federal Ministry of Education and Research, the Horizon 2020 program of the European Commission, Boston Scientific, the Parkinson’s Foundation, the Dr.-Reinfried Pohl Foundation, and the German Parkinson Association (dPV).
+
+\section*{Abbreviations}
+\begin{acronym}[ECU]
+\acro{aic}[AIC]{Akaike Information Criterion}
+\acro{auc}[AUC]{Area Under The Curve}
+\acro{dpv}[DPV]{Deutsche Parkinson Vereinigung}
+\acro{glm}[GLM]{Generalised Linear Model}
+\acro{gp}[GP]{general practitioner}
+\acro{icarepd}[iCARE-PD]{abbreviation iCARE PD missing}
+\acro{pd}[PD]{Parkinson's Disease}
+\acro{pmm}[PMM]{Predictive Mean Matching Method}
+\acro{sdh}[SDH]{Social determinants of health}
+\end{acronym}
+
+
+\section*{Availability of data and materials}
+The \acs{icarepd}-project, which poses the umbrella for this study, was registered under DRKS00025764 in the German Clinical Trial Register (\url{https://www.drks.de/drks_web/navigate.do?navigationId=trial.HTML&TRIAL_ID=DRKS00025764}). Data from all participants and all analyses are available under \url{https://github.com/dpedrosac/covidPD}.
+
+\section*{Ethics approval and consent to participate}%% if any
+The study was approved by the local Ethics committee (reference number: AZ 164/19) and carried out in accordance with the Declaration of Helsinki. All patients gave informed written consent prior to participating. 
+
+\section*{Competing interests}
+The authors declare that they have no competing interests.
+
+\section*{Consent for publication}%% if any
+All authors have written and agreed the final version of the manuscript. 
+
+\section*{Authors' contributions}
+Conceptualization, D.P., M.vM.; methodology, D.P.; software, D.P.; formal analysis, D.P., M.vM., M.R.P.; provision of resources, D.P.; writing—original draft preparation, D.P., M.vM., M.R.P.; writing—review and editing, D.P., M.vM.; visualization, D.P.; supervision, D.P..
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  The Bibliography                       %%
+%%                                                         %%
+%%  Bmc_mathpys.bst  will be used to                       %%
+%%  create a .BBL file for submission.                     %%
+%%  After submission of the .TEX file,                     %%
+%%  you will be prompted to submit your .BBL file.         %%
+%%                                                         %%
+%%                                                         %%
+%%  Note that the displayed Bibliography will not          %%
+%%  necessarily be rendered by Latex exactly as specified  %%
+%%  in the online Instructions for Authors.                %%
+%%                                                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if your bibliography is in bibtex format, use those commands:
+\section*{References}
+\bibliographystyle{vancouver} % Style BST file (bmc-mathphys, vancouver, spbasic).
+\bibliography{bmc_article_covidPD}      % Bibliography file (usually '*.bib' )
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Figures                       %%
+%%                               %%
+%% NB: this is for captions and  %%
+%% Titles. All graphics must be  %%
+%% submitted separately and NOT  %%
+%% included in the Tex document  %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% Do not use \listoffigures as most will included as separate files
+
+\newpage
+\section*{Figures}
+\begin{figure}[!h]
+\centering
+\begin{subfigure}[b]{0.35\linewidth}
+\includegraphics[width=.90\textwidth]{fig1a.questionnaires.v1.0.png}
+\label{fig1:questionnaires}
+\end{subfigure}%
+\begin{subfigure}[b]{0.35\linewidth}
+\includegraphics[width=.90\textwidth]{fig1b.population_density.1.0.png}
+\label{fig1:population}
+\end{subfigure}%
+\begin{subfigure}[b]{0.35\linewidth}
+\includegraphics[width=.90\textwidth]{fig1c.neurologist_density.v1.0.png}
+\label{fig1:neurologists}
+\end{subfigure}%
+\caption{Demographic data for Germany and additional regional data for the obtained questionnaires. A) Number of received questionnaires within our survey for the distinct three digit postal codes. B) Illustration of inhabitants per square kilometer for Germany. C) Density of neurologists in all parts of Germany according to the German Statutory Health Insurance Association (\textit{Kassenärztliche Bundesvereinigung})}
+\label{fig1:total}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.90\textwidth]{fig2.satisfaction.care.v1.0.jpeg}
+\caption{B17 vs. C6 - Distribution of responses on the Satisfaction with PD-related care before and during the \textsc{Covid}-19 pandemic.}
+\label{fig2:satisfaction}
+\end{figure}
+
+\begin{figure}[!h]
+%Kann man die Grafik größer anzeigen und vielleicht sortieren?
+%% DP: Wonach sortieren? Die Grafiken werden am Ende nicht eingefügt sondern als svg mitgeschickt, das Layout dürfen die übernehmen ;) 
+\centering
+\includegraphics[width=\textwidth]{fig3.oddsratios.v1.0.jpeg}
+\caption{Unadjusted Odds ratios according to the \ac{glm} for all 32 questions. Odds were determined so that higher values indicate affirmation to the question that healthcare was needed but this need remianed unmet during the \textsc{Covid}-19 pandemic. The dashed lines indicate the distinct domains according to Zaman et al. \cite{zaman2021barriers}, whereas significance is illustrated as color of the dot, with two distinct levels of significance. }
+\label{fig3:resultsOR1}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=.84\textwidth]{fig4.model.comparison.v1.0.jpg}
+\caption{Comparison of the models. The full model including all 32 predictors was compatred in terms of accuracy to the reduced model resulting from the stepwise \ac{glm} regression. Values between both models are comparable although only 7 predictors remained in the model compared to the full model. For further details of the multilevel regression cf. Table \ref{tab2:reduced_model}}
+\label{fig4:comparison_models}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Tables                        %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Use of \listoftables is discouraged.
+%%
+\newpage
+\section*{Tables}
+\begin{table}[H]
+\caption{Demographics of subjects filling out questionnaire:}
+\label{tab1:demographics}
+\begin{tabular}{p{5cm} c}
+\toprule
+&\textbf{Overall}\\ %\hline
+& \textbf{(n = 552)}\\ 
+\midrule
+Age (mean (SD)) & 66.76 (9.25) \\ \hline
+Gender = female (\%) &  148 (41.6)  \\ \hline
+Disease duration (\%) & \\ \hline
+\hspace{3mm} $<$2 years & 62 (13.1) \\ \hline
+\hspace{3mm} 2--5 years & 154 (32.6) \\ \hline
+\hspace{3mm} 5--10 years & 157 (33.2) \\ \hline
+\hspace{3mm} 10--15 years & 69 (14.6) \\ \hline
+\hspace{3mm} $>$15 years& 31 ( 6.6) \\ \hline
+Disease stage (\%)& \\ \hline
+\hspace{3mm} Hoehn \& Yahr I &  189 (40.3) \\ \hline
+\hspace{3mm} Hoehn \& Yahr II & 156 (33.3)  \\ \hline
+\hspace{3mm} Hoehn \& Yahr III  &   77 (16.4) \\ \hline
+\hspace{3mm} Hoehn \& Yahr IV  & 41 ( 8.7) \\ \hline
+\hspace{3mm} Hoehn \& Yahr V  &     6 ( 1.3) \\ \hline
+Education level according \newline to ISCED (\%) & \\ \hline
+\hspace{3mm} primary education  & 20 ( 5.0) \\ \hline
+\hspace{3mm} secondary education  & 234 (58.4)\\ \hline
+\hspace{3mm} post secondary education  &   69 (17.2) \\ \hline
+\hspace{3mm} highest education level possible & 78 (19.5)  \\ \hline
+\hspace{3mm} PDQ-8 scores (mean (SD)) & 41.30 (14.23) \\ \hline
+Van-Walraven-Elixhauser \newline \hspace{3mm} Comorbidity Index (mean (SD)) & 6.55 (1.95) \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Significant factors contibuting to unmet care needs during \textsc{Covid}-19 pandemic according to the reduced \ac{glm}:}
+\label{tab2:reduced_model}
+\centering
+\begin{tabular}{l c c c c}
+\toprule    
+Predictor 												& Estimate 	& Std.Error & zvalue & \textit{p} \\
+\midrule
+(Intercept) 											& -2.65  		& 0.29 	& -9.24 	& $<$.0001 \\ \hline
+Educational level (D8) 									& -0.73 		& 0.24 	& -3.01 	& 0.003 \\ \hline
+Perceived GP's expertise (B3) 							& 0.34 		& 0.17 	& 2.07 	& 0.038 \\ \hline
+Confidence in accessing necessary services remotely (C3) 	& 0.64 		& 0.22 	& 2.90 	& 0.004 \\ \hline
+Ease obtaining healthcare prior to the pandemic (B10)		& -0.47 		& 0.22 	& -2.15 	& 0.031 \\ \hline
+Ability to access care prior to the pandemic (B9)				& 0.41 		& 0.20 	& 2.07 	& 0.038 \\ \hline
+Density of Neurologists 									& 0.47 		& 0.21 	& 2.22 	& 0.027 \\ \hline
+Overcoming barriers (B7a)   								& -0.51 		& 0.22 	& -2.38 	& 0.017 \\
+\bottomrule
+\end{tabular}
+\end{table}	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Additional Files              %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section*{Additional Files}
+\begin{table}[!ht]
+\caption{Matching of items in the questionnaire to the categories from the work of Zaman et al. \cite{zaman2021barriers}}
+\label{tab3:matchingzaman}
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Question from \textsc{Covid}-Survey}& \textbf{Representative for...} \\
+\midrule
+ & \textbf{Person-level Barriers} \\ \hline
+1. A2, B1a, D7 & Autonomy \\ \hline
+2. A1, A4, vWEI, B16a & Health Status \\ \hline
+3. D8 & Health Literacy \\ \hline
+4. B3, B5 & Health Belief \\ \hline
+5. B14 & Communication (personal) \\ \hline
+6. PDQ-8 & Self-efficacy \\ \hline
+7. B7a, B9a/b & Transportation \\ \hline
+8. B11, B12, B13, D9, D10 & Cost of care \\ \hline
+9. D2 & Other \\ \hline
+ & \textbf{System-level Barriers} \\ \hline
+10. NA & Difficulties of Diagnosis \\ \hline
+11. B6a & Coordination in care \\ \hline
+12. B15, C2c2 & Communication (system) \\ \hline
+13. B7, B9b, B10, C3\_3, nPop, nGer & Disparty in Health Services \\ \hline
+14. B6, B7a, B9, B9a, C2, C2c2 & Unavailability of Specalist Services \\ \hline
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Odds ratios for the distinct items of the questionnaire}
+\label{tab4:resultsall}
+\centering
+\begin{tabular}{|p{5cm} | p{2cm} |l|l|l|l|}
+\hline
+\textbf{Factors} & \textbf{Domain} & \textbf{Odds Ratio} & \textbf{CIlower} & \textbf{CIupper} & \textbf{\textit{p}-value} \\ \hline
+A1 - Disease duration [Years] & Health Status & 0.9 & 0.69 & 1.16 & 0.419 \\ \hline
+A2 - Disease Stage [H\&Y] & Autonomy & 1.13 & 0.87 & 1.47 & 0.367 \\ \hline
+A4 - Presence of comorbidities & Health Status & 1.26 & 1.06 & 1.49 & 0.007 \\ \hline
+B1a - Regular caregiver present & Autonomy & 0.79 & 0.43 & 1.44 & 0.438 \\ \hline
+B3 - Perceived GP expertise & Health Belief & 0.71 & 0.51 & 0.98 & 0.038 \\ \hline
+B5 - Perceived Neurologist expertise & Health Belief & 0.52 & 0.39 & 0.7 & p $<$ .001 \\ \hline
+B6 - No. of healthcare providers consulted pre COVID & Unavailability of Specialitsts Services & 1.24 & 0.77 & 1.99 & 0.374 \\ \hline
+B6a - Perceived cooperation between healthcare providers & Coordination in Care & 0.99 & 0.66 & 1.49 & 0.975 \\ \hline
+B7 - Presence of geographical barriers in access to healthcare pre COVID & Disparty in Health Services & 1.9 & 1.08 & 3.33 & 0.026 \\ \hline
+B7a - No. of structural and transportation ressources against geographical barriers pre COVID & Unavailability of Specialists Services/ Transportation & 2.27 & 0.79 & 6.51 & 0.129 \\ \hline
+B9 - Not received needed healthcare pre COVID & Unavailability of Specialits Services & 2.5 & 1.88 & 3.32 & p $<$ .001 \\ \hline
+B9a - Availability of PD-specific community ressources & Unavailability of Specialists Services/ Transportation & 2.33 & 1.65 & 3.31 & p $<$ .001 \\ \hline
+B9b - No. of structural and transportation barriers in acces to healthcare pre COVID & Disparatiey in Healthcare Services/ Transportation & 1.98 & 1.01 & 3.89 & 0.048 \\ \hline
+B10 - Perceived difficulty of accessing healthcare pre COVID & Disparatiey in Healthcare Services & 5.37 & 2.84 & 10.17 & p $<$ .001 \\ \hline
+B11 - Rescheduled healthcare due to financial burden pre COVID & Cost of care & 2.11 & 1.13 & 3.93 & 0.019 \\ \hline
+B12 - Extended healthcare insurance & Cost of care & 0.83 & 0.46 & 1.48 & 0.521 \\ \hline
+B13 - Financial burden related to PD pre COVID & Cost of care & 2.81 & 1.42 & 5.53 & 0.003 \\ \hline
+B14 - Communication challenges pre COVID & Communication (personal) & 2.63 & 1.18 & 5.82 & 0.017 \\ \hline
+B15 - Experienced stigmatization in healthcare & Communication (system) & 2.84 & 1.6 & 5.03 & p $<$ .001 \\ \hline
+B16a - No. of negative health consequences from barriers to healthcare & Health Status & 1.18 & 0.93 & 1.48 & 0.166 \\ \hline
+C2 - Availability of remote healthcare during COVID & Unavailability of Specialitsts Services & 1.91 & 1.09 & 3.34 & 0.023 \\ \hline
+C2c2 - Access to telehealth technologies during COVID & Unavailability of Specialitsts Services/ Communication (system) & 0.62 & 0.15 & 2.53 & 0.5 \\ \hline
+C3\_3 - Confidence accessing healthcare remotely & Disparities in Healthcare Services & 2.44 & 1.32 & 4.53 & 0.005 \\ \hline
+D2 - Gender * & Other & 0.55 & 0.31 & 0.98 & 0.044 \\ \hline
+D7 - Living independently & Autonomy & 0.75 & 0.38 & 1.51 & 0.421 \\ \hline
+D8 - Education [ISCED] & Health Literacy & 0.82 & 0.58 & 1.18 & 0.284 \\ \hline
+D9 - Net Householdincome [per/year] & Cost of Care & 1.08 & 0.67 & 1.75 & 0.75 \\ \hline
+D10 - Financial stability & Cost of care & 2.43 & 0.97 & 6.09 & 0.059 \\ \hline
+PDQ-8 - PDQ-8 score & Self-Efficacy & 1.03 & 1.01 & 1.05 & 0.011 \\ \hline
+nPop - Population according to quantiles of German population [in sqkm] & Disparty in Health Services & 0.96 & 0.77 & 1.19 & 0.714 \\ \hline
+nGER - Neurologists nearby (per sqkm) & Disparty in Health Services & 0.97 & 0.87 & 1.07 & 0.527 \\ \hline
+vWEI - Comorbidity Index [vWEI] & Health Status & 1.08 & 0.97 & 1.21 & 0.155 \\ \hline
+\end{tabular}
+\end{table}
+
+\end{backmatter}
+\end{document}
