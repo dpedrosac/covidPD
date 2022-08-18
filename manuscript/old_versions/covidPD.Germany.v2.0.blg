@@ -1,0 +1,18 @@
+[1] Config.pm:307> INFO - This is Biber 2.17
+[1] Config.pm:310> INFO - Logfile is 'covidPD.Germany.v2.0.blg'
+[229] biber:340> INFO - === Di Jul 19, 2022, 23:54:29
+[268] Biber.pm:418> INFO - Reading 'covidPD.Germany.v2.0.bcf'
+[526] Biber.pm:972> INFO - Found 47 citekeys in bib section 0
+[566] Biber.pm:4383> INFO - Processing section 0
+[595] Biber.pm:4574> INFO - Looking for bibtex file 'bmc_article_covidPD.bib' for section 0
+[603] bibtex.pm:1713> INFO - LaTeX decoding ...
+[787] bibtex.pm:1518> INFO - Found BibTeX data source 'bmc_article_covidPD.bib'
+[1985] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1986] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1986] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1987] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[2070] bbl.pm:654> INFO - Writing 'covidPD.Germany.v2.0.bbl' with encoding 'UTF-8'
+[2186] bbl.pm:757> INFO - Output to covidPD.Germany.v2.0.bbl
+[2186] Biber.pm:130> WARN - Duplicate entry key: 'samuels2021digital' in file 'bmc_article_covidPD.bib', skipping ...
+[2187] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_SOGT/83b4af52a66ad5ba44b1aaac1eb7bf7a_6777.utf8, line 526, warning: 22 characters of junk seen at toplevel
+[2187] Biber.pm:132> INFO - WARNINGS: 2

@@ -1,0 +1,22 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'covidPD.Germany.v2.1.blg'
+[143] biber-MSWIN64:340> INFO - === 
+[185] Biber.pm:418> INFO - Reading 'covidPD.Germany.v2.1.bcf'
+[335] Biber.pm:972> INFO - Found 50 citekeys in bib section 0
+[352] Biber.pm:4383> INFO - Processing section 0
+[366] Biber.pm:4574> INFO - Looking for bibtex file 'bmc_article_covidPD.bib' for section 0
+[428] bibtex.pm:1713> INFO - LaTeX decoding ...
+[535] bibtex.pm:1518> INFO - Found BibTeX data source 'bmc_article_covidPD.bib'
+[987] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[992] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[992] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[992] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[1031] bbl.pm:654> INFO - Writing 'covidPD.Germany.v2.1.bbl' with encoding 'UTF-8'
+[1073] bbl.pm:757> INFO - Output to covidPD.Germany.v2.1.bbl
+[1073] Biber.pm:130> WARN - Duplicate entry key: 'samuels2021digital' in file 'bmc_article_covidPD.bib', skipping ...
+[1073] Biber.pm:130> WARN - Duplicate entry key: 'moynihan2021impact' in file 'bmc_article_covidPD.bib', skipping ...
+[1073] Biber.pm:130> WARN - Duplicate entry key: 'sepulveda2020impact' in file 'bmc_article_covidPD.bib', skipping ...
+[1073] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\dpedr\AppData\Local\Temp\biber_tmp_GEJQ\83b4af52a66ad5ba44b1aaac1eb7bf7a_18136.utf8, line 527, warning: 22 characters of junk seen at toplevel
+[1074] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\dpedr\AppData\Local\Temp\biber_tmp_GEJQ\83b4af52a66ad5ba44b1aaac1eb7bf7a_18136.utf8, line 604, warning: 3 characters of junk seen at toplevel
+[1074] Biber.pm:130> WARN - I didn't find a database entry for 'moynihan2021i mpact' (section 0)
+[1074] Biber.pm:132> INFO - WARNINGS: 6

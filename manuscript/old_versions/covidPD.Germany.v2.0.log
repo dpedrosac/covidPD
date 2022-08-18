@@ -1,0 +1,943 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.5)  19 JUL 2022 23:57
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**covidPD.Germany.v2.0.tex
+(./covidPD.Germany.v2.0.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2021/11/13 v3.35 KOMA-Script document class (article)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2021/11/13 v3.35 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box50
+)
+Package tocbasic Info: babel extension for `toc' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 135.
+Class scrartcl Info: You've used standard option `oneside'.
+(scrartcl)           This is correct!
+(scrartcl)           Internally I'm using `twoside=false'.
+(scrartcl)           If you'd like to set the option with \KOMAoptions,
+(scrartcl)           you'd have to use `twoside=false' there
+(scrartcl)           instead of `oneside', too.
+Package scrartcl Info: You've used standard option `11pt'.
+(scrartcl)             This is correct!
+(scrartcl)             Internally I'm using `fontsize=11pt'.
+(scrartcl)             If you'd like to set the option with \KOMAoptions,
+(scrartcl)             you'd have to use `fontsize=11pt' there
+(scrartcl)             instead of `11pt', too.
+Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 2242.
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2021/11/13 v3.35 KOMA-Script font size class option (11pt
+)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2021/11/13 v3.35 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count185
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
+Package typearea Info: You've used standard option `oneside'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `twoside=false'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `twoside=false' there
+(typearea)             instead of `oneside', too.
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1743.
+)
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\scr@dte@section@maxnumwidth=\skip53
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4852.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4852.
+\scr@dte@part@maxnumwidth=\skip54
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 4860.
+\scr@dte@subsection@maxnumwidth=\skip55
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 4870.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 4870.
+\scr@dte@subsubsection@maxnumwidth=\skip56
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 4880.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 4880.
+\scr@dte@paragraph@maxnumwidth=\skip57
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 4891.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 4891.
+\scr@dte@subparagraph@maxnumwidth=\skip58
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 4901.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 4901.
+\abovecaptionskip=\skip59
+\belowcaptionskip=\skip60
+\c@pti@nb@sid@b@x=\box51
+Package tocbasic Info: babel extension for `lof' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 6076.
+
+\scr@dte@figure@maxnumwidth=\skip61
+\c@figure=\count192
+Package tocbasic Info: babel extension for `lot' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 6091.
+
+\scr@dte@table@maxnumwidth=\skip62
+\c@table=\count193
+Class scrartcl Info: Redefining `\numberline' on input line 6258.
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
+
+(/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count194
+\decimalpart=\count195
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\AC@clearlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count196
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count197
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count198
+\c@listtotal=\count199
+\c@listcount=\count266
+\c@liststart=\count267
+\c@liststop=\count268
+\c@citecount=\count269
+\c@citetotal=\count270
+\c@multicitecount=\count271
+\c@multicitetotal=\count272
+\c@instcount=\count273
+\c@maxnames=\count274
+\c@minnames=\count275
+\c@maxitems=\count276
+\c@minitems=\count277
+\c@citecounter=\count278
+\c@maxcitecounter=\count279
+\c@savedcitecounter=\count280
+\c@uniquelist=\count281
+\c@uniquename=\count282
+\c@refsection=\count283
+\c@refsegment=\count284
+\c@maxextratitle=\count285
+\c@maxextratitleyear=\count286
+\c@maxextraname=\count287
+\c@maxextradate=\count288
+\c@maxextraalpha=\count289
+\c@abbrvpenalty=\count290
+\c@highnamepenalty=\count291
+\c@lownamepenalty=\count292
+\c@maxparens=\count293
+\c@parenlevel=\count294
+\blx@tempcnta=\count295
+\blx@tempcntb=\count296
+\blx@tempcntc=\count297
+\c@blx@maxsection=\count298
+\c@blx@maxsegment@0=\count299
+\blx@notetype=\count300
+\blx@parenlevel@text=\count301
+\blx@parenlevel@foot=\count302
+\c@blx@sectionciteorder@0=\count303
+\blx@entrysetcounter=\count304
+\blx@biblioinstance=\count305
+\labelnumberwidth=\skip63
+\labelalphawidth=\skip64
+\biblabelsep=\skip65
+\bibitemsep=\skip66
+\bibnamesep=\skip67
+\bibinitsep=\skip68
+\bibparsep=\skip69
+\bibhang=\skip70
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language12
+\c@mincomprange=\count306
+\c@maxcomprange=\count307
+\c@mincompwidth=\count308
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count309
+\c@savedafterword=\count310
+\c@annotator=\count311
+\c@savedannotator=\count312
+\c@author=\count313
+\c@savedauthor=\count314
+\c@bookauthor=\count315
+\c@savedbookauthor=\count316
+\c@commentator=\count317
+\c@savedcommentator=\count318
+\c@editor=\count319
+\c@savededitor=\count320
+\c@editora=\count321
+\c@savededitora=\count322
+\c@editorb=\count323
+\c@savededitorb=\count324
+\c@editorc=\count325
+\c@savededitorc=\count326
+\c@foreword=\count327
+\c@savedforeword=\count328
+\c@holder=\count329
+\c@savedholder=\count330
+\c@introduction=\count331
+\c@savedintroduction=\count332
+\c@namea=\count333
+\c@savednamea=\count334
+\c@nameb=\count335
+\c@savednameb=\count336
+\c@namec=\count337
+\c@savednamec=\count338
+\c@translator=\count339
+\c@savedtranslator=\count340
+\c@shortauthor=\count341
+\c@savedshortauthor=\count342
+\c@shorteditor=\count343
+\c@savedshorteditor=\count344
+\c@labelname=\count345
+\c@savedlabelname=\count346
+\c@institution=\count347
+\c@savedinstitution=\count348
+\c@lista=\count349
+\c@savedlista=\count350
+\c@listb=\count351
+\c@savedlistb=\count352
+\c@listc=\count353
+\c@savedlistc=\count354
+\c@listd=\count355
+\c@savedlistd=\count356
+\c@liste=\count357
+\c@savedliste=\count358
+\c@listf=\count359
+\c@savedlistf=\count360
+\c@location=\count361
+\c@savedlocation=\count362
+\c@organization=\count363
+\c@savedorganization=\count364
+\c@origlocation=\count365
+\c@savedoriglocation=\count366
+\c@origpublisher=\count367
+\c@savedorigpublisher=\count368
+\c@publisher=\count369
+\c@savedpublisher=\count370
+\c@language=\count371
+\c@savedlanguage=\count372
+\c@origlanguage=\count373
+\c@savedoriglanguage=\count374
+\c@pageref=\count375
+\c@savedpageref=\count376
+\shorthandwidth=\skip71
+\shortjournalwidth=\skip72
+\shortserieswidth=\skip73
+\shorttitlewidth=\skip74
+\shortauthorwidth=\skip75
+\shorteditorwidth=\skip76
+\locallabelnumberwidth=\skip77
+\locallabelalphawidth=\skip78
+\localshorthandwidth=\skip79
+\localshortjournalwidth=\skip80
+\localshortserieswidth=\skip81
+\localshorttitlewidth=\skip82
+\localshortauthorwidth=\skip83
+\localshorteditorwidth=\skip84
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count377
+\c@textcitetotal=\count378
+\c@textcitemaxnames=\count379
+\c@biburlbigbreakpenalty=\count380
+\c@biburlbreakpenalty=\count381
+\c@biburlnumpenalty=\count382
+\c@biburlucpenalty=\count383
+\c@biburllcpenalty=\count384
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count385
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count386
+\c@bbx:relatedtotal=\count387
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count388
+\l__pdf_internal_box=\box52
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2022-01-21 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen141
+\captionmargin@=\dimen142
+\captionwidth=\dimen143
+\caption@tempdima=\dimen144
+\caption@indent=\dimen145
+\caption@parindent=\dimen146
+\caption@hangindent=\dimen147
+Package caption Info: KOMA-Script document class detected.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption-koma.sto
+File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the 
+KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count389
+\c@continuedfloat=\count390
+)
+\c@subfigure=\count391
+\c@subtable=\count392
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen148
+\lightrulewidth=\dimen149
+\cmidrulewidth=\dimen150
+\belowrulesep=\dimen151
+\belowbottomsep=\dimen152
+\aboverulesep=\dimen153
+\abovetopsep=\dimen154
+\cmidrulesep=\dimen155
+\cmidrulekern=\dimen156
+\defaultaddspace=\dimen157
+\@cmidla=\count393
+\@cmidlb=\count394
+\@aboverulesep=\dimen158
+\@belowrulesep=\dimen159
+\@thisruleclass=\count395
+\@lastruleclass=\count396
+\@thisrulewidth=\dimen160
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip85
+\multirow@cntb=\count397
+\multirow@dima=\skip86
+\bigstrutjot=\dimen161
+)
+(/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box53
+\extrarowheight=\dimen163
+\NC@list=\toks18
+\extratabsurround=\skip87
+\backup@length=\skip88
+\ar@cellbox=\box54
+)
+\rotheadsize=\dimen164
+\c@nlinenum=\count398
+\TeXr@lab=\toks19
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count399
+\rotFPtop=\skip89
+\rotFPbot=\skip90
+\rot@float@box=\box55
+\rot@mess@toks=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip91
+\LTright=\skip92
+\LTpre=\skip93
+\LTpost=\skip94
+\LTchunksize=\count400
+\LTcapwidth=\dimen165
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@gbox=\box60
+\LT@cols=\count401
+\LT@rows=\count402
+\c@LT@tables=\count403
+\c@LT@chunks=\count404
+\LT@p@ftn=\toks21
+)
+Class scrartcl Info: longtable captions redefined on input line 28.
+\@quotelevel=\count405
+\@quotereset=\count406
+
+
+LaTeX Warning: Unused global option(s):
+    [english].
+
+(./covidPD.Germany.v2.0.aux
+
+LaTeX Warning: Label `tab4:resultsall1' multiply defined.
+
+)
+\openout1 = `covidPD.Germany.v2.0.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+Package scrbase Info: activating english \contentsname on input line 29.
+Package scrbase Info: activating english \listfigurename on input line 29.
+Package scrbase Info: activating english \listtablename on input line 29.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count407
+\scratchdimen=\dimen166
+\scratchbox=\box61
+\nofMPsegments=\count408
+\nofMParguments=\count409
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count410
+\MPscratchDim=\dimen167
+\MPnumerator=\count411
+\makeMPintoPDFobject=\count412
+\everyMPtoPDFconversion=\toks23
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout3 = `covidPD.Germany.v2.0.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'covidPD.Germany.v2.0.bbl' found.
+
+(./covidPD.Germany.v2.0.bbl)
+Package biblatex Info: Reference section=0 on input line 29.
+Package biblatex Info: Reference segment=0 on input line 29.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 32.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 35.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 37.
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 57.
+ [2] [3] [4] [5]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 88.
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+  [][]$\OT1/cmr/m/n/9 https : / / www . bbsr . bund . de / BBSR / DE / forschun
+g / raumbeobachtung / Raumabgrenzungen /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+ \OT1/cmr/m/n/9 deutschland / regionen / Raumordnungsregionen / raumordnungsreg
+ionen -[] 2017 . xlsx ? \OMS/cmsy/m/n/9 n[] n []\OT1/cmr/m/n/9 blob =
+ []
+
+[6]
+<media//fig1a.questionnaires.v1.0.png, id=37, 124.0635pt x 130.3269pt>
+File: media//fig1a.questionnaires.v1.0.png Graphic file (type png)
+<use media//fig1a.questionnaires.v1.0.png>
+Package pdftex.def Info: media//fig1a.questionnaires.v1.0.png  used on input li
+ne 93.
+(pdftex.def)             Requested size: 131.75188pt x 138.40237pt.
+<media//fig1b.population_density.1.0.png, id=39, 129.3633pt x 132.2541pt>
+File: media//fig1b.population_density.1.0.png Graphic file (type png)
+<use media//fig1b.population_density.1.0.png>
+Package pdftex.def Info: media//fig1b.population_density.1.0.png  used on input
+ line 97.
+(pdftex.def)             Requested size: 131.75188pt x 134.69962pt.
+<media//fig1c.neurologist_density.v1.0.png, id=40, 128.1588pt x 130.3269pt>
+File: media//fig1c.neurologist_density.v1.0.png Graphic file (type png)
+<use media//fig1c.neurologist_density.v1.0.png>
+Package pdftex.def Info: media//fig1c.neurologist_density.v1.0.png  used on inp
+ut line 101.
+(pdftex.def)             Requested size: 131.75188pt x 133.98166pt.
+
+Overfull \hbox (20.9204pt too wide) in paragraph at lines 92--104
+ [][][][] 
+ []
+
+[7 <./media//fig1a.questionnaires.v1.0.png> <./media//fig1b.population_density.
+1.0.png> <./media//fig1c.neurologist_density.v1.0.png>] [8]
+<media//fig2.satisfaction.care.v1.0.jpeg, id=51, 674.52pt x 674.52pt>
+File: media//fig2.satisfaction.care.v1.0.jpeg Graphic file (type jpg)
+<use media//fig2.satisfaction.care.v1.0.jpeg>
+Package pdftex.def Info: media//fig2.satisfaction.care.v1.0.jpeg  used on input
+ line 165.
+(pdftex.def)             Requested size: 376.42744pt x 376.4318pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9]
+<media//fig3.oddsratios.v1.0.jpeg, id=56, 1054.94125pt x 936.49875pt>
+File: media//fig3.oddsratios.v1.0.jpeg Graphic file (type jpg)
+<use media//fig3.oddsratios.v1.0.jpeg>
+Package pdftex.def Info: media//fig3.oddsratios.v1.0.jpeg  used on input line 1
+76.
+(pdftex.def)             Requested size: 418.25555pt x 371.29192pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./media//fig2.satisfaction.care.v1.0.jpeg>] [11 <./media//fig3.oddsratios.
+v1.0.jpeg>] [12] [13] [14]
+
+Package biblatex Warning: Name format 'last-first' deprecated.
+(biblatex)                Please use 'family-given' instead.
+(biblatex)                Using 'family-given' now.
+
+[15] [16] [17]
+Overfull \hbox (0.98813pt too wide) in paragraph at lines 247--247
+[]\OT1/cmr/m/n/10.95 Deuschl, G., Oer-tel, W., and Re-ich-mann, H. ``S3-Leitlin
+ie Id-iopathis-ches Parkinson-
+ []
+
+[18] [19]
+Overfull \vbox (4.78935pt too high) detected at line 282
+ []
+
+[20]
+Overfull \hbox (44.19623pt too wide) in alignment at lines 292--296
+ [] [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+[]|\OT1/cmr/m/n/10.95 Unavailability of
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 305--305
+[]|\OT1/cmr/m/n/10.95 Disparty in Health
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
+[]|\OT1/cmr/m/n/10.95 Unavailability of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--307
+[]|\OT1/cmr/m/n/10.95 Unavailability of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+[]|\OT1/cmr/m/n/10.95 Unavailability of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--309
+[]|\OT1/cmr/m/n/10.95 Disparatiey in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[]|\OT1/cmr/m/n/10.95 Disparatiey in
+ []
+
+
+Underfull \hbox (badness 2035) in paragraph at lines 311--311
+[]|\OT1/cmr/m/n/10.95 B11 - Resched-uled health-care
+ []
+
+
+Underfull \hbox (badness 4634) in paragraph at lines 311--311
+\OT1/cmr/m/n/10.95 due to fi-nan-cial bur-den pre
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+[]|\OT1/cmr/m/n/10.95 Communication
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
+[]|\OT1/cmr/m/n/10.95 Communication
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 316--316
+\OT1/cmr/m/n/10.95 con-se-quences from bar-ri-ers to
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 317--317
+[]|\OT1/cmr/m/n/10.95 C2 - Avail-abil-ity of re-mote
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
+[]|\OT1/cmr/m/n/10.95 Unavailability of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+[]|\OT1/cmr/m/n/10.95 Unavailability of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+\OT1/cmr/m/n/10.95 Spe-cial-it-sts Ser-
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 318--318
+\OT1/cmr/m/n/10.95 vices/ Com-mu-ni-ca-
+ []
+
+
+Underfull \hbox (badness 7851) in paragraph at lines 319--319
+[]|\OT1/cmr/m/n/10.95 C3[]3 - Con-fi-dence ac-cess-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+[]|\OT1/cmr/m/n/10.95 Disparities in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+\OT1/cmr/m/n/10.95 Health-care Ser-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+[]|\OT1/cmr/m/n/10.95 D9 - Net House-hold-in-come
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 326--326
+[]|\OT1/cmr/m/n/10.95 Disparty in Health
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 327--327
+[]|\OT1/cmr/m/n/10.95 Disparty in Health
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+[]|\OT1/cmr/m/n/10.95 vWEI - Co-mor-bid-ity In-dex
+ []
+
+
+Overfull \hbox (44.19623pt too wide) in alignment at lines 296--331
+ [] [] [] [] [] [] 
+ []
+
+[21]
+<media//fig4.model.comparison.v1.0.jpg, id=97, 1224.575pt x 1159.33125pt>
+File: media//fig4.model.comparison.v1.0.jpg Graphic file (type jpg)
+<use media//fig4.model.comparison.v1.0.jpg>
+Package pdftex.def Info: media//fig4.model.comparison.v1.0.jpg  used on input l
+ine 334.
+(pdftex.def)             Requested size: 351.33313pt x 332.6064pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22] [23 <./media//fig4.model.comparison.v1.0.jpg>] (./covidPD.Germany.v2.0.aux
+)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package logreq Info: Writing requests to 'covidPD.Germany.v2.0.run.xml'.
+\openout1 = `covidPD.Germany.v2.0.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 15121 strings out of 480121
+ 307925 string characters out of 5892161
+ 1160975 words of memory out of 5000000
+ 32935 multiletter control sequences out of 15000+600000
+ 478821 words of font info for 59 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 108i,27n,106p,10615b,1469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/david/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600
+pk> </home/david/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0700.60
+0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on covidPD.Germany.v2.0.pdf (23 pages, 1362431 bytes).
+PDF statistics:
+ 187 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

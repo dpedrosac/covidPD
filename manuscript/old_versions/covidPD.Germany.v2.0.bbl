@@ -1,0 +1,2335 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{nunez2021access}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f20fe05df9a890e52e80f31efea5e8a9}{%
+           family={Núñez},
+           familyi={N\bibinitperiod},
+           given={Alicia},
+           giveni={A\bibinitperiod}}}%
+        {{hash=203ee857bdda4c7d855a8dd2ee7e73e9}{%
+           family={Sreeganga},
+           familyi={S\bibinitperiod},
+           given={SD},
+           giveni={S\bibinitperiod}}}%
+        {{hash=95250bd5f141638da506622a24ff2907}{%
+           family={Ramaprasad},
+           familyi={R\bibinitperiod},
+           given={Arkalgud},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{63000e80e3fd56592a4584c7b9dc01fb}
+      \strng{fullhash}{63000e80e3fd56592a4584c7b9dc01fb}
+      \strng{bibnamehash}{63000e80e3fd56592a4584c7b9dc01fb}
+      \strng{authorbibnamehash}{63000e80e3fd56592a4584c7b9dc01fb}
+      \strng{authornamehash}{63000e80e3fd56592a4584c7b9dc01fb}
+      \strng{authorfullhash}{63000e80e3fd56592a4584c7b9dc01fb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International journal of environmental research and public health}
+      \field{number}{6}
+      \field{title}{Access to Healthcare during COVID-19}
+      \field{volume}{18}
+      \field{year}{2021}
+      \field{pages}{2980}
+      \range{pages}{1}
+    \endentry
+    \entry{moynihan2021impact}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=6fd82cad7f55c8d85e7df7fa4d3c1449}{%
+           family={Moynihan},
+           familyi={M\bibinitperiod},
+           given={Ray},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d7a2d63c8cc928d4f5f892b0c4671dad}{%
+           family={Sanders},
+           familyi={S\bibinitperiod},
+           given={Sharon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5138233afa3cf98162944f57f799cf66}{%
+           family={Michaleff},
+           familyi={M\bibinitperiod},
+           given={Zoe\bibnamedelima A},
+           giveni={Z\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8f45217ff9c0f524188c922a48b7490e}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Anna\bibnamedelima Mae},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=60f19782f15a4407f9f55c0a0413ff8e}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=41a3f832bbcef8afc918b0854609cb19}{%
+           family={To},
+           familyi={T\bibinitperiod},
+           given={Emma\bibnamedelima J},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d10892352cd424357d9f36fc5f9cf648}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=93758d5f18b3ab8eb44544ff5142a649}{%
+           family={Kitchener},
+           familyi={K\bibinitperiod},
+           given={Eliza},
+           giveni={E\bibinitperiod}}}%
+        {{hash=83753547c2e56907a6fe54d2e91b4c34}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Melissa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=32a67bd033268afbf650bc9c754e8fe6}{%
+           family={Johansson},
+           familyi={J\bibinitperiod},
+           given={Minna},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {British Medical Journal Publishing Group}%
+      }
+      \strng{namehash}{a198571a682a963c97c11cc7f4c487b1}
+      \strng{fullhash}{76c96e252c6c6a054ae2ba895d45db0d}
+      \strng{bibnamehash}{a198571a682a963c97c11cc7f4c487b1}
+      \strng{authorbibnamehash}{a198571a682a963c97c11cc7f4c487b1}
+      \strng{authornamehash}{a198571a682a963c97c11cc7f4c487b1}
+      \strng{authorfullhash}{76c96e252c6c6a054ae2ba895d45db0d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMJ open}
+      \field{number}{3}
+      \field{title}{Impact of COVID-19 pandemic on utilisation of healthcare services: a systematic review}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{pages}{e045343}
+      \range{pages}{-1}
+    \endentry
+    \entry{world2020impact}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8179b1fdebe9235e54501d2878c47e1b}{%
+           family={Organization},
+           familyi={O\bibinitperiod},
+           given={World\bibnamedelima Health},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \strng{namehash}{b34697b55e931105852323b3db93732d}
+      \strng{fullhash}{b34697b55e931105852323b3db93732d}
+      \strng{bibnamehash}{b34697b55e931105852323b3db93732d}
+      \strng{authorbibnamehash}{b34697b55e931105852323b3db93732d}
+      \strng{authornamehash}{b34697b55e931105852323b3db93732d}
+      \strng{authorfullhash}{b34697b55e931105852323b3db93732d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The impact of the COVID-19 pandemic on noncommunicable disease resources and services: results of a rapid assessment}
+      \field{year}{2020}
+    \endentry
+    \entry{sepulveda2020impact}{article}{}
+      \name{author}{7}{}{%
+        {{hash=c7b1e3f59b8186d1d0df445d06c512a3}{%
+           family={Sepúlveda-Loyola},
+           familyi={S\bibinithyphendelim L\bibinitperiod},
+           given={W},
+           giveni={W\bibinitperiod}}}%
+        {{hash=d853d986383d27b23bbe311a99ef8fb7}{%
+           family={Rodrı́guez-Sánchez},
+           familyi={R\bibinithyphendelim S\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=63c1c3fa4a0ccb151b3c0d5d2edd67d3}{%
+           family={Pérez-Rodrı́guez},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6d4796e65711cc6feaa31b7b840f5c27}{%
+           family={Ganz},
+           familyi={G\bibinitperiod},
+           given={F},
+           giveni={F\bibinitperiod}}}%
+        {{hash=00a6fccc7da87a85811aa45d858f4fff}{%
+           family={Torralba},
+           familyi={T\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=514e8874602b8c48676b45932f494e9b}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={DV},
+           giveni={D\bibinitperiod}}}%
+        {{hash=144cf898de5676a5e0b4ce39383cb16f}{%
+           family={Rodrı́guez-Mañas},
+           familyi={R\bibinithyphendelim M\bibinitperiod},
+           given={Leocadio},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{9f148f2b1a692bc812afb549e3e5bc77}
+      \strng{fullhash}{88cdc6601db76b7e3d43e65fa27c4e6b}
+      \strng{bibnamehash}{9f148f2b1a692bc812afb549e3e5bc77}
+      \strng{authorbibnamehash}{9f148f2b1a692bc812afb549e3e5bc77}
+      \strng{authornamehash}{9f148f2b1a692bc812afb549e3e5bc77}
+      \strng{authorfullhash}{88cdc6601db76b7e3d43e65fa27c4e6b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The journal of nutrition, health \& aging}
+      \field{number}{9}
+      \field{title}{Impact of social isolation due to COVID-19 on health in older people: mental and physical effects and recommendations}
+      \field{volume}{24}
+      \field{year}{2020}
+      \field{pages}{938\bibrangedash 947}
+      \range{pages}{10}
+    \endentry
+    \entry{kasar2021life}{article}{}
+      \name{author}{2}{}{%
+        {{hash=15f0329337fe551772185d4fa9b44068}{%
+           family={Kasar},
+           familyi={K\bibinitperiod},
+           given={Kadriye\bibnamedelima Sayin},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e8424afa2d44013b0090cf40d65da03b}{%
+           family={Karaman},
+           familyi={K\bibinitperiod},
+           given={Emine},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e55764ecdf88e4eb3ca47b61a0604824}
+      \strng{fullhash}{e55764ecdf88e4eb3ca47b61a0604824}
+      \strng{bibnamehash}{e55764ecdf88e4eb3ca47b61a0604824}
+      \strng{authorbibnamehash}{e55764ecdf88e4eb3ca47b61a0604824}
+      \strng{authornamehash}{e55764ecdf88e4eb3ca47b61a0604824}
+      \strng{authorfullhash}{e55764ecdf88e4eb3ca47b61a0604824}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Geriatric Nursing}
+      \field{number}{5}
+      \field{title}{Life in lockdown: Social isolation, loneliness and quality of life in the elderly during the COVİD-19 pandemic: A scoping review}
+      \field{volume}{42}
+      \field{year}{2021}
+      \field{pages}{1222\bibrangedash 1229}
+      \range{pages}{8}
+    \endentry
+    \entry{yogev2021covid}{article}{}
+      \name{author}{2}{}{%
+        {{hash=eee3768fdb3384cd98c526a01a2eeaed}{%
+           family={Yogev-Seligmann},
+           familyi={Y\bibinithyphendelim S\bibinitperiod},
+           given={Galit},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d1b1284bfc34c7d731272f0cfd0e1c19}{%
+           family={Kafri},
+           familyi={K\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b0541b83f0aa18f28ce81ac4331e9fac}
+      \strng{fullhash}{b0541b83f0aa18f28ce81ac4331e9fac}
+      \strng{bibnamehash}{b0541b83f0aa18f28ce81ac4331e9fac}
+      \strng{authorbibnamehash}{b0541b83f0aa18f28ce81ac4331e9fac}
+      \strng{authornamehash}{b0541b83f0aa18f28ce81ac4331e9fac}
+      \strng{authorfullhash}{b0541b83f0aa18f28ce81ac4331e9fac}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMC neurology}
+      \field{number}{1}
+      \field{title}{COVID-19 social distancing: negative effects on people with Parkinson disease and their associations with confidence for self-management}
+      \field{volume}{21}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{scheidt2021care}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=918860db3ccb0d1eb020d3ac997fce07}{%
+           family={Scheidt-Nave},
+           familyi={S\bibinithyphendelim N\bibinitperiod},
+           given={Christa},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1f736f6c27bc104f1cf3d233737c3593}{%
+           family={Barnes},
+           familyi={B\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7ee6edd5565dff178444b6e569677a00}{%
+           family={Beyer},
+           familyi={B\bibinitperiod},
+           given={Ann-Kristin},
+           giveni={A\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=1928d6d2062d4fe2d86132e5eb0660a8}{%
+           family={Busch},
+           familyi={B\bibinitperiod},
+           given={Markus\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=6a3d8ea6a8a70eaa58c2b7e5ef4f615f}{%
+           family={Hapke},
+           familyi={H\bibinitperiod},
+           given={Ulfert},
+           giveni={U\bibinitperiod}}}%
+        {{hash=98bc84f6b8756f5dbdb33e116a31d3ec}{%
+           family={Heidemann},
+           familyi={H\bibinitperiod},
+           given={Christin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=176bc803d091e0fd34b0e8a7bb704842}{%
+           family={Imhoff},
+           familyi={I\bibinitperiod},
+           given={Maren},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b060ea5c9b56d765fec7374166a6adb4}{%
+           family={Mumm},
+           familyi={M\bibinitperiod},
+           given={Rebekka},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d465657a825ffa204ee7f836a8b51ca9}{%
+           family={Paprott},
+           familyi={P\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+        {{hash=81ea0bc784f88cfe09b932fdc331a2d7}{%
+           family={Steppuhn},
+           familyi={S\bibinitperiod},
+           given={Henriette},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Robert Koch Institute}%
+      }
+      \strng{namehash}{c0832afa7e9d19773466d51ba503c40a}
+      \strng{fullhash}{7bfabafec9f11397f2da36ee806edcfe}
+      \strng{bibnamehash}{c0832afa7e9d19773466d51ba503c40a}
+      \strng{authorbibnamehash}{c0832afa7e9d19773466d51ba503c40a}
+      \strng{authornamehash}{c0832afa7e9d19773466d51ba503c40a}
+      \strng{authorfullhash}{7bfabafec9f11397f2da36ee806edcfe}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Health Monitoring}
+      \field{number}{Suppl 10}
+      \field{title}{Care for the chronically ill in Germany--The challenges during the COVID-19 pandemic}
+      \field{volume}{5}
+      \field{year}{2021}
+      \field{pages}{2}
+      \range{pages}{1}
+    \endentry
+    \entry{feral2020collateral}{article}{}
+      \name{author}{3}{}{%
+        {{hash=51bd6a514969ef0b55985009d1d79a4f}{%
+           family={Feral-Pierssens},
+           familyi={F\bibinithyphendelim P\bibinitperiod},
+           given={Anne-Laure},
+           giveni={A\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=afd1e8cdda6e9d9834ac69ea7897ccc7}{%
+           family={Claret},
+           familyi={C\bibinitperiod},
+           given={Pierre-Géraud},
+           giveni={P\bibinithyphendelim G\bibinitperiod}}}%
+        {{hash=69ec58ca6f4fc341a8994b8429984fbb}{%
+           family={Chouihed},
+           familyi={C\bibinitperiod},
+           given={Tahar},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wolters Kluwer Health}%
+      }
+      \strng{namehash}{534e4bd84df6a47536c5934b2a0e0bd3}
+      \strng{fullhash}{534e4bd84df6a47536c5934b2a0e0bd3}
+      \strng{bibnamehash}{534e4bd84df6a47536c5934b2a0e0bd3}
+      \strng{authorbibnamehash}{534e4bd84df6a47536c5934b2a0e0bd3}
+      \strng{authornamehash}{534e4bd84df6a47536c5934b2a0e0bd3}
+      \strng{authorfullhash}{534e4bd84df6a47536c5934b2a0e0bd3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Journal of Emergency Medicine}
+      \field{title}{Collateral damage of the COVID-19 outbreak: expression of concern}
+      \field{year}{2020}
+    \endentry
+    \entry{demirtepe2022psychosocial}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=2a2259e7fb0f7a6fa889e4135100b308}{%
+           family={Demirtepe-Saygili},
+           familyi={D\bibinithyphendelim S\bibinitperiod},
+           given={Dilek},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IGI Global}%
+      }
+      \strng{namehash}{2a2259e7fb0f7a6fa889e4135100b308}
+      \strng{fullhash}{2a2259e7fb0f7a6fa889e4135100b308}
+      \strng{bibnamehash}{2a2259e7fb0f7a6fa889e4135100b308}
+      \strng{authorbibnamehash}{2a2259e7fb0f7a6fa889e4135100b308}
+      \strng{authornamehash}{2a2259e7fb0f7a6fa889e4135100b308}
+      \strng{authorfullhash}{2a2259e7fb0f7a6fa889e4135100b308}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Impact of the COVID-19 Pandemic on Child, Adolescent, and Adult Development}
+      \field{title}{Psychosocial Effects of the COVID-19 Pandemic on Adults With Chronic Illnesses}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+    \endentry
+    \entry{zipprich2020knowledge}{article}{}
+      \name{author}{5}{}{%
+        {{hash=99b13f912874ca3d18f4eb74f515104b}{%
+           family={Zipprich},
+           familyi={Z\bibinitperiod},
+           given={Hannah\bibnamedelima M},
+           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=019f4af09ec225bb539fac296f410099}{%
+           family={Teschner},
+           familyi={T\bibinitperiod},
+           given={Ulrike},
+           giveni={U\bibinitperiod}}}%
+        {{hash=89882dd2da6cdcdc2a2887159ac44bed}{%
+           family={Witte},
+           familyi={W\bibinitperiod},
+           given={Otto\bibnamedelima W},
+           giveni={O\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=2d68d8b07a95325e42a7aae112141fe9}{%
+           family={Schönenberg},
+           familyi={S\bibinitperiod},
+           given={Aline},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2dbb7847b161ad8c9f7ec340f444d8d8}{%
+           family={Prell},
+           familyi={P\bibinitperiod},
+           given={Tino},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{9c9b4bff93ebc1ffbcad13418bd880ac}
+      \strng{fullhash}{f4296e8bb844edf8ece2c6b221adad18}
+      \strng{bibnamehash}{9c9b4bff93ebc1ffbcad13418bd880ac}
+      \strng{authorbibnamehash}{9c9b4bff93ebc1ffbcad13418bd880ac}
+      \strng{authornamehash}{9c9b4bff93ebc1ffbcad13418bd880ac}
+      \strng{authorfullhash}{f4296e8bb844edf8ece2c6b221adad18}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of clinical medicine}
+      \field{number}{6}
+      \field{title}{Knowledge, attitudes, practices, and burden during the COVID-19 pandemic in people with Parkinsonâ€™s disease in Germany}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{1643}
+      \range{pages}{1}
+    \endentry
+    \entry{frundt2022impact}{article}{}
+      \name{author}{9}{}{%
+        {{hash=b1f21b0b4411c4b15696820bb271d6cc}{%
+           family={Fründt},
+           familyi={F\bibinitperiod},
+           given={Odette},
+           giveni={O\bibinitperiod}}}%
+        {{hash=8f3760de7f0cfed981277d67a87c699e}{%
+           family={Hanff},
+           familyi={H\bibinitperiod},
+           given={Anne-Marie},
+           giveni={A\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=ab462c66f0f9bb72ed6ca4980898fbd3}{%
+           family={Mai},
+           familyi={M\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8e748cae0c1bc9ccb275c3c1096aae43}{%
+           family={Kirchner},
+           familyi={K\bibinitperiod},
+           given={Christiane},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d490be77ce352c4a62d2c89e59afb051}{%
+           family={Bouzanne\bibnamedelimb des\bibnamedelima Mazery},
+           familyi={B\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Emma},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1deb910468670cc5def39a810945ebb6}{%
+           family={Amouzandeh},
+           familyi={A\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8321ce24a6b63c421015aa32f0c22da5}{%
+           family={Buhmann},
+           familyi={B\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+        {{hash=999ef8a72b2d5772f3b0086c31614647}{%
+           family={Krüger},
+           familyi={K\bibinitperiod},
+           given={Rejko},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b8b3763a11313d1eacb2119a667d49b3}{%
+           family={Südmeyer},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{c3d892a14a10c0262ef1164499dcecce}
+      \strng{fullhash}{7c8e474fbc80477959b5942dcf301e60}
+      \strng{bibnamehash}{c3d892a14a10c0262ef1164499dcecce}
+      \strng{authorbibnamehash}{c3d892a14a10c0262ef1164499dcecce}
+      \strng{authornamehash}{c3d892a14a10c0262ef1164499dcecce}
+      \strng{authorfullhash}{7c8e474fbc80477959b5942dcf301e60}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain sciences}
+      \field{number}{1}
+      \field{title}{Impact of COVID-19 Pandemic on (Health) Care Situation of People with Parkinson's Disease in Germany (Care4PD)}
+      \field{volume}{12}
+      \field{year}{2022}
+      \field{pages}{62}
+      \range{pages}{1}
+    \endentry
+    \entry{richter2021analysis}{article}{}
+      \name{author}{6}{}{%
+        {{hash=daaaaa3239c402816d3f0640da7eb6a5}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4afda8fca4993c0ca9166ef649c7e869}{%
+           family={Scherbaum},
+           familyi={S\bibinitperiod},
+           given={Raphael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5df30e546641222531b71b0d787387b0}{%
+           family={Bartig},
+           familyi={B\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e1a60516d107b3e3fe29e49fd8437cc0}{%
+           family={Gold},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=34739ea491052cfaeda025a41c319154}{%
+           family={Krogias},
+           familyi={K\bibinitperiod},
+           given={Christos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4094e195108cad9ab4d8721f714ca6d4}{%
+           family={Tönges},
+           familyi={T\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e430719bca7956a5ee4955288d03b4ee}
+      \strng{fullhash}{82a25f173c6197b4e3b3d79419554c72}
+      \strng{bibnamehash}{e430719bca7956a5ee4955288d03b4ee}
+      \strng{authorbibnamehash}{e430719bca7956a5ee4955288d03b4ee}
+      \strng{authornamehash}{e430719bca7956a5ee4955288d03b4ee}
+      \strng{authorfullhash}{82a25f173c6197b4e3b3d79419554c72}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Parkinsonism \& related disorders}
+      \field{title}{Analysis of nationwide multimodal complex treatment and drug pump therapy in Parkinson's disease in times of COVID-19 pandemic in Germany}
+      \field{volume}{85}
+      \field{year}{2021}
+      \field{pages}{109\bibrangedash 113}
+      \range{pages}{5}
+    \endentry
+    \entry{brooks2021social}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ea1759b6b01907ad3f13f66c07ac6859}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Samantha\bibnamedelima K},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=1d543131037811aa173a5d000e88a639}{%
+           family={Weston},
+           familyi={W\bibinitperiod},
+           given={Dale},
+           giveni={D\bibinitperiod}}}%
+        {{hash=7eedff5adbccce63d8c7c8363e7d1957}{%
+           family={Greenberg},
+           familyi={G\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fed6aeaf215e56cddc3736bcf2f7b38c}
+      \strng{fullhash}{fed6aeaf215e56cddc3736bcf2f7b38c}
+      \strng{bibnamehash}{fed6aeaf215e56cddc3736bcf2f7b38c}
+      \strng{authorbibnamehash}{fed6aeaf215e56cddc3736bcf2f7b38c}
+      \strng{authornamehash}{fed6aeaf215e56cddc3736bcf2f7b38c}
+      \strng{authorfullhash}{fed6aeaf215e56cddc3736bcf2f7b38c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Public Health}
+      \field{title}{Social and psychological impact of the COVID-19 pandemic on people with Parkinson's disease: a scoping review}
+      \field{volume}{199}
+      \field{year}{2021}
+      \field{pages}{77\bibrangedash 86}
+      \range{pages}{10}
+    \endentry
+    \entry{huijts2017prevalence}{article}{}
+      \name{author}{5}{}{%
+        {{hash=8458a67e4a0122fd11b2951a18e8b9c4}{%
+           family={Huijts},
+           familyi={H\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4eb606415b7af44efb64d40cffccb75d}{%
+           family={Stornes},
+           familyi={S\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1826543078f6cc11aac8edef0844498a}{%
+           family={Eikemo},
+           familyi={E\bibinitperiod},
+           given={Terje\bibnamedelima A},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c7fd1756181efa384c904a0402c3b579}{%
+           family={Bambra},
+           familyi={B\bibinitperiod},
+           given={Clare},
+           giveni={C\bibinitperiod}}}%
+        {{hash=422f054694e52bd5d892af37faa3830c}{%
+           family={Consortium},
+           familyi={C\bibinitperiod},
+           given={HiNews},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{71df27eee2afad86373fe8378c2c9e97}
+      \strng{fullhash}{ca6bb487e3d4574631b193d23429cf3b}
+      \strng{bibnamehash}{71df27eee2afad86373fe8378c2c9e97}
+      \strng{authorbibnamehash}{71df27eee2afad86373fe8378c2c9e97}
+      \strng{authornamehash}{71df27eee2afad86373fe8378c2c9e97}
+      \strng{authorfullhash}{ca6bb487e3d4574631b193d23429cf3b}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The European Journal of Public Health}
+      \field{number}{suppl\_1}
+      \field{title}{Prevalence of physical and mental non-communicable diseases in Europe: findings from the European Social Survey (2014) special module on the social determinants of health}
+      \field{volume}{27}
+      \field{year}{2017}
+      \field{pages}{8\bibrangedash 13}
+      \range{pages}{6}
+    \endentry
+    \entry{lowcock2012social}{article}{}
+      \name{author}{5}{}{%
+        {{hash=37d7a036cc15b5374065c9c7e7f3a0fc}{%
+           family={Lowcock},
+           familyi={L\bibinitperiod},
+           given={Elizabeth\bibnamedelima C},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=73a75779922813555056551117ad1f3d}{%
+           family={Rosella},
+           familyi={R\bibinitperiod},
+           given={Laura\bibnamedelima C},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=05ae9c1c959ad153a0386ad227aeff5d}{%
+           family={Foisy},
+           familyi={F\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5e0d88194034ffcedcc25718431e71cc}{%
+           family={McGeer},
+           familyi={M\bibinitperiod},
+           given={Allison},
+           giveni={A\bibinitperiod}}}%
+        {{hash=44dd1ea90bc42b2eace3e3de889f5a0e}{%
+           family={Crowcroft},
+           familyi={C\bibinitperiod},
+           given={Natasha},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Public Health Association}%
+      }
+      \strng{namehash}{9ba812490dadfedcc36523d9a964d4ca}
+      \strng{fullhash}{d97d5322bca39136c8addb691a533ccb}
+      \strng{bibnamehash}{9ba812490dadfedcc36523d9a964d4ca}
+      \strng{authorbibnamehash}{9ba812490dadfedcc36523d9a964d4ca}
+      \strng{authornamehash}{9ba812490dadfedcc36523d9a964d4ca}
+      \strng{authorfullhash}{d97d5322bca39136c8addb691a533ccb}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American journal of public health}
+      \field{number}{8}
+      \field{title}{The social determinants of health and pandemic H1N1 2009 influenza severity}
+      \field{volume}{102}
+      \field{year}{2012}
+      \field{pages}{e51\bibrangedash e58}
+      \range{pages}{-1}
+    \endentry
+    \entry{whocovidbrief}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8179b1fdebe9235e54501d2878c47e1b}{%
+           family={Organization},
+           familyi={O\bibinitperiod},
+           given={World\bibnamedelima Health},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \strng{namehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{fullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{bibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorbibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authornamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorfullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{COVID-19 and the social determinants of health and health equity: evidence brief}
+      \field{year}{2021}
+      \field{pages}{i\bibrangedash 22}
+      \range{pages}{22}
+    \endentry
+    \entry{brown2020effect}{article}{}
+      \name{author}{9}{}{%
+        {{hash=4db5ad07bfca82f74b061abcbd00da91}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Ethan\bibnamedelima G},
+           giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=f4434868bce87d7e9f17e608451571c1}{%
+           family={Chahine},
+           familyi={C\bibinitperiod},
+           given={Lana\bibnamedelima M},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=6fff6adc0199985816886a1e245f3857}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={Samuel\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=5a4a3bf51d4df30cab05a1eb0947d93d}{%
+           family={Korell},
+           familyi={K\bibinitperiod},
+           given={Monica},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e64028b7c28a8b3f10ca2835c8d17a74}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Emerald},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e59d82958fb03a8d024a3b757a6a3eca}{%
+           family={Kinel},
+           familyi={K\bibinitperiod},
+           given={Daniel\bibnamedelima R},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=a840cf7633cbe607d7e07525b3edd4a5}{%
+           family={Arnedo},
+           familyi={A\bibinitperiod},
+           given={Vanessa},
+           giveni={V\bibinitperiod}}}%
+        {{hash=fe20e3c6ee3560f1049f14eecfd26f33}{%
+           family={Marek},
+           familyi={M\bibinitperiod},
+           given={Kenneth\bibnamedelima L},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=699106918c27ff31e7519bbe22f5b510}{%
+           family={Tanner},
+           familyi={T\bibinitperiod},
+           given={Caroline\bibnamedelima M},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{f1c6a5dbbd9f0a23ee53705e5f7a4fde}
+      \strng{fullhash}{e869a5f2a4717a2f548fd8c840838a58}
+      \strng{bibnamehash}{f1c6a5dbbd9f0a23ee53705e5f7a4fde}
+      \strng{authorbibnamehash}{f1c6a5dbbd9f0a23ee53705e5f7a4fde}
+      \strng{authornamehash}{f1c6a5dbbd9f0a23ee53705e5f7a4fde}
+      \strng{authorfullhash}{e869a5f2a4717a2f548fd8c840838a58}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Parkinson's disease}
+      \field{number}{4}
+      \field{title}{The effect of the COVID-19 pandemic on people with Parkinson’s disease}
+      \field{volume}{10}
+      \field{year}{2020}
+      \field{pages}{1365\bibrangedash 1377}
+      \range{pages}{13}
+    \endentry
+    \entry{world2010conceptual}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8179b1fdebe9235e54501d2878c47e1b}{%
+           family={Organization},
+           familyi={O\bibinitperiod},
+           given={World\bibnamedelima Health},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \strng{namehash}{b34697b55e931105852323b3db93732d}
+      \strng{fullhash}{b34697b55e931105852323b3db93732d}
+      \strng{bibnamehash}{b34697b55e931105852323b3db93732d}
+      \strng{authorbibnamehash}{b34697b55e931105852323b3db93732d}
+      \strng{authornamehash}{b34697b55e931105852323b3db93732d}
+      \strng{authorfullhash}{b34697b55e931105852323b3db93732d}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A conceptual framework for action on the social determinants of health}
+      \field{year}{2010}
+    \endentry
+    \entry{zaman2021barriers}{article}{}
+      \name{author}{3}{}{%
+        {{hash=39126c2a54e4a5d6fe4d2d73d348ada8}{%
+           family={Zaman},
+           familyi={Z\bibinitperiod},
+           given={Muhammed\bibnamedelima Shahriar},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=21b685b081051c76a007084b5e8ad892}{%
+           family={Ghahari},
+           familyi={G\bibinitperiod},
+           given={Setareh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9cbf3ce6ee552cb797657c7b4515d3f9}{%
+           family={McColl},
+           familyi={M\bibinitperiod},
+           given={Mary\bibnamedelima Ann},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{0843e09bb3336efa46a08885d62e4dec}
+      \strng{fullhash}{0843e09bb3336efa46a08885d62e4dec}
+      \strng{bibnamehash}{0843e09bb3336efa46a08885d62e4dec}
+      \strng{authorbibnamehash}{0843e09bb3336efa46a08885d62e4dec}
+      \strng{authornamehash}{0843e09bb3336efa46a08885d62e4dec}
+      \strng{authorfullhash}{0843e09bb3336efa46a08885d62e4dec}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Parkinson's Disease}
+      \field{number}{Preprint}
+      \field{title}{Barriers to Accessing Healthcare Services for People with Parkinsonâ€™s Disease: A Scoping Review}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 17}
+      \range{pages}{17}
+    \endentry
+    \entry{leiner2019sosci}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4948f2b73b5e9b3d069d8e08c21ae3c1}{%
+           family={Leiner},
+           familyi={L\bibinitperiod},
+           given={Dominik\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4948f2b73b5e9b3d069d8e08c21ae3c1}
+      \strng{fullhash}{4948f2b73b5e9b3d069d8e08c21ae3c1}
+      \strng{bibnamehash}{4948f2b73b5e9b3d069d8e08c21ae3c1}
+      \strng{authorbibnamehash}{4948f2b73b5e9b3d069d8e08c21ae3c1}
+      \strng{authornamehash}{4948f2b73b5e9b3d069d8e08c21ae3c1}
+      \strng{authorfullhash}{4948f2b73b5e9b3d069d8e08c21ae3c1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SoSci survey (version 3.1. 06)[computer software]}
+      \field{year}{2019}
+    \endentry
+    \entry{van2009modification}{article}{}
+      \name{author}{5}{}{%
+        {{hash=fb243048d83ae93c3d3f8bb294d5124f}{%
+           family={Walraven},
+           familyi={W\bibinitperiod},
+           given={Carl},
+           giveni={C\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=72bb99ace345dcf7ae8b3e877ab1dc2f}{%
+           family={Austin},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima C},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d21aff4cefa495698756e8df4af554c4}{%
+           family={Jennings},
+           familyi={J\bibinitperiod},
+           given={Alison},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b0753b502d75d36129042928b98a0d22}{%
+           family={Quan},
+           familyi={Q\bibinitperiod},
+           given={Hude},
+           giveni={H\bibinitperiod}}}%
+        {{hash=cd73087021e8d034f3ae32fcc445323c}{%
+           family={Forster},
+           familyi={F\bibinitperiod},
+           given={Alan\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{f6226e6abb940cb3c1f2f9254c605b85}
+      \strng{fullhash}{eda83a434e79b5ecc7466cfec6c54956}
+      \strng{bibnamehash}{f6226e6abb940cb3c1f2f9254c605b85}
+      \strng{authorbibnamehash}{f6226e6abb940cb3c1f2f9254c605b85}
+      \strng{authornamehash}{f6226e6abb940cb3c1f2f9254c605b85}
+      \strng{authorfullhash}{eda83a434e79b5ecc7466cfec6c54956}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical care}
+      \field{title}{A modification of the Elixhauser comorbidity measures into a point system for hospital death using administrative data}
+      \field{year}{2009}
+      \field{pages}{626\bibrangedash 633}
+      \range{pages}{8}
+    \endentry
+    \entry{rcore}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
+           family={{R Core Team}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vienna, Austria}%
+      }
+      \list{organization}{1}{%
+        {R Foundation for Statistical Computing}%
+      }
+      \strng{namehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{fullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{bibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorbibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authornamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorfullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{R: A Language and Environment for Statistical Computing}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.R-project.org/
+      \endverb
+      \verb{url}
+      \verb https://www.R-project.org/
+      \endverb
+    \endentry
+    \entry{vanbuuren2011}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bc2b17be0859294de039f6a318340de2}{%
+           family={{van Buuren}},
+           familyi={v\bibinitperiod},
+           given={Stef},
+           giveni={S\bibinitperiod}}}%
+        {{hash=608d0e9a1fa5297e662ddcf0f605c2ab}{%
+           family={Groothuis-Oudshoorn},
+           familyi={G\bibinithyphendelim O\bibinitperiod},
+           given={Karin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{d76903115e02d42c810b0a2141fadc58}
+      \strng{fullhash}{d76903115e02d42c810b0a2141fadc58}
+      \strng{bibnamehash}{d76903115e02d42c810b0a2141fadc58}
+      \strng{authorbibnamehash}{d76903115e02d42c810b0a2141fadc58}
+      \strng{authornamehash}{d76903115e02d42c810b0a2141fadc58}
+      \strng{authorfullhash}{d76903115e02d42c810b0a2141fadc58}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{number}{3}
+      \field{title}{{mice}: Multivariate Imputation by Chained Equations in R}
+      \field{volume}{45}
+      \field{year}{2011}
+      \field{pages}{1\bibrangedash 67}
+      \range{pages}{67}
+      \verb{doi}
+      \verb 10.18637/jss.v045.i03
+      \endverb
+    \endentry
+    \entry{kuhn2008}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3305789acf03200ed22f154007d4fab9}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3305789acf03200ed22f154007d4fab9}
+      \strng{fullhash}{3305789acf03200ed22f154007d4fab9}
+      \strng{bibnamehash}{3305789acf03200ed22f154007d4fab9}
+      \strng{authorbibnamehash}{3305789acf03200ed22f154007d4fab9}
+      \strng{authornamehash}{3305789acf03200ed22f154007d4fab9}
+      \strng{authorfullhash}{3305789acf03200ed22f154007d4fab9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The caret package, short for classification and regression training, contains numerous tools for developing predictive models using the rich set of models available in R. The package focuses on simplifying model training and tuning across a wide variety of modeling techniques. It also includes methods for pre-processing training data, calculating variable importance, and model visualizations. An example from computational chemistry is used to illustrate the functionality on a real data set and to benchmark the benefits of parallel processing with several types of models.}
+      \field{issn}{1548-7660}
+      \field{journaltitle}{Journal of Statistical Software, Articles}
+      \field{number}{5}
+      \field{title}{Building Predictive Models in R Using the caret Package}
+      \field{volume}{28}
+      \field{year}{2008}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.18637/jss.v028.i05
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstatsoft.org/v028/i05
+      \endverb
+      \verb{url}
+      \verb https://www.jstatsoft.org/v028/i05
+      \endverb
+    \endentry
+    \entry{10665-341674}{book}{}
+      \name{author}{7}{}{%
+        {{hash=2f791a924622e4e32d986943ed05eb93}{%
+           family={Health\bibnamedelima Systems},
+           familyi={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={European\bibnamedelima Observatory},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod},
+           prefix={on},
+           prefixi={o\bibinitperiod}}}%
+        {{hash=9e476387322a5c250893cf9c5c4ce78c}{%
+           family={Policies},
+           familyi={P\bibinitperiod}}}%
+        {{hash=c96f081481004b32d36121bc49101701}{%
+           family={M},
+           familyi={M\bibinitperiod},
+           given={Bluemel},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e42cc846b4eb489aef36b9909002cd10}{%
+           family={A},
+           familyi={A\bibinitperiod},
+           given={Spranger},
+           giveni={S\bibinitperiod}}}%
+        {{hash=06bcbe7902dff5e0cfca6f1a300f79af}{%
+           family={K},
+           familyi={K\bibinitperiod},
+           given={Achstetter},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b4ed3a59c01db8062054d97213923385}{%
+           family={A},
+           familyi={A\bibinitperiod},
+           given={Maresso},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5b0828bbb5d2fa5e4c9b64e8431640d5}{%
+           family={R},
+           familyi={R\bibinitperiod},
+           given={Busse},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Health Organization. Regional Office for Europe}%
+      }
+      \strng{namehash}{7996f00e2330481fec2c06b1426e22c1}
+      \strng{fullhash}{c663188999e778152397a4f8e053e727}
+      \strng{bibnamehash}{7996f00e2330481fec2c06b1426e22c1}
+      \strng{authorbibnamehash}{7996f00e2330481fec2c06b1426e22c1}
+      \strng{authornamehash}{7996f00e2330481fec2c06b1426e22c1}
+      \strng{authorfullhash}{c663188999e778152397a4f8e053e727}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Health Systems in Transition; Vol. 22 (6)}
+      \field{title}{Germany: health system review}
+      \field{type}{Publications}
+      \field{year}{2020}
+      \field{pages}{i\bibrangedash 273}
+      \range{pages}{273}
+    \endentry
+    \entry{richter2019dynamics}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=daaaaa3239c402816d3f0640da7eb6a5}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5df30e546641222531b71b0d787387b0}{%
+           family={Bartig},
+           familyi={B\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+        {{hash=70018e59da5fadc3c75f4868d9f8fc63}{%
+           family={Muhlack},
+           familyi={M\bibinitperiod},
+           given={Siegfried},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f6bd11c2faee622e10adaf71991ee4ac}{%
+           family={Hartelt},
+           familyi={H\bibinitperiod},
+           given={Elke},
+           giveni={E\bibinitperiod}}}%
+        {{hash=4afda8fca4993c0ca9166ef649c7e869}{%
+           family={Scherbaum},
+           familyi={S\bibinitperiod},
+           given={Raphael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bad16a93922d4790132324b713301180}{%
+           family={Katsanos},
+           familyi={K\bibinitperiod},
+           given={Aristeides\bibnamedelima H},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=c2ad285eb682bccdfe2685694db2188f}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4e5142c21643a4ec8b1c1cf348485383}{%
+           family={Jost},
+           familyi={J\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=b593f8fbbb89997700c7631ee2516d4d}{%
+           family={Ebersbach},
+           familyi={E\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e1a60516d107b3e3fe29e49fd8437cc0}{%
+           family={Gold},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{e430719bca7956a5ee4955288d03b4ee}
+      \strng{fullhash}{91e324d4d76049ef376b5605e60a4603}
+      \strng{bibnamehash}{e430719bca7956a5ee4955288d03b4ee}
+      \strng{authorbibnamehash}{e430719bca7956a5ee4955288d03b4ee}
+      \strng{authornamehash}{e430719bca7956a5ee4955288d03b4ee}
+      \strng{authorfullhash}{91e324d4d76049ef376b5605e60a4603}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cells}
+      \field{number}{2}
+      \field{title}{Dynamics of Parkinson’s disease multimodal complex treatment in Germany from 2010--2016: Patient characteristics, access to treatment, and formation of regional centers}
+      \field{volume}{8}
+      \field{year}{2019}
+      \field{pages}{151}
+      \range{pages}{1}
+    \endentry
+    \entry{van2020building}{article}{}
+      \name{author}{5}{}{%
+        {{hash=1ac57fd8720ada7e1e8a172fa2b8d4bd}{%
+           family={Munster},
+           familyi={M\bibinitperiod},
+           given={Marlena},
+           giveni={M\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=4094e195108cad9ab4d8721f714ca6d4}{%
+           family={Tönges},
+           familyi={T\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=18d5c68e990d26117a029f2597aed43e}{%
+           family={Loewenbrück},
+           familyi={L\bibinitperiod},
+           given={Kai\bibnamedelima F},
+           giveni={K\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=c1a3691f64d8426f14d08f7f76bf8b19}{%
+           family={Warnecke},
+           familyi={W\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b2ce6ca994a73fc48ad615ae5f9798d3}{%
+           family={Eggers},
+           familyi={E\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{0e1956476491459532224e43866d144b}
+      \strng{fullhash}{b1cefaf428918cd02729842149089ee4}
+      \strng{bibnamehash}{0e1956476491459532224e43866d144b}
+      \strng{authorbibnamehash}{0e1956476491459532224e43866d144b}
+      \strng{authornamehash}{0e1956476491459532224e43866d144b}
+      \strng{authorfullhash}{b1cefaf428918cd02729842149089ee4}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of clinical medicine}
+      \field{number}{9}
+      \field{title}{Building a Parkinson-Network--Experiences from Germany}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{2743}
+      \range{pages}{1}
+    \endentry
+    \entry{prell2020specialized}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=2dbb7847b161ad8c9f7ec340f444d8d8}{%
+           family={Prell},
+           familyi={P\bibinitperiod},
+           given={Tino},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6f0d36a19b7f57f49d2663f34f26fec2}{%
+           family={Siebecker},
+           familyi={S\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=856e94e8d1d01909cc5c8358075e2c42}{%
+           family={Lorrain},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4094e195108cad9ab4d8721f714ca6d4}{%
+           family={Tönges},
+           familyi={T\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c1a3691f64d8426f14d08f7f76bf8b19}{%
+           family={Warnecke},
+           familyi={W\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=89080025001fae6d96ffcafe80ddae48}{%
+           family={Klucken},
+           familyi={K\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1552967e4c54e9c945e363b912db5ffc}{%
+           family={Wellach},
+           familyi={W\bibinitperiod},
+           given={Ingmar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=8321ce24a6b63c421015aa32f0c22da5}{%
+           family={Buhmann},
+           familyi={B\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4bbb351860327f200db5692319dcf91a}{%
+           family={Wolz},
+           familyi={W\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eff7dd2648d8563a23386a636ae9c1e1}{%
+           family={Lorenzl},
+           familyi={L\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{8718799b0c69ac102daf44f883af0886}
+      \strng{fullhash}{fc3475bb5715a647ef4c59fd5d74cc88}
+      \strng{bibnamehash}{8718799b0c69ac102daf44f883af0886}
+      \strng{authorbibnamehash}{8718799b0c69ac102daf44f883af0886}
+      \strng{authornamehash}{8718799b0c69ac102daf44f883af0886}
+      \strng{authorfullhash}{fc3475bb5715a647ef4c59fd5d74cc88}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Clinical Medicine}
+      \field{number}{8}
+      \field{title}{Specialized staff for the care of people with Parkinson’s disease in Germany: an overview}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{2581}
+      \range{pages}{1}
+    \endentry
+    \entry{deuschl2016s3}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2abd9ab40b7d0c81115663e90e8624c9}{%
+           family={Deuschl},
+           familyi={D\bibinitperiod},
+           given={Günther},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d2494a1396373891247da565e2a2515c}{%
+           family={Oertel},
+           familyi={O\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5b1926bd13252b0797544f78657639e6}{%
+           family={Reichmann},
+           familyi={R\bibinitperiod},
+           given={Heinz},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1e78767d4b6e2dd3b796d014fac8656}
+      \strng{fullhash}{e1e78767d4b6e2dd3b796d014fac8656}
+      \strng{bibnamehash}{e1e78767d4b6e2dd3b796d014fac8656}
+      \strng{authorbibnamehash}{e1e78767d4b6e2dd3b796d014fac8656}
+      \strng{authornamehash}{e1e78767d4b6e2dd3b796d014fac8656}
+      \strng{authorfullhash}{e1e78767d4b6e2dd3b796d014fac8656}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Leitlinie der Deutschen Gesellschaft für Neurologie (DGN). AWMF-Register-Nummer}
+      \field{title}{S3-Leitlinie Idiopathisches Parkinson-Syndrom}
+      \field{year}{2016}
+      \field{pages}{030\bibrangedash 010}
+      \range{pages}{-19}
+    \endentry
+    \entry{radder2020recommendations}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=86d376a2de24e319ec41e976292fe6f6}{%
+           family={Radder},
+           familyi={R\bibinitperiod},
+           given={Danique\bibnamedelima LM},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=832246781c864044449af038fc66e2bf}{%
+           family={Nonnekes},
+           familyi={N\bibinitperiod},
+           given={Jorik},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2590094a67121440bdd1525089c9f1d8}{%
+           family={Van\bibnamedelima Nimwegen},
+           familyi={V\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Marlies},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2ce6ca994a73fc48ad615ae5f9798d3}{%
+           family={Eggers},
+           familyi={E\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1dec5a85f03a0dab51ae982c6946b596}{%
+           family={Abbruzzese},
+           familyi={A\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e5e0371ebc8bbec500924b35bdd6e289}{%
+           family={Alves},
+           familyi={A\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+        {{hash=eb2c2f586f9e07c55f2073a9a8666dd7}{%
+           family={Browner},
+           familyi={B\bibinitperiod},
+           given={Nina},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0a560731d76a1db0da7809c4b98c36ee}{%
+           family={Chaudhuri},
+           familyi={C\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b593f8fbbb89997700c7631ee2516d4d}{%
+           family={Ebersbach},
+           familyi={E\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3302c9d90614bc5166244dce40bd4887}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={Joaquim\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{dfb198bc7299840557e3e984b6972f2d}
+      \strng{fullhash}{1b9babf28c7b74869d8a41f203effd3d}
+      \strng{bibnamehash}{dfb198bc7299840557e3e984b6972f2d}
+      \strng{authorbibnamehash}{dfb198bc7299840557e3e984b6972f2d}
+      \strng{authornamehash}{dfb198bc7299840557e3e984b6972f2d}
+      \strng{authorfullhash}{1b9babf28c7b74869d8a41f203effd3d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Parkinson's disease}
+      \field{number}{3}
+      \field{title}{Recommendations for the organization of multidisciplinary clinical care teams in Parkinson’s disease}
+      \field{volume}{10}
+      \field{year}{2020}
+      \field{pages}{1087\bibrangedash 1098}
+      \range{pages}{12}
+    \endentry
+    \entry{davis2003variability}{article}{}
+      \name{author}{5}{}{%
+        {{hash=5475494c6ed8156d536b0ef6a6ec2ba3}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Jennifer\bibnamedelima Taylor},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=7cb371f8c7c44623f43c49c0101bd48f}{%
+           family={Ehrhart},
+           familyi={E\bibinitperiod},
+           given={Amy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=20ad43c3fa29572ca4f041222a7016a6}{%
+           family={Trzcinski},
+           familyi={T\bibinitperiod},
+           given={Brooke\bibnamedelima Hanna},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=bd801b3b5e6ecf88a43bb9f7e70b17ab}{%
+           family={Kille},
+           familyi={K\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8576361c2c3f44ed0254b4ad4da08881}{%
+           family={Mount},
+           familyi={M\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {LWW}%
+      }
+      \strng{namehash}{49663db3c0263a4320aae1dcf4494011}
+      \strng{fullhash}{3e2947966f20e3b6c59b2fbde9528f4c}
+      \strng{bibnamehash}{49663db3c0263a4320aae1dcf4494011}
+      \strng{authorbibnamehash}{49663db3c0263a4320aae1dcf4494011}
+      \strng{authornamehash}{49663db3c0263a4320aae1dcf4494011}
+      \strng{authorfullhash}{3e2947966f20e3b6c59b2fbde9528f4c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Neurologic Physical Therapy}
+      \field{number}{2}
+      \field{title}{Variability of experiences for individuals living with Parkinson disease}
+      \field{volume}{27}
+      \field{year}{2003}
+      \field{pages}{38\bibrangedash 45}
+      \range{pages}{8}
+    \endentry
+    \entry{hurt2019barriers}{article}{}
+      \name{author}{6}{}{%
+        {{hash=73a4b830076267c8e65d0ea5e4b8e213}{%
+           family={Hurt},
+           familyi={H\bibinitperiod},
+           given={Catherine\bibnamedelima S},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=80978a58235af5bf52e47dff067dd348}{%
+           family={Rixon},
+           familyi={R\bibinitperiod},
+           given={Lorna},
+           giveni={L\bibinitperiod}}}%
+        {{hash=877d6fe7f3e130c2c6e7f9f638413a7b}{%
+           family={Chaudhuri},
+           familyi={C\bibinitperiod},
+           given={K\bibnamedelima Ray},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=d1e88599d86f729ece06e88cd9fa2bc1}{%
+           family={Moss-Morris},
+           familyi={M\bibinithyphendelim M\bibinitperiod},
+           given={Rona},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4f147d0d49898f6c08c7ad171b385c6a}{%
+           family={Samuel},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e1bd039db7252e2ae7dea1dfd027a78a}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima G},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{59625d5ca610af1a71654c47144683c8}
+      \strng{fullhash}{2ab5bbb1589a4c8ceb667f7f88d6c109}
+      \strng{bibnamehash}{59625d5ca610af1a71654c47144683c8}
+      \strng{authorbibnamehash}{59625d5ca610af1a71654c47144683c8}
+      \strng{authornamehash}{59625d5ca610af1a71654c47144683c8}
+      \strng{authorfullhash}{2ab5bbb1589a4c8ceb667f7f88d6c109}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Parkinsonism \& Related Disorders}
+      \field{title}{Barriers to reporting non-motor symptoms to health-care providers in people with Parkinson's}
+      \field{volume}{64}
+      \field{year}{2019}
+      \field{pages}{220\bibrangedash 225}
+      \range{pages}{6}
+    \endentry
+    \entry{fleisher2016associations}{article}{}
+      \name{author}{4}{}{%
+        {{hash=664ce5208945f55f63fc160aae87113b}{%
+           family={Fleisher},
+           familyi={F\bibinitperiod},
+           given={Jori\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=709cddbf171d76295af3987e1d52fbe5}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Krunal},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bb2129637dd1ff666beb3e6878b83479}{%
+           family={Fitts},
+           familyi={F\bibinitperiod},
+           given={Whitney},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e6c3047c09bee5533c16d48e7221ff45}{%
+           family={Dahodwala},
+           familyi={D\bibinitperiod},
+           given={Nabila\bibnamedelima A},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{d418822105525473392e8120a496daed}
+      \strng{fullhash}{6a5bcf1592a00e483e87a05b68a449e9}
+      \strng{bibnamehash}{d418822105525473392e8120a496daed}
+      \strng{authorbibnamehash}{d418822105525473392e8120a496daed}
+      \strng{authornamehash}{d418822105525473392e8120a496daed}
+      \strng{authorfullhash}{6a5bcf1592a00e483e87a05b68a449e9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Movement disorders clinical practice}
+      \field{number}{3}
+      \field{title}{Associations and implications of low health literacy in Parkinson's Disease}
+      \field{volume}{3}
+      \field{year}{2016}
+      \field{pages}{250\bibrangedash 256}
+      \range{pages}{7}
+    \endentry
+    \entry{lim2020factors}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2b2e42665b21d4f7f8f556cfc658d749}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Kyeung\bibnamedelima Eun},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=2f96f5282e68b513735fdfe8400bd3c6}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Sung\bibnamedelima Reul},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5158331ba10f81f577ce1fe56e7b6a19}{%
+           family={Sung},
+           familyi={S\bibinitperiod},
+           given={Young\bibnamedelima Hee},
+           giveni={Y\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f0282d1c3ebb3631e83150fed6c145db}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Sun-Young},
+           giveni={S\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=aec7a0b351e62e23f3a1d558ba41af62}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Mi\bibnamedelima Sun},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5823ea862d4a18bee0d9439c8dff0d9a}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Sun\bibnamedelima Ju},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{ad4748c4d771456622c08c66c975494d}
+      \strng{fullhash}{e5b4ca9e06a589e83576741aab881a1b}
+      \strng{bibnamehash}{ad4748c4d771456622c08c66c975494d}
+      \strng{authorbibnamehash}{ad4748c4d771456622c08c66c975494d}
+      \strng{authornamehash}{ad4748c4d771456622c08c66c975494d}
+      \strng{authorfullhash}{e5b4ca9e06a589e83576741aab881a1b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Geriatric Nursing}
+      \field{number}{3}
+      \field{title}{Factors influencing self-management in Parkinson's disease: a cross-sectional study}
+      \field{volume}{41}
+      \field{year}{2020}
+      \field{pages}{254\bibrangedash 260}
+      \range{pages}{7}
+    \endentry
+    \entry{rostagni2022gratitude}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8add39f975da15068f7259165e402fca}{%
+           family={Rostagni},
+           familyi={R\bibinitperiod},
+           given={Olivia\bibnamedelima M},
+           giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=2cace9b9c331e3a5392dd54776bdfcdd}{%
+           family={Stutts},
+           familyi={S\bibinitperiod},
+           given={Lauren\bibnamedelima A},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{47183fbdeab5d11c70ab69ac47687e71}
+      \strng{fullhash}{47183fbdeab5d11c70ab69ac47687e71}
+      \strng{bibnamehash}{47183fbdeab5d11c70ab69ac47687e71}
+      \strng{authorbibnamehash}{47183fbdeab5d11c70ab69ac47687e71}
+      \strng{authornamehash}{47183fbdeab5d11c70ab69ac47687e71}
+      \strng{authorfullhash}{47183fbdeab5d11c70ab69ac47687e71}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychology, Health \& Medicine}
+      \field{title}{Gratitude, self-efficacy, and health-related quality of life in individuals with Parkinson’s Disease}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+    \endentry
+    \entry{bainbridge2009challenges}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c25bab20c1b190d6faad64e902c2eb7f}{%
+           family={Bainbridge},
+           familyi={B\bibinitperiod},
+           given={Jacquelyn\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=43b8296a3191177f0170211f9d072b45}{%
+           family={Ruscin},
+           familyi={R\bibinitperiod},
+           given={J\bibnamedelima Mark},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ca77a768ccecb45ade944b04c8af390c}
+      \strng{fullhash}{ca77a768ccecb45ade944b04c8af390c}
+      \strng{bibnamehash}{ca77a768ccecb45ade944b04c8af390c}
+      \strng{authorbibnamehash}{ca77a768ccecb45ade944b04c8af390c}
+      \strng{authornamehash}{ca77a768ccecb45ade944b04c8af390c}
+      \strng{authorfullhash}{ca77a768ccecb45ade944b04c8af390c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Drugs \& aging}
+      \field{number}{2}
+      \field{title}{Challenges of treatment adherence in older patients with Parkinson’s disease}
+      \field{volume}{26}
+      \field{year}{2009}
+      \field{pages}{145\bibrangedash 155}
+      \range{pages}{11}
+    \endentry
+    \entry{shin2016initiation}{article}{}
+      \name{author}{2}{}{%
+        {{hash=12800d67ffa4fb112dcc8b5ef26ab758}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Ju\bibnamedelima Young},
+           giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=3181e0cf0de986c249aa4913491d1648}{%
+           family={Habermann},
+           familyi={H\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{aae97d8f5bf8f2983ca1ebfad37a3cd7}
+      \strng{fullhash}{aae97d8f5bf8f2983ca1ebfad37a3cd7}
+      \strng{bibnamehash}{aae97d8f5bf8f2983ca1ebfad37a3cd7}
+      \strng{authorbibnamehash}{aae97d8f5bf8f2983ca1ebfad37a3cd7}
+      \strng{authornamehash}{aae97d8f5bf8f2983ca1ebfad37a3cd7}
+      \strng{authorfullhash}{aae97d8f5bf8f2983ca1ebfad37a3cd7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Clinical Nursing}
+      \field{number}{1-2}
+      \field{title}{Initiation of medications for Parkinson's disease: a qualitative description}
+      \field{volume}{25}
+      \field{year}{2016}
+      \field{pages}{127\bibrangedash 133}
+      \range{pages}{7}
+    \endentry
+    \entry{vanrole}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=1ac57fd8720ada7e1e8a172fa2b8d4bd}{%
+           family={Munster},
+           familyi={M\bibinitperiod},
+           given={Marlena},
+           giveni={M\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=19d8f158d662427adc534fa0512ec926}{%
+           family={Stümpel},
+           familyi={S\bibinitperiod},
+           given={Johanne},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b1a6b8eb0dab926e9d0c76b079a551a6}{%
+           family={Thieken},
+           familyi={T\bibinitperiod},
+           given={Franziska},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ca7b5683e56099154cccc9d8b0a17037}{%
+           family={Ratajczak},
+           familyi={R\bibinitperiod},
+           given={Florin},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ea31ab02e6767cac455307d0f3a02958}{%
+           family={Rascol},
+           familyi={R\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=1b79d7044d9b10b19b5288fbf4d1e885}{%
+           family={Fabbri},
+           familyi={F\bibinitperiod},
+           given={Margherita},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4b400bb9bcacb0832117af174cbcf05d}{%
+           family={Clemens},
+           familyi={C\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=20a106971811666a01e6eaacf3e00e08}{%
+           family={Czabanowska},
+           familyi={C\bibinitperiod},
+           given={Katarzyna},
+           giveni={K\bibinitperiod}}}%
+        {{hash=94c3834279a338bdb1ffc32eba5e5f5b}{%
+           family={Mestre},
+           familyi={M\bibinitperiod},
+           given={Tiago\bibnamedelima A},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=65f6fc6b00d1751114c82f14b58e218b}{%
+           family={Pedrosa},
+           familyi={P\bibinitperiod},
+           given={David\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{0e1956476491459532224e43866d144b}
+      \strng{fullhash}{f76ff7c2ff9d6e5f0509733f51a8d80a}
+      \strng{bibnamehash}{0e1956476491459532224e43866d144b}
+      \strng{authorbibnamehash}{0e1956476491459532224e43866d144b}
+      \strng{authornamehash}{0e1956476491459532224e43866d144b}
+      \strng{authorfullhash}{f76ff7c2ff9d6e5f0509733f51a8d80a}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Parkinson's Disease}
+      \field{number}{Preprint}
+      \field{title}{The Role of Parkinson Nurses for Personalizing Care in Parkinson’s Disease: A Systematic Review and Meta-Analysis}
+      \field{pages}{1\bibrangedash 25}
+      \range{pages}{25}
+    \endentry
+    \entry{spottke2005cost}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=075a214a9405a05c34de9acc6b832db6}{%
+           family={Spottke},
+           familyi={S\bibinitperiod},
+           given={Annika\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ba2cbfcb3f2671460dc76fd7f5865b48}{%
+           family={Reuter},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a03fcf2a0eb9e23ba937d4c4f50a0605}{%
+           family={Machat},
+           familyi={M\bibinitperiod},
+           given={Olaf},
+           giveni={O\bibinitperiod}}}%
+        {{hash=4c2366ed89509416b68fba9e8d1a433d}{%
+           family={Bornschein},
+           familyi={B\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=38c2920e30cff1929fe1fac80c5c5356}{%
+           family={Campenhausen},
+           familyi={C\bibinitperiod},
+           given={Sonja},
+           giveni={S\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=6f6a354927e2001333806418071e9b85}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Karin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=94b8f80bddbfd2a1203e3f81f6803ea6}{%
+           family={Koehne-Volland},
+           familyi={K\bibinithyphendelim V\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=125587b0124e305b6c9a7d02aa74e77a}{%
+           family={Rieke},
+           familyi={R\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=66a1cc55167d81795de16d529a4371e7}{%
+           family={Simonow},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e0fa619e4adc25c2d9b2bd3d3b83c94d}{%
+           family={Brandstaedter},
+           familyi={B\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{006ba53fbb9e031ece6d857f9e3b0e75}
+      \strng{fullhash}{d63684030e53de955c2ea06c5c0fba8d}
+      \strng{bibnamehash}{006ba53fbb9e031ece6d857f9e3b0e75}
+      \strng{authorbibnamehash}{006ba53fbb9e031ece6d857f9e3b0e75}
+      \strng{authornamehash}{006ba53fbb9e031ece6d857f9e3b0e75}
+      \strng{authorfullhash}{d63684030e53de955c2ea06c5c0fba8d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pharmacoeconomics}
+      \field{number}{8}
+      \field{title}{Cost of illness and its predictors for Parkinson’s disease in Germany}
+      \field{volume}{23}
+      \field{year}{2005}
+      \field{pages}{817\bibrangedash 836}
+      \range{pages}{20}
+    \endentry
+    \entry{dahodwala2018sex}{article}{}
+      \name{author}{7}{}{%
+        {{hash=81a016ef9cb6c527e53fda8431ce87f1}{%
+           family={Dahodwala},
+           familyi={D\bibinitperiod},
+           given={Nabila},
+           giveni={N\bibinitperiod}}}%
+        {{hash=709cddbf171d76295af3987e1d52fbe5}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Krunal},
+           giveni={K\bibinitperiod}}}%
+        {{hash=1f1042f5dd309cbf69ff60a2b59cb378}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2493323561a1d7363aee20ae68993fda}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Samuel\bibnamedelima S},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5cb3b2eebb57853f3c2dfcfb2328deb7}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c9ef9404d907a33874bf97bd4e247f68}{%
+           family={Cubillos},
+           familyi={C\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f5e531414a8a5830594f70c019da05e1}{%
+           family={Willis},
+           familyi={W\bibinitperiod},
+           given={Allison\bibnamedelima W},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AAN Enterprises}%
+      }
+      \strng{namehash}{8e20a03afb788a6a56effcc0b0e35253}
+      \strng{fullhash}{bdf7e2b4be65956fe63500dde60983bf}
+      \strng{bibnamehash}{8e20a03afb788a6a56effcc0b0e35253}
+      \strng{authorbibnamehash}{8e20a03afb788a6a56effcc0b0e35253}
+      \strng{authornamehash}{8e20a03afb788a6a56effcc0b0e35253}
+      \strng{authorfullhash}{bdf7e2b4be65956fe63500dde60983bf}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurology}
+      \field{number}{1}
+      \field{title}{Sex disparities in access to caregiving in Parkinson disease}
+      \field{volume}{90}
+      \field{year}{2018}
+      \field{pages}{e48\bibrangedash e54}
+      \range{pages}{-1}
+    \endentry
+    \entry{taylor2016leveraging}{article}{}
+      \name{author}{8}{}{%
+        {{hash=2fce952a84d9f892ad47cb5ae3d0c2e7}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Lauren\bibnamedelima A},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c2349061d5897a6f0bdae68c1e24bd2c}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Annabel\bibnamedelima Xulin},
+           giveni={A\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+        {{hash=eb5f8dfc69616cfa0de9585fd760c4de}{%
+           family={Coyle},
+           familyi={C\bibinitperiod},
+           given={Caitlin\bibnamedelima E},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c24a597002de6908686683094768100f}{%
+           family={Ndumele},
+           familyi={N\bibinitperiod},
+           given={Chima},
+           giveni={C\bibinitperiod}}}%
+        {{hash=758c96bf2f67a9fab6b53b70318ee06b}{%
+           family={Rogan},
+           familyi={R\bibinitperiod},
+           given={Erika},
+           giveni={E\bibinitperiod}}}%
+        {{hash=24c1a2d30d397e97628dff78fadc7634}{%
+           family={Canavan},
+           familyi={C\bibinitperiod},
+           given={Maureen},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e6f7e2468cef707444c88658e0fa3a2c}{%
+           family={Curry},
+           familyi={C\bibinitperiod},
+           given={Leslie\bibnamedelima A},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a8cc08c6b6403978a97faa8da76d581f}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={Elizabeth\bibnamedelima H},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science San Francisco, CA USA}%
+      }
+      \strng{namehash}{2e51790228b9cd6a206540943601f2e7}
+      \strng{fullhash}{b274e492b325fc1323c37380b728c0f8}
+      \strng{bibnamehash}{2e51790228b9cd6a206540943601f2e7}
+      \strng{authorbibnamehash}{2e51790228b9cd6a206540943601f2e7}
+      \strng{authornamehash}{2e51790228b9cd6a206540943601f2e7}
+      \strng{authorfullhash}{b274e492b325fc1323c37380b728c0f8}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PloS one}
+      \field{number}{8}
+      \field{title}{Leveraging the social determinants of health: what works?}
+      \field{volume}{11}
+      \field{year}{2016}
+      \field{pages}{e0160217}
+      \range{pages}{-1}
+    \endentry
+    \entry{gottlieb2019social}{article}{}
+      \name{author}{4}{}{%
+        {{hash=246da761869bd0de452a86b9f477b4e5}{%
+           family={Gottlieb},
+           familyi={G\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8a96780c9f347c3b826c34acc9fa225d}{%
+           family={Fichtenberg},
+           familyi={F\bibinitperiod},
+           given={Caroline},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0688bba928a9b58092c7def1c2a5da4b}{%
+           family={Alderwick},
+           familyi={A\bibinitperiod},
+           given={Hugh},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b9dd50ee42ea04c0d346e8cdc9cefed7}{%
+           family={Adler},
+           familyi={A\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {LWW}%
+      }
+      \strng{namehash}{e21bce1e3f7e92da0badc5afc9d7400c}
+      \strng{fullhash}{b8d4bda03fe78e76eb7a86c46d402e8c}
+      \strng{bibnamehash}{e21bce1e3f7e92da0badc5afc9d7400c}
+      \strng{authorbibnamehash}{e21bce1e3f7e92da0badc5afc9d7400c}
+      \strng{authornamehash}{e21bce1e3f7e92da0badc5afc9d7400c}
+      \strng{authorfullhash}{b8d4bda03fe78e76eb7a86c46d402e8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Healthcare Management}
+      \field{number}{4}
+      \field{title}{Social determinants of health: what’sa healthcare system to do?}
+      \field{volume}{64}
+      \field{year}{2019}
+      \field{pages}{243\bibrangedash 257}
+      \range{pages}{15}
+    \endentry
+    \entry{friedman2018toward}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4bfc9fd13175a3bbaa4d00ae1824f3b8}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Nicole\bibnamedelima L},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0f1791f804b76989ff795509f61bdda9}{%
+           family={Banegas},
+           familyi={B\bibinitperiod},
+           given={Matthew\bibnamedelima P},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Kaiser Permanente}%
+      }
+      \strng{namehash}{4d0158a527c7db7a8cb2f6b6ec40130a}
+      \strng{fullhash}{4d0158a527c7db7a8cb2f6b6ec40130a}
+      \strng{bibnamehash}{4d0158a527c7db7a8cb2f6b6ec40130a}
+      \strng{authorbibnamehash}{4d0158a527c7db7a8cb2f6b6ec40130a}
+      \strng{authornamehash}{4d0158a527c7db7a8cb2f6b6ec40130a}
+      \strng{authorfullhash}{4d0158a527c7db7a8cb2f6b6ec40130a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Permanente Journal}
+      \field{title}{Toward addressing social determinants of health: a health care system strategy}
+      \field{volume}{22}
+      \field{year}{2018}
+    \endentry
+    \entry{achey2014past}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=cada57504a02fcb88560e9c8f559af23}{%
+           family={Achey},
+           familyi={A\bibinitperiod},
+           given={Meredith},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9c1fc176fbc41899059841a693f4a4cd}{%
+           family={Aldred},
+           familyi={A\bibinitperiod},
+           given={Jason\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=afa5f73032cd5699fe80f9b1b8a236b2}{%
+           family={Aljehani},
+           familyi={A\bibinitperiod},
+           given={Noha},
+           giveni={N\bibinitperiod}}}%
+        {{hash=800b1bc40fa6bd06a85e24db37fa0b49}{%
+           family={Bloem},
+           familyi={B\bibinitperiod},
+           given={Bastiaan\bibnamedelima R},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=58e567fd1e5a9d56b2ecc967aa93e966}{%
+           family={Biglan},
+           familyi={B\bibinitperiod},
+           given={Kevin\bibnamedelima M},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9ce3f437f8297ab1e439f16bfdd13c01}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Piu},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cbddaf886048cc5cc3a530d47ca9223c}{%
+           family={Cubo},
+           familyi={C\bibinitperiod},
+           given={Esther},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e643e61c895450ed53a36e89dc8aec9d}{%
+           family={Ray\bibnamedelima Dorsey},
+           familyi={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5b2d318bbb741f1e8fbdba68e507b588}{%
+           family={Goetz},
+           familyi={G\bibinitperiod},
+           given={Christopher\bibnamedelima G},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=cf2c69141a62f42a674a910fc8fb199b}{%
+           family={Guttman},
+           familyi={G\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{aa198ab348aa88a568e0dc05a0c8481b}
+      \strng{fullhash}{ad9ccbb399d1aed798bdba6a633d2e5c}
+      \strng{bibnamehash}{aa198ab348aa88a568e0dc05a0c8481b}
+      \strng{authorbibnamehash}{aa198ab348aa88a568e0dc05a0c8481b}
+      \strng{authornamehash}{aa198ab348aa88a568e0dc05a0c8481b}
+      \strng{authorfullhash}{ad9ccbb399d1aed798bdba6a633d2e5c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Movement disorders}
+      \field{number}{7}
+      \field{title}{The past, present, and future of telemedicine for Parkinson's disease}
+      \field{volume}{29}
+      \field{year}{2014}
+      \field{pages}{871\bibrangedash 883}
+      \range{pages}{13}
+    \endentry
+    \entry{van2021moving}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=1ac57fd8720ada7e1e8a172fa2b8d4bd}{%
+           family={Munster},
+           familyi={M\bibinitperiod},
+           given={Marlena},
+           giveni={M\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=19d8f158d662427adc534fa0512ec926}{%
+           family={Stümpel},
+           familyi={S\bibinitperiod},
+           given={Johanne},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b1a6b8eb0dab926e9d0c76b079a551a6}{%
+           family={Thieken},
+           familyi={T\bibinitperiod},
+           given={Franziska},
+           giveni={F\bibinitperiod}}}%
+        {{hash=405dd52b98df0fb19d3ea9ea0e303bdd}{%
+           family={Pedrosa},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=26ebdc514a33eccfdb4afbb4b5fa6a2f}{%
+           family={Antonini},
+           familyi={A\bibinitperiod},
+           given={Angelo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b8b554dbfcd8c9322d3c81ba8ecdace8}{%
+           family={Côté},
+           familyi={C\bibinitperiod},
+           given={Diane},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1b79d7044d9b10b19b5288fbf4d1e885}{%
+           family={Fabbri},
+           familyi={F\bibinitperiod},
+           given={Margherita},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3302c9d90614bc5166244dce40bd4887}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={Joaquim\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f2b170b647430f8eedf78d9cb30981c7}{%
+           family={R{\uu}žička},
+           familyi={R\bibinitperiod},
+           given={Evžen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cb8fea0523650207bee2af17f22474df}{%
+           family={Grimes},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{0e1956476491459532224e43866d144b}
+      \strng{fullhash}{b90470d8c895557e58dcd7ca84f8fc15}
+      \strng{bibnamehash}{0e1956476491459532224e43866d144b}
+      \strng{authorbibnamehash}{0e1956476491459532224e43866d144b}
+      \strng{authornamehash}{0e1956476491459532224e43866d144b}
+      \strng{authorfullhash}{b90470d8c895557e58dcd7ca84f8fc15}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of personalized medicine}
+      \field{number}{7}
+      \field{title}{Moving towards Integrated and Personalized Care in Parkinson's Disease: A Framework Proposal for Training Parkinson Nurses}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{pages}{623}
+      \range{pages}{1}
+    \endentry
+    \entry{eggers2020care}{article}{}
+      \name{author}{5}{}{%
+        {{hash=b2ce6ca994a73fc48ad615ae5f9798d3}{%
+           family={Eggers},
+           familyi={E\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1552967e4c54e9c945e363b912db5ffc}{%
+           family={Wellach},
+           familyi={W\bibinitperiod},
+           given={Ingmar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=6b44543b35e9fc9c3a50ba6df5a68598}{%
+           family={Groppa},
+           familyi={G\bibinitperiod},
+           given={Sergiu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3912e6d573eabfb321faae33a7c78fa5}{%
+           family={Strothjohann},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=89080025001fae6d96ffcafe80ddae48}{%
+           family={Klucken},
+           familyi={K\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{18ac246ab4bfc6b5c4f6d5f4bf7ebff7}
+      \strng{fullhash}{88d25f86a5f4e6d9d57dc3ae1bb9cbce}
+      \strng{bibnamehash}{18ac246ab4bfc6b5c4f6d5f4bf7ebff7}
+      \strng{authorbibnamehash}{18ac246ab4bfc6b5c4f6d5f4bf7ebff7}
+      \strng{authornamehash}{18ac246ab4bfc6b5c4f6d5f4bf7ebff7}
+      \strng{authorfullhash}{88d25f86a5f4e6d9d57dc3ae1bb9cbce}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Der Nervenarzt}
+      \field{title}{Care of patients with Parkinson's disease in Germany: status quo and perspectives as reflected in the digital transition}
+      \field{year}{2020}
+    \endentry
+    \entry{samuels2021digital}{article}{}
+      \name{author}{3}{}{%
+        {{hash=119408568eac61c78646eec0e08f05b2}{%
+           family={Samuels-Kalow},
+           familyi={S\bibinithyphendelim K\bibinitperiod},
+           given={Margaret},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c510ecc21af5f27d6a2f8b448b7384f6}{%
+           family={Jaffe},
+           familyi={J\bibinitperiod},
+           given={Todd},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4e56139091047603dfc53cce91cfd539}{%
+           family={Zachrison},
+           familyi={Z\bibinitperiod},
+           given={Kori},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {BMJ Publishing Group Ltd}%
+        {the British Association for Accident~…}%
+      }
+      \strng{namehash}{fb99c2f609eba1b324a5bbb3fc5b0eea}
+      \strng{fullhash}{fb99c2f609eba1b324a5bbb3fc5b0eea}
+      \strng{bibnamehash}{fb99c2f609eba1b324a5bbb3fc5b0eea}
+      \strng{authorbibnamehash}{fb99c2f609eba1b324a5bbb3fc5b0eea}
+      \strng{authornamehash}{fb99c2f609eba1b324a5bbb3fc5b0eea}
+      \strng{authorfullhash}{fb99c2f609eba1b324a5bbb3fc5b0eea}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Emergency Medicine Journal}
+      \field{number}{6}
+      \field{title}{Digital disparities: designing telemedicine systems with a health equity aim}
+      \field{volume}{38}
+      \field{year}{2021}
+      \field{pages}{474\bibrangedash 476}
+      \range{pages}{3}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
